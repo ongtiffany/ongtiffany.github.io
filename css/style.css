@@ -1,0 +1,56 @@
+.modal-body h4 {
+  text-align: left;
+  font-size: 0.7em;
+  margin: 0;
+  font-weight: normal; }
+
+.modal-body a:hover {
+  color: black; }
+
+.modal-body .col-md-6:nth-of-type(1) {
+  padding-left: 0; }
+
+.modal-body .col-md-6:nth-of-type(2) {
+  padding-right: 0; }
+
+.modal-body p.image-caption {
+  margin-top: -2em;
+  background: black;
+  color: white;
+  padding: 0.5em 2em;
+  line-height: 1.4;
+  font-size: 0.9em;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.navbar-default .container a {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  display: block; }
+  .navbar-default .container a img {
+    width: 2.5em;
+    float: left; }
+  .navbar-default .container a h1 {
+    float: left;
+    margin: 0.3em 0.3em 0.6em 0.3em;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1; }
+    .navbar-default .container a h1 span {
+      display: block;
+      font-weight: 100; }
+  .navbar-default .container a:hover {
+    opacity: 0.7; }
+
+.navbar-shrink .container a {
+  padding-top: 0.5em; }
+
+.col-md-3, .col-sm-6 {
+  padding: 0; }
+
+@media (max-width: 992px) {
+  .modal-body .col-md-6:nth-of-type(1) {
+    padding: 0; }
+  .modal-body .col-md-6:nth-of-type(2) {
+    padding: 0; } }

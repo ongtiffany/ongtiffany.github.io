@@ -1,0 +1,595 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<style>
+#overlay-wrapper * {
+box-sizing: border-box;
+}
+
+/* Weather Styles */
+@font-face {
+    font-family: 'weather';
+    src: url('http://s3-eu-west-1.amazonaws.com/trinity-images/weather-mvt/artill_clean_icons.otf');
+    src: url('http://s3-eu-west-1.amazonaws.com/trinity-images/weather-mvt/artill_clean_icons-webfont.eot') format('embedded-opentype'),
+         url('http://s3-eu-west-1.amazonaws.com/trinity-images/weather-mvt/artill_clean_icons-webfont.woff') format('woff'),
+         url('http://s3-eu-west-1.amazonaws.com/trinity-images/weather-mvt/artill_clean_icons-webfont') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+#overlay-wrapper #box #weather {
+  text-align: center;
+}
+
+#overlay-wrapper i {
+  font-family: weather;
+  font-size: 50px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+#overlay-wrapper i:before {
+  font-family: weather;
+  font-size: 100px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.3;
+    color: #1878c1;
+}
+
+#overlay-wrapper #weather h2 {
+  border-top: none;
+  font-size: 50px;
+  position: inherit;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  background-size: 100% auto;
+  color: #1878c1;
+  padding: 0px 0 40px;
+  }
+
+#overlay-wrapper #weather h2:before {
+display: none;
+}
+
+#overlay-wrapper .icon-0:before { content: ":"; }
+#overlay-wrapper .icon-1:before { content: "p"; }
+#overlay-wrapper .icon-2:before { content: "S"; }
+#overlay-wrapper .icon-3:before { content: "Q"; }
+#overlay-wrapper .icon-4:before { content: "S"; }
+#overlay-wrapper .icon-5:before { content: "W"; }
+#overlay-wrapper .icon-6:before { content: "W"; }
+#overlay-wrapper .icon-7:before { content: "W"; }
+#overlay-wrapper .icon-8:before { content: "W"; }
+#overlay-wrapper .icon-9:before { content: "I"; }
+#overlay-wrapper .icon-10:before { content: "W"; }
+#overlay-wrapper .icon-11:before { content: "I"; }
+#overlay-wrapper .icon-12:before { content: "I"; }
+#overlay-wrapper .icon-13:before { content: "I"; }
+#overlay-wrapper .icon-14:before { content: "I"; }
+#overlay-wrapper .icon-15:before { content: "W"; }
+#overlay-wrapper .icon-16:before { content: "I"; }
+#overlay-wrapper .icon-17:before { content: "W"; }
+#overlay-wrapper .icon-18:before { content: "U"; }
+#overlay-wrapper .icon-19:before { content: "Z"; }
+#overlay-wrapper .icon-20:before { content: "Z"; }
+#overlay-wrapper .icon-21:before { content: "Z"; }
+#overlay-wrapper .icon-22:before { content: "Z"; }
+#overlay-wrapper .icon-23:before { content: "Z"; }
+#overlay-wrapper .icon-24:before { content: "E"; }
+#overlay-wrapper .icon-25:before { content: "E"; }
+#overlay-wrapper .icon-26:before { content: "3"; }
+#overlay-wrapper .icon-27:before { content: "a"; }
+#overlay-wrapper .icon-28:before { content: "A"; }
+#overlay-wrapper .icon-29:before { content: "a"; }
+#overlay-wrapper .icon-30:before { content: "A"; }
+#overlay-wrapper .icon-31:before { content: "6"; }
+#overlay-wrapper .icon-32:before { content: "1"; }
+#overlay-wrapper .icon-33:before { content: "6"; }
+#overlay-wrapper .icon-34:before { content: "1"; }
+#overlay-wrapper .icon-35:before { content: "W"; }
+#overlay-wrapper .icon-36:before { content: "1"; }
+#overlay-wrapper .icon-37:before { content: "S"; }
+#overlay-wrapper .icon-38:before { content: "S"; }
+#overlay-wrapper .icon-39:before { content: "S"; }
+#overlay-wrapper .icon-40:before { content: "M"; }
+#overlay-wrapper .icon-41:before { content: "W"; }
+#overlay-wrapper .icon-42:before { content: "I"; }
+#overlay-wrapper .icon-43:before { content: "W"; }
+#overlay-wrapper .icon-44:before { content: "a"; }
+#overlay-wrapper .icon-45:before { content: "S"; }
+#overlay-wrapper .icon-46:before { content: "U"; }
+#overlay-wrapper .icon-47:before { content: "S"; }
+
+#overlay-wrapper #weather ul {
+margin: 0;
+padding: 10px 0;
+}
+
+#overlay-wrapper #weather li {
+  margin: 0;
+  color: #141414;
+  text-transform: uppercase;
+  list-style-type: none;
+  font-size: 21px;
+  line-height: 1;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  }
+
+#overlay-wrapper #weather li.currently {
+font-weight: bold;
+color: #1878c1;
+}
+
+#overlay-wrapper #weather li:nth-child(even) {
+background: #f1f1f1;
+}
+
+#overlay-wrapper #weather li:last-child {
+border: 0;
+}
+
+#overlay-wrapper .weather-widget{
+  display: inline-block;
+  width: 100%;
+}
+
+#overlay-wrapper .weather-widget button-all{
+  font-family: 'SimHei', 'STHeiti', sans-serif;
+  text-align:center;
+}
+
+#overlay-wrapper h3{
+margin:0 0 20px 0;
+}
+
+#overlay-wrapper #weather ul {
+font-family: 'Lorimer No 2', sans-serif;
+padding:0;
+}
+/* Weather Styles End */
+
+
+/* Overlay Styles */ 
+#overlay-wrapper a.activator{
+  width:153px;
+  padding:10px;
+  position:absolute;
+  top:0px;
+  background:black;
+  color:white;
+  left:0px;
+  z-index:1;
+  cursor:pointer;
+}
+
+/*Style for overlay and box */
+#overlay-wrapper #overlay{
+  background:rgba(0,0,0, 0.7);
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  z-index:100;
+}
+
+
+
+#overlay-wrapper #box{
+  font-family: 'SimHei', 'STHeiti', sans-serif;
+  position:fixed;
+  width:400px;
+  height: 400px;
+  top: calc(50% - 200px);
+  background:#fff;
+  z-index:101;
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  border-radius: 4px;
+}
+
+/* Heading */
+#overlay-wrapper #box .weather-text{
+  font-family: 'Alternate Gothic', sans-serif;
+font-size:31px;
+text-align:center;
+line-height: 1;
+margin:0;
+color:#141414;
+font-weight: bold;
+background: #f1f1f1;
+border-bottom: 1px solid #e0e0e0;
+padding: 40px 70px;
+margin-bottom: 30px;
+border-radius: 4px 4px 0 0;
+}
+
+/* Close */
+#overlay-wrapper a#boxclose{
+float: right;
+cursor: pointer;
+font-family: Arial, sans-serif;  
+font-weight: 700;
+font-size:21px;
+width: 40px;
+height: 40px;
+margin-top: -20px;
+margin-right: -20px;  
+background: #1878c1;
+color: #fff;
+border-radius: 100%;
+text-align: center;
+line-height: 2;
+transition: 100ms ease-in-out all;
+border: 1px solid #1878c1;
+box-shadow: 0 0 4px #000;
+text-decoration: none;
+}
+
+
+#overlay-wrapper #box form {
+display:inline-block;
+}
+
+#overlay-wrapper #box form input {
+background:black;
+color:white;
+border:none;
+padding:10px;
+font-family: 'SimHei', 'STHeiti', sans-serif;
+font-size:20px;
+}
+/* Overlay Styles End */
+
+/*Button Styles */
+
+/* Geolocation Button */
+#overlay-wrapper .button-1{
+font-family: 'SimHei', 'STHeiti', sans-serif;
+background: #1878c1 url(http://s3.mirror.co.uk/weather-mvt/location-icon.png) no-repeat 300px 15px;
+background-size:20px 20px;
+border: 0;
+width: calc(100% - 60px);
+height: 55px;
+display: block; 
+color: #fff;
+margin: 0 30px;
+font-size:18px;
+text-transform: uppercase;
+border-radius: 3px;
+border:2px solid #1878c1;
+transition: 150ms ease-in-out all;
+}
+
+
+#overlay-wrapper .button-1:hover {
+background: #fff url(http://s3.mirror.co.uk/weather-mvt/location-icon-hover.png) no-repeat 300px 15px;
+background-size:20px 20px;
+color:#1878c1;
+}
+
+span.weather-or {
+text-align: center;
+color: #979797;
+display: block;
+margin: 13px 0 10px;
+}
+
+
+/* Enter Postcode or City */
+
+ #overlay-wrapper .postcode {
+font-family: 'SimHei', 'STHeiti', sans-serif;
+text-align: center;
+color:#1878c1;
+width: calc(100% - 60px);
+margin: 0 30px;
+font-size:17px;
+height:53px;
+}
+
+ #overlay-wrapper .enterLocation input {
+font-family: 'SimHei', 'STHeiti', sans-serif;
+border: 1px solid #e0e0e0;
+background: #fafafa;
+box-shadow: none;
+color:#1878c1;
+border-radius: 3px;
+}
+#overlay-wrapper .enterLocation input:focus {
+color:#1878c1;
+font-weight: bold;
+}
+
+
+#overlay-wrapper .enterLocation {
+position: relative;
+}
+
+#overlay-wrapper .button-2 {
+  border: 0;
+  width: 53px;
+  height: 53px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'SimHei', 'STHeiti', sans-serif;
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  background: #1878c1;
+  transition: 200ms ease-in-out all;
+  border-radius: 0 3px 3px 0;
+}
+
+#overlay-wrapper .button-2:hover {
+font-size: 28px;
+line-height:1.3;
+}
+
+#overlay-wrapper #autocomplete {
+background: white;
+border: 0;
+height: 25px;
+color: black;
+font-size: 13px;
+text-align:center;
+width:100%;
+margin:0;
+}
+/* Button Styles End */
+
+/* Mobile Media Queries */
+@media only screen and (min-width:400px) and (max-width:768px) {
+  #overlay-wrapper #box{
+  width:400px;
+  left:50%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+ #overlay-wrapper #box {
+width:50%;
+}
+
+#overlay-wrapper #box .weather-text {
+font-size:33px;
+}
+
+#overlay-wrapper .button-1, #overlay-wrapper .postcode {
+font-size:22px;
+}
+
+#overlay-wrapper .button-2{
+font-size:30px;
+width:80px;
+background: rgba(255, 255, 255, 0);
+}
+
+span.weather-or {
+font-size:18px;
+}
+
+#overlay-wrapper #weather li {
+  font-size: 21px;
+  }
+}
+
+
+@media screen and (max-width:400px) {
+
+#overlay-wrapper #box{
+  margin: 20px;
+  width:85%;
+  position:absolute;
+top: 0;
+height:340px;
+  }
+
+#overlay-wrapper #box .weather-text {
+font-size:23px;
+padding: 20px 40px;
+}
+
+#overlay-wrapper a#boxclose {
+padding-top: 0px;
+}
+
+#overlay-wrapper .button-1, #overlay-wrapper .postcode {
+font-size:16px;
+background-position: 195px 15px;
+text-align: left;
+}
+
+span.weather-or {
+  font-size: 15px;
+}
+
+#overlay-wrapper .button-2{
+font-size:27px;
+padding: 0;
+}
+
+#overlay-wrapper .enterLocation input{
+text-align: left;
+padding-left: 5px;
+}
+
+#overlay-wrapper #weather li {
+  font-size: 23px;
+  }
+
+#overlay-wrapper #weather h2 {
+  padding: 0;
+  border-top: none;
+  font-size:23px;
+  position: inherit;
+  padding-bottom: 10px;
+  }
+
+#overlay-wrapper #weather i{
+  font-size:40px;
+  }
+}
+
+/* Mobile Media Queries End */
+</style>
+
+</head>
+<body>
+
+<!-- Html -->
+
+<div id="overlay-wrapper">
+<div id="overlay"></div>
+<div id="box">
+<a id="boxclose">X</a>
+<div id="close">
+<div class="weather-text">
+Find out the<br>weather near you
+</div>
+<div class="enterLocation" style="display:block;position:relative;width:100%;">
+<input type="text" value="Enter postcode or city" onfocus="this.value=''" onblur="(this.value==" '')?="" this.value="" "="" id="address" class="postcode" onkeydown="if (event.keyCode == 13) document.getElementById('getThisweather').click()" required="" placeholder="Enter a location" autocomplete="off">
+
+
+<button onclick="hide('close')" class="button-2" id="getThisweather" type="button" required="" disabled="">&#8594;
+      </button>
+<span class="weather-or">Or</span>
+<button onclick="hide('close')" class="button-1" id="currentlocation">Current Location</button>
+</div>
+</div>  <div id="weather"></div> </div>
+</div>
+	
+<!-- Html -->
+
+<!-- Javascript Links -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&amp;libraries=places&amp;language=en-US"></script>
+<script type="text/javascript" src="http://s3.mirror.co.uk/weather-mvt/jquery.geocomplete.js"></script>
+
+<!-- Javascript Links End -->
+
+
+<!-- Weather API -->
+
+<script>
+
+// Hide section (Geolocation and Enter Location) 
+function hide(target) {
+document.getElementById(target).style.display = 'none';
+}
+// Hide section (Geolocation and Enter Location) onclick End-
+
+// Overlay transitions 
+$( document ).ready(function() {
+if ( $(window).width() > 1024) { $('#overlay').fadeIn('fast',function(){
+$('#box').animate({'left':'36%'},500);
+});
+$('#boxclose').click(function(){
+$('#box').animate({'left':'-500px'},500,function(){
+$('#overlay').fadeOut('fast');
+}); });
+}
+else if ( $(window).width() > 768) { $('#overlay').fadeIn('fast',function(){
+$('#box').animate({'left':'23%'},500);
+});
+$('#boxclose').click(function(){
+$('#box').animate({'left':'-800px'},500,function(){
+$('#overlay').fadeOut('fast');
+}); });
+}
+else if ( $(window).width() > 400) { $('#overlay').fadeIn('fast',function(){
+$('#box').animate({'left':'22%'},500);
+});
+$('#boxclose').click(function(){
+$('#box').animate({'left':'-500px'},500,function(){
+$('#overlay').fadeOut('fast');
+}); });
+}
+else { $('#overlay').fadeIn('fast',function(){
+$('#box').animate({'left':'0px'},500);
+});
+$('#boxclose').click(function(){
+$('#box').animate({'left':'-500px'},500,function(){
+$('#overlay').fadeOut('fast');
+}); });
+}
+});
+// Overlay transitions End
+
+
+
+$(document).ready(function(){
+// Call Geo Complete
+$("#address").geocomplete({details:"form#property"});
+});
+
+// Enter Postcode Show Lat/Long
+$('#currentlocation').on('click', function() {
+navigator.geolocation.getCurrentPosition(function(position) {
+loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+});
+});
+$(document).ready(function(){
+$('#getThisweather').click(function(){
+var geocoder = new google.maps.Geocoder();
+geocoder.geocode({address:$('#address').val(),region:'no'},function(results,status){
+if(status.toLowerCase() == 'ok'){
+var coords = new google.maps.LatLng(results[0]['geometry']['location'].lat(),results[0]['geometry']['location'].lng());
+//$('#lat').val(coords.lat());
+//$('#lng').val(coords.lng());
+}
+//alert (coords);
+loadWeather(coords.lat()+','+coords.lng()); //load weather using your lat/lng coordinates
+});
+});
+});
+
+
+// Weather Display 
+function loadWeather(location, woeid) {
+$.simpleWeather({
+location: location,
+woeid: woeid,
+unit: 'c',
+success: function(weather) {
+html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+html += '<li class="currently">'+weather.currently+'</li>';
+html += '<li>'+weather.alt.temp+'&deg;F</li></ul>'; $("#weather").html(html);
+},
+error: function(error) {
+$("#weather").html('<p>'+error+'</p>');
+}
+});
+}
+
+
+$('#getThisweather').prop('disabled', true);
+// Do stuff when there is textarea activity
+$('#address').on("propertychange input textInput", function() {
+var charLimit = 20;
+var remaining = charLimit - $(this).val().length;
+// alert("COUNTER " + remaining);
+$('#counter').addClass("over-char-limit").text(remaining);
+if (remaining === charLimit) {
+// No characters entered so disable the button
+$('#getThisweather').prop('disabled', true);
+} else if (remaining < 0) {
+// remaining = 0; // Prevents the counter going into negative numbers
+$('#getThisweather').prop('disabled', true);
+} else {
+$('#getThisweather').removeAttr('disabled');
+$('#counter').removeClass("over-char-limit").text(remaining);
+}
+});
+
+</script>
+
+
+</body>
+</html>
