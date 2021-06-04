@@ -20,7 +20,7 @@ a:hover{
     
     }//.col-md-6 
 p.image-caption{
-margin-top: -2em;
+margin-top: -2.4em;
 background: black;
 color: white;
 padding: 0.5em 2em;
@@ -86,3 +86,16 @@ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     }//.col-md-6 
 }//.modal-body
 }//media
+
+@media(max-width:768px) {
+.navbar-default .container a{
+        padding-top: 0.5em;
+}
+
+header {
+    display:none;
+    background-image: none;
+}
+}//media
+
+
