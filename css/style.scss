@@ -72,6 +72,22 @@ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     .col-md-3, .col-sm-6 {
         padding:0;
     }
+@media(min-width:1200px) {
+.container{
+    width: 100% !important;
+    max-width: 1300px !important;
+}
+.img-responsive,
+ .thumbnail > img,
+  .thumbnail a > img{
+    width:100%;
+  }
+
+#projects .portfolio-item .portfolio-link {
+    max-width:100%;
+}
+}//media
+
 
 @media(max-width:992px) {
 .modal-body{
