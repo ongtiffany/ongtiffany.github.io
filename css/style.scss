@@ -58,7 +58,16 @@ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         }//hover
     }//a
     }//.container
-
+    .nav li a:hover{
+      color: #fff;
+      border-bottom: 1px dashed; 
+      opacity: 0.9;
+    } 
+    .navbar-nav>.active>a:hover{
+      background:none;
+      border-bottom: 5px solid;
+      opacity: 0.9;
+    }     
 }//.navbar-default
 
     .navbar-shrink{
