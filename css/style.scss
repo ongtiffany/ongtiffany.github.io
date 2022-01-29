@@ -1,13 +1,18 @@
 
+/// Please don't judge my coding based on this. This is very old stuff that I haven't had time to re-write and just hacked away to make it work.... Yes, I know, shameful but personal websites are always low priority :( /// 
+
 .modal-body{
+  font-family: 'Work Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
 h4{
 text-align: left;
-font-size: 0.7em;
-margin: 0;
+font-size: 0.9em;
 font-weight: normal;
+font-weight: bold;
+
 }
 a:hover{
     color:black;
+    opacity: 0.6;
 
 }
 .col-md-6 {
@@ -26,7 +31,6 @@ color: white;
 padding: 0.5em 2em;
 line-height: 1.4;
 font-size:0.9em;
-font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 }//.modal-body
 .navbar-default {
@@ -44,7 +48,7 @@ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
           float:left;
           margin:0.3em 0.3em 0.6em 0.3em;
           font-style: normal;
-          font-size:1em;
+          font-size:1.1em;
           font-weight:300;
           line-height:1;
 
@@ -84,7 +88,7 @@ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 @media(min-width:1200px) {
 .container{
     width: 100% !important;
-    max-width: 1300px !important;
+    max-width: 1600px !important;
 }
 .img-responsive,
  .thumbnail > img,

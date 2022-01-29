@@ -1,26 +1,24 @@
-.modal-body h4 {
-  text-align: left;
-  font-size: 0.7em;
-  margin: 0;
-  font-weight: normal; }
-
-.modal-body a:hover {
-  color: black; }
-
-.modal-body .col-md-6:nth-of-type(1) {
-  padding-left: 0; }
-
-.modal-body .col-md-6:nth-of-type(2) {
-  padding-right: 0; }
-
-.modal-body p.image-caption {
-  margin-top: -2.4em;
-  background: black;
-  color: white;
-  padding: 0.5em 2em;
-  line-height: 1.4;
-  font-size: 0.9em;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; }
+.modal-body {
+  font-family: 'Work Sans',"Helvetica Neue",Helvetica,Arial,sans-serif; }
+  .modal-body h4 {
+    text-align: left;
+    font-size: 0.9em;
+    font-weight: normal;
+    font-weight: bold; }
+  .modal-body a:hover {
+    color: black;
+    opacity: 0.6; }
+  .modal-body .col-md-6:nth-of-type(1) {
+    padding-left: 0; }
+  .modal-body .col-md-6:nth-of-type(2) {
+    padding-right: 0; }
+  .modal-body p.image-caption {
+    margin-top: -2.4em;
+    background: black;
+    color: white;
+    padding: 0.5em 2em;
+    line-height: 1.4;
+    font-size: 0.9em; }
 
 .navbar-default .container a {
   text-transform: uppercase;
@@ -34,7 +32,7 @@
     float: left;
     margin: 0.3em 0.3em 0.6em 0.3em;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 300;
     line-height: 1; }
     .navbar-default .container a h1 span {
@@ -42,6 +40,16 @@
       font-weight: 100; }
   .navbar-default .container a:hover {
     opacity: 0.7; }
+
+.navbar-default .nav li a:hover {
+  color: #fff;
+  border-bottom: 1px dashed;
+  opacity: 0.9; }
+
+.navbar-default .navbar-nav > .active > a:hover {
+  background: none;
+  border-bottom: 5px solid;
+  opacity: 0.9; }
 
 .navbar-shrink .container a {
   padding-top: 0.5em; }
@@ -52,7 +60,7 @@
 @media (min-width: 1200px) {
   .container {
     width: 100% !important;
-    max-width: 1300px !important; }
+    max-width: 1600px !important; }
   .img-responsive,
   .thumbnail > img,
   .thumbnail a > img {
