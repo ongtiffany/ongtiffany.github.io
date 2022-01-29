@@ -88,6 +88,8 @@
   section#about p.section-subheading {
     font-size: 1.2em;
     line-height: 1.8; }
+  section#contact h3.section-subheading {
+    font-size: 1.3em; }
   .portfolio-modal .modal-content h2 {
     font-size: 2em; }
   .portfolio-modal .modal-content p {

@@ -579,8 +579,17 @@ section#contact .text-danger {
 section#contact h3.section-subheading {
     color: #FDFDFD;
     text-shadow: 1px 1px #2c2c2c;
+    max-width: 22em;
+    margin: 0 auto;
+    font-style: normal;
 }
-
+section#contact h3.section-subheading span{
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-size: 0.9em;
+    display: block;
+    padding-top:0.5em;
+}
 section#contact a {
     color: #fff;
 }
