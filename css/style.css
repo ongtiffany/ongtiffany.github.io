@@ -1,5 +1,5 @@
 .modal-body {
-  font-family: 'Work Sans',"Helvetica Neue",Helvetica,Arial,sans-serif; }
+  font-family: 'Work Sans', "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .modal-body h4 {
     text-align: left;
     font-size: 0.9em;
@@ -54,7 +54,8 @@
 .navbar-shrink .container a {
   padding-top: 0.5em; }
 
-.col-md-3, .col-sm-6 {
+.col-md-3,
+.col-sm-6 {
   padding: 0; }
 
 @media (min-width: 1200px) {
@@ -72,11 +73,41 @@
   .modal-body .col-md-6:nth-of-type(1) {
     padding: 0; }
   .modal-body .col-md-6:nth-of-type(2) {
-    padding: 0; } }
+    padding: 0; }
+  header {
+    background-size: 150%;
+    height: 100vh; }
+    header .intro-text {
+      padding-top: 150px; }
+      header .intro-text .intro-lead-in span {
+        display: block; } }
 
 @media (max-width: 768px) {
   .navbar-default .container a {
     padding-top: 0.5em; }
-  header {
-    display: none;
-    background-image: none; } }
+  section#about p.section-subheading {
+    font-size: 1.2em;
+    line-height: 1.8; }
+  .portfolio-modal .modal-content h2 {
+    font-size: 2em; }
+  .portfolio-modal .modal-content p {
+    font-size: 1.3em; }
+    .portfolio-modal .modal-content p .item-intro {
+      font-size: 1em; }
+  .portfolio-modal .close-modal {
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px; }
+    .portfolio-modal .close-modal .lr {
+      height: 45px; }
+      .portfolio-modal .close-modal .lr .rl {
+        height: 45px; }
+  .modal-body {
+    font-size: 0.8em; }
+    .modal-body p.image-caption {
+      font-size: 1em; } }
+
+@media (min-width: 450px) {
+  #work .portfolio-item .portfolio-link {
+    max-width: initial; } }

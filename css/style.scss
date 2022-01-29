@@ -1,130 +1,251 @@
-
 /// Please don't judge my coding based on this. This is very old stuff that I haven't had time to re-write and just hacked away to make it work.... Yes, I know, shameful but personal websites are always low priority :( /// 
 
-.modal-body{
-  font-family: 'Work Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
-h4{
-text-align: left;
-font-size: 0.9em;
-font-weight: normal;
-font-weight: bold;
+.modal-body {
+    font-family: 'Work Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-}
-a:hover{
-    color:black;
-    opacity: 0.6;
+    h4 {
+        text-align: left;
+        font-size: 0.9em;
+        font-weight: normal;
+        font-weight: bold;
 
-}
-.col-md-6 {
-    &:nth-of-type(1){
-        padding-left:0;
     }
-    &:nth-of-type(2){
-        padding-right:0;
+
+    a:hover {
+        color: black;
+        opacity: 0.6;
+
     }
-    
-    }//.col-md-6 
-p.image-caption{
-margin-top: -2.4em;
-background: black;
-color: white;
-padding: 0.5em 2em;
-line-height: 1.4;
-font-size:0.9em;
-}
-}//.modal-body
-.navbar-default {
-    .container{
-          a {
-        text-transform: uppercase;
+
+    .col-md-6 {
+        &:nth-of-type(1) {
+            padding-left: 0;
+        }
+
+        &:nth-of-type(2) {
+            padding-right: 0;
+        }
+
+    }
+
+    //.col-md-6 
+    p.image-caption {
+        margin-top: -2.4em;
+        background: black;
         color: white;
-        text-decoration: none;
-        display: block;
-        img{
-          width:2.5em;
-          float:left;
-        }
-        h1{
-          float:left;
-          margin:0.3em 0.3em 0.6em 0.3em;
-          font-style: normal;
-          font-size:1.1em;
-          font-weight:300;
-          line-height:1;
+        padding: 0.5em 2em;
+        line-height: 1.4;
+        font-size: 0.9em;
+    }
+}
 
-          span{
+//.modal-body
+.navbar-default {
+    .container {
+        a {
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
             display: block;
-            font-weight:100;
-          }
+
+            img {
+                width: 2.5em;
+                float: left;
+            }
+
+            h1 {
+                float: left;
+                margin: 0.3em 0.3em 0.6em 0.3em;
+                font-style: normal;
+                font-size: 1.1em;
+                font-weight: 300;
+                line-height: 1;
+
+                span {
+                    display: block;
+                    font-weight: 100;
+                }
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            //hover
         }
-        &:hover {
-            opacity: 0.7;
-        }//hover
-    }//a
-    }//.container
-    .nav li a:hover{
-      color: #fff;
-      border-bottom: 1px dashed; 
-      opacity: 0.9;
-    } 
-    .navbar-nav>.active>a:hover{
-      background:none;
-      border-bottom: 5px solid;
-      opacity: 0.9;
-    }     
-}//.navbar-default
 
-    .navbar-shrink{
-        .container{
-          a {
-            padding-top:0.5em;
-          }
-      }
+        //a
     }
 
-    .col-md-3, .col-sm-6 {
-        padding:0;
+    //.container
+    .nav li a:hover {
+        color: #fff;
+        border-bottom: 1px dashed;
+        opacity: 0.9;
     }
+
+    .navbar-nav>.active>a:hover {
+        background: none;
+        border-bottom: 5px solid;
+        opacity: 0.9;
+    }
+}
+
+//.navbar-default
+
+.navbar-shrink {
+    .container {
+        a {
+            padding-top: 0.5em;
+        }
+    }
+}
+
+.col-md-3,
+.col-sm-6 {
+    padding: 0;
+}
+
 @media(min-width:1200px) {
-.container{
-    width: 100% !important;
-    max-width: 1600px !important;
-}
-.img-responsive,
- .thumbnail > img,
-  .thumbnail a > img{
-    width:100%;
-  }
+    .container {
+        width: 100% !important;
+        max-width: 1600px !important;
+    }
 
-#projects .portfolio-item .portfolio-link {
-    max-width:100%;
+    .img-responsive,
+    .thumbnail>img,
+    .thumbnail a>img {
+        width: 100%;
+    }
+
+    #projects .portfolio-item .portfolio-link {
+        max-width: 100%;
+    }
 }
-}//media
+
+//media
 
 
 @media(max-width:992px) {
-.modal-body{
-.col-md-6 {
-    &:nth-of-type(1){
-        padding:0;
+    .modal-body {
+        .col-md-6 {
+            &:nth-of-type(1) {
+                padding: 0;
+            }
+
+            &:nth-of-type(2) {
+                padding: 0;
+            }
+
+        }
+
+        //.col-md-6 
     }
-    &:nth-of-type(2){
-        padding:0;
+
+    //.modal-body
+    header {
+    background-size: 150%;
+    height: 100vh;
+
+    .intro-text {
+        padding-top: 150px;
+
+        .intro-lead-in span {
+            display: block;
+
+        }
+
+        //.intro-lead-in span
     }
-    
-    }//.col-md-6 
-}//.modal-body
-}//media
+
+    //.intro-text
+
+}
+
+// header
+}
+
+//media
+
+
+
 
 @media(max-width:768px) {
-.navbar-default .container a{
+
+    .navbar-default .container a {
         padding-top: 0.5em;
+    }
+
+
+    section#about p.section-subheading {
+        font-size: 1.2em;
+        line-height: 1.8;
+    }
+
+    //section#about p.section-subheading
+
+    .portfolio-modal {
+        .modal-content {
+            h2 {
+                font-size: 2em;
+            }
+
+            //h2
+            p {
+                font-size: 1.3em;
+
+                .item-intro {
+                    font-size: 1em;
+                }
+            }
+
+            //p.item-intro 
+        }
+
+        //.modal-content
+        .close-modal {
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+
+            .lr {
+                height: 45px;
+
+                .rl {
+                    height: 45px;
+                }
+            }
+        }
+
+        //.close-modal 
+
+    }
+
+    //.portfolio-modal 
+
+    .modal-body {
+        font-size: 0.8em;
+
+        p.image-caption {
+            font-size: 1em;
+        }
+
+        // p.image-caption
+    }
+
+    //.modal-body h4 
+
+
 }
 
-header {
-    display:none;
-    background-image: none;
+//@media(min-width:768px)
+
+@media(min-width:450px) {
+    #work .portfolio-item .portfolio-link {
+        max-width: initial;
+    }
+
 }
-}//media
 
-
+//@media(max-width:450px)
