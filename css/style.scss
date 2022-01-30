@@ -40,6 +40,10 @@
 }
 
 //.modal-body
+.navbar-nav {
+    text-align: center;
+    background:rgba(0,0,0,0.7);
+}
 .navbar-default {
     .container {
         a {
@@ -163,6 +167,7 @@
 }
 
 // header
+
 }
 
 //media
@@ -194,16 +199,19 @@ section#contact h3.section-subheading {
 
     .portfolio-modal {
         .modal-content {
+          padding-top:30px;
             h2 {
                 font-size: 2em;
+                margin: 0.5em 0 0 0;
             }
 
             //h2
             p {
                 font-size: 1.3em;
 
-                .item-intro {
-                    font-size: 1em;
+                &.item-intro {
+                  margin-top:0;
+                    font-size: 1.3em;
                 }
             }
 
@@ -212,16 +220,16 @@ section#contact h3.section-subheading {
 
         //.modal-content
         .close-modal {
-            top: 15px;
-            right: 15px;
-            width: 45px;
-            height: 45px;
+            top: 5px;
+            right: 25px;
+            width: 35px;
+            height: 35px;
 
             .lr {
-                height: 45px;
+                height: 35px;
 
                 .rl {
-                    height: 45px;
+                    height: 35px;
                 }
             }
         }
@@ -249,10 +257,42 @@ section#contact h3.section-subheading {
 
 //@media(min-width:768px)
 
-@media(min-width:450px) {
-    #work .portfolio-item .portfolio-link {
-        max-width: initial;
+@media(max-width:450px) {
+
+        header {
+    background-size: cover;
+    max-height: 100vh !important;
+
+    .intro-text {
+        padding-top: 30vh;
+        .intro-lead-in span {
+            display: block;
+            line-height: 1.2;
+        }
+
+        //.intro-lead-in span
     }
+
+    //.intro-text
+
+}
+
+// header
+
+    #work .container {
+        padding:0;
+    }
+        #work .portfolio-item .portfolio-link {
+        max-width: none;
+    }
+}
+
+//@media(max-width:450px)
+
+@media(min-width:450px) {
+
+
+
 
 }
 

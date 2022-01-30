@@ -20,6 +20,10 @@
     line-height: 1.4;
     font-size: 0.9em; }
 
+.navbar-nav {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7); }
+
 .navbar-default .container a {
   text-transform: uppercase;
   color: white;
@@ -90,26 +94,40 @@
     line-height: 1.8; }
   section#contact h3.section-subheading {
     font-size: 1.3em; }
-  .portfolio-modal .modal-content h2 {
-    font-size: 2em; }
-  .portfolio-modal .modal-content p {
-    font-size: 1.3em; }
-    .portfolio-modal .modal-content p .item-intro {
-      font-size: 1em; }
+  .portfolio-modal .modal-content {
+    padding-top: 30px; }
+    .portfolio-modal .modal-content h2 {
+      font-size: 2em;
+      margin: 0.5em 0 0 0; }
+    .portfolio-modal .modal-content p {
+      font-size: 1.3em; }
+      .portfolio-modal .modal-content p.item-intro {
+        margin-top: 0;
+        font-size: 1.3em; }
   .portfolio-modal .close-modal {
-    top: 15px;
-    right: 15px;
-    width: 45px;
-    height: 45px; }
+    top: 5px;
+    right: 25px;
+    width: 35px;
+    height: 35px; }
     .portfolio-modal .close-modal .lr {
-      height: 45px; }
+      height: 35px; }
       .portfolio-modal .close-modal .lr .rl {
-        height: 45px; }
+        height: 35px; }
   .modal-body {
     font-size: 0.8em; }
     .modal-body p.image-caption {
       font-size: 1em; } }
 
-@media (min-width: 450px) {
+@media (max-width: 450px) {
+  header {
+    background-size: cover;
+    max-height: 100vh !important; }
+    header .intro-text {
+      padding-top: 30vh; }
+      header .intro-text .intro-lead-in span {
+        display: block;
+        line-height: 1.2; }
+  #work .container {
+    padding: 0; }
   #work .portfolio-item .portfolio-link {
-    max-width: initial; } }
+    max-width: none; } }
