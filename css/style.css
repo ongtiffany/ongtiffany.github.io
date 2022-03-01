@@ -182,12 +182,12 @@ article header {
     font-style: italic;
     color: #cccccc; }
 
-@media (max-width: 60px) {
+@media (max-width: 600px) {
   article header {
     max-height: 100vh;
     height: 100vh; }
     article header h2 {
-      padding-top: 40vh; }
+      padding: 40vh 5px 0 5px; }
       article header h2 span {
         display: block; } }
 
