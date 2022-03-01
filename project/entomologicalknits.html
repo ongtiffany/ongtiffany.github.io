@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-white.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Water Consumption</h2>
+            <h3>Environment Awareness</h3>
+            </header>
+                <article>
+                    <h4>Project:</h4>
+                    <p>A personal project based on the very long showers my kids take. I wanted a way to explain to them how important water was and should be used sparingly but also in a very simplified way that they could relate to and empathise, so a lot might not be completely accurate.</p>
+                    
+                    <h4>Process:</h4>
+                    <p>I took the things they were most interested with at the time, and asked them to depict the few ways they used water. Photographed their creations and collaged them together with some numbers and ratios they could relate to and applied in their lives.</p>
+                    <figure>
+                        <img src="../img/project/water/tiago-waterconsumption.jpg" alt="collage of lego models and data annotation">
+                        <figcaption>
+                            Collage of scenarios, bar charts with lego and annotations
+</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/water/silvia-waterconsumption.jpg" alt="collage of drawings and data annotation">
+                        <figcaption>
+                            Collage of drawing the scenarios with annotation
+</figcaption>
+                    </figure>
+                    <h4>Conclusion:</h4>
+                    <p>They understood and showers were incredibly quick but unfortunately after a few weeks they didn’t seem to care much anymore and reverted back.
+                    </p>
+                    <a href="../index.html">
+                        <button>
+                            <span>&#x02A2F;</span> Close Project
+                        </button>
+                    </a>
+                </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2022</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJQ2K0VZ6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9XJQ2K0VZ6');
+    </script>
+</body>
+
+</html>

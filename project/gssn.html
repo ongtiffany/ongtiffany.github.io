@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-white.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>German Screen Studies Network</h2>
+            <h3>Research and Resource Hub</h3>
+        </header>
+        <article>
+            <h4>Project:</h4>
+            <p>The German Screen Studies Network was founded in June 2012 as a platform for informed comment and German-language film promotion amongst researchers, educators, film professionals, and the interested public.</p>
+            <p>The GSSN provides for a – most prominently the annual GSSN symposium, but also film talks, workshops and schools events - for public discussion and debate on German-language screen media. Acts as a research hub for national and international scholarship on German-language screen media. Promotes German-language films and other screen media to a broad-based anglophone public. Provides a resource base for professional researchers and others with research interests in German-language screen media.</p>
+            <h4>Process:</h4>
+            <p>This was my first project at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, working closely with another designer who managed the project and worked on most of the development. The project partner was a delight to work with and I really enjoyed the project. The original site was hosted on tumblr, with a logo that was quickly created using a word document. They wanted a new logo, keeping the abbreviations but also with a full title version, but with more refinement and identity to be used online and printed material.
+            </p>
+            <p>Once the client’s requirements were complete, our research began. Logos ideas were sketched taking any inspiration from film to German flags. During internal meetings, these were discussed and the selection narrowed down. The site design also went through a similar process, starting with the site map, and page content and function requirements.
+            </p>
+            <figure>
+                <img src="../img/project/gssn/original-site-logo.jpg" alt="original site and logo">
+                <figcaption>
+                    Original tumblr site and logo
+                </figcaption>
+                </a>
+            </figure>
+            <figure>
+                <img src="../img/project/gssn/sketchbook-ideas.jpg" alt="ideas sketched in sketchbook">
+                <figcaption>
+                    Sketchbook ideas
+                </figcaption>
+                </a>
+            </figure>
+            <figure>
+                <img src="../img/project/gssn/logo-options.jpg" alt="logo options">
+                <figcaption>
+                    Two final logo options
+                </figcaption>
+                </a>
+            </figure>
+            <figure>
+                <img src="../img/project/gssn/current-site1.jpg" alt="screenshot of current site">
+                <p class="image-caption">
+                    <figcaption>
+                        Screenshot of current site - News and events
+                    </figcaption>
+                    </a>
+            </figure>
+            <figure>
+                <img src="../img/project/gssn/current-site2.jpg" alt="screenshot of current site">
+                <p class="image-caption">
+                    <figcaption>
+                        Screenshot of current site - Landing page
+                    </figcaption>
+                    </a>
+            </figure>
+            <h4>Website:</h4>
+            <p>
+                <a href="http://germanscreenstudies.eu" target="_blank">http://germanscreenstudies.eu</a>
+            </p>
+            <a href="../index.html">
+                <button>
+                    <span>&#x02A2F;</span> Close Project
+                </button>
+            </a>
+        </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2022</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJQ2K0VZ6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9XJQ2K0VZ6');
+    </script>
+</body>
+
+</html>

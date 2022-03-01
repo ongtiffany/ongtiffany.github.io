@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-white.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Baby of the Year Competition</h2>
+            <h3>Form and administration page</h3>
+            </header>
+                <article>
+                    <h4>Project:</h4>
+                    <p>A regional annual baby of the year competition running over 20 years in newspaper print has recently integrated online. They have found a few adminstrative issues with the online process and wanted to improve it. Contestants fill up a form using jotform. Entries are download using jotform's spreadsheet. Selected entried are placed in the printed newspaper with their name, photo, and reference number. Online, an article is published with a slideshow image gallery of the contestant photos and the same details as the paper. Jotform adminstration process takes too long - Feedback from contestants that they would like to slect photos from their social media accounts, Facebook in particular - Not easy to find contestant to vote in image gallery.</p>
+                    
+                    <h4>Process:</h4>
+                    <p>This was a project that my manager gave to me to work on where I looked at the issues and tried to come up with a solution when I was working at Trinity Mirror, now known as <a href="https://www.reachplc.com/" target="_blank">Reach</a>. I designed the form and the dashboard, coded up everything in HTML and CSS, but handed over to my manager to implement its funtionality.</p>
+                    <figure>
+                        <img src="../img/project/baby/dashboard.jpg" alt="Screenshot of dashboard">
+                        <figcaption>
+                            Screenshot of dashboard
+</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/baby/form.jpg" alt="Form for competition entry">
+                        <figcaption>
+                            Screenshot of form
+</figcaption>
+                    </figure>
+                    <a href="../index.html">
+                        <button>
+                            <span>&#x02A2F;</span> Close Project
+                        </button>
+                    </a>
+                </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2022</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJQ2K0VZ6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9XJQ2K0VZ6');
+    </script>
+</body>
+
+</html>

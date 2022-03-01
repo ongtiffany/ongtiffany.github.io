@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-white.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>The Mao Era in Objects</h2>
+            <h3>Teaching Resource</h3>
+        </header>
+        <article>
+            <h4>Project:</h4>
+            <p>The website introduces twenty-four different objects that were made, used, talked and written about during the Mao Era. Some of these are famous, others less so. Some are large decorative objects, others solely intended for everyday use. Some might seem a more obvious object to examine than others. Visitors will find that some of the more famous objects associated with the era -- bicycles, ration coupons, chopsticks, pens, to name a few -- are currently not represented here. While biographies of these objects may follow in future, the website does not aim to present a comprehensive history or function as an object encyclopaedia. Contributors each write about their object from a different vantage point, variously focusing more on its making, representation, circulation, and use. The result is a selection of readings and interpretations that reflect contributors' individual expertise and research interests.</p>
+            <p>The project was lead by Dr Jennifer Altehenger, with the research software engineering team from <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>.
+            </p>
+            <h4>Process:</h4>
+            <p>I designed the overall look and feel of the site and also the functionality and user experience. I worked with two other developers, an analyst and the project lead and project assistant. I also attended workshop arranged by the project lead to find out more requirements from one of the main user groups which were teachers. I went on leave near the completion of the project and another designer tied up the loose ends.
+            </p>
+            <figure>
+                <img src="../img/project/mao/sitemap.png" alt="site map">
+                <figcaption>
+                    Site map work in progress
+                </figcaption>
+                </a>
+            </figure>
+            <figure>
+                <img src="../img/project/mao/mockups.jpg" alt="mockups examples">
+                <figcaption>
+                    Mockups of various parts of the site
+                </figcaption>
+                </a>
+            </figure>
+            <figure>
+                <img src="../img/project/mao/screenshot-currentsite.png" alt="Screenshot of new site">
+                <figcaption>
+                    Screenshot of the new site
+                </figcaption>
+                </a>
+            </figure>
+            <h4>Website:</h4>
+            <p>
+                <a href="https://maoeraobjects.ac.uk" target="_blank">https://maoeraobjects.ac.uk</a>
+            </p>
+            <a href="../index.html">
+                <button>
+                    <span>&#x02A2F;</span> Close Project
+                </button>
+            </a>
+        </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2022</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJQ2K0VZ6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9XJQ2K0VZ6');
+    </script>
+</body>
+
+</html>

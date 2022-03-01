@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-white.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Red Riding Hood</h2>
+            <h3>Data Visualisation</h3>
+            </header>
+                <article>
+                    <h4>Project:</h4>
+                    <p>I’ve been wanting to work on a data visualisation project for a while. I’ve been seeing more and more projects from others that had their own individual style and really wanted to try my hand at it to see what I could come up with. I had already dabbled with a few small pieces but nothing very polished. I knew it would also take me time to find my own style and get to a certain standard that I would be proud of.</p>
+                    <p>I’ve been immersing myself in data visualisation podcasts since they were a really accessible way for me to gain information with my tight schedule and could listen whilst completing household chores. I had taken in quite a lot of information, inspired, motivated, found the designers I liked the work of, ready to do something but never knew where to start. I stumbled on a <a href="https://www.domestika.org/en/courses/2495-data-visualization-and-information-design-create-a-visual-model/course" target="_blank">data visualisation course</a> from Frederica Fragapane, a designer whose work I found beautiful. There were a few other data visualisation courses on the site and watched all the introduction videos. Even though Frederica Fragapane's course was what I really wanted, I felt I needed a simpler one to ease me in. I chose the course from <a href="https://www.domestika.org/en/courses/3069-effective-data-visualization-transform-information-into-art/course" target="_blank">Sonja Kuijpers</a> as I was curious of her process and also liked her style. I used my 10% time at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a> and also personal time to complete this project.</p>
+                    <h4>Process:</h4>
+                    <p>The course assignment started by choosing a book that you had a personal or strong connection to. I didn’t have any so went to the <a href="https://www.gutenberg.org" target="_blank">Gutenburg Project</a> site as recommended and since I knew the data would be manually collected, I looked at children’s books as I knew they were usually a lot shorter in content.</p>
+                    <p>I found a few that made the shortlist but
+                        Red Riding Hood by Lydia Very that was published in 1863 really captured my attention because of the unique shape of the book and illustrations. Everything in it fit my criteria. Not much text or many pages. I was familiar with the story (or versions of it). I liked the illustrations and the language of writing.</p>
+                    <p>I realised <a href="https://www.gutenberg.org" target="_blank">Gutenburg Project</a> didn’t have the scanned version of the book. It was just the background with html text on top. I searched for the original versions of the book to gain a better idea how the book really looked like. <a href="https://www.worthpoint.com" target="_blank">Worthpoint</a> had a lot of examples but not full page versions. The best version I found was on <a href="https://archive.org" target="_blank">Internet Archive</a>.
+                        <figure>
+                            <img src="../img/project/redridinghood/originalbook.jpg" alt="original book pages laid out in a row">
+                            <figcaption>
+                                Original book pages laid out in a row
+                            </figcaption>
+                            </a>
+                        </figure>
+                        <p>I followed the course assignment, counting the characters on each chapter, but in my case was just pages. Then looked at other data that could be gathered, and jotted it down. The data collection was manual and slow. The process was a nice change to my usual work and quite therapeutic but was still very glad I chose a short book. I then typed in all up into Excel as I knew it would get messy and more calculations were needed. Used Word to get text word and character count.
+                        </p>
+                        <p>
+                            With most of the data at hand I started sketching out how I could visualise it. I had it in mind that I wanted to make the visualisation reflect the story as much as possible. I also knew I wanted to use simple geometric shapes. I had used it in previous projects and like the simplicity of it and also if I had to code it up (in css) it would be a lot easier.</p>
+                        <p>I started with the characters, knowing they were the main feature and made symbols for each. Thought it would be nice if I could create a scene with the data and making each page a tree seemed perfect to represent the woods and forest.
+                        </p>
+                        <figure>
+                            <img src="../img/project/redridinghood/sketchbook.jpg" alt="sketchbook drawings">
+                            <figcaption>
+                                Initial sketches in sketchbook
+                            </figcaption>
+                            </a>
+                        </figure>
+                        <p>The course used RAWgraphs to turn the data from a spreadsheet into svg shapes which could be downloaded and adapted in Illustrator. I had read about and tried unsuccessfully to plot anything before, so was glad to have figured out how to use it.
+                        </p>
+                        <figure>
+                            <img src="../img/project/redridinghood/rawgraphs.jpg" alt="screenshot of total letters on 16 pages on a bubble chart in RAWgraph">
+                            <figcaption>
+                                Screenshot of plotting total text characters (letters) on 16 pages on a bubble chart in RAWgraph
+                            </figcaption>
+                            </a>
+                        </figure>
+                        <p>I got to a point where I had everything I wanted but the layout. I had this idea that once I completed the layout I would next code it up to give it a bit of interactivity and make it responsive so didn’t want to complicate the layout but it just looked too stiff.</p>
+                        <figure>
+                            <img src="../img/project/redridinghood/flat.jpg" alt="first version">
+                            <figcaption>
+                                First version
+                            </figcaption>
+                            </a>
+                        </figure>
+                        <p>I decided to try to put it in a circle, which spaced the trees out too much and also didn’t make sense since the story wasn’t cyclical, but a semi circle seems to work and moved a few elements around to make it fit.</p>
+                        <p>The next stage of the assignment was to share it for feedback. I never like asking for feedback, not because of bad feedback but because of no feedback. There’s nothing more disappointing than putting your work and yourself out there, asking for feedback and getting nothing back, which I've experienced a few times so had a bit of apprehension. But I had a course forum and my work colleagues, and I really needed to get on with it so out it went.</p>
+                        <figure>
+                            <img src="../img/project/redridinghood/semicircle.jpg" alt="semi-circle layout">
+                            <figcaption>
+                                Semi-circle layout
+                            </figcaption>
+                            </a>
+                        </figure>
+                        <p> Only a couple of colleagues replied but they gave good feedback which was much appreciated. Things I missed were pointed out, and sentiment analysis was suggested. The course leader gave design suggestions which was really what I needed as I didn’t have a design community that I could easily turn to.</p>
+                        <p>
+                            Text sentiment analysis was something I’ve never worked on before. It meant categorising a word or section of text, into negative, positive or neutral. The more advanced analysis methods would give a metric scale to the sentiment, like negative 40%, or -0.4. I searched around for free online tools that I could do that easily with and although there were lots available, not many fit my requirements, which were: - Free, No signup, Gave a sentiment metric, Could analyse individual words and section of text, No coding needed.</p>
+                        <p>After quite a bit of searching and testing, I finally found one that did it all. <a href="http://monkeylearn.com" target="_blank">MonkeyLearn</a> had a demo tool that I could paste a the text of a page plus the individual words within it.
+                            <figure>
+                                <img src="../img/project/redridinghood/monkeylearn.jpg" alt="screenshot of monkeylearn">
+                                <figcaption>
+                                    Screenshot of sentiment analyzer tool on monkeylearn
+                                </figcaption>
+                                </a>
+                            </figure>
+                            <p>It would take too long and tedious to type and write down the score every word so I picked a few words from each page which I thought would have a high negative or positive score and listed it on an excel sheet. I then picked out the top 20 of the positive and negative words, including the repeated ones, but excluded the very positive word “mother” (according to the monkeylearn’s model) as it repeated 9 times. I found the scoring of quite a few words from the monkey learn model a bit questionable but it was quite a well known sentiment analysis tool, was the only one that fit all my requirements and I had spent so long getting the sentiment scores, I couldn’t bear to redo it all so continued.</p>
+                            <p>I marked the page sentiment over the tree which initially I wanted to use a more cloud like representation but it looked too much so opted for a thin curved solid or dotted line. The top 20 negative and positive words - circles in the tree representing the words were marked. This was from the suggestion from my colleague, who mentioned the circles could represent the sentiment analysis. I realised it could be better represented
+                                and tried to change the circles to a sunburst but it changed the look too much and I shelved the idea for the next project.</p>
+                            <p>I usually despise word clouds but thought it was quite appropriate to use them like actual clouds in the sky scene. It could give a rough sense of the most used words if someone wanted to look for them and also add some texture to the image and used a free online tool from <a href="https://www.jasondavies.com/wordcloud/" target="_blank">Jason Davis</a> that gave several options and allowed a svg download. The legend got even trickier with the additional information and I don’t know if many people would have the patience to read all that is there but hopefully it is useful for anyone who wants to read it. I worked on tweaking the rest the suggestions from the feedback. A darker background was one that took me far longer than I imagined. I still don’t think I have it right but I had exhausted almost every combination I could think of.</p>
+                            <figure>
+                                <img src="../img/project/redridinghood/final.jpg" alt="final poster">
+                                <figcaption>
+                                    Final poster
+                                </figcaption>
+                                </a>
+                            </figure>
+                            <h4>Conclusion:</h4>
+                            <p>I spent far longer than expected in this project and I’m not completely happy with many aspects of it. There are so many things I could improve on it like legibility, colours, fonts, layout.... the list could go
+                                on. But this was something I needed to do to make a step forward and I learnt a lot from it.
+                            </p>
+                            <a href="../index.html">
+                                <button>
+                                    <span>&#x02A2F;</span> Close Project
+                                </button>
+                            </a>
+                </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2022</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJQ2K0VZ6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9XJQ2K0VZ6');
+    </script>
+</body>
+
+</html>

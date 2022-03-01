@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-white.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Interactive Maps</h2>
+            <h3>Cartography</h3>
+            </header>
+                <article>
+                    <h4>Project:</h4>
+                    <p>The data unit department at Trinity Mirror, now known as <a href="https://www.reachplc.com/" target="_blank">Reach</a> requested a way to display data linked to locations on a map. </p>
+                    <h4>Process:</h4>
+                    <p>Research was carried out to find the latest map trends. A responsive solution was needed as the data and maps needed to be viewed on wide screens and narrow devices.</p>
+                    <p>After much research this design with a list of data titles with a map proved to be the best option using Leaflet When a data title or marker is selected, a popup appears with more data. The map layer can easily be changed as there are a variety of map tiles which I compiled a little library.</p>
+                    <p>This project is still ongoing and the next stage is so allow data to be entered or edited easily for editors, integration with google spreadsheets will be implemented. Search and category filters will also added.</p>
+                    <figure>
+                        <img src="../img/project/map/research.jpg" alt="Collage of visual research">
+                        <p class="image-caption">
+                            <figcaption>
+                                Visual research
+                            </figcaption>
+                            </a>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/map/wireframe.jpg" alt="Drawing of wireframe">
+                        <p class="image-caption">
+                            <figcaption>
+                                Wireframe, layout structure
+                            </figcaption>
+                            </a>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/map/example1.jpg" alt="Desktop and mobile view of map widget">
+                        <figcaption>
+                            Desktop and mobile view of map widget
+</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/map/example2.jpg" alt="Desktop and mobile view of map widget">
+                        <p class="image-caption">
+                            <figcaption>
+                                Desktop and mobile view of map widget
+                            </figcaption>
+                            </a>
+                    </figure>
+                    <a href="../index.html">
+                        <button>
+                            <span>&#x02A2F;</span> Close Project
+                        </button>
+                    </a>
+                </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2022</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJQ2K0VZ6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9XJQ2K0VZ6');
+    </script>
+</body>
+
+</html>
