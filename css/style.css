@@ -173,7 +173,8 @@ article header {
   background-size: cover;
   -o-background-size: cover;
   min-height: 150px;
-  max-height: 400px; }
+  max-height: 400px;
+  background-color: black; }
   article header h2 {
     padding-top: 300px;
     padding-bottom: 200px;
@@ -201,7 +202,8 @@ article header {
     float: left;
     width: 25%; }
     #work .item img {
-      width: 100%; }
+      width: 100%;
+      background: black; }
     #work .item .overlay {
       position: absolute;
       width: 25%;
@@ -246,7 +248,8 @@ article header {
       display: block;
       min-height: 100%;
       max-width: 100%;
-      opacity: 0.8; }
+      opacity: 0.8;
+      background: black; }
     .grid figure figcaption {
       padding: 1.5vw;
       color: #fff;
@@ -297,7 +300,8 @@ article header {
     .grid figure img {
       opacity: 1;
       -webkit-transition: opacity 0.3s;
-      transition: opacity 0.3s; }
+      transition: opacity 0.3s;
+      background: black; }
     .grid figure:hover img {
       opacity: 0.3; }
     .grid figure figcaption::before, .grid figure figcaption::after {
@@ -345,7 +349,8 @@ article header {
     -moz-transition: all ease 2s;
     transition: all ease 2s; }
     .readmore-state:checked ~ .readmore-target figure img {
-      height: auto; }
+      height: auto;
+      background: black; }
   .readmore-state:checked ~ .readmore-trigger:before {
     content: 'Show less'; }
   .readmore-state ~ .readmore-trigger:before {
@@ -360,7 +365,8 @@ article header {
   max-height: 0;
   font-size: 0; }
   .readmore-target figure img {
-    height: 0; }
+    height: 0;
+    background: black; }
 
 .readmore-trigger {
   cursor: pointer;
@@ -445,23 +451,33 @@ article header {
       font-size: 12px;
       text-transform: uppercase;
       line-height: 1.8; }
+    #project article h5 {
+      text-align: left;
+      border-left: 3px solid gray;
+      padding-left: 7px;
+      font-weight: normal;
+      font-size: 16px;
+      text-transform: uppercase; }
     #project article p {
       text-align: justify;
       margin: 0 0 30px 0;
       line-height: 2; }
-      #project article p ol {
-        text-align: left; }
+    #project article ol {
+      text-align: left; }
     #project article figure {
       width: 100%;
       margin: 60px 0;
       padding: 0; }
       #project article figure img {
-        width: 100%; }
+        width: 100%;
+        background: black; }
       #project article figure figcaption {
         font-size: 12px;
         background: gray;
         color: white;
         padding: 5px 0; }
+        #project article figure figcaption a {
+          color: white; }
     #project article a button {
       cursor: pointer;
       margin-top: 50px;
