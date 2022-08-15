@@ -43,7 +43,7 @@
         </header>
         <article>
             <h4>Project:</h4>
-            <p>I started another <a href="https://www.domestika.org/en/courses/2495-data-visualization-and-information-design-create-a-visual-model/course" target="_blank">data visualisation course</a> this time with Frederica Fragapane. I liked her style and was keen to learn about her process and methods which is explained in the course. Initially I thought of using a new topic and data set but there were a few ideas I didn't get to try out with my previous <a href="redridinghood.html" target="_blank">Red Riding Hood project</a>, and liked the idea of digging deeper more into it and see how differently it could be presented. I started the project using my 10% time at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, but ended up using about half of my personal time as it took a lot longer than I expected and I had a couple of weeks of leave so took the opportunity to work on the bulk of it, and slowly progressed months after.
+            <p>I started another <a href="https://www.domestika.org/en/courses/2495-data-visualization-and-information-design-create-a-visual-model/course" target="_blank">data visualisation course</a> this time with Frederica Fragapane. I liked her style and was keen to learn about her process and methods which is explained in the course. Initially I thought of using a new topic and data set but there were a few ideas I didn't get to try out with my previous <a href="redridinghood.html" target="_blank">Red Riding Hood project</a>, and liked the idea of digging deeper more into it and see how differently it could be presented. I started the project using my 10% time at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, but ended up using about half of my personal time as it took a lot longer than I expected and I had a couple of weeks of leave so took the opportunity to work on the initial bulk of it and slowly progressed months after.
                 <h4>Process:</h4>
                 <p><i>Note: </i> I took notes along the way to try improve my documentation process but it's turned into quite a long read.</p>
                 <h5>Background</h5>
@@ -54,10 +54,10 @@
                         Legend of sentiment analysis in previous <a href="redridinghood.html" target="_blank">Red Riding Hood</a> and work in progress examples trying out different styles
                     </figcaption>
                 </figure>
-                <p>I was really excited to follow the process which involved putting the data in a radar graph and manually placing each data point to fit. The process was tedious and repetitive but I didn't mind that. What I did mind, after trying it out with some data, was that it was far too easy for me to make an error with the placement and I didn't the risk of that happening. I knew I had to adapt to make it work for myself. The data also wasn't that clear in the previous project and I knew improvements could be made to the sentiment analysis and present that more clearly.</p>
+                <p>I was really excited to follow the process which involved putting the data in a radar graph and manually placing each data point to fit. The process was tedious and repetitive but I didn't mind that. What I did mind, after trying it out with some data, was that it was far too easy for me to make an error with the placement. I knew I had to adapt to make the process less error prone for myself. The data presented also wasn't that clear in the previous project and I knew improvements could be made to the sentiment analysis and present that more clearly.</p>
                 <h5>Data</h5>
                 <p>I thought I could fast track this stage since I was reusing the same data but I was wrong. I had used the free online sentiment analysis tool <a href="http://monkeylearn.com" target="_blank">MonkeyLearn</a> in the previous project as it was the best I found at the time that fit my requirements. I wanted to use it again so both projects would have the same data but when I listed down the results it gave for all the words on the first page, I wasn't satified with the results. "hood"(91.1%) and "above" (86.3%) were the top negative words, compared to "died" (54.8%) and "lonely" (51.8%) what I think are more negative. I was rather annoyed I didn't spot this earlier for the previous project. I had already spent quite a while searching for a sentiment analysis tool that would fit my requirements previously so I knew the search for an alternative would not be easy. I really wanted to stick with MonkeyLearn but the results just didn't sit well with me. I searched for quite a long time, past the first few pages of what the search results would give, and finally came across <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>. </p>
-                <p>The results were far better, "lonely" (-0.927) and "died" (-0.797) were the top negative words for the first page, and the process was also going to be much easier. With MonkeyLearn, I had to put the page text to get the page sentiment, and input each word individual to get the results. With <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>, I only had to put the page text and it gave the results of page sentiment and also results of all the positive and negative words on that page in one go so it would save me quite a lot of time. It doesn't give neutral word results but better that it doesn't as I would feel tempted to use it and really isn't needed.</p>
+                <p>The results were far better, "lonely" (-0.927) and "died" (-0.797) were the top negative words for the first page, and the process was also going to be much easier. With MonkeyLearn, I had to put the page text to get the page sentiment value, and input each word individual to get each word sentiment value. With <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>, I only had to put the page text and it gave the results of page sentiment and also results of all the positive and negative words on that page in one go so it would save me quite a lot of time. It didn't give neutral word values but better that way as I would feel tempted to use and visualise it.</p>
                 <figure>
                     <img src="../img/project/rrh2/sentiment-comparison.jpg" alt="sentiment tool comparison with charts and data in excel">
                     <figcaption>
@@ -65,7 +65,9 @@
                     </figcaption>
                 </figure>
                 <h5>Mockups</h5>
-                <p>Once I was satisfied with the new and extra sentiment data I collected, I started with my usual process of sketching down some ideas and layouts.
+                <p>Once I was satisfied with the new and additional sentiment data I collected, I started with my usual process of sketching down some ideas and layouts. With the previous project, there was a visual focus on the characters, and locations. With this project, I wanted to the focus to be on the sentiment and the words. 
+                </p>
+
                     <figure>
                         <img src="../img/project/rrh2/sketchbook.jpg" alt="scans of line drawings in sketchbook">
                         <figcaption>
@@ -130,36 +132,57 @@
                             <p>
                                 The connecting lines, lines and dots to mark the begin and end of a sentence get misaligned when scaled due to some elements being position manually so I had to change the design a little. After a few more iterations, I came up with a version that removed the begin and end points and represented the start with a darker colour and gradually fading to a lighter colour ar the end of the sentence on curved lines, replaced the rhyme lines with two side borders on the rhyme words, one pair with solid and the other pair with double.
                             </p>
-                            <h5>Putting it together</h5>
+                            <h5>Layout</h5>
                             <p>
                                 I wanted to have a default overview of all sixteen pages and able to zoom in to view each one in more detail. At first I thought I could scale down each page and on hover over would expand but it kept flickering from each version during the interactions. After a few trials, I got it working using the modal interaction I have used previously in several projects but with some added transitions. But I didn't like it.
                             </p>
                             <p>
                                 I went back to my sketchbook to draw out a few ideas and thought of making it more of a scrolltelly like piece so the user gets and overview of the project, how to read section, and overview of all the data visualisations, then moving on to the individual data visualisations with the hover interactions.
                             </p>
-                            <!--<figure>
-                                <img src="../img/project/rrh2/sketchbook.jpg" alt="scans of line drawings in sketchbook">
-                                <figcaption>
-                                    TO CHANGE IMAGE: Layout
-                                </figcaption>
-                            </figure>-->
-                            <p>
-                                I had to think of ways it would work on different screens especially smaller and touch screens and like with my work projects, I now try to have as few variations between the screen sizes so there is less to style and code up. I used as much CSS properties but ran into a few that either were not supported in all browsers and had to add a few Javascript snippets. I finally came up with a layout that I was happy with and tried documented all various <a href="https://codepen.io/collection/bNzGgq" target="_blank">prototype stages</a>.`
-                            </p>
-                            <p>
-                                The addition of the data of each page into the HTML and CSS also took far longer than expected as there were a lot of stages, from typing out individual words to styling each element along with tooltips. I tried to document some of the main code input processes but not everything as it would be too much.
 
-                            </p>
                             <figure>
-                                <img src="../img/project/rrh2/section-process.jpg" alt="screenshots of the some of the code process">
+                                <img src="../img/project/rrh2/layout.jpg" alt="Sketches and Mockups of layouts">
                                 <figcaption>
-                                    Screenshots of the some of the code process of the main sections
+                                    Sketches and Mockups of the some layout prototypes
                                 </figcaption>
                             </figure>
                             <p>
-                                There were a lot of small bits which turned out to be large bits and took ages. The "How to read" section was a lot trickier than expected and I had to re-write several times along with the gif animations as I couldn't think of good way with just static images. All the small elements that broke each time I added or edited some code and had to be fixed. And also all the breakpoints, testing and editing for different screen sizes and browsers - which I'm sure will be buggy on many I haven't covered. 
-
+                                I had to think of ways it would work on different screens especially smaller and touch screens and like with my work projects, I now try to have as few variations between the screen sizes so there is less to style and code up. I used as much CSS properties but ran into a few that either were not supported in all browsers and had to add a few Javascript snippets. I finally came up with a layout that I was happy with. 
                             </p>
+                            <h5>How to Read</h5>
+                            <p>
+                                The "How to read" section was a lot trickier than expected and I had to re-write several times along with the gif animations as I couldn't think of good way with just static images. Initially I wanted it as part of the main page combined with the scrollytelly function but thought it would be frustrating for a user who already knew how to read it to have to scroll through it all to get to the visualisation section so put it as a separate modal page. 
+                            </p>
+
+                            <h5>Data Entry</h5>
+
+                            <p>Until this point I had only input data for one page and left the other pages until the end since I knew it was just a case of data entry as I had all the structure in place. What I didn't realise was how long it would take as there were so many stages, I had added along the way. It took about 40 minutes to an hour per page. This was my process to input individual page data into HTML and CSS after the general code structure had been finalised:</p>
+
+                            <figure>
+                                <img src="../img/project/rrh2/data-entry-to-code-process.jpg" alt="screenshots of the some of the code process">
+                                <figcaption>
+                                    Screenshots of the some data entry into code process of the main page sections
+                                </figcaption>
+                            </figure>
+
+                            <ol>
+                                <li>Input page summary in HTML of the inner circle</li>
+                                    <ul>
+                                <li>Page number</li>
+                                <li>Number of words</li>
+                                <li>Two sets of rhyming words</li>
+                                <li>Page sentiment value</li>
+                                <li>Top emotion</li>
+                                </ul>
+                                <li>Input Emotion types and values in HTML, position height values in CSS</li>
+                                <li>Input individual word and sentiment value in HTML, colour sentiment value in CSS</li>
+                                <li>Add sentence lines in CSS</li>
+                                <li>Input borders for rhyming words in CSS</li>
+                                <li>Add Sentiment colour and opacity in CSS</li>
+                                <li>Add Page Text in HTML</li>
+                            </ol>
+                     
+
                             <figure>
                                 <img src="../img/project/rrh2/final-screenshot.jpg" alt="screenshot of final visualisation">
                                 <figcaption>
@@ -168,12 +191,15 @@
                             </figure>
                             <h4>Conclusion:</h4>
                             <p>
-                                I'm a little underwhelmed looking at the finished piece considering how long it has taken me. This project has burnt the retina of my eyes several times over several days, has kept me up long nights for months, but I have learnt a lot from it and hopefully I will be able to not take as long for my next project with less manual data input.
+                                This project took far longer than I expected, with lots of late nights but I have learnt a lot from it. It definitely takes much longer to code up and make a data visualisation interactive than a flat design due to all the time spent fixing elements that break each time I added or edited some code. And also having to test and code up various breakpoints, testing and editing for different screen sizes and browsers, many of which I haven't covered as I only tested on the devices and browsers I had to hand. The data entry took a long time and part of me feels I should have spent some time trying to put the data into json and used javascript to insert it to HTML which I have tried in other project prototypes in the past but never quite did a full version. Also made it a point to create a new prototype for each iteration and ended up with <a href="https://codepen.io/collection/bNzGgq" target="_blank">26 prototype stages</a>. 
+
+
+
                             </p>
                             <h4>Visualisation:</h4>
                             <p>
                                 <a href="https://ongtiffany.github.io/project/rrh2-viz.html" target="_blank">https://ongtiffany.github.io/project/rrh2-viz.html</a><br>
-                                (best viewed on a Chrome or Firefox browser on desktop)
+                                (best viewed on a Chrome or Firefox browser on desktop but not too large a screen)
                             </p>
                             <a href="../index.html">
                                 <button>
