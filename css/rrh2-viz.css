@@ -7,6 +7,7 @@ html {
 body {
   width: 90%;
   padding: 0 5%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -338,7 +339,7 @@ nav ol a {
   font-size: 1.7vw;
   border-radius: 50%;
   font-family: "Amatic SC", cursive;
-  border: 0.2vw solid white;
+  border: 0.24vw solid white;
   line-height: 2.4;
   font-family: "Coming Soon";
   font-family: "Yomogi";
@@ -362,10 +363,10 @@ nav ol a:before {
 nav ol a:after {
   position: absolute;
   content: "";
-  left: -6.5%;
-  top: -6.5%;
-  width: 113%;
-  height: 113%;
+  left: -9%;
+  top: -9%;
+  width: 118%;
+  height: 118%;
   border-radius: 50%;
   z-index: -2;
 }
@@ -429,111 +430,112 @@ nav ol a:nth-child(3) {
 }
 nav ol a:nth-child(3):after {
   background-image: conic-gradient(gray 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 300.94deg, white 300.94deg 359.66deg);
 }
 nav ol a:nth-child(4) {
   top: calc(4.8vw - (7vw * -0.185));
   background: rgba(150, 150, 150, 0.259);
 }
 nav ol a:nth-child(4):after {
-  background-image: conic-gradient(gray 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 293.6deg, white 293.6deg 359.66deg);
 }
 nav ol a:nth-child(5) {
   top: calc(4.8vw - (7vw * 0.162));
   background: rgba(201, 162, 40, 0.2268);
 }
 nav ol a:nth-child(5):after {
-  background-image: conic-gradient(gray 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 300.94deg, white 300.94deg 359.66deg);
 }
 nav ol a:nth-child(6) {
   top: calc(4.8vw - (7vw * 0.180));
   background: rgba(201, 162, 40, 0.252);
 }
 nav ol a:nth-child(6):after {
-  background-image: conic-gradient(gray 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 293.6deg, white 293.6deg 359.66deg);
 }
 nav ol a:nth-child(7) {
   top: calc(4.8vw - (7vw * -0.102));
   background: rgba(150, 150, 150, 0.1428);
 }
 nav ol a:nth-child(7):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 293.6deg, white 293.6deg 359.66deg);
 }
 nav ol a:nth-child(8) {
   top: calc(4.8vw - (7vw * 0.058));
   background: rgba(201, 162, 40, 0.0812);
 }
 nav ol a:nth-child(8):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 315.62deg, white 315.62deg 359.66deg);
 }
 nav ol a:nth-child(9) {
   top: calc(4.8vw - (7vw * 0.247));
   background: rgba(201, 162, 40, 0.3458);
 }
 nav ol a:nth-child(9):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 315.62deg, white 315.62deg 359.66deg);
 }
 nav ol a:nth-child(10) {
   top: calc(4.8vw - (7vw * 0.041));
   background: rgba(201, 162, 40, 0.0574);
 }
 nav ol a:nth-child(10):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 308.28deg, white 308.28deg 359.66deg);
 }
 nav ol a:nth-child(11) {
   top: calc(4.8vw - (7vw * 0.168));
   background: rgba(201, 162, 40, 0.2352);
 }
 nav ol a:nth-child(11):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 286.26deg, white 286.26deg 359.66deg);
 }
 nav ol a:nth-child(12) {
   top: calc(4.8vw - (7vw * 0.068));
   background: rgba(201, 162, 40, 0.0952);
 }
 nav ol a:nth-child(12):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 286.26deg, white 286.26deg 359.66deg);
 }
 nav ol a:nth-child(13) {
   top: calc(4.8vw - (7vw * 0.029));
   background: rgba(201, 162, 40, 0.0406);
 }
 nav ol a:nth-child(13):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 330.3deg, white 330.3deg 359.66deg);
 }
 nav ol a:nth-child(14) {
   top: calc(4.8vw - (7vw * 0.432));
   background: rgba(201, 162, 40, 0.6048);
 }
 nav ol a:nth-child(14):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 315.62deg, white 315.62deg 359.66deg);
 }
 nav ol a:nth-child(15) {
   top: calc(4.8vw - (7vw * 0.320));
   background: rgba(201, 162, 40, 0.448);
 }
 nav ol a:nth-child(15):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 359.66deg);
 }
 nav ol a:nth-child(16) {
   top: calc(4.8vw - (7vw * 0.167));
   background: rgba(201, 162, 40, 0.2338);
 }
 nav ol a:nth-child(16):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 344.98deg, white 344.98deg 359.66deg);
 }
 nav ol a:nth-child(17) {
   top: calc(4.8vw - (7vw * -0.464));
   background: rgba(150, 150, 150, 0.6496);
 }
 nav ol a:nth-child(17):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 300.94deg, white 300.94deg 359.66deg);
 }
 nav ol a:nth-child(18) {
   top: calc(4.8vw - (7vw * -0.043));
   background: rgba(150, 150, 150, 0.0602);
 }
 nav ol a:nth-child(18):after {
-  background-image: conic-gradient(#555 7deg 292deg, white 292deg 358.5deg);
+  background: conic-gradient(gray 7.34deg 344.98deg, white 344.98deg 359.66deg);
 }
 nav .active {
   color: white;
@@ -1835,7 +1837,6 @@ section .reworked-wrapper .page .word .tooltip:hover {
 section .text-wrapper {
   margin: 10vw 0 0 0;
   width: 100%;
-  font-family: "Parisienne", cursive;
   font-family: "Dancing Script";
   font-size: 1.7vw;
   letter-spacing: 0.07vw;
@@ -1849,7 +1850,6 @@ section .text-wrapper {
 section .text-wrapper h3 {
   margin: 0;
   font-size: 0.8em;
-  /* text-decoration: underline; */
   padding: 2vw 0 0 0;
   color: black;
   text-align: center;
@@ -1859,8 +1859,8 @@ section .text-wrapper ol {
   counter-reset: restyle;
   background: rgba(255, 255, 255, 0.9);
   display: inline-block;
-  padding: 0 0 0 4%;
-  width: 27%;
+  padding: 0 0% 0 4%;
+  width: 32%;
   text-align: left;
   border: 4px double white;
 }
@@ -2033,7 +2033,7 @@ section .reworked-wrapper .page2 .word:nth-child(43) > span {
 }
 
 section .reworked-wrapper .page3 {
-  background: conic-gradient(#555 7deg 7.1deg, lightgray 20deg 20.5deg, white 20.5deg 27.7deg, #555 27.7deg 27.8deg, lightgray 56.3deg 57.3deg, white 57.3deg 64.3deg, #555 64.3deg 64.4deg, lightgray 100deg 101deg, white 101deg 108deg, #555 108deg 108.1deg, lightgray 144.9deg 145deg, white 145deg 152deg, #555 152deg 152.1deg, lightgray 181.9deg 182deg, white 182deg 188.9deg, #555 188.9deg 189deg, lightgrey 210deg 211deg, white 211.3deg 218.2deg, #555 218.2deg 218.3deg, lightgray 245.3deg 255.3deg, white 255.3deg 262.5deg, #555 262.5deg 262.6deg, lightgray 291deg 292deg, white 292deg 358.5deg, #555 358.5deg 7deg);
+  background: conic-gradient(black 7.34deg, white 22.02deg 29.36deg, black 29.36deg, white 58.72deg 66.06deg, black 66.06deg, white 102.76deg 110.1deg, black 110.1deg, white 146.8deg 154.14deg, black 154.14deg, white 176.16deg 183.5deg, black 183.5deg, white 212.86deg 220.2deg, black 220.2deg, white 256.9deg 264.24deg, black 264.24deg, white 293.6deg 300.94deg);
 }
 section .reworked-wrapper .page3 > .emotion:nth-child(1) > span {
   height: calc(1.996vw + (29.8206vw * 0.0131));
@@ -2054,10 +2054,10 @@ section .reworked-wrapper .page3 > .emotion:nth-child(6) > span {
   height: calc(1.996vw + (29.8206vw * 0.0005));
 }
 section .reworked-wrapper .page3 .innercircle {
-  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.162));
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.1797));
 }
 section .reworked-wrapper .page3 .innercircle:hover {
-  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.162));
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.1797));
 }
 section .reworked-wrapper .page3 .word {
   /* SENTIMENT SHADES */
@@ -2100,6 +2100,383 @@ section .reworked-wrapper .page3 .word:nth-child(42) > span {
 }
 section .reworked-wrapper .page3 .word:nth-child(48) > span {
   background: rgba(150, 150, 150, 0.0715);
+}
+
+section .reworked-wrapper .page4 {
+  background: conic-gradient(black 7.34deg, white 36.7deg 44.04deg, black 44.04deg, white 73.4deg 80.74deg, black 80.74deg, white 102.76deg 110.1deg, black 110.1deg, white 139.46deg 146.8deg, black 146.8deg, white 176.16deg 183.5deg, black 183.5deg, white 212.86deg 220.2deg, black 220.2deg, white 256.9deg 264.24deg, black 264.24deg, white 286.26deg 293.6deg);
+}
+section .reworked-wrapper .page4 > .emotion:nth-child(1) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0189));
+}
+section .reworked-wrapper .page4 > .emotion:nth-child(2) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0042));
+}
+section .reworked-wrapper .page4 > .emotion:nth-child(3) > span {
+  height: 0;
+}
+section .reworked-wrapper .page4 > .emotion:nth-child(4) > span {
+  height: 0;
+}
+section .reworked-wrapper .page4 > .emotion:nth-child(5) > span {
+  height: 0;
+}
+section .reworked-wrapper .page4 > .emotion:nth-child(6) > span {
+  height: 0;
+}
+section .reworked-wrapper .page4 .innercircle {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.162));
+}
+section .reworked-wrapper .page4 .innercircle:hover {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.162));
+}
+section .reworked-wrapper .page4 .word {
+  /* SENTIMENT SHADES */
+}
+section .reworked-wrapper .page4 .word:nth-child(17) > span, section .reworked-wrapper .page4 .word:nth-child(26) > span {
+  border-left: 0.2vw solid black;
+}
+section .reworked-wrapper .page4 .word:nth-child(35) > span, section .reworked-wrapper .page4 .word:nth-child(46) > span {
+  border-right: 0.4vw double black;
+}
+section .reworked-wrapper .page4 .word:nth-child(11) > span {
+  background: #c9a228;
+}
+section .reworked-wrapper .page4 .word:nth-child(13) > span {
+  background: rgba(201, 162, 40, 0.9147);
+}
+section .reworked-wrapper .page4 .word:nth-child(15) > span {
+  background: rgba(201, 162, 40, 0.9387);
+}
+section .reworked-wrapper .page4 .word:nth-child(17) > span {
+  background: #c9a228;
+}
+section .reworked-wrapper .page4 .word:nth-child(22) > span {
+  background: rgba(201, 162, 40, 0.9424);
+}
+section .reworked-wrapper .page4 .word:nth-child(23) > span {
+  background: rgba(201, 162, 40, 0.1179);
+}
+section .reworked-wrapper .page4 .word:nth-child(32) > span {
+  background: rgba(201, 162, 40, 0.1921);
+}
+section .reworked-wrapper .page4 .word:nth-child(43) > span {
+  background: rgba(201, 162, 40, 0.1713);
+}
+section .reworked-wrapper .page4 .word:nth-child(27) > span {
+  background: rgba(201, 162, 40, 0.152);
+}
+section .reworked-wrapper .page4 .word:nth-child(35) > span {
+  background: rgba(201, 162, 40, 0.0984);
+}
+section .reworked-wrapper .page4 .word:nth-child(41) > span {
+  background: rgba(150, 150, 150, 0.9277);
+}
+section .reworked-wrapper .page4 .word:nth-child(39) > span {
+  background: rgba(150, 150, 150, 0.7928);
+}
+section .reworked-wrapper .page4 .word:nth-child(44) > span {
+  background: rgba(150, 150, 150, 0.7928);
+}
+section .reworked-wrapper .page4 .word:nth-child(46) > span {
+  background: rgba(150, 150, 150, 0.4541);
+}
+section .reworked-wrapper .page4 .word:nth-child(19) > span {
+  background: rgba(150, 150, 150, 0.1264);
+}
+section .reworked-wrapper .page4 .word:nth-child(28) > span {
+  background: rgba(150, 150, 150, 0.1264);
+}
+section .reworked-wrapper .page4 .word:nth-child(28) > span {
+  background: rgba(150, 150, 150, 0.1264);
+}
+
+section .reworked-wrapper .page5 {
+  background: conic-gradient(black 7.34deg, white 36.7deg 44.04deg, black 44.04deg, white 73.4deg 80.74deg, black 80.74deg, white 102.76deg 110.1deg, black 110.1deg, white 139.46deg 146.8deg, black 146.8deg, white 176.16deg 183.5deg, black 183.5deg, white 212.86deg 220.2deg, black 220.2deg, white 256.9deg 264.24deg, black 264.24deg, white 286.26deg 293.6deg);
+}
+section .reworked-wrapper .page5 > .emotion:nth-child(1) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0189));
+}
+section .reworked-wrapper .page5 > .emotion:nth-child(2) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0042));
+}
+section .reworked-wrapper .page5 > .emotion:nth-child(3) > span {
+  height: 0;
+}
+section .reworked-wrapper .page5 > .emotion:nth-child(4) > span {
+  height: 0;
+}
+section .reworked-wrapper .page5 > .emotion:nth-child(5) > span {
+  height: 0;
+}
+section .reworked-wrapper .page5 > .emotion:nth-child(6) > span {
+  height: 0;
+}
+section .reworked-wrapper .page5 .innercircle {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(150, 150, 150, 0.102));
+}
+section .reworked-wrapper .page5 .innercircle:hover {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(150, 150, 150, 0.102));
+}
+section .reworked-wrapper .page5 .word {
+  /* SENTIMENT SHADES */
+}
+section .reworked-wrapper .page5 .word:nth-child(18) > span, section .reworked-wrapper .page5 .word:nth-child(27) > span {
+  border-left: 0.2vw solid black;
+}
+section .reworked-wrapper .page5 .word:nth-child(37) > span, section .reworked-wrapper .page5 .word:nth-child(47) > span {
+  border-right: 0.4vw double black;
+}
+section .reworked-wrapper .page5 .word:nth-child(42) > span {
+  background: rgba(201, 162, 40, 0.238);
+}
+section .reworked-wrapper .page5 .word:nth-child(47) > span {
+  background: rgba(201, 162, 40, 0.134);
+}
+section .reworked-wrapper .page5 .word:nth-child(15) > span {
+  background: rgba(201, 162, 40, 0.134);
+}
+section .reworked-wrapper .page5 .word:nth-child(37) > span {
+  background: rgba(201, 162, 40, 0.117);
+}
+section .reworked-wrapper .page5 .word:nth-child(28) > span {
+  background: rgba(201, 162, 40, 0.103);
+}
+section .reworked-wrapper .page5 .word:nth-child(17) > span {
+  background: rgba(150, 150, 150, 0.927);
+}
+section .reworked-wrapper .page5 .word:nth-child(21) > span {
+  background: rgba(150, 150, 150, 0.1105);
+}
+section .reworked-wrapper .page5 .word:nth-child(32) > span {
+  background: rgba(150, 150, 150, 0.096);
+}
+
+section .reworked-wrapper .page6 {
+  background: conic-gradient(black 7.34deg, white 29.36deg 36.7deg, black 36.7deg, white 73.4deg 80.74deg, black 80.74deg, white 117.44deg 124.78deg, black 124.78deg, white 154.14deg 161.48deg, black 161.48deg, white 190.84deg 198.18deg, black 198.18deg, white 220.2deg 227.54deg, black 227.54deg, white 264.24deg 271.58deg, black 271.58deg, white 308.28deg 315.62deg);
+}
+section .reworked-wrapper .page6 > .emotion:nth-child(1) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0901));
+}
+section .reworked-wrapper .page6 > .emotion:nth-child(2) > span {
+  height: 0;
+}
+section .reworked-wrapper .page6 > .emotion:nth-child(3) > span {
+  height: 0;
+}
+section .reworked-wrapper .page6 > .emotion:nth-child(4) > span {
+  height: 0;
+}
+section .reworked-wrapper .page6 > .emotion:nth-child(5) > span {
+  height: 0;
+}
+section .reworked-wrapper .page6 > .emotion:nth-child(6) > span {
+  height: 0;
+}
+section .reworked-wrapper .page6 .innercircle {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.0576));
+}
+section .reworked-wrapper .page6 .innercircle:hover {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.0576));
+}
+section .reworked-wrapper .page6 .word {
+  /* SENTIMENT SHADES */
+}
+section .reworked-wrapper .page6 .word:nth-child(18) > span, section .reworked-wrapper .page6 .word:nth-child(29) > span {
+  border-left: 0.2vw solid black;
+}
+section .reworked-wrapper .page6 .word:nth-child(38) > span, section .reworked-wrapper .page6 .word:nth-child(50) > span {
+  border-right: 0.4vw double black;
+}
+section .reworked-wrapper .page6 .word:nth-child(16) > span {
+  background: rgba(201, 162, 40, 0.955);
+}
+section .reworked-wrapper .page6 .word:nth-child(18) > span {
+  background: rgba(201, 162, 40, 0.914);
+}
+section .reworked-wrapper .page6 .word:nth-child(48) > span {
+  background: rgba(201, 162, 40, 0.649);
+}
+section .reworked-wrapper .page6 .word:nth-child(30) > span {
+  background: rgba(201, 162, 40, 0.192);
+}
+section .reworked-wrapper .page6 .word:nth-child(29) > span {
+  background: rgba(201, 162, 40, 0.152);
+}
+section .reworked-wrapper .page6 .word:nth-child(46) > span {
+  background: rgba(201, 162, 40, 0.134);
+}
+section .reworked-wrapper .page6 .word:nth-child(22) > span {
+  background: rgba(201, 162, 40, 0.113);
+}
+section .reworked-wrapper .page6 .word:nth-child(20) > span {
+  background: rgba(201, 162, 40, 0.105);
+}
+section .reworked-wrapper .page6 .word:nth-child(27) > span {
+  background: rgba(201, 162, 40, 0.103);
+}
+section .reworked-wrapper .page6 .word:nth-child(33) > span {
+  background: rgba(150, 150, 150, 0.678);
+}
+section .reworked-wrapper .page6 .word:nth-child(21) > span {
+  background: rgba(150, 150, 150, 0.625);
+}
+section .reworked-wrapper .page6 .word:nth-child(24) > span {
+  background: rgba(150, 150, 150, 0.366);
+}
+section .reworked-wrapper .page6 .word:nth-child(42) > span {
+  background: rgba(150, 150, 150, 0.254);
+}
+section .reworked-wrapper .page6 .word:nth-child(9) > span {
+  background: rgba(150, 150, 150, 0.221);
+}
+section .reworked-wrapper .page6 .word:nth-child(36) > span {
+  background: rgba(150, 150, 150, 0.221);
+}
+section .reworked-wrapper .page6 .word:nth-child(31) > span {
+  background: rgba(150, 150, 150, 0.126);
+}
+
+section .reworked-wrapper .page7 {
+  background: conic-gradient(black 7.34deg, white 29.36deg 36.7deg, black 36.7deg, white 66.06deg 73.4deg, black 73.4deg, white 110.1deg 117.44deg, black 117.44deg, white 146.8deg 154.14deg, black 154.14deg, white 183.5deg 190.84deg, black 190.84deg, white 220.2deg 227.54deg, black 227.54deg, white 256.9deg 264.24deg, black 264.24deg, white 300.94deg 308.28deg);
+}
+section .reworked-wrapper .page7 > .emotion:nth-child(1) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0282));
+}
+section .reworked-wrapper .page7 > .emotion:nth-child(2) > span {
+  height: 0;
+}
+section .reworked-wrapper .page7 > .emotion:nth-child(3) > span {
+  height: 0;
+}
+section .reworked-wrapper .page7 > .emotion:nth-child(4) > span {
+  height: 0;
+}
+section .reworked-wrapper .page7 > .emotion:nth-child(5) > span {
+  height: 0;
+}
+section .reworked-wrapper .page7 > .emotion:nth-child(6) > span {
+  height: 0;
+}
+section .reworked-wrapper .page7 .innercircle {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.2476));
+}
+section .reworked-wrapper .page7 .innercircle:hover {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.2476));
+}
+section .reworked-wrapper .page7 .word {
+  /* SENTIMENT SHADES */
+}
+section .reworked-wrapper .page7 .word:nth-child(17) > span, section .reworked-wrapper .page7 .word:nth-child(28) > span {
+  border-left: 0.2vw solid black;
+}
+section .reworked-wrapper .page7 .word:nth-child(38) > span, section .reworked-wrapper .page7 .word:nth-child(49) > span {
+  border-right: 0.4vw double black;
+}
+section .reworked-wrapper .page7 .word:nth-child(36) > span {
+  background: #c9a228;
+}
+section .reworked-wrapper .page7 .word:nth-child(43) > span {
+  background: rgba(201, 162, 40, 0.881);
+}
+section .reworked-wrapper .page7 .word:nth-child(23) > span {
+  background: rgba(201, 162, 40, 0.806);
+}
+section .reworked-wrapper .page7 .word:nth-child(25) > span {
+  background: rgba(201, 162, 40, 0.238);
+}
+section .reworked-wrapper .page7 .word:nth-child(42) > span {
+  background: rgba(201, 162, 40, 0.238);
+}
+section .reworked-wrapper .page7 .word:nth-child(35) > span {
+  background: rgba(201, 162, 40, 0.192);
+}
+section .reworked-wrapper .page7 .word:nth-child(40) > span {
+  background: rgba(201, 162, 40, 0.192);
+}
+section .reworked-wrapper .page7 .word:nth-child(49) > span {
+  background: rgba(201, 162, 40, 0.152);
+}
+section .reworked-wrapper .page7 .word:nth-child(17) > span {
+  background: rgba(201, 162, 40, 0.117);
+}
+section .reworked-wrapper .page7 .word:nth-child(30) > span {
+  background: rgba(201, 162, 40, 0.117);
+}
+section .reworked-wrapper .page7 .word:nth-child(10) > span {
+  background: rgba(150, 150, 150, 0.126);
+}
+section .reworked-wrapper .page7 .word:nth-child(32) > span {
+  background: rgba(150, 150, 150, 0.11);
+}
+section .reworked-wrapper .page7 .word:nth-child(21) > span {
+  background: rgba(150, 150, 150, 0.071);
+}
+section .reworked-wrapper .page7 .word:nth-child(28) > span {
+  background: rgba(150, 150, 150, 0.071);
+}
+
+section .reworked-wrapper .page8 {
+  background: conic-gradient(black 7.34deg, white 22.02deg 29.36deg, black 29.36deg, white 66.06deg 73.4deg, black 73.4deg, white 110.1deg 117.44deg, black 117.44deg, white 154.14deg 161.48deg, black 161.48deg, white 183.5deg 190.84deg, black 190.84deg, white 227.54deg 234.88deg, black 234.88deg, white 264.24deg 271.58deg, black 271.58deg, white 300.94deg 308.28deg);
+}
+section .reworked-wrapper .page8 > .emotion:nth-child(1) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0117));
+}
+section .reworked-wrapper .page8 > .emotion:nth-child(2) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0133));
+}
+section .reworked-wrapper .page8 > .emotion:nth-child(3) > span {
+  height: calc(1.996vw + (29.8206vw * 0.0173));
+}
+section .reworked-wrapper .page8 > .emotion:nth-child(4) > span {
+  height: 0;
+}
+section .reworked-wrapper .page8 > .emotion:nth-child(5) > span {
+  height: 0;
+}
+section .reworked-wrapper .page8 > .emotion:nth-child(6) > span {
+  height: 0;
+}
+section .reworked-wrapper .page8 .innercircle {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.0412));
+}
+section .reworked-wrapper .page8 .innercircle:hover {
+  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.0412));
+}
+section .reworked-wrapper .page8 .word {
+  /* SENTIMENT SHADES */
+}
+section .reworked-wrapper .page8 .word:nth-child(17) > span, section .reworked-wrapper .page8 .word:nth-child(29) > span {
+  border-left: 0.2vw solid black;
+}
+section .reworked-wrapper .page8 .word:nth-child(39) > span, section .reworked-wrapper .page8 .word:nth-child(49) > span {
+  border-right: 0.4vw double black;
+}
+section .reworked-wrapper .page8 .word:nth-child(46) > span {
+  background: rgba(201, 162, 40, 0.955);
+}
+section .reworked-wrapper .page8 .word:nth-child(15) > span {
+  background: rgba(201, 162, 40, 0.476);
+}
+section .reworked-wrapper .page8 .word:nth-child(18) > span {
+  background: rgba(201, 162, 40, 0.192);
+}
+section .reworked-wrapper .page8 .word:nth-child(19) > span {
+  background: rgba(201, 162, 40, 0.117);
+}
+section .reworked-wrapper .page8 .word:nth-child(29) > span {
+  background: rgba(201, 162, 40, 0.117);
+}
+section .reworked-wrapper .page8 .word:nth-child(30) > span {
+  background: #969696;
+}
+section .reworked-wrapper .page8 .word:nth-child(13) > span {
+  background: rgba(150, 150, 150, 0.113);
+}
+section .reworked-wrapper .page8 .word:nth-child(35) > span {
+  background: rgba(150, 150, 150, 0.083);
+}
+section .reworked-wrapper .page8 .word:nth-child(45) > span {
+  background: rgba(150, 150, 150, 0.071);
 }
 
 footer {
