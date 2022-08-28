@@ -9,6 +9,7 @@ body {
   text-align: center; }
 
 * {
+  width: 100%;
   box-sizing: border-box; }
 
 a {
@@ -358,7 +359,14 @@ article header {
   .readmore-state ~ label.readmore-trigger {
     margin: 5em 0 6em 0;
     display: inline-block;
-    border: 1px solid black; }
+    border: 1px solid black;
+    width: 10em;
+    text-align: center;
+    -webkit-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in; }
 
 .readmore-target {
   opacity: 0;
@@ -462,7 +470,7 @@ article header {
       text-align: justify;
       margin: 0 0 30px 0;
       line-height: 2; }
-    #project article ol {
+    #project article ul, #project article ol {
       text-align: left; }
     #project article figure {
       width: 100%;
