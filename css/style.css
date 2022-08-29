@@ -6,10 +6,10 @@ body {
   margin: 0;
   height: 100%;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
 
 * {
-  width: 100%;
   box-sizing: border-box; }
 
 a {
@@ -327,15 +327,21 @@ article header {
       transform: scale(1, 0); }
     .grid figure h2 {
       padding: 25% 4% 0 4%;
-      -webkit-transition: -webkit-transform 0.35s;
-      transition: transform 0.5s;
+      -webkit-transition: all 300ms ease-in;
+      -moz-transition: all 300ms ease-in;
+      -ms-transition: all 300ms ease-in;
+      -o-transition: all 300ms ease-in;
+      transition: all 300ms ease-in;
       -webkit-transform: translate3d(0, -20px, 0);
       transform: translate3d(0, -20px, 0); }
     .grid figure p {
       padding: 20px 2.5em;
       opacity: 0;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transition: all 300ms ease-in;
+      -moz-transition: all 300ms ease-in;
+      -ms-transition: all 300ms ease-in;
+      -o-transition: all 300ms ease-in;
+      transition: all 300ms ease-in;
       -webkit-transform: translate3d(0, 20px, 0);
       transform: translate3d(0, 20px, 0); }
 
@@ -346,9 +352,11 @@ article header {
     opacity: 1;
     font-size: inherit;
     max-height: 999em;
-    -webkit-transition: all ease 2s;
-    -moz-transition: all ease 2s;
-    transition: all ease 2s; }
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in; }
     .readmore-state:checked ~ .readmore-target figure img {
       height: auto;
       background: black; }
@@ -361,12 +369,7 @@ article header {
     display: inline-block;
     border: 1px solid black;
     width: 10em;
-    text-align: center;
-    -webkit-transition: all 300ms ease-in;
-    -moz-transition: all 300ms ease-in;
-    -ms-transition: all 300ms ease-in;
-    -o-transition: all 300ms ease-in;
-    transition: all 300ms ease-in; }
+    text-align: center; }
 
 .readmore-target {
   opacity: 0;
@@ -388,9 +391,11 @@ article header {
   .readmore-trigger:hover {
     background-color: black;
     color: white;
-    -webkit-transition: all ease 1s;
-    -moz-transition: all ease 1s;
-    transition: all ease 1s; }
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    -ms-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
+    transition: all 100ms ease-in; }
 
 #about {
   background-attachment: scroll;
