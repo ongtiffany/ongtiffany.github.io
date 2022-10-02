@@ -23,6 +23,12 @@ a {
 section {
   display: block; }
 
+figure {
+  width: 100%; }
+  figure img {
+    width: 100%;
+    background: black; }
+
 nav {
   position: fixed;
   top: 0;
