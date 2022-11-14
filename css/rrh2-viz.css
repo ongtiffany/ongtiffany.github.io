@@ -30,9 +30,10 @@ h2.side {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  left: -1vw;
+  left: -6vw;
   position: absolute;
   font-size: 1.5vw;
+  margin: -4vw 0 0 0;
 }
 h2.story {
   margin-bottom: 50vw;
@@ -179,9 +180,15 @@ section ol.horizontal, section ul.horizontal {
   margin: 5vw 0;
 }
 section ol.vertical, section ul.vertical {
-  margin: 20vw 0 2vw 0;
+  margin: 0 0 2vw 0;
   display: flex;
   margin-left: calc(-80px + 2.8vw);
+}
+section ol.vertical.characters, section ul.vertical.characters {
+  margin-top: 20vw;
+}
+section ol.vertical.locations, section ul.vertical.locations {
+  margin-bottom: 10vw;
 }
 section ol.vertical > li, section ul.vertical > li {
   width: 3.6vw;
@@ -1434,6 +1441,7 @@ section .reworked-wrapper .page .innercircle h2 {
   border-radius: 50%;
   margin: 0 0 0 0;
   position: initial;
+  border: 0;
 }
 section .reworked-wrapper .page .innercircle dl dt {
   font-family: "Amatic SC", cursive;
@@ -1495,6 +1503,10 @@ section .reworked-wrapper .page .innercircle span.tooltiptext ol li:before {
 section .reworked-wrapper .page .innercircle span.tooltiptext ol li.woods:before, section .reworked-wrapper .page .innercircle span.tooltiptext ol li.forest:before {
   left: -1vw;
   padding-bottom: 0.3vw;
+}
+section .reworked-wrapper .page .innercircle span.tooltiptext ol li.cabin:after {
+  left: 1.2vw;
+  top: -1vw;
 }
 section .reworked-wrapper .page .word {
   width: 9.5%;
