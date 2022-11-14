@@ -13,16 +13,36 @@ body {
 h1 {
   font-family: "Clicker Script";
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 3em;
 }
 
 h2 {
   text-align: center;
-  font-family: "Homemade Apple";
-  font-family: "Amatic SC";
-  font-size: 2vw;
-  top: 0;
-  position: sticky;
+  font-family: "Clicker Script";
+  font-size: 2em;
+  margin: 5vw 0 0 0;
+  padding: 7vw 0 3vw 0;
+  border-top: 1px dotted lightgray;
+}
+h2.side {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  left: -1vw;
+  position: absolute;
+  font-size: 1.5vw;
+}
+h2.story {
+  margin-bottom: 50vw;
+}
+
+h3 {
+  font-family: "Dancing Script";
+  font-size: 1em;
+  display: inline-block;
+  margin: 5% 10% 0 10%;
 }
 
 p {
@@ -51,6 +71,48 @@ p.note {
   font-family: "Cutive Mono";
 }
 
+hr.end {
+  margin: 10vw 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+button.legend {
+  display: block;
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -ms-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+  z-index: 2;
+  cursor: pointer;
+  position: fixed;
+  right: -1.8em;
+  font-size: 1.2em;
+  background: #1a1a1a;
+  width: 5em;
+  bottom: calc(50vh + 3.8em);
+  height: 1.6em;
+  box-shadow: #737373 0.1em 0.1em 0.3em;
+  z-index: 1000;
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  border: none;
+}
+button.legend a {
+  text-decoration: none;
+  font-family: "Amatic SC";
+  font-weight: bold;
+  color: white;
+}
+button.legend:hover {
+  opacity: 0.6;
+}
+
 button.about {
   display: block;
   -webkit-transition: all 300ms ease-in;
@@ -61,11 +123,11 @@ button.about {
   z-index: 2;
   cursor: pointer;
   position: fixed;
-  right: -2.1em;
+  right: -3.7em;
   font-size: 1.2em;
-  background: #f2f2f2;
-  width: 6em;
-  bottom: calc(50vh - 7.8em);
+  background: #1a1a1a;
+  width: 9em;
+  bottom: calc(50vh - 2.8em);
   height: 1.6em;
   box-shadow: #bfbfbf 0.1em 0.1em 0.3em;
   z-index: 1000;
@@ -80,191 +142,12 @@ button.about a {
   text-decoration: none;
   font-family: "Amatic SC";
   font-weight: bold;
-  color: black;
+  color: white;
 }
 button.about:hover {
   opacity: 0.6;
 }
 
-#howtoread {
-  /* end .info */
-}
-#howtoread .info {
-  position: fixed;
-  z-index: 999;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  right: -100vw;
-  margin: 0;
-  -webkit-transition: all 300ms ease-in;
-  -moz-transition: all 300ms ease-in;
-  -ms-transition: all 300ms ease-in;
-  -o-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
-  background: white;
-  padding: 5em 0 0 0;
-  line-height: 1.4;
-  overflow: scroll;
-  text-align: center;
-  /* end p */
-}
-#howtoread .info section {
-  width: 80%;
-  padding: 0 10%;
-  text-align: left;
-}
-#howtoread .info section h3 {
-  font-family: "Homemade Apple";
-  font-family: "Clicker Script";
-  font-size: 2em;
-  border-bottom: 3px double black;
-  display: inline-block;
-  line-height: 1;
-}
-#howtoread .info section p {
-  margin: 0;
-  width: 100%;
-  padding: 0;
-}
-#howtoread .info section ul li {
-  font-family: "Yomogi";
-  text-align: left;
-}
-#howtoread .info section figure {
-  margin: 3em 0;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  z-index: -1;
-}
-#howtoread .info section figure img {
-  width: 100%;
-  height: auto;
-  border: 1px solid lightgray;
-}
-#howtoread .info section figure figcaption {
-  font-family: "Homemade Apple";
-  font-size: 0.9em;
-}
-#howtoread .info section:last-of-type {
-  padding-bottom: 50vh;
-}
-#howtoread .info p a {
-  font-style: italic;
-  color: black;
-}
-#howtoread .info p a:hover {
-  opacity: 0.7;
-}
-#howtoread label {
-  display: block;
-  -webkit-transition: all 300ms ease-in;
-  -moz-transition: all 300ms ease-in;
-  -ms-transition: all 300ms ease-in;
-  -o-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
-  z-index: 2;
-  cursor: pointer;
-  position: fixed;
-  right: -2.1em;
-  font-size: 1.2em;
-  background: #1a1a1a;
-  color: white;
-  width: 6em;
-  bottom: calc(50vh - 0.8em);
-  height: 1.6em;
-  box-shadow: #404040 0.1em 0.1em 0.3em;
-  z-index: 1000;
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-#howtoread label h2 {
-  font-size: 1em;
-  line-height: 0;
-}
-#howtoread label:hover {
-  background: #595959;
-}
-#howtoread label:hover:after {
-  border: 1em solid #595959;
-  border-right: 1em solid transparent;
-}
-#howtoread label:before {
-  content: "";
-  position: absolute;
-  right: 1em;
-  bottom: 0.3em;
-  -webkit-transition: all 300ms ease-in;
-  -moz-transition: all 300ms ease-in;
-  -ms-transition: all 300ms ease-in;
-  -o-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
-}
-
-input#legend[type=checkbox] {
-  display: none;
-}
-
-input#legend[type=checkbox]:checked ~ .info {
-  margin: 0;
-  right: 0;
-}
-
-input#legend[type=checkbox]:checked ~ label.legend {
-  right: 0;
-  top: 0;
-  -moz-transform: rotate(0);
-  -o-transform: rotate(0);
-  -ms-transform: rotate(0);
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
-  background: none;
-  box-shadow: none;
-  /* cross icon */
-}
-input#legend[type=checkbox]:checked ~ label.legend h2 {
-  right: calc(50vw - 3em);
-  position: fixed;
-  background: black;
-  width: 6em;
-  height: 1.6em;
-  line-height: 1.5;
-  top: -0.5em;
-  box-shadow: #262626 0.1em 0.1em 0.3em;
-}
-input#legend[type=checkbox]:checked ~ label.legend:before {
-  content: "X";
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 1.7em;
-  width: 1.7em;
-  text-align: center;
-  padding: 0.1em 0.1em 0 0;
-  color: black;
-  cursor: pointer;
-  font-family: "Sacramento";
-  font-size: 1.3em;
-  line-height: 2;
-  cursor: pointer;
-}
-input#legend[type=checkbox]:checked ~ label.legend:after {
-  -webkit-transition: all 300ms ease-in;
-  -moz-transition: all 300ms ease-in;
-  -ms-transition: all 300ms ease-in;
-  -o-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
-}
-input#legend[type=checkbox]:checked ~ label.legend:hover:before {
-  background: black;
-  color: white;
-}
-
-/* end #howtoread */
 section > section article {
   padding: 0 1rem;
   background: rgba(255, 255, 255, 0.8);
@@ -288,12 +171,403 @@ section > section figure img {
   height: 50vh;
 }
 
+section ol, section ul {
+  font-size: 1.7vw;
+  font-family: "Clicker Script";
+}
+section ol.horizontal, section ul.horizontal {
+  margin: 5vw 0;
+}
+section ol.vertical, section ul.vertical {
+  margin: 20vw 0 2vw 0;
+  display: flex;
+  margin-left: calc(-80px + 2.8vw);
+}
+section ol.vertical > li, section ul.vertical > li {
+  width: 3.6vw;
+  display: list-item;
+  margin: 0;
+  margin-right: 2vw;
+}
+section ol.vertical > li:before, section ul.vertical > li:before {
+  content: none;
+}
+section ol.vertical > li ul li.tooltip.wolf:before, section ul.vertical > li ul li.tooltip.wolf:before {
+  width: 0.8vw;
+  padding-bottom: 0.8vw;
+  left: 1.7vw;
+}
+section ol.vertical > li.page1 ul li:nth-child(2), section ul.vertical > li.page1 ul li:nth-child(2) {
+  height: 1vw;
+}
+section ol.vertical > li.page1 ul li:nth-child(3), section ul.vertical > li.page1 ul li:nth-child(3) {
+  height: 1vw;
+}
+section ol.vertical > li.page3 ul li:nth-child(2), section ul.vertical > li.page3 ul li:nth-child(2) {
+  height: 4vw;
+}
+section ol.vertical > li.page3 ul li:nth-child(3), section ul.vertical > li.page3 ul li:nth-child(3) {
+  height: 1vw;
+}
+section ol.vertical > li.page4 ul li:nth-child(2), section ul.vertical > li.page4 ul li:nth-child(2) {
+  height: 1vw;
+}
+section ol.vertical > li.page4 ul li:nth-child(3), section ul.vertical > li.page4 ul li:nth-child(3) {
+  height: 1vw;
+}
+section ol.vertical > li.page5 ul li:nth-child(2), section ul.vertical > li.page5 ul li:nth-child(2) {
+  height: 3vw;
+}
+section ol.vertical > li.page5 ul li:nth-child(3), section ul.vertical > li.page5 ul li:nth-child(3) {
+  height: 1vw;
+}
+section ol.vertical > li.page5 ul li:nth-child(4), section ul.vertical > li.page5 ul li:nth-child(4) {
+  height: 1vw;
+}
+section ol.vertical > li.page6 ul li:nth-child(2), section ul.vertical > li.page6 ul li:nth-child(2) {
+  height: 3vw;
+}
+section ol.vertical > li.page6 ul li:nth-child(3), section ul.vertical > li.page6 ul li:nth-child(3) {
+  height: 1vw;
+}
+section ol.vertical > li.page7 ul li:nth-child(2), section ul.vertical > li.page7 ul li:nth-child(2) {
+  height: 7vw;
+}
+section ol.vertical > li.page7 ul li:nth-child(3), section ul.vertical > li.page7 ul li:nth-child(3) {
+  height: 2vw;
+}
+section ol.vertical > li.page8 ul li:nth-child(2), section ul.vertical > li.page8 ul li:nth-child(2) {
+  height: 3vw;
+}
+section ol.vertical > li.page8 ul li:nth-child(3), section ul.vertical > li.page8 ul li:nth-child(3) {
+  height: 2vw;
+}
+section ol.vertical > li.page8 ul li:nth-child(4), section ul.vertical > li.page8 ul li:nth-child(4) {
+  height: 2vw;
+}
+section ol.vertical > li.page8 ul li:nth-child(5), section ul.vertical > li.page8 ul li:nth-child(5) {
+  height: 1vw;
+}
+section ol.vertical > li.page9 ul li:nth-child(2), section ul.vertical > li.page9 ul li:nth-child(2) {
+  height: 4vw;
+}
+section ol.vertical > li.page9 ul li:nth-child(3), section ul.vertical > li.page9 ul li:nth-child(3) {
+  height: 3vw;
+}
+section ol.vertical > li.page9 ul li:nth-child(4), section ul.vertical > li.page9 ul li:nth-child(4) {
+  height: 1vw;
+}
+section ol.vertical > li.page10 ul li:nth-child(2), section ul.vertical > li.page10 ul li:nth-child(2) {
+  height: 3vw;
+}
+section ol.vertical > li.page10 ul li:nth-child(3), section ul.vertical > li.page10 ul li:nth-child(3) {
+  height: 2vw;
+}
+section ol.vertical > li.page10 ul li:nth-child(4), section ul.vertical > li.page10 ul li:nth-child(4) {
+  height: 1vw;
+}
+section ol.vertical > li.page11 ul li:nth-child(2), section ul.vertical > li.page11 ul li:nth-child(2) {
+  height: 5vw;
+}
+section ol.vertical > li.page11 ul li:nth-child(3), section ul.vertical > li.page11 ul li:nth-child(3) {
+  height: 3vw;
+}
+section ol.vertical > li.page11 ul li:nth-child(4), section ul.vertical > li.page11 ul li:nth-child(4) {
+  height: 1vw;
+}
+section ol.vertical > li.page12 ul li:nth-child(2), section ul.vertical > li.page12 ul li:nth-child(2) {
+  height: 5vw;
+}
+section ol.vertical > li.page12 ul li:nth-child(3), section ul.vertical > li.page12 ul li:nth-child(3) {
+  height: 4vw;
+}
+section ol.vertical > li.page13 ul li:nth-child(2), section ul.vertical > li.page13 ul li:nth-child(2) {
+  height: 6vw;
+}
+section ol.vertical > li.page13 ul li:nth-child(3), section ul.vertical > li.page13 ul li:nth-child(3) {
+  height: 2vw;
+}
+section ol.vertical > li.page14 ul li:nth-child(2), section ul.vertical > li.page14 ul li:nth-child(2) {
+  height: 3vw;
+}
+section ol.vertical > li.page14 ul li:nth-child(3), section ul.vertical > li.page14 ul li:nth-child(3) {
+  height: 2vw;
+}
+section ol.vertical > li.page14 ul li:nth-child(4), section ul.vertical > li.page14 ul li:nth-child(4) {
+  height: 1vw;
+}
+section ol.vertical > li.page15 ul li:nth-child(2), section ul.vertical > li.page15 ul li:nth-child(2) {
+  height: 3vw;
+}
+section ol.vertical > li.page15 ul li:nth-child(3), section ul.vertical > li.page15 ul li:nth-child(3) {
+  height: 2vw;
+}
+section ol.vertical > li.page15 ul li:nth-child(4), section ul.vertical > li.page15 ul li:nth-child(4) {
+  height: 1vw;
+}
+section ol.vertical > li.page16 ul li:nth-child(1), section ul.vertical > li.page16 ul li:nth-child(1) {
+  height: 3vw;
+}
+section ol.vertical > li.page16 ul li:nth-child(2), section ul.vertical > li.page16 ul li:nth-child(2) {
+  height: 1vw;
+}
+section ol.vertical > li.page16 ul li:nth-child(3), section ul.vertical > li.page16 ul li:nth-child(3) {
+  height: 1vw;
+}
+section ol.vertical > li.page16 ul li:nth-child(4), section ul.vertical > li.page16 ul li:nth-child(4) {
+  height: 1vw;
+}
+section ol.vertical > li.page16 ul li:nth-child(5), section ul.vertical > li.page16 ul li:nth-child(5) {
+  height: 1vw;
+}
+section ol.vertical > li.even, section ul.vertical > li.even {
+  width: 3vw;
+  margin-left: 0.6vw;
+}
+section ol.vertical > li ul, section ul.vertical > li ul {
+  width: 100%;
+  display: flex;
+  margin-top: 3vw;
+}
+section ol.vertical > li ul li, section ul.vertical > li ul li {
+  height: 5vw;
+  margin: 0 2% 0 0;
+  width: 100%;
+  background: transparent;
+}
+section ol.vertical > li ul li span.mentions, section ul.vertical > li ul li span.mentions {
+  position: absolute;
+  bottom: -2.5vw;
+  left: 0;
+}
+section ol.vertical > li ul li.tooltip, section ul.vertical > li ul li.tooltip {
+  display: list-item;
+  background-image: linear-gradient(gray 0, rgba(255, 255, 255, 0.1));
+}
+section ol.vertical > li ul li.tooltip:hover, section ul.vertical > li ul li.tooltip:hover {
+  background: black;
+}
+section ol.vertical > li ul li.tooltip span.tooltiptext, section ul.vertical > li ul li.tooltip span.tooltiptext {
+  -moz-transform: rotate(0) translate(-11vw, -140%);
+  -o-transform: rotate(0) translate(-11vw, -140%);
+  -ms-transform: rotate(0) translate(-11vw, -140%);
+  -webkit-transform: rotate(0) translate(-11vw, -140%);
+  transform: rotate(0) translate(-11vw, -140%);
+  transform-origin: right center;
+  width: 5vw;
+}
+section ol.vertical > li ul li:before, section ul.vertical > li ul li:before {
+  width: 0.55vw;
+  padding-bottom: 0.5vw;
+  margin-top: -0.8vw;
+  left: 1.8vw;
+}
+section ol.vertical > li ol, section ul.vertical > li ol {
+  width: 100%;
+  display: block;
+}
+section ol.vertical > li ol li, section ul.vertical > li ol li {
+  background: transparent;
+  width: 100vw;
+  height: 5vw;
+  display: list-item;
+}
+section ol.vertical > li ol li.tooltip, section ul.vertical > li ol li.tooltip {
+  margin: 0;
+  width: 100%;
+  margin-right: 2%;
+}
+section ol.vertical > li ol li.tooltip.cabin:after, section ul.vertical > li ol li.tooltip.cabin:after {
+  top: 3.8vw;
+  left: 0.4vw;
+}
+section ol.vertical > li ol li.tooltip.forest span.tooltiptext, section ol.vertical > li ol li.tooltip.woods span.tooltiptext, section ul.vertical > li ol li.tooltip.forest span.tooltiptext, section ul.vertical > li ol li.tooltip.woods span.tooltiptext {
+  top: 1.5vw;
+}
+section ol.vertical > li ol li.tooltip.cabin span.tooltiptext, section ol.vertical > li ol li.tooltip.ghouse span.tooltiptext, section ul.vertical > li ol li.tooltip.cabin span.tooltiptext, section ul.vertical > li ol li.tooltip.ghouse span.tooltiptext {
+  top: 0;
+}
+section ol.vertical > li ol li:before, section ul.vertical > li ol li:before {
+  top: 0;
+  margin-left: 2.3vw;
+}
+section ol.vertical > li ol li span.tooltiptext, section ul.vertical > li ol li span.tooltiptext {
+  position: absolute;
+  top: -4vw;
+  right: -2.4vw;
+  z-index: 9999;
+  width: 8vw;
+}
+section ol hr, section ul hr {
+  border-top: 1px solid lightgray;
+  border-bottom: none;
+  width: 66%;
+  margin-left: 13%;
+}
+section ol li, section ul li {
+  background-image: linear-gradient(to right, white 11vw, gray 11vw, rgba(255, 255, 255, 0.1));
+  line-height: 1.4;
+  margin-bottom: 0.3vw;
+  margin-left: 15%;
+  list-style-type: none;
+  width: 100%;
+  display: block;
+}
+section ol li span.mentions, section ul li span.mentions {
+  position: absolute;
+  right: -2.1vw;
+}
+section ol li:before, section ul li:before {
+  content: "";
+  width: 1.05vw;
+  padding-bottom: 1.05vw;
+  position: absolute;
+  margin-left: -1.8vw;
+  margin-top: 0.6vw;
+}
+section ol li.rrh, section ul li.rrh {
+  width: calc(14% + 49%);
+}
+section ol li.rrh:before, section ul li.rrh:before {
+  background: radial-gradient(55% 55% ellipse at 50% 50%, firebrick 80%, transparent 85%);
+}
+section ol li.wolf, section ul li.wolf {
+  width: calc(14% + 20%);
+}
+section ol li.wolf:before, section ul li.wolf:before {
+  width: 1.7vw;
+  padding-bottom: 1.7vw;
+  left: -0.3vw;
+  background: conic-gradient(black 0 30deg, transparent 30deg 330deg, black 330deg 360deg) -10% 200%/95% 95% no-repeat;
+}
+section ol li.wolfasgran, section ul li.wolfasgran {
+  width: calc(14% + 9%);
+}
+section ol li.wolfasgran:before, section ul li.wolfasgran:before {
+  background: conic-gradient(black 0 30deg, transparent 30deg 330deg, black 330deg 360deg) 45% 350%/90% 90% no-repeat, radial-gradient(80% 80% ellipse at 50% 50%, transparent 55%, grey 60%, grey 61%, transparent 65%);
+}
+section ol li.gran, section ul li.gran {
+  width: calc(14% + 8%);
+}
+section ol li.gran:before, section ul li.gran:before {
+  background: radial-gradient(75% 75% ellipse at 50% 50%, transparent 55%, gray 60%, gray 61%, transparent 65%);
+}
+section ol li.mother, section ul li.mother {
+  width: calc(14% + 7%);
+}
+section ol li.mother:before, section ul li.mother:before {
+  background: radial-gradient(75% 75% ellipse at 50% 50%, transparent 30%, gray 35%, gray 65%, transparent 70%);
+}
+section ol li.reader, section ul li.reader {
+  width: calc(14% + 2%);
+}
+section ol li.reader:before, section ul li.reader:before {
+  background: radial-gradient(39% 39% ellipse at 50% 50%, gray 80%, transparent 85%), linear-gradient(lightgray, lightgray 100%) 100% 100%/100% 100% no-repeat;
+}
+section ol li.rm, section ul li.rm {
+  width: calc(14% + 1%);
+}
+section ol li.rm:before, section ul li.rm:before {
+  background: radial-gradient(55% 55% ellipse at 50% 50%, transparent 30%, gray 35%, gray 60%, transparent 65%), linear-gradient(lightgray, lightgray 100%) 100% 100%/100% 100% no-repeat;
+}
+section ol li.rw, section ul li.rw {
+  width: calc(14% + 1%);
+}
+section ol li.rw:before, section ul li.rw:before {
+  background: conic-gradient(black 0 30deg, transparent 30deg 330deg, black 330deg 360deg) 50% 600%/95% 95% no-repeat, linear-gradient(lightgray, lightgray 100%) 100% 100%/100% 100% no-repeat;
+}
+section ol li.woods, section ul li.woods {
+  width: calc(14% + 3%);
+}
+section ol li.woods:before, section ul li.woods:before {
+  left: -1.9vw;
+  width: 3vw;
+  top: 0;
+  padding-bottom: 0.5vw;
+  background: OliveDrab;
+  background: DarkSeaGreen;
+  background-size: 0.3vw 0.3vw;
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.2) 0.07vw, DarkSeaGreen 0, DarkSeaGreen 50%);
+}
+section ol li.forest, section ul li.forest {
+  width: calc(14% + 10%);
+}
+section ol li.forest:before, section ul li.forest:before {
+  left: -1.9vw;
+  width: 3vw;
+  padding-bottom: 0.5vw;
+  top: 0;
+  background: DarkGreen;
+}
+section ol li.cabin, section ul li.cabin {
+  width: calc(14% + 1%);
+}
+section ol li.cabin:before, section ul li.cabin:before {
+  width: 5.3vw;
+  padding-bottom: 5vw;
+  top: -3.2vw;
+  left: -3.1vw;
+  background: conic-gradient(transparent 0 125deg, tan 125deg 235deg, transparent 235deg 360deg) 50% 0%/55% 90% no-repeat;
+}
+section ol li.cabin:after, section ul li.cabin:after {
+  content: "";
+  position: absolute;
+  width: 2.9vw;
+  height: 1.2vw;
+  top: 0.6vw;
+  left: -3.7vw;
+  background-color: transparent;
+  background-image: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 0.35vw 0.3vw;
+}
+section ol li.ghouse, section ul li.ghouse {
+  width: calc(14% + 6%);
+}
+section ol li.ghouse:before, section ul li.ghouse:before {
+  width: 5.3vw;
+  padding-bottom: 5vw;
+  top: -3.2vw;
+  left: -3.1vw;
+  background: conic-gradient(transparent 0 125deg, lightgray 125deg 235deg, transparent 235deg 360deg) 50% 0%/55% 90% no-repeat;
+}
+section ol li.tooltip, section ul li.tooltip {
+  display: block;
+}
+section ol li.tooltip:hover, section ul li.tooltip:hover {
+  color: black;
+  font-style: italic;
+  background: black;
+  background-image: linear-gradient(to right, white 11vw, gray 11vw, rgba(255, 255, 255, 0.1));
+}
+section ol li.tooltip:hover span, section ul li.tooltip:hover span {
+  font-style: normal;
+  font-weight: bold;
+}
+section ol li.tooltip span.tooltiptext, section ul li.tooltip span.tooltiptext {
+  position: absolute;
+  top: 0;
+  right: -13vw;
+  z-index: 9999;
+  width: 10vw;
+  font-family: "Yomogi";
+  font-weight: normal;
+  font-size: 0.9vw;
+  letter-spacing: -0.01vw;
+}
+section ol li.tooltip span.tooltiptext span, section ul li.tooltip span.tooltiptext span {
+  display: block;
+}
+
 nav {
   top: 0;
   position: sticky;
   z-index: 99;
   background-image: linear-gradient(white 30%, rgba(255, 255, 255, 0.1));
   height: 12vw;
+}
+nav h2.side {
+  left: -5vw;
+  top: 5vw;
 }
 nav ol > span {
   right: 88.5vw;
@@ -305,31 +579,21 @@ nav ol > span {
   font-family: "Sacramento";
 }
 nav ol > span:nth-child(1) {
-  top: 0.1vw;
+  top: 0.6vw;
 }
 nav ol > span:nth-child(2) {
   position: absolute;
-  top: 12.2vw;
+  top: 12.7vw;
 }
 nav ol:after {
   position: absolute;
   content: "";
   background: linear-gradient(#c9a228 0, white 50%, gray);
   left: -0.4vw;
-  top: 2.2vw;
+  top: 2.7vw;
   height: 80%;
   width: 0.4vw;
   border-left: 0.07vw solid lightgray;
-}
-nav ol:before {
-  position: absolute;
-  content: "";
-  border-bottom: 0.1vw dashed rgba(0, 0, 0, 0.08);
-  left: 1.5vw;
-  top: 6.9vw;
-  height: 0.1vw;
-  width: 91vw;
-  z-index: -1;
 }
 nav ol a {
   width: 3.6vw;
@@ -354,25 +618,183 @@ nav ol a:before {
   content: "";
   border-radius: 50%;
   background: white;
-  width: 100%;
-  height: 100%;
-  border: 0.17vw solid white;
-  top: -0.17vw;
-  left: -0.17vw;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
   z-index: -1;
 }
 nav ol a:after {
   position: absolute;
   content: "";
-  left: -6.5%;
-  top: -6.5%;
-  width: 113%;
-  height: 113%;
+  left: -6%;
+  top: -6%;
+  width: 112%;
+  height: 112%;
   border-radius: 50%;
   z-index: -2;
 }
+nav ol a:hover {
+  opacity: 1;
+  color: white;
+}
 nav ol a:hover:before {
-  background: lightgray;
+  background-image: radial-gradient(circle farthest-side, black 75%, transparent 80%);
+}
+nav ol a .emotion {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+  z-index: -2;
+}
+nav ol a .emotion:nth-child(1) {
+  -moz-transform: rotate(-180deg) translate(0, 43%);
+  -o-transform: rotate(-180deg) translate(0, 43%);
+  -ms-transform: rotate(-180deg) translate(0, 43%);
+  -webkit-transform: rotate(-180deg) translate(0, 43%);
+  transform: rotate(-180deg) translate(0, 43%);
+  transform-origin: top center;
+}
+nav ol a .emotion:nth-child(1) .tooltiptext {
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  top: 4vw;
+  right: 0.5vw;
+  padding: 0 0.5vw 0.4vw 0.5vw;
+  line-height: 1.2;
+  z-index: 99999;
+  font-size: 0.5vw;
+}
+nav ol a .emotion:nth-child(2) {
+  -moz-transform: rotate(-120deg) translate(0, 43%);
+  -o-transform: rotate(-120deg) translate(0, 43%);
+  -ms-transform: rotate(-120deg) translate(0, 43%);
+  -webkit-transform: rotate(-120deg) translate(0, 43%);
+  transform: rotate(-120deg) translate(0, 43%);
+  transform-origin: top center;
+}
+nav ol a .emotion:nth-child(2) .tooltiptext {
+  -moz-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  top: 4vw;
+  right: 0.5vw;
+  padding: 0 0.5vw 0.4vw 0.5vw;
+  line-height: 1.2;
+  z-index: 99999;
+  font-size: 0.5vw;
+}
+nav ol a .emotion:nth-child(3) {
+  -moz-transform: rotate(-60deg) translate(0, 43%);
+  -o-transform: rotate(-60deg) translate(0, 43%);
+  -ms-transform: rotate(-60deg) translate(0, 43%);
+  -webkit-transform: rotate(-60deg) translate(0, 43%);
+  transform: rotate(-60deg) translate(0, 43%);
+  transform-origin: top center;
+}
+nav ol a .emotion:nth-child(3) .tooltiptext {
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  top: 4vw;
+  right: 0.5vw;
+  padding: 0 0.5vw 0.4vw 0.5vw;
+  line-height: 1.2;
+  z-index: 99999;
+  font-size: 0.5vw;
+}
+nav ol a .emotion:nth-child(4) {
+  -moz-transform: rotate(0deg) translate(0, 43%);
+  -o-transform: rotate(0deg) translate(0, 43%);
+  -ms-transform: rotate(0deg) translate(0, 43%);
+  -webkit-transform: rotate(0deg) translate(0, 43%);
+  transform: rotate(0deg) translate(0, 43%);
+  transform-origin: top center;
+}
+nav ol a .emotion:nth-child(4) .tooltiptext {
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  top: 4vw;
+  right: 0.5vw;
+  padding: 0 0.5vw 0.4vw 0.5vw;
+  line-height: 1.2;
+  z-index: 99999;
+  font-size: 0.5vw;
+}
+nav ol a .emotion:nth-child(5) {
+  -moz-transform: rotate(60deg) translate(0, 43%);
+  -o-transform: rotate(60deg) translate(0, 43%);
+  -ms-transform: rotate(60deg) translate(0, 43%);
+  -webkit-transform: rotate(60deg) translate(0, 43%);
+  transform: rotate(60deg) translate(0, 43%);
+  transform-origin: top center;
+}
+nav ol a .emotion:nth-child(5) .tooltiptext {
+  -moz-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  top: 4vw;
+  right: 0.5vw;
+  padding: 0 0.5vw 0.4vw 0.5vw;
+  line-height: 1.2;
+  z-index: 99999;
+  font-size: 0.5vw;
+}
+nav ol a .emotion:nth-child(6) {
+  -moz-transform: rotate(120deg) translate(0, 43%);
+  -o-transform: rotate(120deg) translate(0, 43%);
+  -ms-transform: rotate(120deg) translate(0, 43%);
+  -webkit-transform: rotate(120deg) translate(0, 43%);
+  transform: rotate(120deg) translate(0, 43%);
+  transform-origin: top center;
+}
+nav ol a .emotion:nth-child(6) .tooltiptext {
+  -moz-transform: rotate(-120deg);
+  -o-transform: rotate(-120deg);
+  -ms-transform: rotate(-120deg);
+  -webkit-transform: rotate(-120deg);
+  transform: rotate(-120deg);
+  top: 4vw;
+  right: 0.5vw;
+  padding: 0 0.5vw 0.4vw 0.5vw;
+  line-height: 1.2;
+  z-index: 99999;
+  font-size: 0.5vw;
+}
+nav ol a .emotion:nth-child(7) {
+  -moz-transform: rotate(180deg) translate(0, 43%);
+  -o-transform: rotate(180deg) translate(0, 43%);
+  -ms-transform: rotate(180deg) translate(0, 43%);
+  -webkit-transform: rotate(180deg) translate(0, 43%);
+  transform: rotate(180deg) translate(0, 43%);
+  transform-origin: top center;
+}
+nav ol a .emotion:nth-child(7) .tooltiptext {
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  top: 4vw;
+  right: 0.5vw;
+  padding: 0 0.5vw 0.4vw 0.5vw;
+  line-height: 1.2;
+  z-index: 99999;
+  font-size: 0.5vw;
 }
 nav ol a:nth-child(3) {
   left: 2.8vw;
@@ -426,125 +848,327 @@ nav ol a:nth-child(19) {
   left: 92.4vw;
 }
 nav ol a:nth-child(3) {
-  top: calc(4.8vw - (7vw * -0.345));
-  background: rgba(150, 150, 150, 0.483);
+  top: calc(5.3vw - (7vw * -0.345));
+  background-image: radial-gradient(circle farthest-side, rgba(150, 150, 150, 0.483) 80%, rgba(150, 150, 150, 0.483));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(150, 150, 150, 0.345));
 }
 nav ol a:nth-child(3):after {
-  background: conic-gradient(black 7.34deg 300.94deg, white 300.94deg);
+  background: conic-gradient(gray 7.34deg 300.94deg, transparent 300.94deg);
+}
+nav ol a:nth-child(3) .sentiment .tooltiptext {
+  right: calc(2.8vw + 5vw);
+}
+nav ol a:nth-child(3) .sentiment .tooltiptext:before {
+  width: calc(2.8vw + 2vw);
+  left: calc(2.8vw + 0.6vw);
 }
 nav ol a:nth-child(4) {
-  top: calc(4.8vw - (7vw * -0.185));
-  background: rgba(150, 150, 150, 0.259);
+  top: calc(5.3vw - (7vw * -0.185));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(150, 150, 150, 0.185));
 }
 nav ol a:nth-child(4):after {
-  background: conic-gradient(black 7.34deg 293.6deg, white 293.6deg);
+  background: conic-gradient(gray 7.34deg 293.6deg, transparent 293.6deg);
+}
+nav ol a:nth-child(4) .sentiment .tooltiptext {
+  right: calc(8.4vw + 5vw);
+}
+nav ol a:nth-child(4) .sentiment .tooltiptext:before {
+  width: calc(8.4vw + 2vw);
+  left: calc(8.4vw - (8.4vw - 3.4vw));
 }
 nav ol a:nth-child(5) {
-  top: calc(4.8vw - (7vw * 0.162));
-  background: rgba(201, 162, 40, 0.2268);
+  top: calc(5.3vw - (7vw * 0.162));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.1797));
 }
 nav ol a:nth-child(5):after {
-  background: conic-gradient(black 7.34deg 300.94deg, white 300.94deg);
+  background: conic-gradient(gray 7.34deg 300.94deg, transparent 300.94deg);
+}
+nav ol a:nth-child(5) .sentiment .tooltiptext {
+  right: calc(14vw + 5vw);
+}
+nav ol a:nth-child(5) .sentiment .tooltiptext:before {
+  width: calc(14vw + 2vw);
+  left: calc(14vw - (14vw - 3.5vw));
 }
 nav ol a:nth-child(6) {
-  top: calc(4.8vw - (7vw * 0.180));
-  background: rgba(201, 162, 40, 0.252);
+  top: calc(5.3vw - (7vw * 0.180));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.162));
 }
 nav ol a:nth-child(6):after {
-  background: conic-gradient(black 7.34deg 293.6deg, white 293.6deg);
+  background: conic-gradient(gray 7.34deg 293.6deg, transparent 293.6deg);
+}
+nav ol a:nth-child(6) .sentiment .tooltiptext {
+  right: calc(19.6vw + 5vw);
+}
+nav ol a:nth-child(6) .sentiment .tooltiptext:before {
+  width: calc(19.6vw + 2vw);
+  left: calc(19.6vw - (19.4vw - 3.3vw));
 }
 nav ol a:nth-child(7) {
-  top: calc(4.8vw - (7vw * -0.102));
-  background: rgba(150, 150, 150, 0.1428);
+  top: calc(5.3vw - (7vw * -0.102));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(150, 150, 150, 0.102));
 }
 nav ol a:nth-child(7):after {
-  background: conic-gradient(black 7.34deg 293.6deg, white 293.6deg);
+  background: conic-gradient(gray 7.34deg 293.6deg, transparent 293.6deg);
+}
+nav ol a:nth-child(7) .sentiment .tooltiptext {
+  right: calc(25.2vw + 5vw);
+}
+nav ol a:nth-child(7) .sentiment .tooltiptext:before {
+  width: calc(25.2vw + 2vw);
+  left: calc(25.2vw - (25.2vw - 3.4vw));
 }
 nav ol a:nth-child(8) {
-  top: calc(4.8vw - (7vw * 0.058));
-  background: rgba(201, 162, 40, 0.0812);
+  top: calc(5.3vw - (7vw * 0.058));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.0576));
 }
 nav ol a:nth-child(8):after {
-  background: conic-gradient(black 7.34deg 315.62deg, white 315.62deg);
+  background: conic-gradient(gray 7.34deg 315.62deg, transparent 315.62deg);
+}
+nav ol a:nth-child(8) .sentiment .tooltiptext {
+  right: calc(30.8vw + 5vw);
+}
+nav ol a:nth-child(8) .sentiment .tooltiptext:before {
+  width: calc(30.8vw + 2vw);
+  left: calc(30.8vw - (30.8vw - 3.4vw));
 }
 nav ol a:nth-child(9) {
-  top: calc(4.8vw - (7vw * 0.247));
-  background: rgba(201, 162, 40, 0.3458);
+  top: calc(5.3vw - (7vw * 0.247));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.2476));
 }
 nav ol a:nth-child(9):after {
-  background: conic-gradient(black 7.34deg 315.62deg, white 315.62deg);
+  background: conic-gradient(gray 7.34deg 315.62deg, transparent 315.62deg);
+}
+nav ol a:nth-child(9) .sentiment .tooltiptext {
+  right: calc(36.4vw + 5vw);
+}
+nav ol a:nth-child(9) .sentiment .tooltiptext:before {
+  width: calc(36.4vw + 2vw);
+  left: calc(36.8vw - (36.8vw - 3.4vw));
 }
 nav ol a:nth-child(10) {
-  top: calc(4.8vw - (7vw * 0.041));
-  background: rgba(201, 162, 40, 0.0574);
+  top: calc(5.3vw - (7vw * 0.041));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.0412));
 }
 nav ol a:nth-child(10):after {
-  background: conic-gradient(black 7.34deg 308.28deg, white 308.28deg);
+  background: conic-gradient(gray 7.34deg 308.28deg, transparent 308.28deg);
+}
+nav ol a:nth-child(10) .sentiment .tooltiptext {
+  right: calc(42vw + 5vw);
+}
+nav ol a:nth-child(10) .sentiment .tooltiptext:before {
+  width: calc(42vw + 2vw);
+  left: calc(42vw - (42vw - 3.4vw));
 }
 nav ol a:nth-child(11) {
-  top: calc(4.8vw - (7vw * 0.168));
-  background: rgba(201, 162, 40, 0.2352);
+  top: calc(5.3vw - (7vw * 0.168));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.1676));
 }
 nav ol a:nth-child(11):after {
-  background: conic-gradient(black 7.34deg 286.26deg, white 286.26deg);
+  background: conic-gradient(gray 7.34deg 286.26deg, transparent 286.26deg);
+}
+nav ol a:nth-child(11) .sentiment .tooltiptext {
+  right: calc(47.6vw + 5vw);
+}
+nav ol a:nth-child(11) .sentiment .tooltiptext:before {
+  width: calc(47.6vw + 2vw);
+  left: calc(47.6vw - (47.6vw - 3.4vw));
 }
 nav ol a:nth-child(12) {
-  top: calc(4.8vw - (7vw * 0.068));
-  background: rgba(201, 162, 40, 0.0952);
+  top: calc(5.3vw - (7vw * 0.068));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.0682));
 }
 nav ol a:nth-child(12):after {
-  background: conic-gradient(black 7.34deg 286.26deg, white 286.26deg);
+  background: conic-gradient(gray 7.34deg 286.26deg, transparent 286.26deg);
+}
+nav ol a:nth-child(12) .sentiment .tooltiptext {
+  right: calc(53.2vw + 5vw);
+}
+nav ol a:nth-child(12) .sentiment .tooltiptext:before {
+  width: calc(53.2vw + 2vw);
+  left: calc(53.2vw - (53.2vw - 3.4vw));
 }
 nav ol a:nth-child(13) {
-  top: calc(4.8vw - (7vw * 0.029));
-  background: rgba(201, 162, 40, 0.0406);
+  top: calc(5.3vw - (7vw * 0.029));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.0287));
 }
 nav ol a:nth-child(13):after {
-  background: conic-gradient(black 7.34deg 330.3deg, white 330.3deg);
+  background: conic-gradient(gray 7.34deg 330.3deg, transparent 330.3deg);
+}
+nav ol a:nth-child(13) .sentiment .tooltiptext {
+  right: calc(58.8vw + 5vw);
+}
+nav ol a:nth-child(13) .sentiment .tooltiptext:before {
+  width: calc(58.8vw + 2vw);
+  left: calc(58.8vw - (58.8vw - 3.4vw));
 }
 nav ol a:nth-child(14) {
-  top: calc(4.8vw - (7vw * 0.432));
-  background: rgba(201, 162, 40, 0.6048);
+  top: calc(5.3vw - (7vw * 0.432));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.4323));
 }
 nav ol a:nth-child(14):after {
-  background: conic-gradient(black 7.34deg 322.96deg, white 322.96deg);
+  background: conic-gradient(gray 7.34deg 322.96deg, transparent 322.96deg);
+}
+nav ol a:nth-child(14) .sentiment .tooltiptext {
+  right: calc(64.4vw + 5vw);
+}
+nav ol a:nth-child(14) .sentiment .tooltiptext:before {
+  width: calc(64.4vw + 2vw);
+  left: calc(64.4vw - (64.4vw - 3.4vw));
 }
 nav ol a:nth-child(15) {
-  top: calc(4.8vw - (7vw * 0.320));
-  background: rgba(201, 162, 40, 0.448);
+  top: calc(5.3vw - (7vw * 0.320));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.3194));
 }
 nav ol a:nth-child(15):after {
-  background: conic-gradient(black 7.34deg 359.66deg);
+  background: conic-gradient(gray 7.34deg 359.66deg);
+}
+nav ol a:nth-child(15) .sentiment .tooltiptext {
+  right: calc(70vw + 5vw);
+}
+nav ol a:nth-child(15) .sentiment .tooltiptext:before {
+  width: calc(70vw + 2vw);
+  left: calc(70vw - (70vw - 3.4vw));
 }
 nav ol a:nth-child(16) {
-  top: calc(4.8vw - (7vw * 0.167));
-  background: rgba(201, 162, 40, 0.2338);
+  top: calc(5.3vw - (7vw * 0.167));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(201, 162, 40, 0.1675));
 }
 nav ol a:nth-child(16):after {
-  background: conic-gradient(black 7.34deg 344.98deg, white 344.98deg);
+  background: conic-gradient(gray 7.34deg 344.98deg, transparent 344.98deg);
+}
+nav ol a:nth-child(16) .sentiment .tooltiptext {
+  right: calc(75.6vw + 5vw);
+}
+nav ol a:nth-child(16) .sentiment .tooltiptext:before {
+  width: calc(75.6vw + 2vw);
+  left: calc(75.6vw - (75.6vw - 3.4vw));
 }
 nav ol a:nth-child(17) {
-  top: calc(4.8vw - (7vw * -0.464));
-  background: rgba(150, 150, 150, 0.6496);
+  top: calc(5.3vw - (7vw * -0.464));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(150, 150, 150, 0.4638));
 }
 nav ol a:nth-child(17):after {
-  background: conic-gradient(black 7.34deg 315.62deg, white 315.62deg);
+  background: conic-gradient(gray 7.34deg 315.62deg, transparent 315.62deg);
+}
+nav ol a:nth-child(17) .sentiment .tooltiptext {
+  right: calc(81.2vw + 5vw);
+}
+nav ol a:nth-child(17) .sentiment .tooltiptext:before {
+  width: calc(81.2vw + 2vw);
+  left: calc(81.2vw - (81.2vw - 3.4vw));
 }
 nav ol a:nth-child(18) {
-  top: calc(4.8vw - (7vw * -0.043));
-  background: rgba(150, 150, 150, 0.0602);
+  top: calc(5.3vw - (7vw * -0.043));
+  background-image: radial-gradient(circle farthest-side, transparent 40%, rgba(150, 150, 150, 0.0425));
 }
 nav ol a:nth-child(18):after {
-  background: conic-gradient(black 7.34deg 352.32deg, white 352.32deg);
+  background: conic-gradient(gray 7.34deg 352.32deg, transparent 352.32deg);
+}
+nav ol a:nth-child(18) .sentiment .tooltiptext {
+  right: calc(86.8vw + 5vw);
+}
+nav ol a:nth-child(18) .sentiment .tooltiptext:before {
+  width: calc(86.8vw + 2vw);
+  left: calc(86.8vw - (86.8vw - 3.4vw));
+}
+nav ol a .tooltip {
+  display: block;
+}
+nav ol a .tooltip:hover {
+  background: none;
+  color: white;
+}
+nav ol a .wordcount > .tooltiptext {
+  background: transparent;
+  color: black;
+  width: 6vw;
+  padding: 0;
+  line-height: 1;
+  top: -5.8vw;
+  left: 0.9vw;
+  text-shadow: -0.3vw 0.3vw 0.2vw white, -0.4vw 0.4vw 0.2vw white, -0.1vw -0.1vw 0.1vw white, -0.2vw -0.2vw 0.1vw white, -0.1vw 0.1vw 0.1vw white, -0.2vw 0.2vw 0.1vw white, -0.05vw 0.05vw 0.05vw white, -0.1vw 0.1vw 0.05vw white, 0.05vw 0.05vw 0.05vw white, 0.1vw 0.1vw 0.05vw white, 0.1vw 0.1vw 0.1vw white, 0.2vw 0.2vw 0.1vw white, 0.1vw -0.1vw 0.1vw white, 0.2vw -0.2vw 0.1vw white, 0.3vw -0.1vw 0.1vw white, 0.3vw -0.1vw 0.1vw white, 0.3vw 0.3vw 0.2vw white, 0.4vw 0.4vw 0.2vw white;
+}
+nav ol a .wordcount > .tooltiptext:before {
+  position: absolute;
+  content: "";
+  width: 0.1vw;
+  height: 0.8vw;
+  border-left: 0.06vw solid gray;
+  top: 1.2vw;
+  left: 0.9vw;
+}
+nav ol a .sentiment > .tooltiptext {
+  color: black;
+  background: white;
+  width: 1.8vw;
+  padding: 5vw 0;
+  line-height: 0;
+  top: -6.8vw;
+  margin-right: 1.1vw;
+}
+nav ol a .sentiment > .tooltiptext:before {
+  position: absolute;
+  content: "";
+  border-bottom: 0.095vw dotted lightgray;
+  top: 5vw;
 }
 nav .active {
   color: white;
-  background: black !important;
+}
+nav .active:nth-child(3) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(150, 150, 150, 0.483) 80%);
+}
+nav .active:nth-child(4) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(150, 150, 150, 0.259) 80%);
+}
+nav .active:nth-child(5) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.2268) 80%);
+}
+nav .active:nth-child(6) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.252) 80%);
+}
+nav .active:nth-child(7) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(150, 150, 150, 0.1428) 80%);
+}
+nav .active:nth-child(8) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.0812) 80%);
+}
+nav .active:nth-child(9) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.3458) 80%);
+}
+nav .active:nth-child(10) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.0574) 80%);
+}
+nav .active:nth-child(11) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.2352) 80%);
+}
+nav .active:nth-child(12) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.0952) 80%);
+}
+nav .active:nth-child(13) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.0406) 80%);
+}
+nav .active:nth-child(14) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.6048) 80%);
+}
+nav .active:nth-child(15) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.448) 80%);
+}
+nav .active:nth-child(16) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(201, 162, 40, 0.2338) 80%);
+}
+nav .active:nth-child(17) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(150, 150, 150, 0.6496) 80%);
+}
+nav .active:nth-child(18) {
+  background-image: radial-gradient(circle farthest-side, black 75%, rgba(150, 150, 150, 0.0602) 80%);
 }
 
 .tooltip {
   position: relative;
   display: inline-block;
+  z-index: 99999;
 }
 .tooltip:hover {
   cursor: pointer;
@@ -552,7 +1176,13 @@ nav .active {
   color: white;
 }
 .tooltip .tooltiptext {
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -ms-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
   visibility: hidden;
+  opacity: 0;
   display: block;
   background-color: black;
   color: white;
@@ -565,15 +1195,50 @@ nav .active {
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  opacity: 1;
 }
 
+section article {
+  display: flex;
+}
+section article figure {
+  width: 70%;
+}
+section article figure img {
+  width: 100%;
+  border: 1px solid lightgray;
+}
+section article section {
+  width: 30%;
+}
+section article section p {
+  width: 100%;
+  padding: 0;
+}
+section article ol {
+  width: 100%;
+  margin-left: -20px;
+}
+section article ol li {
+  margin: 0;
+  background: none;
+  list-style-type: inherit;
+  display: revert;
+}
+section article ol li p {
+  width: 100%;
+  padding: 0;
+}
 section .reworked-wrapper {
-  top: 19vw;
   height: 100vh;
-  position: sticky;
+  padding: 10vh 0 70vh 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), white 7%, white);
+  position: relative;
+  z-index: 9;
 }
 section .reworked-wrapper .page {
   position: sticky;
+  background: red;
   width: 30%;
   padding-bottom: 30%;
   border-radius: 50%;
@@ -745,23 +1410,43 @@ section .reworked-wrapper .page .innercircle {
   top: 20%;
   left: 20%;
   text-align: center;
-  line-height: 0;
   font-size: 1.8vw;
   border-radius: 50%;
   font-family: "Amatic SC", cursive;
   z-index: 2;
 }
-section .reworked-wrapper .page .innercircle:hover {
-  background: white;
-  background-image: radial-gradient(circle farthest-side, white 80%, rgba(201, 162, 40, 0.4677));
+section .reworked-wrapper .page .innercircle:hover ~ .word span:before {
+  -webkit-transition: all 600ms ease-in;
+  -moz-transition: all 600ms ease-in;
+  -ms-transition: all 600ms ease-in;
+  -o-transition: all 600ms ease-in;
+  transition: all 600ms ease-in;
+  opacity: 1;
 }
 section .reworked-wrapper .page .innercircle h2 {
-  padding: 2.1vw;
+  padding: 2.9vw 0 0 0;
   font-size: 2.5vw;
+  line-height: 0.8vw;
   font-weight: 400;
   border-radius: 50%;
-  margin: 1.6vw 0 0 0;
+  margin: 0 0 0 0;
   position: initial;
+}
+section .reworked-wrapper .page .innercircle dl dt {
+  font-family: "Amatic SC", cursive;
+  font-size: 0.5em;
+  margin-top: 1.2vw;
+}
+section .reworked-wrapper .page .innercircle dl dd {
+  font-family: "Cutive Mono";
+  font-size: 1.6vw;
+  text-align: center;
+  margin-left: 0;
+}
+section .reworked-wrapper .page .innercircle dl dd.rhymes {
+  font-family: "Clicker Script";
+  line-height: 0.9;
+  font-size: 0.8em;
 }
 section .reworked-wrapper .page .innercircle span.tooltiptext {
   position: absolute;
@@ -775,36 +1460,38 @@ section .reworked-wrapper .page .innercircle span.tooltiptext {
   background: black;
   padding-bottom: 14%;
 }
-section .reworked-wrapper .page .innercircle span.tooltiptext h3 {
-  color: white;
+section .reworked-wrapper .page .innercircle span.tooltiptext dl {
+  margin-top: 2.4vw;
+}
+section .reworked-wrapper .page .innercircle span.tooltiptext dl dt {
+  line-height: 0.7;
+  margin-top: 1vw;
+  font-size: 0.8vw;
   font-family: "Dancing Script";
-  font-size: 1.2vw;
-  margin: 2.9vw 0 0 0;
-  padding: 0;
-  padding-top: 0;
-  font-weight: normal;
 }
-section .reworked-wrapper .page .innercircle span.tooltiptext h3:last-child {
-  margin: 0.5vw 0 0 0;
+section .reworked-wrapper .page .innercircle span.tooltiptext dl dd {
+  font-family: "Meow Script";
+  font-family: "Gwendolyn";
+  line-height: 1.6;
+  font-size: 1.1em;
+  font-family: "Amatic SC", cursive;
 }
-section .reworked-wrapper .page .innercircle span.tooltiptext h3 span {
-  font-family: "Amatic SC";
-  font-size: 1.5vw;
-  margin: 0;
-  padding: 0;
-}
-section .reworked-wrapper .page .innercircle p {
-  font-family: "Cutive Mono";
-  line-height: 0;
-  font-size: 1.2vw;
-  margin-top: 1.2vw;
+section .reworked-wrapper .page .innercircle span.tooltiptext ol {
   text-align: center;
 }
-section .reworked-wrapper .page .innercircle p span {
-  font-family: "Clicker Script";
-  font-size: 1.5vw;
-  line-height: 0;
-  color: #8c8c8c;
+section .reworked-wrapper .page .innercircle span.tooltiptext ol li {
+  width: 100%;
+  margin-top: 2.5vw;
+}
+section .reworked-wrapper .page .innercircle span.tooltiptext ol li:before {
+  width: 3vw;
+  margin-left: calc(50% - 3.6vw);
+  padding-bottom: 3vw;
+  left: -1vw;
+}
+section .reworked-wrapper .page .innercircle span.tooltiptext ol li.woods:before, section .reworked-wrapper .page .innercircle span.tooltiptext ol li.forest:before {
+  left: -1vw;
+  padding-bottom: 0.3vw;
 }
 section .reworked-wrapper .page .word {
   width: 9.5%;
@@ -817,6 +1504,44 @@ section .reworked-wrapper .page .word {
   z-index: 9;
   /*** ROTATION OF WORDS ***/
   /*** END ROTATION OF WORDS ***/
+}
+section .reworked-wrapper .page .word span:before {
+  -webkit-transition: all 400ms ease-in;
+  -moz-transition: all 400ms ease-in;
+  -ms-transition: all 400ms ease-in;
+  -o-transition: all 400ms ease-in;
+  transition: all 400ms ease-in;
+  opacity: 0;
+  content: "";
+  width: 0.8vw;
+  padding-bottom: 0.8vw;
+  position: absolute;
+  right: -1.3vw;
+  top: 0.4vw;
+}
+section .reworked-wrapper .page .word span.rrh:before {
+  background: radial-gradient(55% 55% ellipse at 50% 50%, firebrick 80%, transparent 85%);
+}
+section .reworked-wrapper .page .word span.wolf:before {
+  background: conic-gradient(black 0 30deg, transparent 30deg 330deg, black 330deg 360deg) 50% 200%/95% 95% no-repeat;
+}
+section .reworked-wrapper .page .word span.wolfasgran:before {
+  background: conic-gradient(black 0 30deg, transparent 30deg 330deg, black 330deg 360deg) 45% 350%/90% 90% no-repeat, radial-gradient(80% 80% ellipse at 50% 50%, transparent 55%, gray 60%, gray 61%, transparent 65%);
+}
+section .reworked-wrapper .page .word span.gran:before {
+  background: radial-gradient(75% 75% ellipse at 50% 50%, transparent 55%, gran 60%, gran 61%, transparent 65%);
+}
+section .reworked-wrapper .page .word span.mother:before {
+  background: radial-gradient(75% 75% ellipse at 50% 50%, transparent 30%, gran 35%, gran 65%, transparent 70%);
+}
+section .reworked-wrapper .page .word span.reader:before {
+  background: radial-gradient(39% 39% ellipse at 50% 50%, gray 80%, transparent 85%), linear-gradient(lightgray, lightgray 100%) 100% 100%/100% 100% no-repeat;
+}
+section .reworked-wrapper .page .word span.rm:before {
+  background: radial-gradient(55% 55% ellipse at 50% 50%, transparent 30%, gray 35%, gray 60%, transparent 65%), linear-gradient(lightgray, lightgray 100%) 100% 100%/100% 100% no-repeat;
+}
+section .reworked-wrapper .page .word span.rw:before {
+  background: conic-gradient(black 0 30deg, transparent 30deg 330deg, black 330deg 360deg) 50% 600%/95% 95% no-repeat, linear-gradient(lightgray, lightgray 100%) 100% 100%/100% 100% no-repeat;
 }
 section .reworked-wrapper .page .word:nth-child(8) {
   -moz-transform: rotate(-89.67deg) translate(600%);
@@ -1267,6 +1992,9 @@ section .reworked-wrapper .page .word:nth-child(33) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(33) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(34) {
   -moz-transform: rotate(100.91deg) translate(600%);
   -o-transform: rotate(100.91deg) translate(600%);
@@ -1290,6 +2018,9 @@ section .reworked-wrapper .page .word:nth-child(34) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(34) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(35) {
   -moz-transform: rotate(108.24deg) translate(600%);
@@ -1315,6 +2046,9 @@ section .reworked-wrapper .page .word:nth-child(35) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(35) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(36) {
   -moz-transform: rotate(115.57deg) translate(600%);
   -o-transform: rotate(115.57deg) translate(600%);
@@ -1338,6 +2072,9 @@ section .reworked-wrapper .page .word:nth-child(36) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(36) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(37) {
   -moz-transform: rotate(122.9deg) translate(600%);
@@ -1363,6 +2100,9 @@ section .reworked-wrapper .page .word:nth-child(37) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(37) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(38) {
   -moz-transform: rotate(130.23deg) translate(600%);
   -o-transform: rotate(130.23deg) translate(600%);
@@ -1386,6 +2126,9 @@ section .reworked-wrapper .page .word:nth-child(38) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(38) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(39) {
   -moz-transform: rotate(137.56deg) translate(600%);
@@ -1411,6 +2154,9 @@ section .reworked-wrapper .page .word:nth-child(39) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(39) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(40) {
   -moz-transform: rotate(144.89deg) translate(600%);
   -o-transform: rotate(144.89deg) translate(600%);
@@ -1434,6 +2180,9 @@ section .reworked-wrapper .page .word:nth-child(40) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(40) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(41) {
   -moz-transform: rotate(152.22deg) translate(600%);
@@ -1459,6 +2208,9 @@ section .reworked-wrapper .page .word:nth-child(41) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(41) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(42) {
   -moz-transform: rotate(159.55deg) translate(600%);
   -o-transform: rotate(159.55deg) translate(600%);
@@ -1482,6 +2234,9 @@ section .reworked-wrapper .page .word:nth-child(42) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(42) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(43) {
   -moz-transform: rotate(166.88deg) translate(600%);
@@ -1507,6 +2262,9 @@ section .reworked-wrapper .page .word:nth-child(43) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(43) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(44) {
   -moz-transform: rotate(174.21deg) translate(600%);
   -o-transform: rotate(174.21deg) translate(600%);
@@ -1530,6 +2288,9 @@ section .reworked-wrapper .page .word:nth-child(44) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(44) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(45) {
   -moz-transform: rotate(181.54deg) translate(600%);
@@ -1555,6 +2316,9 @@ section .reworked-wrapper .page .word:nth-child(45) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(45) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(46) {
   -moz-transform: rotate(188.87deg) translate(600%);
   -o-transform: rotate(188.87deg) translate(600%);
@@ -1578,6 +2342,9 @@ section .reworked-wrapper .page .word:nth-child(46) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(46) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(47) {
   -moz-transform: rotate(196.2deg) translate(600%);
@@ -1603,6 +2370,9 @@ section .reworked-wrapper .page .word:nth-child(47) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(47) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(48) {
   -moz-transform: rotate(203.53deg) translate(600%);
   -o-transform: rotate(203.53deg) translate(600%);
@@ -1626,6 +2396,9 @@ section .reworked-wrapper .page .word:nth-child(48) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(48) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(49) {
   -moz-transform: rotate(210.86deg) translate(600%);
@@ -1651,6 +2424,9 @@ section .reworked-wrapper .page .word:nth-child(49) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(49) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(50) {
   -moz-transform: rotate(218.19deg) translate(600%);
   -o-transform: rotate(218.19deg) translate(600%);
@@ -1674,6 +2450,9 @@ section .reworked-wrapper .page .word:nth-child(50) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(50) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(51) {
   -moz-transform: rotate(225.52deg) translate(600%);
@@ -1699,6 +2478,9 @@ section .reworked-wrapper .page .word:nth-child(51) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(51) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(52) {
   -moz-transform: rotate(232.85deg) translate(600%);
   -o-transform: rotate(232.85deg) translate(600%);
@@ -1722,6 +2504,9 @@ section .reworked-wrapper .page .word:nth-child(52) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(52) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(53) {
   -moz-transform: rotate(240.18deg) translate(600%);
@@ -1747,6 +2532,9 @@ section .reworked-wrapper .page .word:nth-child(53) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(53) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(54) {
   -moz-transform: rotate(247.51deg) translate(600%);
   -o-transform: rotate(247.51deg) translate(600%);
@@ -1770,6 +2558,9 @@ section .reworked-wrapper .page .word:nth-child(54) span {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+section .reworked-wrapper .page .word:nth-child(54) span:before {
+  left: -1.2vw;
 }
 section .reworked-wrapper .page .word:nth-child(55) {
   -moz-transform: rotate(254.84deg) translate(600%);
@@ -1795,6 +2586,9 @@ section .reworked-wrapper .page .word:nth-child(55) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(55) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word:nth-child(56) {
   -moz-transform: rotate(262.17deg) translate(600%);
   -o-transform: rotate(262.17deg) translate(600%);
@@ -1819,6 +2613,9 @@ section .reworked-wrapper .page .word:nth-child(56) span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+section .reworked-wrapper .page .word:nth-child(56) span:before {
+  left: -1.2vw;
+}
 section .reworked-wrapper .page .word > span {
   border: 0.09vw dotted lightgray;
   background: white;
@@ -1835,25 +2632,34 @@ section .reworked-wrapper .page .word .tooltip:hover {
   background: black;
 }
 section .text-wrapper {
-  margin: 10vw 0 0 0;
+  margin: 20vw 0 0 0;
   width: 100%;
   font-family: "Dancing Script";
   font-size: 1.7vw;
   letter-spacing: 0.07vw;
-  z-index: 1;
-  padding: 0 0 120vh 0;
+  top: 10vw;
   position: relative;
   text-align: center;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+  position: sticky;
+  position: -webkit-sticky;
 }
 section .text-wrapper h3 {
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.6em;
   padding: 2vw 0 0 0;
   color: black;
   text-align: center;
   width: 100%;
+  font-family: "Amatic SC";
+  font-family: "Yomogi";
+}
+section .text-wrapper h3:after {
+  content: "";
+  border: 0;
+  height: 5px;
+  width: 5em;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 section .text-wrapper ol {
   counter-reset: restyle;
@@ -1863,15 +2669,21 @@ section .text-wrapper ol {
   width: 32%;
   text-align: left;
   border: 4px double white;
-}
-section .text-wrapper ol:hover {
-  background: black;
-  cursor: pointer;
   -webkit-transition: all 400ms ease-in;
   -moz-transition: all 400ms ease-in;
   -ms-transition: all 400ms ease-in;
   -o-transition: all 400ms ease-in;
   transition: all 400ms ease-in;
+}
+section .text-wrapper ol:hover {
+  background: black;
+  border: 4px double white;
+  cursor: pointer;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
 }
 section .text-wrapper ol:hover span {
   color: white;
@@ -1888,6 +2700,7 @@ section .text-wrapper ol li {
   width: 100%;
   float: left;
   padding: 0.2vw 0 0.2vw 0;
+  background-image: none;
 }
 section .text-wrapper ol li:nth-child(1) {
   margin-top: 1vw;
@@ -1910,6 +2723,132 @@ section .text-wrapper span {
   font-size: 1.8vw;
 }
 
+/* This wraps around the tabs, keeping them all in one area */
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 80%;
+  padding: 0 10%;
+  height: 30em;
+  margin-bottom: 10em;
+}
+.tab-container input[type=radio] {
+  /* Hide the checkbox, do not use display:none as it prevents keyboard users navigating through the tabs */
+  width: 0;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.tab-container input[type=radio]:checked + label {
+  /* The label "tab" when clicked */
+  color: black;
+  background: white;
+  cursor: default;
+  border: 1px solid black;
+  border-right: none;
+}
+.tab-container input[type=radio]:checked + label:hover {
+  background: black;
+  color: white;
+}
+.tab-container input[type=radio]:focus + label {
+  /* How the label appears to keyboard users when it is focused on  */
+  outline: 1px solid gray;
+}
+.tab-container input[type=radio]:checked + label + .panel {
+  /* Show panel when corresponding label is clicked
+  * This is where your tab panel styles like height, padding, backgrounds and fonts go */
+  position: relative;
+  visibility: visible;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity ease-out 0.1s 0.1s;
+  flex-basis: 100%;
+  height: 150px;
+  border: 1px solid black;
+  overflow: auto;
+  width: 100%;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  overflow: auto;
+}
+.tab-container label {
+  /* The label of the input, this is what you see and click on instead of an ugly radio button */
+  order: 1;
+  cursor: pointer;
+  color: #c6c6c6;
+  background: #ededed;
+  border: 1px solid #ededed;
+  border-right: none;
+  padding: 0.5% 1%;
+  margin-bottom: 0.2%;
+  transition: all ease-out 0.2s 0.1s;
+  width: 15em;
+  flex-basis: unset;
+  flex-grow: 0;
+  font-family: "Yomogi";
+}
+.tab-container label:hover {
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-right: none;
+}
+.tab-container .panel {
+  /* Panel styles */
+  order: 99;
+  flex-grow: 0;
+  flex-basis: 0;
+  width: 0;
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+}
+.tab-container .panel figure {
+  width: 150%;
+  margin: 0;
+}
+.tab-container .panel figure img {
+  width: 100%;
+}
+.tab-container .panel p {
+  width: 90%;
+  padding: 0 5%;
+}
+
+@media (max-width: 1000px) {
+  .tab-container {
+    width: 100%;
+    padding: 0;
+    height: unset;
+    flex-direction: row;
+  }
+  .tab-container .panel, .tab-container label {
+    order: initial;
+  }
+  .tab-container label {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .tab-container input[type=radio]:checked + label + .panel {
+    height: unset;
+  }
+  .tab-container input[type=radio]:checked + label + .panel {
+    width: 100%;
+  }
+}
 section .reworked-wrapper .page1 {
   background: conic-gradient(black 7.34deg, white 29.36deg 36.7deg, black 36.7deg, white 66.06deg 73.4deg, black 73.4deg, white 110.1deg 117.44deg, black 117.44deg, white 146.8deg 154.14deg, black 154.14deg, white 190.84deg 198.18deg, black 198.18deg, white 220.2deg 227.54deg, black 227.54deg, white 249.56deg 256.9deg, black 256.9deg, white 293.6deg 300.94deg);
 }
