@@ -567,7 +567,10 @@ nav {
 }
 nav h2.side {
   left: -5vw;
-  top: 5vw;
+  top: 6vw;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 nav ol > span {
   right: 88.5vw;
