@@ -44,13 +44,16 @@
         <article>
             <p><i>[ UNFINISHED - still work in progress ]</i></p>
             <h4>Project:</h4>
-            <p>I started another <a href="https://www.domestika.org/en/courses/2495-data-visualization-and-information-design-create-a-visual-model/course" target="_blank">data visualisation course</a> this time with Frederica Fragapane. I liked her style and was keen to learn about her process and methods which is explained in the course. Initially I thought of using a new topic and data set but there were a few ideas I didn't get to try out with my previous <a href="redridinghood.html" target="_blank">Red Riding Hood project</a>, and liked the idea of digging deeper more into it and see how differently it could be presented. I started the project using my 10% time at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, but ended up using about half of my personal time as it took a lot longer than I expected and I had a couple of weeks of leave so took the opportunity to work on the initial bulk of it and slowly progressed months after.
+            <p>I started another <a href="https://www.domestika.org/en/courses/2495-data-visualization-and-information-design-create-a-visual-model/course" target="_blank">data visualisation course</a> this time with Frederica Fragapane. I liked her style and was keen to learn about her process and methods which is explained in the course. Initially I thought of using a new topic and data set but there were a few ideas I didn't get to try out with my previous <a href="redridinghood.html" target="_blank">Red Riding Hood project</a>, and liked the idea of digging deeper more into it and see how differently it could be presented. I used my 10% time at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, and also my personal time (about 70%).
+            </p>
                 <h4>Process:</h4>
-                <p><i>Note: </i> I took notes along the way to try improve my documentation process but it's turned into quite a long read.</p>
+                <p><i>Note: </i> This has turned out to be a really long read so I have broken it up into sections. I wanted to take more notes and screenshots along the way, after reading and impressed with <a href="https://www.c82.net/" target="_blank">Nicholas Rougeux</a>’s "making of" write ups. Not only to improve my documentation process, but I find it helps me rationalise my choices during the project.
+                </p>
+
                 <h5>Background</h5>
                 <p>In my previous project of <a href="redridinghood.html" target="_blank">Red Riding Hood</a>, a colleague gave me the idea to add sentiment analysis to the inner circles which represent each word to add an extra layer of data and meaning. I had little knowledge of sentiment analysis so had to look it up to understand the basics. As I dug a bit deeper, I thought of different ways to represent the sentiment data that could be visually quite interesting. I wanted to show the sentiment for all the words by putting them around in a circle to be able to identify their position on the page, rather than the random placement of circles I had. I tried a few different ways but it they all changed the look of the "trees" too much and so left it minimal, just showing the top 20 positive and negative words, represented by light and dark outline circles, and also the page sentiment, represented by arcs above the page "tree". One of the methods in this second course was very similar to how I had tried to visualise the words previously placing data points around a circle.</p>
                 <figure>
-                    <img src="../img/project/rrh2/word-circles.jpg" alt="legend and work in progress of visualising words in a circle">
+                    <img src="../img/project/rrh2/word-circles.jpg" alt="on left focusing on legend with a tree, house and character using geometric shapes, on right circles with examples of sunburst like patterns, segments, radar graphs within">
                     <figcaption>
                         Legend of sentiment analysis in previous <a href="redridinghood.html" target="_blank">Red Riding Hood</a> and work in progress examples trying out different styles
                     </figcaption>
@@ -60,7 +63,7 @@
                 <p>I thought I could fast track this stage since I was reusing the same data but I was wrong. I had used the free online sentiment analysis tool <a href="http://monkeylearn.com" target="_blank">MonkeyLearn</a> in the previous project as it was the best I found at the time that fit my requirements. I wanted to use it again so both projects would have the same data but when I listed down the results it gave for all the words on the first page, I wasn't satified with the results. "hood"(91.1%) and "above" (86.3%) were the top negative words, compared to "died" (54.8%) and "lonely" (51.8%) what I think are more negative. I was rather annoyed I didn't spot this earlier for the previous project. I had already spent quite a while searching for a sentiment analysis tool that would fit my requirements previously so I knew the search for an alternative would not be easy. I really wanted to stick with MonkeyLearn but the results just didn't sit well with me. I searched for quite a long time, past the first few pages of what the search results would give, and finally came across <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>. </p>
                 <p>The results were far better, "lonely" (-0.927) and "died" (-0.797) were the top negative words for the first page, and the process was also going to be much easier. With MonkeyLearn, I had to put the page text to get the page sentiment value, and input each word individual to get each word sentiment value. With <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>, I only had to put the page text and it gave the results of page sentiment and also results of all the positive and negative words on that page in one go so it would save me quite a lot of time. It didn't give neutral word values but better that way as I would feel tempted to use and visualise it.</p>
                 <figure>
-                    <img src="../img/project/rrh2/sentiment-comparison.jpg" alt="sentiment tool comparison with charts and data in excel">
+                    <img src="../img/project/rrh2/sentiment-comparison.jpg" alt="left: 2 bar charts with positive to negative sentiment on vertical y axis and pages on x axis, center: 2 bubble charts with positive to negative sentiment on vertical y axis and pages on x axis, right: data of page 1 on spreadsheet, column 1 spelling of word, column 2 monkeylearn sentiment results, column 3 twinword sentiment results">
                     <figcaption>
                         Comparison of words of a page with <a href="http://monkeylearn.com" target="_blank">MonkeyLearn</a> and <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a> showing excel spreadsheet, bar chart and RAWgraph bubble chart
                     </figcaption>
@@ -70,21 +73,21 @@
                 </p>
 
                     <figure>
-                        <img src="../img/project/rrh2/sketchbook.jpg" alt="scans of line drawings in sketchbook">
+                        <img src="../img/project/rrh2/sketchbook.jpg" alt="photograph of the same sketchbook opened up to 4 pages with black fountain pen line drawings of circles, sunburst patterns and scribblednotes">
                         <figcaption>
                             Concept drawings in sketchbook throughout the project
                         </figcaption>
                     </figure>
                     <p>I went back to <a href="https://rawgraphs.io" target="_blank">RAWgraphs</a> to see if there was a graph I could use to get a similar effect. What I needed was a bar chart but arranged in a circle - radial bar chart but RAWgraphs didn't have that. I tried a few and the sunburst one was close but the data structure wasn't quite right. I changed things around in excel, something that I'm sure is not conventional and a bit crazy to do but I knew it would give me what I needed. I typed out a binary system of the letter count for each word per row for the first page, put it into RAWgraphs to make the sunburst chart, exported the svg to Illustrator, typed out each letter, of the word and deleted the additional data which was added for spacing. </p>
                     <figure>
-                        <img src="../img/project/rrh2/sunburst.jpg" alt="a sunburst chart and a styled version">
+                        <img src="../img/project/rrh2/sunburst.jpg" alt="left: words shooting out going clockwise around a circle, right: styled version with sentiment colours and handwritten and script fonts">
                         <figcaption>
                             Export of RAWgraph sunburst chart and a version after cleaning up in Illustrator
                         </figcaption>
                     </figure>
                     <p>I mocked up a version of how all the pages might look altogether when placed as a scatter plot with the page sentiment on the y axis and pages on the x axis.
                         <figure>
-                            <img src="../img/project/rrh2/mockup.jpg" alt="mockup of layout and individual pages in illustrator and photoshop">
+                            <img src="../img/project/rrh2/mockup.jpg" alt="top: bubble chart drawn in illustrator with positive and negative sentiment on vertical y axis and pages on horizontal x axis, 16 circles depicting pages with words circling laid out horizontally with sentiment colours in circle and words, bottom: enlarged view of a circle">
                             <figcaption>
                                 Mockup of layout and individual pages in illustrator and photoshop
                             </figcaption>
@@ -109,7 +112,7 @@
                                 <li>Style words</li>
                             </ol>
                             <figure>
-                                <img src="../img/project/rrh2/process.jpg" alt="screenshots mapping out my initial process of a page">
+                                <img src="../img/project/rrh2/process.jpg" alt="screenshots of original page, word document, excel sheets, excel graphs, RAWgraphs, web pages, vector graphics">
                                 <figcaption>
                                     Steps of my initial process of a page
                                 </figcaption>
@@ -117,47 +120,42 @@
                             <h5>Prototype</h5>
                             <p>It was taking me about 2-3 hours per page and I hadn't even finished 3 when I stopped to think. I could continue and finish them all but I also knew I wanted to eventually make the final piece interactive and responsive as it had quite a lot of information that would make the visualisation quite cluttered if it was shown in a static format. I decided to stop my work in Illustrator and start playing around with code.</p>
                             <p>I know a lot of data developer/visualisers were using D3 to make their very impressive data visualisation pieces. I had tried a few times to learn Javascript but never got it and usually spent a lot of time debugging my errors. I just wasn’t ready to try again just yet. I really liked working with CSS, had done quite a few side projects previously and have seen some amazing work with just CSS so wanted to see how far I could get with it, knowing it has its limitations.</p>
-                            <p>I started making some prototypes in <a href="https://codepen.io/" target="_blank">codepen</a> and managed to come up with one that looked very similar to the design in Illustrator. It was responsive, semi-accessible for screen readers (I think), but some elements just didn’t scale well.</p>
-                            <figure>
-                                <img src="../img/project/rrh2/illustrator.jpg" alt="screenshots of codepen prototypes">
-                                <figcaption>
-                                    Design of 'Page 3' in Illustrator
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <iframe height="490" style="width: 100%;" scrolling="no" title="RRH prototype 8 - data input " src="https://codepen.io/ongtiffany/full/zYpEEWv" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-                                <figcaption>
-                                    <a href="https://codepen.io/ongtiffany/full/zYpEEWv" target="_blank">Initial prototype</a> of 'Page 3' in codepen
-                                </figcaption>
-                            </figure>
-                            <p>
-                                The connecting lines, lines and dots to mark the begin and end of a sentence get misaligned when scaled due to some elements being position manually so I had to change the design a little. After a few more iterations, I came up with a version that removed the begin and end points and represented the start with a darker colour and gradually fading to a lighter colour ar the end of the sentence on curved lines, replaced the rhyme lines with two side borders on the rhyme words, one pair with solid and the other pair with double.
-                            </p>
-                            <h5>Layout</h5>
-                            <p>
-                                I wanted to have a default overview of all sixteen pages and able to zoom in to view each one in more detail. At first I thought I could scale down each page and on hover over would expand but it kept flickering from each version during the interactions. After a few trials, I got it working using the modal interaction I have used previously in several projects but with some added transitions. But I didn't like it.
-                            </p>
-                            <p>
-                                I went back to my sketchbook to draw out a few ideas and thought of making it more of a scrolltelly like piece so the user gets and overview of the project, how to read section, and overview of all the data visualisations, then moving on to the individual data visualisations with the hover interactions.
+                            <p>I started making some prototypes in <a href="https://codepen.io/" target="_blank">codepen</a> which I have found really useful to code with since both code and results are on the same window, refreshes automatically, and what I particularly found useful for this project was their HTML and CSS preprocessors, which I used Pug and SCSS so I didn't have to write as much and structure the code more easily. I managed to come up with a <a href="https://codepen.io/ongtiffany/full/zYpEEWv" target="_blank">prototype</a> that looked very similar to the design in Illustrator. It was responsive, semi-accessible for screen readers (I think), but some elements just didn’t scale well.The connecting lines, lines and dots to mark the begin and end of a sentence get misaligned when scaled due to some elements being position manually.</p>
+
+                            <p>After a few more iterations, I came up with a version that removed the begin and end points and represented the start with a darker colour and gradually fading to a lighter colour ar the end of the sentence on curved lines, replaced the rhyme lines with two side borders on the rhyme words, one pair with solid and the other pair with double.
                             </p>
 
+                            <p>As the project progressed, I added page sentiment colour to the center circle, some page summary information, and the rhyming words of the page, gave the emotion triangles a slight gradient to make it more subtle and subdue. And also some tooltips for additional information.
+                            </p>
+
+                            <figure>
+                                <img src="../img/project/rrh2/illustrator-codepen.jpg" alt=" three versions showing slight variations of words placed around a circle with sentiment colours on certain words, one with a gradient sentiment colour in the circle and more text, dashed lines with start and end points, connecting dotted lines or side borders, 3 gray or gradient triangles around circle.">
+                                <figcaption>
+                                    Design of 'Page 3' in Illustrator as a mockup, Codepen early and later prototypes
+                                </figcaption>
+                            </figure>
+
+
+
+                            <h5>Layout</h5>
+                            <p>
+                                I wanted to have a default overview of all sixteen pages and able to zoom in to view each one in more detail. At first I thought I could scale down each page and on hover over would expand but it kept flickering from each version during the interactions. After a few trials, I got it working using the modal interaction I have used previously in several projects but with some added transitions. But I didn't like the way the <a href="https://codepen.io/ongtiffany/full/XWVPjjO" target="_blank">prototype</a> worked. There would be too many clicks or taps to interact with just the basic part of the visualisation to view each page.</p>
+                            <p>
+                                I went back to my sketchbook to draw out a few ideas and thought of making it more of a scrollytelling like piece so the user gets and overview of the project, how to read section, and overview of all the data visualisations, then moving on to the individual data visualisations. I had to consider how everything would work on different screens especially smaller and touch screens and like with my work projects, I now try to have as few variations between the screen sizes so there more consistency, also less to style and code up. I used as much CSS properties but ran into a few that either were not supported in all browsers and had to add a few Javascript snippets. I finally came up with a layout that I was happy with. The initial <a href="https://codepen.io/ongtiffany/full/YzeRQRX" target="_blank">prototype</a> had the "how to read" section on the same page, then iterated to having it in on a separate modal pop up as I thought it would be an------ was iterated slightly as the project progressed and with feedback. 
+                            </p>
+                            </p>
+                            
                             <figure>
                                 <img src="../img/project/rrh2/layout.jpg" alt="Sketches and Mockups of layouts">
                                 <figcaption>
-                                    Sketches and Mockups of the some layout prototypes
+                                    Sketches and Mockups of two layouts
                                 </figcaption>
                             </figure>
-                            <p>
-                                I had to think of ways it would work on different screens especially smaller and touch screens and like with my work projects, I now try to have as few variations between the screen sizes so there is less to style and code up. I used as much CSS properties but ran into a few that either were not supported in all browsers and had to add a few Javascript snippets. I finally came up with a layout that I was happy with. 
-                            </p>
-                            <h5>How to Read</h5>
-                            <p>
-                                The "How to read" section was a lot trickier than expected and I had to re-write several times along with the gif animations as I couldn't think of good way with just static images. Initially I wanted it as part of the main page combined with the scrollytelly function but thought it would be frustrating for a user who already knew how to read it to have to scroll through it all to get to the visualisation section so put it as a separate modal page. 
-                            </p>
+                            
 
                             <h5>Data Entry</h5>
 
-                            <p>Until this point I had only input data for one page and left the other pages until the end since I knew it was just a case of data entry as I had all the structure in place. What I didn't realise was how long it would take as there were so many stages, I had added along the way. It took about 40 minutes to an hour per page. This was my process to input individual page data into HTML and CSS after the general code structure had been finalised:</p>
+                            <p>Until this point I had only input data for one page and left the other pages until the end since I knew it was just a case of data entry as I had all the structure in place. What I didn't realise was how long it would take as there were so many stages, I had added along the way. It took about 40 minutes - 1 hour per page. This was my process to input individual page data into HTML and CSS after the general code structure had been finalised:</p>
 
                             <figure>
                                 <img src="../img/project/rrh2/data-entry-to-code-process.jpg" alt="screenshots of the some of the code process">
@@ -184,14 +182,93 @@
                             </ol>
                      
 
+                            <h5>Feedback</h5>
+
+                            <p>I had entered the first few pages of data so the end was near (or so I thought). Since there were so many parts to this visualisation, I knew I had to ask for feedback. I asked around my usual circle for feedback but I didn’t get any replies. I carried on with the data entry, continued testing it out but had a growing feeling something was lacking. I went back to the previous Red Riding Hood project to recall what it looked like and realise it looked a lot more interesting. Apart from it having more colour, which I made a conscious decision to minimise for this one, I concluded it was because the narrative of the story was much more evident. I couldn’t add much more data as it would add more clutter and probably add confusion to an already unfamiliar and unconventional format. I thought what would be the minimum addition that could show the narrative. After relooking at the previous project and a bit of thought, I narrowed it down to two characters and two locations. - Red Riding Hood - Wolf - Red Riding Hood’s House - Grandma’s House . Those 4 things I thought could give a sense of the story and I could replace the page numbers with the characters, add some sort of house indication, and made a mock up of it.  sss
+                            </p>
+
+
                             <figure>
-                                <img src="../img/project/rrh2/final-screenshot.jpg" alt="screenshot of final visualisation">
+                                <img src="../img/project/rrh2/symbols-mockup.png" alt="replacing numbers with symbols">
                                 <figcaption>
-                                    Final piece: Page 3
+                                    Replacing number with symbols in the navigation
                                 </figcaption>
                             </figure>
 
+
+                            <p>I still needed feedback and by some good fortunate, I had visited to the Data Visualisation Society website as I occasionally do to check on upcoming events and there was an “Early Career Create: Project Jam” event in 2 days. It read: 
+“During this event, we'll separate into smaller coworking groups based on what aspect of the project cycle you are working on at the moment: ideation, prototyping/design, development, etc. so you can get feedback from others in a similar place. This event is open to all DVS members.“   </p>
+
                             <figure>
+                                <img src="../img/project/rrh2/dvs-projectjam.jpg" alt="Data Visualisation Society Project Jam">
+                                <figcaption>
+                                    Event image from the Project Jam of Data Visualisation Society 
+                                </figcaption>
+                            </figure>
+
+<p>I had been to a few DVS online events but only lingered in the shadows. I had never spoken about my personal work to anyone other than my family and a handful of colleagues so was a bit nervous having to explain the work to people I don’t know. Fortunately it wasn’t a large group, just 4 others, I showed the latest version of the prototype I had at the time and the feedback was really useful.</p>
+
+                            <figure>
+                                <iframe height="490" style="width: 100%;" scrolling="no" title="RRH prototype 8 - data input " src="https://codepen.io/ongtiffany/full/JjLabzK" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                                <figcaption>
+                                    <a href="https://codepen.io/ongtiffany/full/JjLabzK" target="_blank">Version</a> of what I showed at the DVS Project Jam
+                                </figcaption>
+                            </figure>
+
+
+<p>It confirmed what I had felt but with more accuracy and valuable suggestions for improvement, so thank you again everyone who was there.   There were so many things I should and could improve, and so many solutions and ideas. I sketched out a few and tried to figure out which were the ones that solved it the best, but also if I could implement them quickly as I had already gone over my personal deadline to complete. I decided to not give myself another deadline as it would just add unnecessary pressure for a project that was meant to be enjoyable, but maybe have one again when I was closer to the end not to drag it out longer than needed, as I did have my next project in mind and also keen to start that. </p>
+
+<p>Some of the feedback included:</p>
+<ul>
+    <li>Page numbers on navigation were more useful than character symbols</li>
+    <li>How to read section will probably not be read</li>
+    <li>Word count and sentiment on navigation not clear</li>
+    <li>Words on navigation</li>
+</ul>
+
+<p>I started adding tooltips to the navigation, to show on hover the word count, and numerical sentiment value with a line linking it to the scale. I also added the emotions but took it out as it felt too messy and confusing.</p>
+
+                            <figure>
+                                <img src="../img/project/rrh2/navigation-tooltips.png" alt="showing all the tooltips in the navigation">
+                                <figcaption>
+                                    Adding tooltips to navigation
+                                </figcaption>
+                            </figure>
+
+<p>I still wanted to add the characters and locations so worked on many mockups to find ways to integrate them. I thought an overview of the character and location counts across the story would be useful, then breaking down into per page. Then I also had a suggestion from my partner to add them within the indivudual pages as well. </p>
+                            <figure>
+                                <img src="../img/project/rrh2/characters-locations.jpg" alt="examples of characters locations mentions">
+                                <figcaption>
+                                    Mockup examples of characters locations mentions done in Illustrator
+                                </figcaption>
+                            </figure>
+
+
+
+
+                            
+
+                            <h5>How to Read</h5>
+                            <p>
+                                The "How to read" section was a lot trickier than expected and I had to re-write several times along with the gif animations as I couldn't think of good way with just static images. Initially I wanted it as part of the main page combined with the scrollytelling function but thought it would be frustrating for a user who already knew how to read it to have to scroll through it all to get to the visualisation section so put it as a separate modal page. 
+                            </p>
+
+
+
+
+
+
+
+
+
+                            <figure>
+                                <img src="../img/project/rrh2/final-screenshot.jpg" alt="screenshot of final visualisation">
+                                <figcaption>
+                                    Visualisation of Page 1
+                                </figcaption>
+                            </figure>
+
+                           <!-- <figure>
                                 <img src="../img/project/rrh2/icons.png" alt="icons">
                                 <figcaption>
                                     icons
@@ -209,18 +286,15 @@
                                 <figcaption>
                                     Pages in laid out in a square
                                 </figcaption>
-                            </figure>
-
-
-
+                            </figure>-->
 
                             <h4>Conclusion:</h4>
-                            <p>
+                           <!-- <p>
                                 This project took far longer than I expected, with lots of late nights but I have learnt a lot from it. It definitely takes much longer to code up and make a data visualisation interactive than a flat design due to all the time spent fixing elements that break each time I added or edited some code. And also having to test and code up various breakpoints, testing and editing for different screen sizes and browsers, many of which I haven't covered as I only tested on the devices and browsers I had to hand. The data entry took a long time and part of me feels I should have spent some time trying to put the data into json and used javascript to insert it to HTML which I have tried in other project prototypes in the past but never quite did a full version. Also made it a point to create a new prototype for each iteration and ended up with <a href="https://codepen.io/collection/bNzGgq" target="_blank">26 prototype stages</a>. 
 
 
 
-                            </p>
+                            </p>-->
                             <h4>Visualisation:</h4>
                             <p>
                                 <a href="https://ongtiffany.github.io/project/rrh2-viz.html" target="_blank">https://ongtiffany.github.io/project/rrh2-viz.html</a><br>

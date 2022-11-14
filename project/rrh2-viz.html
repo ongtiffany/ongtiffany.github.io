@@ -17,79 +17,174 @@
 </head>
 
 <body>
+
 <h1>Visualising the text of Red Riding Hood</h1>
-<p><i>[ UNFINISHED - still work in progress ]</i></p></p>
 <p>The data for this visualisation is extracted from the text of the picture book, <a href="https://archive.org/details/redridinghood00veryiala" target="_blank">Red Riding Hood</a>, written and illustrated by <a href="https://en.wikipedia.org/wiki/Lydia_Louisa_Anna_Very" target="_blank">Lydia Louisa Anna Very</a>. This book is thought to be one of the first shape books ever printed in America, published by Prang in 1863.</p>
-<p>The "How to Read" section will explain the various ways to read and navigate the visualisation. To find out more on this project, refer to the <a href="https://ongtiffany.github.io/project/rrh2.html" target="_blank">About</a> page.</p>
+<p>The aim of this project was to extract data from the text of the story, and visualising it in an experimental way to provide a companion to reading the story in it's original text. </p>
+<p>To find out more on this project, refer to the <a href="https://ongtiffany.github.io/project/rrh2.html" target="_blank">About</a> page. </p>
 <p class="note"><i>Note:</i> There may be limitations to the functionality and accessibility of this page. It works best on a non-touch screen device, Chrome or Firefox browser.</p>
-<button class="about"><a href="https://ongtiffany.github.io/project/rrh2.html">About</a></button>
-<div id="howtoread">
-  <input id="legend" type="checkbox"/>
-  <label class="legend" role="button" for="legend"> 
-    <h2>How To Read</h2>
-  </label>
-  <div class="info">
-    <section>
-      <h3>Structure</h3>
-      <p>The visualisation is divided into 2 main parts:</p>
-      <ul>
-        <li>Overview</li>
-        <li>Page
-          <ul>
-            <li>Visual</li>
-            <li>Text</li>
-          </ul>
-        </li>
-      </ul>
-      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/structure.jpg" alt="Higlighting the 2 main parts of the visualisation"/>
-        <figcaption>Main structure of the visualisation</figcaption>
-      </figure>
-      <h3>Overview</h3>
-      <p>On the left is a sentiment scale. The highest point (dark gold) is most positive and the lowest (dark grey) most negative. The middle (white) is neutral and also depicted with a horizontal light grey dashed line to serve as a baseline. A page is represented with a circle starting from 1 at the left, ending at 16 on the right. Each page is plotted vertically based on its sentiment value; so if it's higher more positive, lower more negative. Also the circle is coloured based on sentiment value. The number of words per page is also represented in a subtle way with a thin line around the circle. Starting at the top, is the first word moving clockwise around. The 49 words forms a full circle, so the more full the line around the circle, the more words the page has.</p>
-      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/overview.gif"/>
-        <figcaption>Overview section</figcaption>
-      </figure>
-      <h3>Page - Visual</h3>
-      <p>The visual section can be read in sections. The inner circle has a summary of the page. Moving outwards is the emotions section which there can be up to six on a page depicted by triangles. From top moving clockwise, joy, fear, surprise, anger.... The larger the triangle, larger the emotion value. The next section is sentences of which there are always 8 in a page represented by thin curved lines. The first sentence start at the top moving clockwise. Each sentence starts black, fading into light gray at the end of a sentence and is linked with words which is the final outer section. The first word starts at the top and moves clockwise around the circle. Also like each page, a word can have a postive or negative sentiment thus coloured and shaded accordingly to its value. Each page also has 2 sets of rhyming words, the first set will have a single black side line, and the second set double black side lines.</p>
-      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/page.gif"/>
-        <figcaption>Page sections and hovers</figcaption>
-      </figure>
-      <p>Some additional information can be seen by hovering over certain elements. The inner circle will show the value of the page sentiment and top emotion. Each emotion triangle will show its type and value. Each word that has a positive of negative sentiment will show its value. If the word is neutral, it will be white and not have a value.</p>
-      <h3>Page Text</h3>
-      <p>The text section is very simple and straight forward displayed close to it's original format of 8 lines of text, for readibility and comparison. Upon hover, it hides the text only showing the punctuation of the page.</p>
-      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/text.gif"/>
-        <figcaption>Text section</figcaption>
-      </figure>
-      <h3>Navigation</h3>
-      <p>Scrolling down shows the pages sequence. The circles in the overview also acts as navigation menu and enables jumping from page to page.</p>
-      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/navigation-scroll.gif"/>
-        <figcaption>Navigation and scroll</figcaption>
-      </figure>
-    </section>
-  </div>
-</div>
-<nav>
+<!--button.legend
+a(href="/") Legend
+
+-->
+<button class="about"><a href="https://ongtiffany.github.io/project/rrh2.html">Behind the Visualisation</a></button>
+<section>
+  <h2>Introducing the Characters in the book</h2>
+  <p>The section above lists all the characters starting with ones with the most mentions at the top to the least at the bottom. There are 5 characters in the story which are the ones above the line and the author also addresses 3 more that aren't in the story. The Reader, Reader's Mother and Reader's Wolf below the line. </p>
+  <p>On the left, symbols are given to each character. Red Riding Hood is given a fully filled red circle, her mother slightly filled, and her grandmother the least filled. The Wolf is given a black triangle, and when in disguise, a inside the same circle as Grandma. The Reader, Reader's Mother and Reader's Wolf, have the same symbols as Red Riding Hood, Mother, and Wolf but in grey.</p>
+  <p>On the right of the character names, are horizontal sections and their lengths correspond to the number to mentions on the far right. Hovering over any of the characters will bring up a tooltip with a bit more information about the character.</p>
+  <ol class="horizontal">
+    <li class="tooltip rrh"> <span class="symbolname">Red Riding Hood</span><span class="tooltiptext">Red Riding Hood, a young little girl is the main character of this story</span><span class="mentions">49</span></li>
+    <li class="tooltip wolf"> <span class="symbolname">Wolf</span><span class="tooltiptext">This Wolf is a talking one and the baddy of the story</span><span class="mentions">20</span></li>
+    <li class="tooltip wolfasgran"> <span class="symbolname">Wolf as Grandma</span><span class="tooltiptext">Red Riding Hood's Grandmother old and frail but well equipped</span><span class="mentions">9</span></li>
+    <li class="tooltip gran"> <span class="symbolname">Grandma</span><span class="tooltiptext">The Wolf cunningly in disguise</span><span class="mentions">8</span></li>
+    <li class="tooltip mother"> <span class="symbolname">Mother</span><span class="tooltiptext">Red Riding Hood's mother who has many words of wisdom about safety</span><span class="mentions">7</span></li>
+    <hr/>
+    <li class="tooltip reader"> <span class="symbolname">Reader</span><span class="tooltiptext">This is you, the reader of the story</span><span class="mentions">2</span></li>
+    <li class="tooltip rm"> <span class="symbolname">Reader's Mother</span><span class="tooltiptext">Anyone you know that cares about you and gives you important advice</span><span class="mentions">1</span></li>
+    <li class="tooltip rw"> <span class="symbolname">Reader's Wolf</span><span class="tooltiptext">Anyone that is evil and bad in this world</span><span class="mentions">1</span></li>
+  </ol>
+</section>
+<section>
+  <h2>The Locations </h2>
+  <p>There are 4 main locations. These are the places and environments where Red Riding Hood's journey takes her in the story, starting from her own home in the woods, through the forest to her grandmother's home. Like with characters, there is a symbol for each location, but the number of counts the occurence on a page, depicted on a horizontal bar chart.</p>
+  <ol class="horizontal">
+    <li class="tooltip forest"><span class="symbolname">Forest</span><span class="tooltiptext">A wild, uncultivated, and unpredictable place.</span><span class="mentions">10</span></li>
+    <li class="tooltip ghouse"><span class="symbolname">Grandma's House</span><span class="tooltiptext">The house where Red Riding Hood's Grandmother lives.</span><span class="mentions">6</span></li>
+    <li class="tooltip woods"><span class="symbolname">Woods</span><span class="tooltiptext">The peaceful beautiful woods brimming with nature and life.</span><span class="mentions">3</span></li>
+    <li class="tooltip cabin"><span class="symbolname">Cabin</span><span class="tooltiptext">The house where Red Riding Hood lives with her mother.</span><span class="mentions">1</span></li>
+  </ol>
+</section>
+<section>
   <h2>Pages</h2>
-  <ol><span>positive</span><span>negative</span><a href="#p1"> 
-      <li>1</li></a><a href="#p2">
-      <li>2</li></a><a href="#p3"> 
-      <li>3</li></a><a href="#p4"> 
-      <li>4</li></a><a href="#p5"> 
-      <li>5</li></a><a href="#p6"> 
-      <li>6</li></a><a href="#p7"> 
-      <li>7</li></a><a href="#p8"> 
-      <li>8</li></a><a href="#p9"> 
-      <li>9</li></a><a href="#p10"> 
-      <li>10</li></a><a href="#p11"> 
-      <li>11</li></a><a href="#p12"> 
-      <li>12</li></a><a href="#p13"> 
-      <li>13</li></a><a href="#p14"> 
-      <li>14</li></a><a href="#p15"> 
-      <li>15</li></a><a href="#p16"> 
-      <li>16</li></a></ol>
+  <p>There are 16 pages in this book. Each page has 8 lines and 2 sets of rhyming words. Each page is represented by a circle, with page 1 starting on the left moving right with each page increment. The vertical position and colour of each circle is based on its page sentiment value. The higher and golden, the more positive the sentiment. The lower and greyer, the more negative. The thin outer line surrounding each circle is the number of words per page. The longer the line, the more words on that page. Hovering over each circle will show the numerical value of sentiment value and word count of each page. </p>
+</section>
+<nav>
+  <h2 class="side">Pages</h2>
+  <ol><span>+ positive</span><span>- negative</span><a href="#p1">  
+      <li class="tooltip">1
+        <div class="sentiment tooltip"><span class="tooltiptext">-0.35</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">41 words</span></div>
+      </li></a><a href="#p2">
+      <li class="tooltip">2
+        <div class="sentiment tooltip"><span class="tooltiptext">-0.18</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">40 words</span></div>
+      </li></a><a href="#p3"> 
+      <li class="tooltip">3
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.32</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">37 words</span></div>
+      </li></a><a href="#p4"> 
+      <li class="tooltip">4
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.17</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">40 words</span></div>
+      </li></a><a href="#p5"> 
+      <li class="tooltip">5
+        <div class="sentiment tooltip"><span class="tooltiptext">-0.10</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">40 words</span></div>
+      </li></a><a href="#p6"> 
+      <li class="tooltip">6
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.05</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">43 words</span></div>
+      </li></a><a href="#p7"> 
+      <li class="tooltip">7
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.24</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">43 words</span></div>
+      </li></a><a href="#p8"> 
+      <li class="tooltip">8
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.04</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">42 words</span></div>
+      </li></a><a href="#p9"> 
+      <li class="tooltip">9
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.16</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">39 words</span></div>
+      </li></a><a href="#p10"> 
+      <li class="tooltip">10
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.06</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">39 words</span></div>
+      </li></a><a href="#p11"> 
+      <li class="tooltip">11
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.02</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">45 words</span></div>
+      </li></a><a href="#p12"> 
+      <li class="tooltip">12
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.43</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">44 words</span></div>
+      </li></a><a href="#p13"> 
+      <li class="tooltip">13
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.31</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">49 words</span></div>
+      </li></a><a href="#p14"> 
+      <li class="tooltip">14
+        <div class="sentiment tooltip"><span class="tooltiptext">+0.16</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">47 words</span></div>
+      </li></a><a href="#p15"> 
+      <li class="tooltip">15
+        <div class="sentiment tooltip"><span class="tooltiptext">-0.46</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">43 words</span></div>
+      </li></a><a href="#p16"> 
+      <li class="tooltip">16
+        <div class="sentiment tooltip"><span class="tooltiptext">-0.04</span></div>
+        <div class="wordcount tooltip"><span class="tooltiptext">48 words</span></div>
+      </li></a></ol>
 </nav>
+<section>
+  <h2>Individual pages</h2>
+  <p>In this section, we go deeper looking into each page in more detail looking at more data. There are quite a lot to it so some reading the section below  might be needed to understand the details. </p>
+  <div class="tab-container">
+    <input name="tab" type="radio" id="vertical-1" checked="checked"/>
+    <label for="vertical-1">Overview of SECTIONS</label>
+    <div class="panel">
+      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/sections.gif"/></figure>
+      <p>These sections are divided up and numbered sections, for ease of explanation, but can be viewed in any order. </p>
+    </div>
+    <input name="tab" type="radio" id="vertical-2"/>
+    <label for="vertical-2">1. Text</label>
+    <div class="panel">
+      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/text.gif"/></figure>
+      <p>This is the original text as it was written in the book. Upon hover, the text disappears leaving only the punctuation. </p>
+    </div>
+    <input name="tab" type="radio" id="vertical-3"/>
+    <label for="vertical-3">2. Visual: SUMMARY</label>
+    <div class="panel">
+      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/summary.gif"/></figure>
+      <p>The inner smallest circle shows a summary of the page. The default view shows the page number, number of words, and rhyming words. On hover show the sentiment value and the top emotion.</p>
+    </div>
+    <input name="tab" type="radio" id="vertical-4"/>
+    <label for="vertical-4">3. Visual: EMOTIONS</label>
+    <div class="panel">
+      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/emotions.gif"/></figure>
+      <p>Moving outwards is the emotions section. There can be up to six on a page depicted by triangles. From top moving clockwise, joy, surprise, sadness, fear, disgust, anger. The larger the triangle, larger the emotion value.   </p>
+    </div>
+    <input name="tab" type="radio" id="vertical-5"/>
+    <label for="vertical-5">4. Visual: SENTENCES</label>
+    <div class="panel">
+      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/sentences.gif"/></figure>
+      <p>The next section is sentences of which there are always 8 on a page represented by thin curved lines. The first sentence start at the top moving clockwise. Each sentence starts black, fading into light gray at the end of a sentence and is linked with words which is the final outer section.    </p>
+    </div>
+    <input name="tab" type="radio" id="vertical-6"/>
+    <label for="vertical-6">5. Visual: WORDS</label>
+    <div class="panel">
+      <figure><img src="https://ongtiffany.github.io/img/project/rrh2viz/words.gif"/></figure>
+      <p>The first word starts at the top and moves clockwise around the circle. Also like each page, a word can have a postive or negative sentiment thus coloured and shaded accordingly to its value. Each page also has 2 sets of rhyming words, the first set will have a single black side line, and the second set double black side lines.</p>
+    </div>
+  </div>
+</section>
+<h2 class="story">The story begins...    </h2>
 <!-- Page 1-->
 <section id="p1">
+  <div class="text-wrapper">
+    <h3>1</h3>
+    <ol>
+      <li>There was a lonely cabin</li>
+      <li>Within a dark<span>,</span> old wood<span>,</span></li>
+      <li>And in it<span>,</span> with her mother</li>
+      <li>There dwelt Red Riding Hood<span>.</span></li>
+      <li>The tall old trees above them</li>
+      <li>Their winter fire supplied</li>
+      <li>When Autumn<span>'</span>s flaming sunsets</li>
+      <li>From their red leaves had died<span>.</span> </li>
+    </ol>
+  </div>
   <div class="reworked-wrapper">
     <div class="page page1">
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0</span></span></div>
@@ -99,13 +194,24 @@
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0152</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0180</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Negative -0.35</span></h3><br/>
-          <h3>Top Emotion<br/><span>Surprise</span></h3></span>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Negative -0.35</dd>
+            <dt>Top Emotion</dt>
+            <dd>Surprise</dd>
+          </dl>
+          <ol>
+            <li class="tooltip cabin"></li>
+            <li class="tooltip woods"></li>
+          </ol></span>
         <h2>1</h2>
-        <p>41 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>old &#183; wood</span></p>
-        <p> <span>supplied &#183; died</span></p>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>41</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">old &#183; wood</dd>
+          <dd class="rhymes">supplied &#183; died</dd>
+        </dl>
       </div>
       <div class="word"><span class="beginsentence">There</span></div>
       <div class="word"><span>was</span></div>
@@ -122,10 +228,10 @@
       <div class="word"><span>it</span></div>
       <div class="word"><span>with</span></div>
       <div class="word"><span>her</span></div>
-      <div class="word"><span class="endsentence">mother</span></div>
+      <div class="word"><span class="endsentence mother">mother</span></div>
       <div class="word"><span class="beginsentence">There</span></div>
       <div class="word"><span>dwelt</span></div>
-      <div class="word"><span>Red</span></div>
+      <div class="word"><span class="rrh">Red</span></div>
       <div class="word"><span>Riding</span></div>
       <div class="word"><span class="endsentence">Hood</span></div>
       <div class="word"><span class="beginsentence">The</span></div>
@@ -150,22 +256,22 @@
       <div class="word"><span class="tooltip endsentence">died<span class="tooltiptext">-0.797</span></span></div>
     </div>
   </div>
-  <div class="text-wrapper">
-    <h3>1</h3>
-    <ol>
-      <li>There was a lonely cabin</li>
-      <li>Within a dark<span>,</span> old wood<span>,</span></li>
-      <li>And in it<span>,</span> with her mother</li>
-      <li>There dwelt Red Riding Hood<span>.</span></li>
-      <li>The tall old trees above them</li>
-      <li>Their winter fire supplied</li>
-      <li>When Autumn<span>'</span>s flaming sunsets</li>
-      <li>From their red leaves had died<span>.</span></li>
-    </ol>
-  </div>
 </section>
 <!-- Page 2-->
 <section id="p2">
+  <div class="text-wrapper">
+    <h3>2</h3>
+    <ol>
+      <li>The rippling brook<span>,</span> their water</li>
+      <li>From far off mountains brought<span>;</span></li>
+      <li>And prattled of their summits</li>
+      <li>In icy statues wrought<span>.</span></li>
+      <li>For them<span>,</span> the squirrels hoarded</li>
+      <li>Their nuts in hollow trees<span>;</span></li>
+      <li>And pounds of sweetest honey</li>
+      <li>Were made them by the bees<span>;</span></li>
+    </ol>
+  </div>
   <div class="reworked-wrapper">
     <div class="page page2">
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0</span></span></div>
@@ -175,13 +281,24 @@
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0032</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Negative -0.18</span></h3><br/>
-          <h3>Top Emotion<br/><span>Surprise</span></h3></span>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Negative -0.18</dd>
+            <dt>Top Emotion</dt>
+            <dd>Surprise</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip woods"></li>
+          </ol></span>
         <h2>2</h2>
-        <p>40 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>brought &#183; wrought</span></p>
-        <p> <span>trees &#183; bees</span></p>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>40</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">brought &#183; wrought</dd>
+          <dd class="rhymes">trees &#183; bees</dd>
+        </dl>
       </div>
       <div class="word"><span class="beginsentence">The</span></div>
       <div class="word"><span>rippling</span></div>
@@ -225,82 +342,9 @@
       <div class="word"><span class="endsentence">bees</span></div>
     </div>
   </div>
-  <div class="text-wrapper">
-    <h3>2</h3>
-    <ol>
-      <li>The rippling brook<span>,</span> their water</li>
-      <li>From far off mountains brought<span>;</span></li>
-      <li>And prattled of their summits</li>
-      <li>In icy statues wrought<span>.</span></li>
-      <li>For them<span>,</span> the squirrels hoarded</li>
-      <li>Their nuts in hollow trees<span>;</span></li>
-      <li>And pounds of sweetest honey</li>
-      <li>Were made them by the bees<span>;</span></li>
-    </ol>
-  </div>
 </section>
 <!-- Page 3-->
 <section id="p3">
-  <div class="reworked-wrapper">
-    <div class="page page3">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0131</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.0049</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0005</span></span></div>
-      <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.32</span></h3><br/>
-          <h3>Top Emotion<br/><span>Joy</span></h3></span>
-        <h2>Page 3</h2>
-        <p>37 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>do &#183; you</span></p>
-        <p> <span>red &#183; tread</span></p>
-      </div>
-      <div class="word"><span class="beginsentence">To</span></div>
-      <div class="word"><span>gather</span></div>
-      <div class="word"><span>these</span></div>
-      <div class="word"><span class="tooltip endsentence">together<span class="tooltiptext">+0.192</span></span></div>
-      <div class="word"><span class="beginsentence">Was</span></div>
-      <div class="word"><span class="tooltip">work<span class="tooltiptext">+0.509</span></span></div>
-      <div class="word"><span class="tooltip">enough<span class="tooltiptext">+0.467</span></span></div>
-      <div class="word"><span>to</span></div>
-      <div class="word"><span class="endsentence">do</span></div>
-      <div class="word"><span class="tooltip beginsentence">Little<span class="tooltiptext">-0.110</span></span></div>
-      <div class="word"><span>Red</span></div>
-      <div class="word"><span>Riding</span></div>
-      <div class="word"><span>Hood</span></div>
-      <div class="word"><span class="tooltip">thought<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span class="endsentence">so</span></div>
-      <div class="word"><span class="beginsentence">An</span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span class="tooltip">no<span class="tooltiptext">-0.217</span></span></div>
-      <div class="word"><span class="tooltip">doubt<span class="tooltiptext">+0.466</span></span></div>
-      <div class="word"><span>would</span></div>
-      <div class="word"><span class="endsentence">you</span></div>
-      <div class="word"><span class="beginsentence">Blushing</span></div>
-      <div class="word"><span>beneath</span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>fingers</span></div>
-      <div class="word"><span class="beginsentence">Looked</span></div>
-      <div class="word"><span class="tooltip endsentence">up<span class="tooltiptext">+0.140</span></span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span>berries</span></div>
-      <div class="word"><span class="endsentence">red</span></div>
-      <div class="word"><span class="beginsentence">The</span></div>
-      <div class="word"><span>flowers</span></div>
-      <div class="word"><span class="tooltip">seemed<span class="tooltiptext">+0.238</span></span></div>
-      <div class="word"><span>to</span></div>
-      <div class="word"><span class="tooltip">know<span class="tooltiptext">+0.178</span></span></div>
-      <div class="word"><span class="endsentence">her</span></div>
-      <div class="word"><span class="beginsentence">And</span></div>
-      <div class="word"><span>listened</span></div>
-      <div class="word"><span>for</span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span class="tooltip endsentence">tread<span class="tooltiptext">-0.071</span></span></div>
-    </div>
-  </div>
   <div class="text-wrapper">
     <h3>3</h3>
     <ol>
@@ -314,9 +358,93 @@
       <li>And listened for her tread<span>.</span></li>
     </ol>
   </div>
+  <div class="reworked-wrapper">
+    <div class="page page3">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0131</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.0049</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0005</span></span></div>
+      <div class="innercircle tooltip"><span class="tooltiptext"> 
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.32</dd>
+            <dt>Top Emotion</dt>
+            <dd>Joy</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip woods"></li>
+          </ol></span>
+        <h2>3</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>37</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">do &#183; you</dd>
+          <dd class="rhymes">red &#183; tread</dd>
+        </dl>
+      </div>
+      <div class="word"><span class="beginsentence">To</span></div>
+      <div class="word"><span>gather</span></div>
+      <div class="word"><span>these</span></div>
+      <div class="word"><span class="tooltip endsentence">together<span class="tooltiptext">+0.192</span></span></div>
+      <div class="word"><span class="beginsentence">Was</span></div>
+      <div class="word"><span class="tooltip">work<span class="tooltiptext">+0.509</span></span></div>
+      <div class="word"><span class="tooltip">enough<span class="tooltiptext">+0.467</span></span></div>
+      <div class="word"><span>to</span></div>
+      <div class="word"><span class="endsentence">do</span></div>
+      <div class="word"><span class="tooltip beginsentence">Little<span class="tooltiptext">-0.110</span></span></div>
+      <div class="word"><span class="rrh">Red</span></div>
+      <div class="word"><span>Riding</span></div>
+      <div class="word"><span>Hood</span></div>
+      <div class="word"><span class="tooltip">thought<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span class="endsentence">so</span></div>
+      <div class="word"><span class="beginsentence">An</span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span class="tooltip">no<span class="tooltiptext">-0.217</span></span></div>
+      <div class="word"><span class="tooltip">doubt<span class="tooltiptext">+0.466</span></span></div>
+      <div class="word"><span>would</span></div>
+      <div class="word"><span class="endsentence reader">you</span></div>
+      <div class="word"><span class="beginsentence">Blushing</span></div>
+      <div class="word"><span>beneath</span></div>
+      <div class="word"><span class="rrh">her</span></div>
+      <div class="word"><span>fingers</span></div>
+      <div class="word"><span class="beginsentence">Looked</span></div>
+      <div class="word"><span class="tooltip endsentence">up<span class="tooltiptext">+0.140</span></span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span>berries</span></div>
+      <div class="word"><span class="endsentence">red</span></div>
+      <div class="word"><span class="beginsentence">The</span></div>
+      <div class="word"><span>flowers</span></div>
+      <div class="word"><span class="tooltip">seemed<span class="tooltiptext">+0.238</span></span></div>
+      <div class="word"><span>to</span></div>
+      <div class="word"><span class="tooltip">know<span class="tooltiptext">+0.178</span></span></div>
+      <div class="word"><span class="endsentence rrh"> her</span></div>
+      <div class="word"><span class="beginsentence">And</span></div>
+      <div class="word"><span>listened</span></div>
+      <div class="word"><span>for</span></div>
+      <div class="word"><span class="rrh">her</span></div>
+      <div class="word"><span class="tooltip endsentence">tread<span class="tooltiptext">-0.071</span></span></div>
+    </div>
+  </div>
 </section>
 <!-- Page 4-->
 <section id="p4">
+  <div class="text-wrapper">
+    <h3>4</h3>
+    <ol>
+      <li>For she was good and loving</li>
+      <li>And beautiful as good<span>,</span></li>
+      <li>With daily acts of kindness<span>,</span></li>
+      <li>Little Red Riding Hood<span>.</span></li>
+      <li>Afar off<span>,</span> in the forest,</span></li>
+      <li>There lived her grandam old<span>;</span></li>
+      <li>And she was poor and needy<span>,</span></li>
+      <li>And often sick and cold<span>.</span></li>
+    </ol>
+  </div>
   <div class="reworked-wrapper">
     <div class="page page4">
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0189</span></span></div>
@@ -326,16 +454,27 @@
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.17</span></h3><br/>
-          <h3>Top Emotion<br/><span>Joy</span></h3></span>
-        <h2>Page 4</h2>
-        <p>40 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>good &#183; Hood</span></p>
-        <p> <span>old &#183; cold</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.17</dd>
+            <dt>Top Emotion</dt>
+            <dd>Joy</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>4</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>40</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">good &#183; Hood</dd>
+          <dd class="rhymes">old &#183; cold  </dd>
+        </dl>
       </div>
       <div class="word"><span>For</span></div>
-      <div class="word"><span>she</span></div>
+      <div class="word"><span class="rrh">she</span></div>
       <div class="word"><span>was</span></div>
       <div class="word"><span class="tooltip">good<span class="tooltiptext">+1.886</span></span></div>
       <div class="word"><span>and</span></div>
@@ -350,7 +489,7 @@
       <div class="word"><span>of</span></div>
       <div class="word"><span class="tooltip">kindness<span class="tooltiptext">+0.942</span></span></div>
       <div class="word"><span class="tooltip">Little<span class="tooltiptext">-0.110</span></span></div>
-      <div class="word"><span>Red</span></div>
+      <div class="word"><span class="rrh">Red</span></div>
       <div class="word"><span>Riding</span></div>
       <div class="word"><span>Hood</span></div>
       <div class="word"><span class="tooltip">Afar<span class="tooltiptext">+0.152</span></span></div>
@@ -360,10 +499,10 @@
       <div class="word"><span>forest</span></div>
       <div class="word"><span class="tooltip">lived<span class="tooltiptext">+0.192</span></span></div>
       <div class="word"><span>her</span></div>
-      <div class="word"><span>grandam</span></div>
+      <div class="word"><span class="gran">grandam</span></div>
       <div class="word"><span class="tooltip">old<span class="tooltiptext">+0.098</span></span></div>
       <div class="word"><span>And</span></div>
-      <div class="word"><span>she</span></div>
+      <div class="word"><span class="gran">she</span></div>
       <div class="word"><span>was</span></div>
       <div class="word"><span class="tooltip">poor<span class="tooltiptext">-0.792</span></span></div>
       <div class="word"><span>and</span></div>
@@ -375,22 +514,22 @@
       <div class="word"><span class="tooltip">cold<span class="tooltiptext">-0.454</span></span></div>
     </div>
   </div>
-  <div class="text-wrapper">
-    <h3>4</h3>
-    <ol>
-      <li>For she was good and loving</li>
-      <li>And beautiful as good<span>,</span></li>
-      <li>With daily acts of kindness<span>,</span></li>
-      <li>Little Red Riding Hood<span>.</span></li>
-      <li>Afar off<span>,</span> in the forest,</span></li>
-      <li>There lived her grandam old<span>;</span></li>
-      <li>And she was poor and needy<span>,</span></li>
-      <li>And often sick and cold<span>.</span></li>
-    </ol>
-  </div>
 </section>
 <!-- Page 5-->
 <section id="p5">
+  <div class="text-wrapper">
+    <h3>5</h3>
+    <ol>
+      <li>And once a week<span>,</span> her grandchild</li>
+      <li>Would walk the lonely wood<span>,</span></li>
+      <li>And carry little bundles</li>
+      <li>Of faggots and of food<span>.</span></li>
+      <li>One morn the mother started</li>
+      <li>The maid upon her way<span>,</span></li>
+      <li>And said<span>,</span> <span>"</span>now you must carry</li>
+      <li>To grandmamma to day<span>.</span><span> "</span></li>
+    </ol>
+  </div>
   <div class="reworked-wrapper">
     <div class="page page5">
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0008</span></span></div>
@@ -400,20 +539,31 @@
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0031</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Negative -0.102</span></h3><br/>
-          <h3>Top Emotion<br/><span>Disgust</span></h3></span>
-        <h2>Page 5</h2>
-        <p>40 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>wood &#183; food</span></p>
-        <p> <span>way &#183; day</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Negative -0.10</dd>
+            <dt>Top Emotion</dt>
+            <dd>Disgust</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>5</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>40</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">wood &#183; food</dd>
+          <dd class="rhymes">way &#183; day</dd>
+        </dl>
       </div>
       <div class="word"><span>And</span></div>
       <div class="word"><span>once</span></div>
       <div class="word"><span>a</span></div>
       <div class="word"><span>week</span></div>
       <div class="word"><span>her</span></div>
-      <div class="word"><span>grandchild</span></div>
+      <div class="word"><span class="rrh">grandchild</span></div>
       <div class="word"><span>Would</span></div>
       <div class="word"><span class="tooltip">walk<span class="tooltiptext">+0.117</span></span></div>
       <div class="word"><span>the</span></div>
@@ -431,41 +581,41 @@
       <div class="word"><span class="tooltip">One<span class="tooltiptext">+0.103</span></span></div>
       <div class="word"><span>morn</span></div>
       <div class="word"><span>the</span></div>
-      <div class="word"><span>mother</span></div>
+      <div class="word"><span class="mother">mother</span></div>
       <div class="word"><span class="tooltip">started<span class="tooltiptext">-0.096</span></span></div>
       <div class="word"><span>The</span></div>
-      <div class="word"><span>maid</span></div>
+      <div class="word"><span class="rrh">maid</span></div>
       <div class="word"><span>upon</span></div>
       <div class="word"><span>her</span></div>
       <div class="word"><span class="tooltip">way<span class="tooltiptext">+0.117</span></span></div>
       <div class="word"><span>And</span></div>
       <div class="word"><span>said</span></div>
       <div class="word"><span>now</span></div>
-      <div class="word"><span>you</span></div>
+      <div class="word"><span class="rrh">you</span></div>
       <div class="word"><span class="tooltip">must<span class="tooltiptext">+0.238</span></span></div>
       <div class="word"><span>carry</span></div>
       <div class="word"><span>To</span></div>
-      <div class="word"><span>grandmamma</span></div>
+      <div class="word"><span class="gran">grandmamma</span></div>
       <div class="word"><span>to</span></div>
       <div class="word"><span class="tooltip">day<span class="tooltiptext">+0.134</span></span></div>
     </div>
   </div>
-  <div class="text-wrapper">
-    <h3>5</h3>
-    <ol>
-      <li>And once a week<span>,</span> her grandchild</li>
-      <li>Would walk the lonely wood<span>,</span></li>
-      <li>And carry little bundles</li>
-      <li>Of faggots and of food<span>.</span></li>
-      <li>One morn the mother started</li>
-      <li>The maid upon her way<span>,</span></li>
-      <li>And said<span>,</span> <span>"</span>now you must carry</li>
-      <li>To grandmamma to day<span>.</span><span> "</span></li>
-    </ol>
-  </div>
 </section>
 <!-- Page 6-->
 <section id="p6">
+  <div class="text-wrapper">
+    <h3>6</h3>
+    <ol>
+      <li><span>"</span>This little pot of butter</li>
+      <li>I<span>'</span>ve churned so nice and sweet<span>;</span></li>
+      <li>And mind not stop and prattle</li>
+      <li>With any one you meet<span>!</span><span> "</span></li>
+      <li>Then through the shady forest</li>
+      <li>The little maiden went<span>;</span></li>
+      <li>And though her steps were fleetest<span>,</span></li>
+      <li>The day was well nigh spent<span>,</span></li>
+    </ol>
+  </div>
   <div class="reworked-wrapper">
     <div class="page page6">
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.1816</span></span></div>
@@ -475,20 +625,31 @@
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.057</span></h3><br/>
-          <h3>Top Emotion<br/><span>Joy</span></h3></span>
-        <h2>Page 6</h2>
-        <p>43 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>sweet &#183; meet</span></p>
-        <p> <span>went &#183; spent</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.057</dd>
+            <dt>Top Emotion</dt>
+            <dd>Joy</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>6</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>43</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">sweet &#183; meet</dd>
+          <dd class="rhymes">went &#183; spent</dd>
+        </dl>
       </div>
       <div class="word"><span>This</span></div>
       <div class="word"><span class="tooltip">little<span class="tooltiptext">-0.221</span></span></div>
       <div class="word"><span>pot</span></div>
       <div class="word"><span>of</span></div>
       <div class="word"><span>butter</span></div>
-      <div class="word"><span>Ive</span></div>
+      <div class="word"><span class="mother">Ive</span></div>
       <div class="word"><span>churned</span></div>
       <div class="word"><span>so</span></div>
       <div class="word"><span class="tooltip">nice<span class="tooltiptext">+0.955</span></span></div>
@@ -503,7 +664,7 @@
       <div class="word"><span>With</span></div>
       <div class="word"><span>any</span></div>
       <div class="word"><span class="tooltip">one<span class="tooltiptext">+0.103</span></span></div>
-      <div class="word"><span>you</span></div>
+      <div class="word"><span class="rrh">you</span></div>
       <div class="word"><span class="tooltip">meet<span class="tooltiptext">+0.152</span></span></div>
       <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.192</span></span></div>
       <div class="word"><span class="tooltip">through<span class="tooltiptext">-0.126</span></span></div>
@@ -512,11 +673,11 @@
       <div class="word"><span>forest</span></div>
       <div class="word"><span>The</span></div>
       <div class="word"><span class="tooltip">little<span class="tooltiptext">-0.221</span></span></div>
-      <div class="word"><span>maiden</span></div>
+      <div class="word"><span class="rrh">maiden</span></div>
       <div class="word"><span>went</span></div>
       <div class="word"><span>And</span></div>
       <div class="word"><span>though</span></div>
-      <div class="word"><span>her</span></div>
+      <div class="word"><span class="rrh">her</span></div>
       <div class="word"><span class="tooltip">step<span class="tooltiptext">-0.25</span></span></div>
       <div class="word"><span>were</span></div>
       <div class="word"><span>fleetest</span></div>
@@ -528,83 +689,9 @@
       <div class="word"><span>spent</span></div>
     </div>
   </div>
-  <div class="text-wrapper">
-    <h3>6</h3>
-    <ol>
-      <li><span>"</span>This little pot of butter</li>
-      <li>I<span>'</span>ve churned so nice and sweet<span>;</span></li>
-      <li>And mind not stop and prattle</li>
-      <li>With any one you meet<span>!</span><span> "</span></li>
-      <li>Then through the shady forest</li>
-      <li>The little maiden went<span>;</span></li>
-      <li>And though her steps were fleetest<span>,</span></li>
-      <li>The day was well nigh spent<span>,</span></li>
-    </ol>
-  </div>
 </section>
 <!-- Page 7-->
 <section id="p7">
-  <div class="reworked-wrapper">
-    <div class="page page7">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0282</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
-      <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.24</span></h3><br/>
-          <h3>Top Emotion<br/><span>Joy</span></h3></span>
-        <h2>Page 7</h2>
-        <p>43 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>spied &#183; side</span></p>
-        <p> <span>are &#183; far</span></p>
-      </div>
-      <div class="word"><span>When</span></div>
-      <div class="word"><span>nearby</span></div>
-      <div class="word"><span class="tooltip">through<span class="tooltiptext">-0.126</span></span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>journey</span></div>
-      <div class="word"><span>An</span></div>
-      <div class="word"><span>old</span></div>
-      <div class="word"><span>gaunt</span></div>
-      <div class="word"><span>she</span></div>
-      <div class="word"><span class="tooltip">spied<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>Who</span></div>
-      <div class="word"><span>wagged</span></div>
-      <div class="word"><span>his</span></div>
-      <div class="word"><span class="tooltip">tail<span class="tooltiptext">-0.071</span></span></div>
-      <div class="word"><span>and</span></div>
-      <div class="word"><span class="tooltip">humbly<span class="tooltiptext">+0.806</span></span></div>
-      <div class="word"><span>Came</span></div>
-      <div class="word"><span class="tooltip">walking<span class="tooltiptext">+0.238</span></span></div>
-      <div class="word"><span class="tooltip">by<span class="tooltiptext">+0.4669</span></span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span class="tooltip">side<span class="tooltiptext">-0.071</span></span></div>
-      <div class="word"><span>And</span></div>
-      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>my</span></div>
-      <div class="word"><span class="tooltip">little<span class="tooltiptext">+0.110</span></span></div>
-      <div class="word"><span>maiden</span></div>
-      <div class="word"><span>How</span></div>
-      <div class="word"><span class="tooltip">very<span class="tooltiptext">+0.192</span></span></div>
-      <div class="word"><span class="tooltip">fair<span class="tooltiptext">+1.190</span></span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span>are</span></div>
-      <div class="word"><span>You</span></div>
-      <div class="word"><span class="tooltip">really<span class="tooltiptext">+0.192</span></span></div>
-      <div class="word"><span>look</span></div>
-      <div class="word"><span class="tooltip">quite<span class="tooltiptext">+0.238</span></span></div>
-      <div class="word"><span class="tooltip">handsome<span class="tooltiptext">+0.881</span></span></div>
-      <div class="word"><span>Where</span></div>
-      <div class="word"><span>do</span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span>walk</span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span class="tooltip">far<span class="tooltiptext">+0.152</span></span></div>
-    </div>
-  </div>
   <div class="text-wrapper">
     <h3>7</h3>
     <ol>
@@ -618,70 +705,81 @@
       <li>Where do you walk so far<span>?</span><span> "</span></li>
     </ol>
   </div>
-</section>
-<!-- Page 8-->
-<section id="p8">
   <div class="reworked-wrapper">
-    <div class="page page8">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0117</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.0133</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0.0173</span></span></div>
+    <div class="page page7">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0282</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Neutral +0.04</span></h3><br/>
-          <h3>Top Emotion<br/><span>Sadness</span></h3></span>
-        <h2>Page 8</h2>
-        <p>42 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>where &#183; bear</span></p>
-        <p> <span>what &#183; pot</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.24</dd>
+            <dt>Top Emotion</dt>
+            <dd>Joy</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>7</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>43</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">spied &#183; side</dd>
+          <dd class="rhymes">are &#183; far</dd>
+        </dl>
       </div>
-      <div class="word"><span>Forgetful</span></div>
-      <div class="word"><span>of</span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>mother</span></div>
-      <div class="word"><span>She</span></div>
-      <div class="word"><span class="tooltip">stopped<span class="tooltiptext">-0.113</span></span></div>
+      <div class="word"><span>When</span></div>
+      <div class="word"><span>nearby</span></div>
+      <div class="word"><span class="tooltip">through<span class="tooltiptext">-0.126</span></span></div>
+      <div class="word"><span class="rrh">her</span></div>
+      <div class="word"><span>journey</span></div>
+      <div class="word"><span>An</span></div>
+      <div class="word"><span>old</span></div>
+      <div class="word"><span class="wolf">gaunt</span></div>
+      <div class="word"><span class="rrh">she</span></div>
+      <div class="word"><span class="tooltip">spied<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>Who</span></div>
+      <div class="word"><span>wagged</span></div>
+      <div class="word"><span class="wolf">his</span></div>
+      <div class="word"><span class="tooltip">tail<span class="tooltiptext">-0.071</span></span></div>
       <div class="word"><span>and</span></div>
-      <div class="word"><span class="tooltip">told<span class="tooltiptext">+0.476</span></span></div>
-      <div class="word"><span>him</span></div>
-      <div class="word"><span>where</span></div>
-      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.192</span></span></div>
+      <div class="word"><span class="tooltip">humbly<span class="tooltiptext">+0.806</span></span></div>
+      <div class="word"><span>Came</span></div>
+      <div class="word"><span class="tooltip">walking<span class="tooltiptext">+0.238</span></span></div>
+      <div class="word"><span class="tooltip">by<span class="tooltiptext">+0.4669</span></span></div>
+      <div class="word"><span class="rrh">her</span></div>
+      <div class="word"><span class="tooltip">side<span class="tooltiptext">-0.071</span></span></div>
+      <div class="word"><span>And</span></div>
       <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span>Wolf</span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span>cunning</span></div>
-      <div class="word"><span>What</span></div>
-      <div class="word"><span>is</span></div>
-      <div class="word"><span>it</span></div>
-      <div class="word"><span>that</span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span class="tooltip">bear<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span class="tooltip">Forgetful<span class="tooltiptext">-1.138</span></span></div>
-      <div class="word"><span>of</span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>mother</span></div>
-      <div class="word"><span>She</span></div>
-      <div class="word"><span class="tooltip">stood<span class="tooltiptext">-0.083</span></span></div>
-      <div class="word"><span>and</span></div>
-      <div class="word"><span>told</span></div>
-      <div class="word"><span>him</span></div>
-      <div class="word"><span>what</span></div>
-      <div class="word"><span>Tis</span></div>
-      <div class="word"><span>butter</span></div>
-      <div class="word"><span>for</span></div>
       <div class="word"><span>my</span></div>
-      <div class="word"><span>grandma</span></div>
-      <div class="word"><span class="tooltip">Packed<span class="tooltiptext">-0.071</span></span></div>
-      <div class="word"><span class="tooltip">nicely<span class="tooltiptext">+0.955</span></span></div>
-      <div class="word"><span>in</span></div>
-      <div class="word"><span>this</span></div>
-      <div class="word"><span>pot</span></div>
+      <div class="word"><span class="tooltip">little<span class="tooltiptext">+0.110</span></span></div>
+      <div class="word"><span class="rrh">maiden</span></div>
+      <div class="word"><span>How</span></div>
+      <div class="word"><span class="tooltip">very<span class="tooltiptext">+0.192</span></span></div>
+      <div class="word"><span class="tooltip">fair<span class="tooltiptext">+1.190</span></span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span>are</span></div>
+      <div class="word"><span class="rrh">You</span></div>
+      <div class="word"><span class="tooltip">really<span class="tooltiptext">+0.192</span></span></div>
+      <div class="word"><span>look</span></div>
+      <div class="word"><span class="tooltip">quite<span class="tooltiptext">+0.238</span></span></div>
+      <div class="word"><span class="tooltip">handsome<span class="tooltiptext">+0.881</span></span></div>
+      <div class="word"><span>Where</span></div>
+      <div class="word"><span>do</span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span>walk</span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span class="tooltip">far<span class="tooltiptext">+0.152</span></span></div>
     </div>
   </div>
+</section>
+<!-- Page 8-->
+<section id="p8">
   <div class="text-wrapper">
     <h3>8</h3>
     <ol>
@@ -695,68 +793,81 @@
       <li>Packed nicely in this pot<span>.</span><span> "</span></li>
     </ol>
   </div>
-</section>
-<!-- Page 9-->
-<section id="p9">
   <div class="reworked-wrapper">
-    <div class="page page9">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.1816</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.0438</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
+    <div class="page page8">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0117</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.0133</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0.0173</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.16</span></h3><br/>
-          <h3>Top Emotion<br/><span>Joy</span></h3></span>
-        <h2>Page 9</h2>
-        <p>39 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>again &#183; and glen</span></p>
-        <p> <span>old &#183; infold</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Neutral +0.04</dd>
+            <dt>Top Emotion</dt>
+            <dd>Sadness</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>8</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>42</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">where &#183; bear</dd>
+          <dd class="rhymes">what &#183; pot</dd>
+        </dl>
       </div>
-      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.384</span></span></div>
+      <div class="word"><span>Forgetful</span></div>
+      <div class="word"><span>of</span></div>
+      <div class="word"><span>her</span></div>
+      <div class="word"><span class="mother">mother</span></div>
+      <div class="word"><span class="rrh">She</span></div>
+      <div class="word"><span class="tooltip">stopped<span class="tooltiptext">-0.113</span></span></div>
+      <div class="word"><span>and</span></div>
+      <div class="word"><span class="tooltip">told<span class="tooltiptext">+0.476</span></span></div>
+      <div class="word"><span class="wolf">him</span></div>
+      <div class="word"><span>where</span></div>
+      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.192</span></span></div>
       <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
       <div class="word"><span>the</span></div>
-      <div class="word"><span>Wolf</span></div>
-      <div class="word"><span class="tooltip">good<span class="tooltiptext">+0.943</span></span></div>
-      <div class="word"><span>bye</span></div>
-      <div class="word"><span class="tooltip">dear<span class="tooltiptext">+0.417</span></span></div>
-      <div class="word"><span>Perhaps</span></div>
-      <div class="word"><span>well</span></div>
-      <div class="word"><span class="tooltip">meet<span class="tooltiptext">-0.1105</span></span></div>
-      <div class="word"><span>again</span></div>
-      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.384</span></span></div>
-      <div class="word"><span class="tooltip">swiftly<span class="tooltiptext">+0.401</span></span></div>
-      <div class="word"><span>on</span></div>
-      <div class="word"><span>he</span></div>
-      <div class="word"><span>hastened</span></div>
-      <div class="word"><span class="tooltip">Swiftly<span class="tooltiptext">+0.401</span></span></div>
-      <div class="word"><span class="tooltip">through<span class="tooltiptext">-0.126</span></span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span>dale</span></div>
-      <div class="word"><span>and</span></div>
-      <div class="word"><span>glen</span></div>
-      <div class="word"><span>And</span></div>
-      <div class="word"><span class="tooltip">running<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span class="tooltip">reached<span class="tooltiptext">+0.137</span></span></div>
-      <div class="word"><span>before</span></div>
+      <div class="word"><span class="wolf">Wolf</span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span>cunning</span></div>
+      <div class="word"><span>What</span></div>
+      <div class="word"><span>is</span></div>
+      <div class="word"><span>it</span></div>
+      <div class="word"><span>that</span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span class="tooltip">bear<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span class="tooltip">Forgetful<span class="tooltiptext">-1.138</span></span></div>
+      <div class="word"><span>of</span></div>
       <div class="word"><span>her</span></div>
-      <div class="word"><span>The</span></div>
-      <div class="word"><span>cabin</span></div>
-      <div class="word"><span class="tooltip">grey<span class="tooltiptext">-0.085</span></span></div>
+      <div class="word"><span class="mother">mother</span></div>
+      <div class="word"><span class="rrh">She</span></div>
+      <div class="word"><span class="tooltip">stood<span class="tooltiptext">-0.083</span></span></div>
       <div class="word"><span>and</span></div>
-      <div class="word"><span class="tooltip">old<span class="tooltiptext">+0.098</span></span></div>
-      <div class="word"><span>Her</span></div>
-      <div class="word"><span>grandmamma</span></div>
-      <div class="word"><span>was</span></div>
-      <div class="word"><span class="tooltip">absent<span class="tooltiptext">-0.162</span></span></div>
-      <div class="word"><span>Her</span></div>
-      <div class="word"><span>quickly</span></div>
-      <div class="word"><span>did</span></div>
-      <div class="word"><span>infold</span></div>
+      <div class="word"><span>told</span></div>
+      <div class="word"><span class="wolf">him</span></div>
+      <div class="word"><span>what</span></div>
+      <div class="word"><span>Tis</span></div>
+      <div class="word"><span>butter</span></div>
+      <div class="word"><span>for</span></div>
+      <div class="word"><span>my</span></div>
+      <div class="word"><span class="gran">grandma</span></div>
+      <div class="word"><span class="tooltip">Packed<span class="tooltiptext">-0.071</span></span></div>
+      <div class="word"><span class="tooltip">nicely<span class="tooltiptext">+0.955</span></span></div>
+      <div class="word"><span>in</span></div>
+      <div class="word"><span>this</span></div>
+      <div class="word"><span>pot</span></div>
     </div>
   </div>
+</section>
+<!-- Page 9-->
+<section id="p9">
   <div class="text-wrapper">
     <h3>9</h3>
     <ol>
@@ -770,9 +881,92 @@
       <li>He quickly did infold</li>
     </ol>
   </div>
+  <div class="reworked-wrapper">
+    <div class="page page9">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.1816</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.0438</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
+      <div class="innercircle tooltip"><span class="tooltiptext"> 
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.16</dd>
+            <dt>Top Emotion</dt>
+            <dd>Joy</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>9</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>39</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">again &#183; and glen</dd>
+          <dd class="rhymes">old &#183; infold</dd>
+        </dl>
+      </div>
+      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.384</span></span></div>
+      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span class="wolf">Wolf</span></div>
+      <div class="word"><span class="tooltip">good<span class="tooltiptext">+0.943</span></span></div>
+      <div class="word"><span>bye</span></div>
+      <div class="word"><span class="tooltip rrh">dear<span class="tooltiptext">+0.417</span></span></div>
+      <div class="word"><span>Perhaps</span></div>
+      <div class="word"><span>well</span></div>
+      <div class="word"><span class="tooltip">meet<span class="tooltiptext">-0.1105</span></span></div>
+      <div class="word"><span>again</span></div>
+      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.384</span></span></div>
+      <div class="word"><span class="tooltip">swiftly<span class="tooltiptext">+0.401</span></span></div>
+      <div class="word"><span>on</span></div>
+      <div class="word"><span class="wolf">he</span></div>
+      <div class="word"><span>hastened</span></div>
+      <div class="word"><span class="tooltip">Swiftly<span class="tooltiptext">+0.401</span></span></div>
+      <div class="word"><span class="tooltip">through<span class="tooltiptext">-0.126</span></span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span>dale</span></div>
+      <div class="word"><span>and</span></div>
+      <div class="word"><span>glen</span></div>
+      <div class="word"><span>And</span></div>
+      <div class="word"><span class="tooltip">running<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span class="tooltip">reached<span class="tooltiptext">+0.137</span></span></div>
+      <div class="word"><span>before</span></div>
+      <div class="word"><span class="rrh">her</span></div>
+      <div class="word"><span>The</span></div>
+      <div class="word"><span>cabin</span></div>
+      <div class="word"><span class="tooltip">grey<span class="tooltiptext">-0.085</span></span></div>
+      <div class="word"><span>and</span></div>
+      <div class="word"><span class="tooltip">old<span class="tooltiptext">+0.098</span></span></div>
+      <div class="word"><span class="rrh">Her</span></div>
+      <div class="word"><span class="gran">grandmamma</span></div>
+      <div class="word"><span>was</span></div>
+      <div class="word"><span class="tooltip">absent<span class="tooltiptext">-0.162</span></span></div>
+      <div class="word"><span class="rrh">Her</span></div>
+      <div class="word"><span>quickly</span></div>
+      <div class="word"><span>did</span></div>
+      <div class="word"><span>infold</span></div>
+    </div>
+  </div>
 </section>
 <!-- Page 10-->
 <section id="p10">
+  <div class="text-wrapper">
+    <h3>10</h3>
+    <ol>
+      <li>Himself in cap and night gown</li>
+      <li>Then quickly on the bed<span>,</span></li>
+      <li>Closely upon the pillow</li>
+      <li>He laid his grizzly head<span>.</span></li>
+      <li>Red Riding Hood soon entered<span>;</span></li>
+      <li><span>"</span>O<span>,</span> grandmamma<span>,</span> see here<span>!</span></li>
+      <li>A little pot of butter<span>!<span> "</span></li>
+      <li>Where is my grandma dear<span>?</span></li>
+    </ol>
+  </div>
   <div class="reworked-wrapper">
     <div class="page page10">
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0</span></span></div>
@@ -782,15 +976,26 @@
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.003</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br></span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.06</span></h3><br/>
-          <h3>Top Emotion<br/><span>Fear</span></h3></span>
-        <h2>Page 10</h2>
-        <p>39 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>bed &#183; head</span></p>
-        <p> <span>here &#183; dear</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.06</dd>
+            <dt>Top Emotion</dt>
+            <dd>Fear</dd>
+          </dl>
+          <ol>
+            <li class="tooltip ghouse"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>10</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>39</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">bed &#183; head</dd>
+          <dd class="rhymes">here &#183; dear</dd>
+        </dl>
       </div>
-      <div class="word"><span>Himself</span></div>
+      <div class="word"><span class="wolf">Himself</span></div>
       <div class="word"><span>in</span></div>
       <div class="word"><span>cap</span></div>
       <div class="word"><span>and</span></div>
@@ -805,18 +1010,18 @@
       <div class="word"><span>upon</span></div>
       <div class="word"><span>the</span></div>
       <div class="word"><span>pillow</span></div>
-      <div class="word"><span>He</span></div>
+      <div class="word"><span class="wolfasgran">He</span></div>
       <div class="word"><span class="tooltip">laid<span class="tooltiptext">-0.143</span></span></div>
       <div class="word"><span>his</span></div>
       <div class="word"><span>grizzly</span></div>
       <div class="word"><span>head</span></div>
-      <div class="word"><span>Red</span></div>
+      <div class="word"><span class="rrh">Red</span></div>
       <div class="word"><span>Riding</span></div>
       <div class="word"><span>Hood</span></div>
       <div class="word"><span>soon</span></div>
       <div class="word"><span>entered</span></div>
       <div class="word"><span>O</span></div>
-      <div class="word"><span>grandmamma</span></div>
+      <div class="word"><span class="wolfasgran">grandmamma</span></div>
       <div class="word"><span class="tooltip">see<span class="tooltiptext">0.214</span></span></div>
       <div class="word"><span>here</span></div>
       <div class="word"><span>A</span></div>
@@ -827,90 +1032,13 @@
       <div class="word"><span>Where</span></div>
       <div class="word"><span>is</span></div>
       <div class="word"><span>my</span></div>
-      <div class="word"><span>grandma</span></div>
+      <div class="word"><span class="gran">grandma</span></div>
       <div class="word"><span class="tooltip">dear<span class="tooltiptext">0.417</span></span></div>
     </div>
-  </div>
-  <div class="text-wrapper">
-    <h3>10</h3>
-    <ol>
-      <li>Himself in cap and night gown</li>
-      <li>Then quickly on the bed<span>,</span></li>
-      <li>Closely upon the pillow</li>
-      <li>He laid his grizzly head<span>.</span></li>
-      <li>Red Riding Hood soon entered<span>;</span></li>
-      <li><span>"</span>O<span>,</span> grandmamma<span>,</span> see here<span>!</span></li>
-      <li>A little pot of butter<span>!<span> "</span></li>
-      <li>Where is my grandma dear<span>?</span></li>
-    </ol>
   </div>
 </section>
 <!-- Page 11-->
 <section id="p11">
-  <div class="reworked-wrapper">
-    <div class="page page11">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0266</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
-      <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Neutral +0.02</span></h3><br/>
-          <h3>Top Emotion<br/><span>Disgust</span></h3></span>
-        <h2>Page 11</h2>
-        <p>45 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>weak &#183; speak</span></p>
-        <p> <span>lie &#183; by</span></p>
-      </div>
-      <div class="word"><span>Here</span></div>
-      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span>Wolf</span></div>
-      <div class="word"><span class="tooltip">well<span class="tooltiptext">+0.649</span></span></div>
-      <div class="word"><span class="tooltip">feigning<span class="tooltiptext">-0.827</span></span></div>
-      <div class="word"><span>Her</span></div>
-      <div class="word"><span>grandmas</span></div>
-      <div class="word"><span class="tooltip">voice<span class="tooltiptext">+0.152</span></span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span class="tooltip">weak<span class="tooltiptext">-0.689</span></span></div>
-      <div class="word"><span>Im</span></div>
-      <div class="word"><span>here</span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span class="tooltip">sick<span class="tooltiptext">-0.792</span></span></div>
-      <div class="word"><span>my</span></div>
-      <div class="word"><span class="tooltip">darling<span class="tooltiptext">+1.762</span></span></div>
-      <div class="word"><span>That</span></div>
-      <div class="word"><span>I</span></div>
-      <div class="word"><span>can</span></div>
-      <div class="word"><span class="tooltip">scarcely<span class="tooltiptext">-0.366</span></span></div>
-      <div class="word"><span>speak</span></div>
-      <div class="word"><span class="tooltip">Take<span class="tooltiptext">-0.715</span></span></div>
-      <div class="word"><span class="tooltip">off<span class="tooltiptext">-0.126</span></span></div>
-      <div class="word"><span>your</span></div>
-      <div class="word"><span>clothes</span></div>
-      <div class="word"><span>my</span></div>
-      <div class="word"><span class="tooltip">darling<span class="tooltiptext">+1.762</span></span></div>
-      <div class="word"><span>Upon</span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span>bed</span></div>
-      <div class="word"><span>come</span></div>
-      <div class="word"><span class="tooltip">lie<span class="tooltiptext">-0.428</span></span></div>
-      <div class="word"><span>When</span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span>are</span></div>
-      <div class="word"><span>here</span></div>
-      <div class="word"><span>beside</span></div>
-      <div class="word"><span>me</span></div>
-      <div class="word"><span>Ill</span></div>
-      <div class="word"><span>be</span></div>
-      <div class="word"><span class="tooltip">better<span class="tooltiptext">+0.906</span></span></div>
-      <div class="word"><span>by</span></div>
-      <div class="word"><span>and</span></div>
-      <div class="word"><span>by</span></div>
-    </div>
-  </div>
   <div class="text-wrapper">
     <h3>11</h3>
     <ol>
@@ -924,72 +1052,84 @@
       <li>I<span>'</span>ll be better by and by<span>!</span><span> "</span></li>
     </ol>
   </div>
+  <div class="reworked-wrapper">
+    <div class="page page11">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0266</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
+      <div class="innercircle tooltip"><span class="tooltiptext"> 
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Neutral +0.02</dd>
+            <dt>Top Emotion</dt>
+            <dd>Disgust</dd>
+          </dl>
+          <ol>
+            <li class="tooltip ghouse"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>11</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>45</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">weak &#183; speak</dd>
+          <dd class="rhymes">lie &#183; by</dd>
+        </dl>
+      </div>
+      <div class="word"><span>Here</span></div>
+      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span class="wolfasgran">Wolf</span></div>
+      <div class="word"><span class="tooltip">well<span class="tooltiptext">+0.649</span></span></div>
+      <div class="word"><span class="tooltip">feigning<span class="tooltiptext">-0.827</span></span></div>
+      <div class="word"><span>Her</span></div>
+      <div class="word"><span class="wolfasgran">grandmas</span></div>
+      <div class="word"><span class="tooltip">voice<span class="tooltiptext">+0.152</span></span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span class="tooltip">weak<span class="tooltiptext">-0.689</span></span></div>
+      <div class="word"><span class="wolfasgran">Im</span></div>
+      <div class="word"><span>here</span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span class="tooltip">sick<span class="tooltiptext">-0.792</span></span></div>
+      <div class="word"><span>my</span></div>
+      <div class="word"><span class="tooltip rrh">darling<span class="tooltiptext">+1.762</span></span></div>
+      <div class="word"><span>That</span></div>
+      <div class="word"><span class="wolfasgran">I</span></div>
+      <div class="word"><span>can</span></div>
+      <div class="word"><span class="tooltip">scarcely<span class="tooltiptext">-0.366</span></span></div>
+      <div class="word"><span>speak</span></div>
+      <div class="word"><span class="tooltip">Take<span class="tooltiptext">-0.715</span></span></div>
+      <div class="word"><span class="tooltip">off<span class="tooltiptext">-0.126</span></span></div>
+      <div class="word"><span>your</span></div>
+      <div class="word"><span>clothes</span></div>
+      <div class="word"><span>my</span></div>
+      <div class="word"><span class="tooltip rrh">darling<span class="tooltiptext">+1.762</span></span></div>
+      <div class="word"><span>Upon</span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span>bed</span></div>
+      <div class="word"><span>come</span></div>
+      <div class="word"><span class="tooltip">lie<span class="tooltiptext">-0.428</span></span></div>
+      <div class="word"><span>When</span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span>are</span></div>
+      <div class="word"><span>here</span></div>
+      <div class="word"><span>beside</span></div>
+      <div class="word"><span class="wolfasgran">me</span></div>
+      <div class="word"><span class="wolfasgran">Ill</span></div>
+      <div class="word"><span>be</span></div>
+      <div class="word"><span class="tooltip">better<span class="tooltiptext">+0.906</span></span></div>
+      <div class="word"><span>by</span></div>
+      <div class="word"><span>and</span></div>
+      <div class="word"><span>by</span></div>
+    </div>
+  </div>
 </section>
 <!-- Page 12-->
 <section id="p12">
-  <div class="reworked-wrapper">
-    <div class="page page12">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.072</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.011</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
-      <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.43</span></h3><br/>
-          <h3>Top Emotion<br/><span>Joy</span></h3></span>
-        <h2>Page 12</h2>
-        <p>44 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>bed &#183; said</span></p>
-        <p> <span>before &#183; more</span></p>
-      </div>
-      <div class="word"><span>Red</span></div>
-      <div class="word"><span>Riding</span></div>
-      <div class="word"><span>Hood</span></div>
-      <div class="word"><span class="tooltip">obeyed<span class="tooltiptext">+0.592</span></span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>And</span></div>
-      <div class="word"><span class="tooltip">got<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>upon</span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span>bed</span></div>
-      <div class="word"><span>O</span></div>
-      <div class="word"><span>grandmamma</span></div>
-      <div class="word"><span>how</span></div>
-      <div class="word"><span>altered</span></div>
-      <div class="word"><span>You</span></div>
-      <div class="word"><span>are</span></div>
-      <div class="word"><span>she</span></div>
-      <div class="word"><span>quickly</span></div>
-      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>O</span></div>
-      <div class="word"><span>what</span></div>
-      <div class="word"><span class="tooltip">GREAT<span class="tooltiptext">+0.797</span></span></div>
-      <div class="word"><span class="tooltip">EYES<span class="tooltiptext">+0.345</span></span></div>
-      <div class="word"><span>my</span></div>
-      <div class="word"><span>grandma</span></div>
-      <div class="word"><span>They</span></div>
-      <div class="word"><span>never</span></div>
-      <div class="word"><span>looked</span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span>before</span></div>
-      <div class="word"><span>Thats</span></div>
-      <div class="word"><span>to</span></div>
-      <div class="word"><span class="tooltip">see<span class="tooltiptext">+0.428</span></span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span class="tooltip">better<span class="tooltiptext">+0.906</span></span></div>
-      <div class="word"><span>my</span></div>
-      <div class="word"><span class="tooltip">darling<span class="tooltiptext">+0.881</span></span></div>
-      <div class="word"><span>The</span></div>
-      <div class="word"><span class="tooltip">larger<span class="tooltiptext">+0.134</span></span></div>
-      <div class="word"><span>to</span></div>
-      <div class="word"><span>see</span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span>more</span></div>
-    </div>
-  </div>
   <div class="text-wrapper">
     <h3>12</h3>
     <ol>
@@ -1003,56 +1143,59 @@
       <li>The larger<span>,</span> to see you more<span>!</span><span> "</span></li>
     </ol>
   </div>
-</section>
-<!-- Page 13-->
-<section id="p13">
   <div class="reworked-wrapper">
-    <div class="page page13">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.101</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.039</span></span></div>
+    <div class="page page12">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.072</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.011</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.001</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.31</span></h3><br/>
-          <h3>Top Emotion<br/><span>Joy</span></h3></span>
-        <h2>Page 13</h2>
-        <p>49 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>before &#183; more</span></p>
-        <p> <span>more &#183; before</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.43</dd>
+            <dt>Top Emotion</dt>
+            <dd>Joy</dd>
+          </dl>
+          <ol>
+            <li class="tooltip ghouse"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>12</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>44</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">bed &#183; said</dd>
+          <dd class="rhymes">before &#183; more </dd>
+        </dl>
       </div>
-      <div class="word"><span>What</span></div>
-      <div class="word"><span>a</span></div>
-      <div class="word"><span class="tooltip">GREAT<span class="tooltiptext">+1.595</span></span></div>
-      <div class="word"><span class="tooltip">NOSE<span class="tooltiptext">+0.152</span></span></div>
-      <div class="word"><span>my</span></div>
-      <div class="word"><span>grandma</span></div>
-      <div class="word"><span>It</span></div>
-      <div class="word"><span>never</span></div>
-      <div class="word"><span>looked</span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span>before</span></div>
-      <div class="word"><span>Thats</span></div>
-      <div class="word"><span>to</span></div>
-      <div class="word"><span class="tooltip">smell<span class="tooltiptext">-1.567</span></span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span class="tooltip">better<span class="tooltiptext">+0.906</span></span></div>
-      <div class="word"><span>my</span></div>
-      <div class="word"><span class="tooltip">darling<span class="tooltiptext">+1.762</span></span></div>
-      <div class="word"><span>The</span></div>
-      <div class="word"><span class="tooltip">larger<span class="tooltiptext">+0.134</span></span></div>
-      <div class="word"><span>to</span></div>
-      <div class="word"><span class="tooltip">smell<span class="tooltiptext">-1.567</span></span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span>more</span></div>
+      <div class="word"><span class="rrh">Red</span></div>
+      <div class="word"><span>Riding</span></div>
+      <div class="word"><span>Hood</span></div>
+      <div class="word"><span class="tooltip">obeyed<span class="tooltiptext">+0.592</span></span></div>
+      <div class="word"><span class="wolfasgran">her</span></div>
       <div class="word"><span>And</span></div>
+      <div class="word"><span class="tooltip">got<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>upon</span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span>bed</span></div>
+      <div class="word"><span>O</span></div>
+      <div class="word"><span class="wolfasgran">grandmamma</span></div>
+      <div class="word"><span>how</span></div>
+      <div class="word"><span>altered</span></div>
+      <div class="word"><span class="wolfasgran">You</span></div>
+      <div class="word"><span>are</span></div>
+      <div class="word"><span class="rrh">she</span></div>
+      <div class="word"><span>quickly</span></div>
+      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>O</span></div>
       <div class="word"><span>what</span></div>
-      <div class="word"><span class="tooltip">GREAT<span class="tooltiptext">+1.595</span></span></div>
-      <div class="word"><span class="tooltip">HANDS<span class="tooltiptext">+0.152</span></span></div>
+      <div class="word"><span class="tooltip">GREAT<span class="tooltiptext">+0.797</span></span></div>
+      <div class="word"><span class="tooltip">EYES<span class="tooltiptext">+0.345</span></span></div>
       <div class="word"><span>my</span></div>
-      <div class="word"><span>grandma</span></div>
+      <div class="word"><span class="wolfasgran">grandma</span></div>
       <div class="word"><span>They</span></div>
       <div class="word"><span>never</span></div>
       <div class="word"><span>looked</span></div>
@@ -1060,20 +1203,23 @@
       <div class="word"><span>before</span></div>
       <div class="word"><span>Thats</span></div>
       <div class="word"><span>to</span></div>
-      <div class="word"><span class="tooltip">hold<span class="tooltiptext">+0.137</span></span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span class="tooltip">tight<span class="tooltiptext">-0.074</span></span></div>
+      <div class="word"><span class="tooltip">see<span class="tooltiptext">+0.428</span></span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span class="tooltip">better<span class="tooltiptext">+0.906</span></span></div>
       <div class="word"><span>my</span></div>
-      <div class="word"><span>darling</span></div>
-      <div class="word"><span>And</span></div>
+      <div class="word"><span class="tooltip rrh">darling<span class="tooltiptext">+0.881</span></span></div>
+      <div class="word"><span>The</span></div>
+      <div class="word"><span class="tooltip">larger<span class="tooltiptext">+0.134</span></span></div>
       <div class="word"><span>to</span></div>
-      <div class="word"><span class="tooltip">hug<span class="tooltiptext">+0.954</span></span></div>
-      <div class="word"><span>you</span></div>
-      <div class="word"><span>more</span></div>
-      <div class="word"><span>and</span></div>
+      <div class="word"><span>see</span></div>
+      <div class="word"><span class="rrh">you</span></div>
       <div class="word"><span>more</span></div>
     </div>
   </div>
+</section>
+<!-- Page 13-->
+<section id="p13">
   <div class="text-wrapper">
     <h3>13</h3>
     <ol>
@@ -1087,9 +1233,101 @@
       <li>And to hug you more and more<span>!</span><span> "</span></li>
     </ol>
   </div>
+  <div class="reworked-wrapper">
+    <div class="page page13">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.101</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.039</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.001</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
+      <div class="innercircle tooltip"><span class="tooltiptext"> 
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Positive +0.31</dd>
+            <dt>Top Emotion</dt>
+            <dd>Joy</dd>
+          </dl>
+          <ol>
+            <li class="tooltip ghouse"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>13</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>49 </dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">before &#183; more</dd>
+          <dd class="rhymes">more &#183; before</dd>
+        </dl>
+      </div>
+      <div class="word"><span>What</span></div>
+      <div class="word"><span>a</span></div>
+      <div class="word"><span class="tooltip">GREAT<span class="tooltiptext">+1.595</span></span></div>
+      <div class="word"><span class="tooltip">NOSE<span class="tooltiptext">+0.152</span></span></div>
+      <div class="word"><span>my</span></div>
+      <div class="word"><span class="wolfasgran">grandma</span></div>
+      <div class="word"><span>It</span></div>
+      <div class="word"><span>never</span></div>
+      <div class="word"><span>looked</span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span>before</span></div>
+      <div class="word"><span>Thats</span></div>
+      <div class="word"><span>to</span></div>
+      <div class="word"><span class="tooltip">smell<span class="tooltiptext">-1.567</span></span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span class="tooltip">better<span class="tooltiptext">+0.906</span></span></div>
+      <div class="word"><span>my</span></div>
+      <div class="word"><span class="tooltip rrh">darling<span class="tooltiptext">+1.762</span></span></div>
+      <div class="word"><span>The</span></div>
+      <div class="word"><span class="tooltip">larger<span class="tooltiptext">+0.134</span></span></div>
+      <div class="word"><span>to</span></div>
+      <div class="word"><span class="tooltip">smell<span class="tooltiptext">-1.567</span></span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span>more</span></div>
+      <div class="word"><span>And</span></div>
+      <div class="word"><span>what</span></div>
+      <div class="word"><span class="tooltip">GREAT<span class="tooltiptext">+1.595</span></span></div>
+      <div class="word"><span class="tooltip">HANDS<span class="tooltiptext">+0.152</span></span></div>
+      <div class="word"><span>my</span></div>
+      <div class="word"><span class="wolfasgran">grandma</span></div>
+      <div class="word"><span>They</span></div>
+      <div class="word"><span>never</span></div>
+      <div class="word"><span>looked</span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span>before</span></div>
+      <div class="word"><span>Thats</span></div>
+      <div class="word"><span>to</span></div>
+      <div class="word"><span class="tooltip">hold<span class="tooltiptext">+0.137</span></span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span class="tooltip">tight<span class="tooltiptext">-0.074</span></span></div>
+      <div class="word"><span>my</span></div>
+      <div class="word"><span class="rrh">darling</span></div>
+      <div class="word"><span>And</span></div>
+      <div class="word"><span>to</span></div>
+      <div class="word"><span class="tooltip">hug<span class="tooltiptext">+0.954</span></span></div>
+      <div class="word"><span class="rrh">you</span></div>
+      <div class="word"><span>more</span></div>
+      <div class="word"><span>and</span></div>
+      <div class="word"><span>more</span></div>
+    </div>
+  </div>
 </section>
 <!-- Page 14-->
 <section id="p14">
+  <div class="text-wrapper">
+    <h3>14</h3>
+    <ol>
+      <li><span>"</span>What a GREAT MOUTH my grandma<span>!</span></li>
+      <li>As large as your tin cup<span>!</span><span> "</span></li>
+      <li><span>"</span>That<span>'</span>s to open wide my beauty</li>
+      <li>And then to eat you up<span>!</span><span> "</span></li>
+      <li>Then he opened his great mouth wider</li>
+      <li>To eat her like a bird</li>
+      <li>But at that dreadful moment</li>
+      <li>A hunter<span>'</span>s gun was heard</li>
+    </ol>
+  </div>
   <div class="reworked-wrapper">
     <div class="page page14">
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0650</span></span></div>
@@ -1099,20 +1337,31 @@
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0</span></span></div>
       <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0</span></span></div>
       <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Positive +0.16</span></h3><br/>
-          <h3>Top Emotion<br/><span>Fear</span></h3></span>
-        <h2>Page 14</h2>
-        <p>47 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>cup &#183; up</span></p>
-        <p> <span>bird &#183; heard</span></p>
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Neutral +0.04</dd>
+            <dt>Top Emotion</dt>
+            <dd>Sadness</dd>
+          </dl>
+          <ol>
+            <li class="tooltip ghouse"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>14</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>47</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">cup &#183; up</dd>
+          <dd class="rhymes">bird &#183; heard</dd>
+        </dl>
       </div>
       <div class="word"><span>What</span></div>
       <div class="word"><span>a</span></div>
       <div class="word"><span class="tooltip">GREAT<span class="tooltiptext">+1.595</span></span></div>
       <div class="word"><span>MOUTH</span></div>
       <div class="word"><span>my</span></div>
-      <div class="word"><span>grandma</span></div>
+      <div class="word"><span class="wolfasgran">grandma</span></div>
       <div class="word"><span>As</span></div>
       <div class="word"><span class="tooltip">large<span class="tooltiptext">+0.134</span></span></div>
       <div class="word"><span>as</span></div>
@@ -1124,23 +1373,23 @@
       <div class="word"><span class="tooltip">open<span class="tooltiptext">-0.066</span></span></div>
       <div class="word"><span class="tooltip">wide<span class="tooltiptext">+0.304</span></span></div>
       <div class="word"><span>my</span></div>
-      <div class="word"><span class="tooltip">beauty<span class="tooltiptext">+0.965</span></span></div>
+      <div class="word"><span class="tooltip rrh">beauty<span class="tooltiptext">+0.965</span></span></div>
       <div class="word"><span>And</span></div>
       <div class="word"><span class="tooltip">then<span class="tooltiptext">+0.384</span></span></div>
       <div class="word"><span>to</span></div>
       <div class="word"><span>eat</span></div>
-      <div class="word"><span>you</span></div>
+      <div class="word"><span class="rrh">you</span></div>
       <div class="word"><span class="tooltip">up<span class="tooltiptext">+0.140</span></span></div>
       <div class="word"><span>Then</span></div>
-      <div class="word"><span>he</span></div>
+      <div class="word"><span class="wolf">he</span></div>
       <div class="word"><span class="tooltip">opened<span class="tooltiptext">-0.254</span></span></div>
-      <div class="word"><span>his</span></div>
+      <div class="word"><span class="wolf">his</span></div>
       <div class="word"><span class="tooltip">great<span class="tooltiptext">+1.595</span></span></div>
       <div class="word"><span>mouth</span></div>
       <div class="word"><span class="tooltip">wider<span class="tooltiptext">+0.304</span></span></div>
       <div class="word"><span>To</span></div>
       <div class="word"><span>eat</span></div>
-      <div class="word"><span>her</span></div>
+      <div class="word"><span class="rrh">her</span></div>
       <div class="word"><span class="tooltip">like<span class="tooltiptext">+0.854</span></span></div>
       <div class="word"><span>a</span></div>
       <div class="word"><span class="tooltip">bird<span class="tooltiptext">-0.071</span></span></div>
@@ -1156,82 +1405,9 @@
       <div class="word"><span>heard</span></div>
     </div>
   </div>
-  <div class="text-wrapper">
-    <h3>14</h3>
-    <ol>
-      <li><span>"</span>What a GREAT MOUTH my grandma<span>!</span></li>
-      <li>As large as your tin cup<span>!</span><span> "</span></li>
-      <li><span>"</span>That<span>'</span>s to open wide my beauty</li>
-      <li>And then to eat you up<span>!</span><span> "</span></li>
-      <li>Then he opened his great mouth wider</li>
-      <li>To eat her like a bird</li>
-      <li>But at that dreadful moment</li>
-      <li>A hunter<span>'</span>s gun was heard</li>
-    </ol>
-  </div>
 </section>
 <!-- Page 15-->
 <section id="p15">
-  <div class="reworked-wrapper">
-    <div class="page page15">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.0417</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0.0957</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.0344</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0282</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0212</span></span></div>
-      <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Negative -0.46</span></h3><br/>
-          <h3>Top Emotion<br/><span>Sadness</span></h3></span>
-        <h2>Page 15</h2>
-        <p>43 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>in &#183; been</span></p>
-        <p> <span>more &#183; before</span></p>
-      </div>
-      <div class="word"><span>The</span></div>
-      <div class="word"><span>Wolf</span></div>
-      <div class="word"><span class="tooltip">fell<span class="tooltiptext">-0.366</span></span></div>
-      <div class="word"><span class="tooltip">dead<span class="tooltiptext">-0.978</span></span></div>
-      <div class="word"><span>and</span></div>
-      <div class="word"><span class="tooltip">bleeding<span class="tooltiptext">-0.366</span></span></div>
-      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.192</span></span></div>
-      <div class="word"><span>grandma</span></div>
-      <div class="word"><span>hastened</span></div>
-      <div class="word"><span>in</span></div>
-      <div class="word"><span>For</span></div>
-      <div class="word"><span>she</span></div>
-      <div class="word"><span class="tooltip">had<span class="tooltiptext">-0.325</span></span></div>
-      <div class="word"><span class="tooltip">seen<span class="tooltiptext">+0.214</span></span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span class="tooltip">peril<span class="tooltiptext">-0.927</span></span></div>
-      <div class="word"><span>The</span></div>
-      <div class="word"><span class="tooltip">danger<span class="tooltiptext">-0.982</span></span></div>
-      <div class="word"><span>that</span></div>
-      <div class="word"><span class="tooltip">had<span class="tooltiptext">-0.325</span></span></div>
-      <div class="word"><span>been</span></div>
-      <div class="word"><span>Red</span></div>
-      <div class="word"><span>Riding</span></div>
-      <div class="word"><span>Hood</span></div>
-      <div class="word"><span class="tooltip">wept<span class="tooltiptext">-0.992</span></span></div>
-      <div class="word"><span class="tooltip">sadly<span class="tooltiptext">-0.569</span></span></div>
-      <div class="word"><span>And</span></div>
-      <div class="word"><span>sorrowed</span></div>
-      <div class="word"><span>more</span></div>
-      <div class="word"><span>and</span></div>
-      <div class="word"><span>more</span></div>
-      <div class="word"><span>That</span></div>
-      <div class="word"><span>shed</span></div>
-      <div class="word"><span>disobeyed</span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>mother</span></div>
-      <div class="word"><span>Which</span></div>
-      <div class="word"><span>she</span></div>
-      <div class="word"><span>never</span></div>
-      <div class="word"><span>did</span></div>
-      <div class="word"><span>before</span></div>
-    </div>
-  </div>
   <div class="text-wrapper">
     <h3>15</h3>
     <ol>
@@ -1245,75 +1421,80 @@
       <li>Which she never did before<span>.</span></li>
     </ol>
   </div>
+  <div class="reworked-wrapper">
+    <div class="page page15">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0.0417</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0.0957</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.0344</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0282</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0212</span></span></div>
+      <div class="innercircle tooltip"><span class="tooltiptext"> 
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Negative -0.46</dd>
+            <dt>Top Emotion</dt>
+            <dd>Sadness</dd>
+          </dl>
+          <ol>
+            <li class="tooltip ghouse"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>15</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>43</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">in &#183; been</dd>
+          <dd class="rhymes">more &#183; before</dd>
+        </dl>
+      </div>
+      <div class="word"><span>The</span></div>
+      <div class="word"><span class="wolf">Wolf</span></div>
+      <div class="word"><span class="tooltip">fell<span class="tooltiptext">-0.366</span></span></div>
+      <div class="word"><span class="tooltip">dead<span class="tooltiptext">-0.978</span></span></div>
+      <div class="word"><span>and</span></div>
+      <div class="word"><span class="tooltip">bleeding<span class="tooltiptext">-0.366</span></span></div>
+      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.192</span></span></div>
+      <div class="word"><span class="gran">grandma</span></div>
+      <div class="word"><span>hastened</span></div>
+      <div class="word"><span>in</span></div>
+      <div class="word"><span>For</span></div>
+      <div class="word"><span class="gran">she</span></div>
+      <div class="word"><span class="tooltip">had<span class="tooltiptext">-0.325</span></span></div>
+      <div class="word"><span class="tooltip">seen<span class="tooltiptext">+0.214</span></span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span class="tooltip">peril<span class="tooltiptext">-0.927</span></span></div>
+      <div class="word"><span>The</span></div>
+      <div class="word"><span class="tooltip">danger<span class="tooltiptext">-0.982</span></span></div>
+      <div class="word"><span>that</span></div>
+      <div class="word"><span class="tooltip">had<span class="tooltiptext">-0.325</span></span></div>
+      <div class="word"><span>been</span></div>
+      <div class="word"><span class="rrh">Red</span></div>
+      <div class="word"><span>Riding</span></div>
+      <div class="word"><span>Hood</span></div>
+      <div class="word"><span class="tooltip">wept<span class="tooltiptext">-0.992</span></span></div>
+      <div class="word"><span class="tooltip">sadly<span class="tooltiptext">-0.569</span></span></div>
+      <div class="word"><span>And</span></div>
+      <div class="word"><span>sorrowed</span></div>
+      <div class="word"><span>more</span></div>
+      <div class="word"><span>and</span></div>
+      <div class="word"><span>more</span></div>
+      <div class="word"><span>That</span></div>
+      <div class="word"><span>shed</span></div>
+      <div class="word"><span>disobeyed</span></div>
+      <div class="word"><span>her</span></div>
+      <div class="word"><span class="mother">mother</span></div>
+      <div class="word"><span>Which</span></div>
+      <div class="word"><span class="rrh">she</span></div>
+      <div class="word"><span>never</span></div>
+      <div class="word"><span>did</span></div>
+      <div class="word"><span>before</span></div>
+    </div>
+  </div>
 </section>
 <!-- Page 16-->
 <section id="p16">
-  <div class="reworked-wrapper">
-    <div class="page page16">
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0433</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.0452</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0046</span></span></div>
-      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0559</span></span></div>
-      <div class="innercircle tooltip"><span class="tooltiptext"> 
-          <h3>Sentiment<br/><span>Neutral -0.04</span></h3><br/>
-          <h3>Top Emotion<br/><span>Fear</span></h3></span>
-        <h2>Page 16</h2>
-        <p>48 Words</p><br/>
-        <p><span>&#8212</span></p>
-        <p> <span>near &#183; dear</span></p>
-        <p> <span>word &#183; unheard</span></p>
-      </div>
-      <div class="word"><span>And</span></div>
-      <div class="word"><span>she</span></div>
-      <div class="word"><span class="tooltip">thought<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>with</span></div>
-      <div class="word"><span class="tooltip">fear<span class="tooltiptext">-0.815</span></span></div>
-      <div class="word"><span class="tooltip">trembling<span class="tooltiptext">-0.126</span></span></div>
-      <div class="word"><span>Of</span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span class="tooltip">death<span class="tooltiptext">-0.968</span></span></div>
-      <div class="word"><span>that</span></div>
-      <div class="word"><span>came</span></div>
-      <div class="word"><span>so</span></div>
-      <div class="word"><span>near</span></div>
-      <div class="word"><span>And</span></div>
-      <div class="word"><span>she</span></div>
-      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span class="tooltip">fright<span class="tooltiptext">-0.902</span></span></div>
-      <div class="word"><span class="tooltip">had<span class="tooltiptext">-0.162</span></span></div>
-      <div class="word"><span class="tooltip">taught<span class="tooltiptext">+0.238</span></span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>To</span></div>
-      <div class="word"><span class="tooltip">mind<span class="tooltiptext">+0.211</span></span></div>
-      <div class="word"><span>her</span></div>
-      <div class="word"><span>mother</span></div>
-      <div class="word"><span class="tooltip">dear<span class="tooltiptext">+0.417</span></span></div>
-      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.192</span></span></div>
-      <div class="word"><span>listen</span></div>
-      <div class="word"><span class="tooltip">all<span class="tooltiptext">+0.192</span></span></div>
-      <div class="word"><span>ye</span></div>
-      <div class="word"><span>children</span></div>
-      <div class="word"><span>And</span></div>
-      <div class="word"><span class="tooltip">mind<span class="tooltiptext">+0.211</span></span></div>
-      <div class="word"><span>your</span></div>
-      <div class="word"><span>mothers</span></div>
-      <div class="word"><span>word</span></div>
-      <div class="word"><span>For</span></div>
-      <div class="word"><span>the</span></div>
-      <div class="word"><span class="tooltip">great<span class="tooltiptext">+0.797</span></span></div>
-      <div class="word"><span>WOLF</span></div>
-      <div class="word"><span class="tooltip">men<span class="tooltiptext">+0.117</span></span></div>
-      <div class="word"><span>call</span></div>
-      <div class="word"><span class="tooltip">EVIL<span class="tooltiptext">-0.929</span></span></div>
-      <div class="word"><span>Is</span></div>
-      <div class="word"><span>prowling</span></div>
-      <div class="word"><span class="tooltip">round<span class="tooltiptext">+0.107</span></span></div>
-      <div class="word"><span>unheard</span></div>
-    </div>
-  </div>
   <div class="text-wrapper">
     <h3>16</h3>
     <ol>
@@ -1327,8 +1508,346 @@
       <li>Is prowling round unheard<span>!</span></li>
     </ol>
   </div>
+  <div class="reworked-wrapper">
+    <div class="page page16">
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">joy<br>0.0433</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">surprise <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">sadness <br>0</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">fear <br>0.0452</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">disgust <br>0.0046</span></span></div>
+      <div class="emotion"><span class="tooltip"><span class="tooltiptext">anger <br>0.0559</span></span></div>
+      <div class="innercircle tooltip"><span class="tooltiptext"> 
+          <dl>
+            <dt>Sentiment</dt>
+            <dd>Neutral -0.04</dd>
+            <dt>Top Emotion</dt>
+            <dd>Fear</dd>
+          </dl>
+          <ol>
+            <li class="tooltip"></li>
+            <li class="tooltip forest"></li>
+          </ol></span>
+        <h2>16</h2>
+        <dl>
+          <dt>Total Words </dt>
+          <dd>48</dd>
+          <dt>Rhymes</dt>
+          <dd class="rhymes">near &#183; dear</dd>
+          <dd class="rhymes">word &#183; unheard</dd>
+        </dl>
+      </div>
+      <div class="word"><span>And</span></div>
+      <div class="word"><span class="rrh">she</span></div>
+      <div class="word"><span class="tooltip">thought<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>with</span></div>
+      <div class="word"><span class="tooltip">fear<span class="tooltiptext">-0.815</span></span></div>
+      <div class="word"><span class="tooltip">trembling<span class="tooltiptext">-0.126</span></span></div>
+      <div class="word"><span>Of</span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span class="tooltip">death<span class="tooltiptext">-0.968</span></span></div>
+      <div class="word"><span>that</span></div>
+      <div class="word"><span>came</span></div>
+      <div class="word"><span>so</span></div>
+      <div class="word"><span>near</span></div>
+      <div class="word"><span>And</span></div>
+      <div class="word"><span class="rrh">she</span></div>
+      <div class="word"><span class="tooltip">said<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span class="tooltip">fright<span class="tooltiptext">-0.902</span></span></div>
+      <div class="word"><span class="tooltip">had<span class="tooltiptext">-0.162</span></span></div>
+      <div class="word"><span class="tooltip">taught<span class="tooltiptext">+0.238</span></span></div>
+      <div class="word"><span class="rrh">her</span></div>
+      <div class="word"><span>To</span></div>
+      <div class="word"><span class="tooltip">mind<span class="tooltiptext">+0.211</span></span></div>
+      <div class="word"><span>her</span></div>
+      <div class="word"><span class="mother">mother</span></div>
+      <div class="word"><span class="tooltip">dear<span class="tooltiptext">+0.417</span></span></div>
+      <div class="word"><span class="tooltip">Then<span class="tooltiptext">+0.192</span></span></div>
+      <div class="word"><span>listen</span></div>
+      <div class="word"><span class="tooltip">all<span class="tooltiptext">+0.192</span></span></div>
+      <div class="word"><span>ye</span></div>
+      <div class="word"><span class="reader">children</span></div>
+      <div class="word"><span>And</span></div>
+      <div class="word"><span class="tooltip">mind<span class="tooltiptext">+0.211</span></span></div>
+      <div class="word"><span>your</span></div>
+      <div class="word"><span class="rm">mothers</span></div>
+      <div class="word"><span>word</span></div>
+      <div class="word"><span>For</span></div>
+      <div class="word"><span>the</span></div>
+      <div class="word"><span class="tooltip">great<span class="tooltiptext">+0.797</span></span></div>
+      <div class="word"><span class="wolf">WOLF</span></div>
+      <div class="word"><span class="tooltip rm">men<span class="tooltiptext">+0.117</span></span></div>
+      <div class="word"><span>call</span></div>
+      <div class="word"><span class="tooltip">EVIL<span class="tooltiptext">-0.929</span></span></div>
+      <div class="word"><span>Is</span></div>
+      <div class="word"><span>prowling</span></div>
+      <div class="word"><span class="tooltip">round<span class="tooltiptext">+0.107</span></span></div>
+      <div class="word"><span>unheard</span></div>
+    </div>
+  </div>
+</section>
+<section>
+  <h2>The End</h2>
+</section>
+<section> 
+  <hr class="end"/>
+</section>
+<section>
+  <h2>Summary/Overview</h2>
+  <p>The section below shows an overview and summary of the charaction mentions and locations on each page. Each page is read vertically, like a column, starting from the top, moving down to the character mentions and locations. Hovering over will bring up tooltip with more information.</p>
+</section>
+<section>
+  <h2 class="side">Characters</h2>
+  <ul class="vertical">
+    <li class="page1 even">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (1)</span></li>
+        <li class="tooltip mother"> <span class="tooltiptext">Mother (1)</span></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page2">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page3 even">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"><span class="tooltiptext">Red Riding Hood (4)</span></li>
+        <li class="tooltip reader"><span class="tooltiptext">Reader (1)</span></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page4 even">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood [1]</span></li>
+        <li class="tooltip gran"> <span class="tooltiptext">Grandma [1]</span></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page5">
+      <ul> 
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood [3]</span></li>
+        <li class="tooltip mother"><span class="tooltiptext">Mother [1]     </span></li>
+        <li class="tooltip gran"> <span class="tooltiptext">Grandma [1]</span></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page6 even">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (3)</span></li>
+        <li class="tooltip mother"><span class="tooltiptext">Mother (1)</span></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page7 even">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (7)</span></li>
+        <li class="tooltip wolf"><span class="tooltiptext">Wolf (2)</span></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page8 even">
+      <ul>
+        <li class="tooltip wolf"><span class="tooltiptext">Wolf (3)</span></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (2)</span></li>
+        <li class="tooltip mother"><span class="tooltiptext">Mother (2)</span></li>
+        <li class="tooltip gran"><span class="tooltiptext">Grandma (1)</span></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page9">
+      <ul>
+        <li></li>
+        <li class="tooltip wolf"><span class="tooltiptext">Wolf (4)</span></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (3)</span></li>
+        <li class="tooltip gran"><span class="tooltiptext">Grandma (1)</span></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page10">
+      <ul>
+        <li></li>
+        <li class="tooltip wolf"><span class="tooltiptext">Wolf (3)</span></li>
+        <li class="tooltip gran"><span class="tooltiptext">Grandma (2)   </span></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (1)</span></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page11">
+      <ul>
+        <li></li>
+        <li class="tooltip wolf"><span class="tooltiptext">Wolf (5)</span></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (3)</span></li>
+        <li class="tooltip gran"><span class="tooltiptext">Grandma (1)</span></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page12 even">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (5)</span></li>
+        <li class="tooltip wolfasgran"><span class="tooltiptext">Wolf as Grandma (4)</span></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page13 even">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (6)</span></li>
+        <li class="tooltip wolfasgran"><span class="tooltiptext">Wolf as Grandma (2)</span></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page14">
+      <ul>
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (3)</span></li>
+        <li class="tooltip wolfasgran"><span class="tooltiptext">Wolf as Grandma (2)</span></li>
+        <li class="tooltip wolf"><span class="tooltiptext">Wolf(1)</span></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page15">
+      <ul> 
+        <li></li>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood (3)</span></li>
+        <li class="tooltip wolf"><span class="tooltiptext">Wolf(2)</span></li>
+        <li class="tooltip wolfasgran"><span class="tooltiptext">Wolf as Grandma (1)</span></li>
+        <li></li>
+      </ul>
+    </li>
+    <li class="page16">
+      <ul>
+        <li class="tooltip rrh"> <span class="tooltiptext">Red Riding Hood <span>(3) </span></span></li>
+        <li class="tooltip mother"><span class="tooltiptext">Wolf(1)</span></li>
+        <li class="tooltip reader"><span class="tooltiptext">Reader(1)</span></li>
+        <li class="tooltip rm"><span class="tooltiptext">Reader's Mother(1)</span></li>
+        <li class="tooltip rw"><span class="tooltiptext">Reader's Wolf <span>(1)            </span></span></li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <h2 class="side">Locations</h2>
+  <ul class="vertical">
+    <li class="page1">
+      <ol>
+        <li class="tooltip cabin"><span class="tooltiptext">Cabin</span></li>
+        <li class="tooltip woods"><span class="tooltiptext">Wood  </span></li>
+      </ol>
+    </li>
+    <li class="page2">
+      <ol>
+        <li class="tooltip"><span class="tooltiptext"> </span></li>
+        <li class="tooltip woods"><span class="tooltiptext">Wood  </span></li>
+      </ol>
+    </li>
+    <li class="page3">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip woods"><span class="tooltiptext">Wood  </span></li>
+      </ol>
+    </li>
+    <li class="page4">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page5">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page6">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page7">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page8">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page9">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page10">
+      <ol>
+        <li class="tooltip ghouse"><span class="tooltiptext">Grandma's House</span></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest     </span></li>
+      </ol>
+    </li>
+    <li class="page11">
+      <ol>
+        <li class="tooltip ghouse"><span class="tooltiptext">Grandma's House</span></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page12">
+      <ol>
+        <li class="tooltip ghouse"><span class="tooltiptext">Grandma's House</span></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest       </span></li>
+      </ol>
+    </li>
+    <li class="page13">
+      <ol>
+        <li class="tooltip ghouse"><span class="tooltiptext">Grandma's House</span></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page14">
+      <ol>
+        <li class="tooltip ghouse"><span class="tooltiptext">Grandma's House</span></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest </span></li>
+      </ol>
+    </li>
+    <li class="page15">
+      <ol>
+        <li class="tooltip ghouse"><span class="tooltiptext">Grandma's House</span></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest   </span></li>
+      </ol>
+    </li>
+    <li class="page16">
+      <ol>
+        <li class="tooltip"></li>
+        <li class="tooltip forest"><span class="tooltiptext">Forest     </span></li>
+      </ol>
+    </li>
+  </ul>
 </section>
 <footer></footer>
+
     <!-- Custom script for nav menu functionality-->
     <script>
 // Get all sections that have an ID defined
