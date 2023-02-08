@@ -4355,6 +4355,8 @@ section .notes p {
     cursor: default;
     border: 1px solid black;
     border-right: none;
+        background:black;
+    color:white;
 }
 
 .tab-container input[type=radio]:checked+label:hover {
@@ -4397,7 +4399,7 @@ section .notes p {
     padding: 0.5% 1%;
     margin-bottom: 0.2%;
     transition: all ease-out 0.2s 0.1s;
-    width: 15em;
+    width: 11em;
     flex-basis: unset;
     flex-grow: 0;
     font-family: "Yomogi";
@@ -4427,8 +4429,9 @@ section .notes p {
 }
 
 .tab-container .panel figure {
-    width: 150%;
+    width: 350%;
     margin: 0;
+    padding:0;
 }
 
 .tab-container .panel figure img {
@@ -4436,8 +4439,9 @@ section .notes p {
 }
 
 .tab-container .panel p {
-    width: 90%;
-    padding: 0 5%;
+    width: 97%;
+    padding: 0 3% 0 0;
+    text-align: center;
 }
 
 @media (max-width: 1000px) {
