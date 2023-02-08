@@ -499,7 +499,8 @@ article header {
           color: white; }
     #project article a button {
       cursor: pointer;
-      margin-top: 50px;
+      margin: 50px auto;
+      display:block;
       background: black;
       border: 2px solid black;
       text-transform: uppercase;
