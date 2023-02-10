@@ -1018,7 +1018,6 @@ nav {
 }
 
 nav h2.side {
-    left: -5vw;
     top: 6vw;
     padding: 0;
     margin: 0;
@@ -1026,6 +1025,12 @@ nav h2.side {
     background: white;
 }
 
+nav h2.sticky{
+    font-size: 1.5vw;
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
 nav ol>span {
     right: 88.5vw;
     width: 5vw;
@@ -4242,7 +4247,7 @@ section .text-wrapper ol {
     background: rgba(255, 255, 255, 0.9);
     display: inline-block;
     padding: 0 0% 0 4%;
-    width: 32%;
+    width: 42%;
     text-align: left;
     border: 4px double white;
     -webkit-transition: all 400ms ease-in;
@@ -6057,7 +6062,7 @@ footer {
     }
 
     body section .text-wrapper ol {
-        width: 70%;
+        width: 90%;
         font-size: 4vw;
     }
 
