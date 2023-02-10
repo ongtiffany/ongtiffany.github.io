@@ -1673,9 +1673,9 @@ nav ol a .sentiment>.tooltiptext {
     color: black;
     background: white;
     width: 1.8vw;
-    padding: 5vw 0;
+    padding: 7vw 0;
     line-height: 0;
-    top: -6.8vw;
+    top: -8.8vw;
     margin-right: 1.1vw;
 }
 
@@ -1683,7 +1683,7 @@ nav ol a .sentiment>.tooltiptext:before {
     position: absolute;
     content: "";
     border-bottom: 0.095vw dotted lightgray;
-    top: 5vw;
+    top: 7vw;
 }
 
 nav .active {
