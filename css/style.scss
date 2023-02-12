@@ -748,16 +748,6 @@ article {
 
 //.readmore-trigger
 
-
-
-
-
-
-
-
-
-
-
 //*** End 4. Work ***//
 
 //*** 5. About ***//
@@ -838,7 +828,22 @@ article {
 }
 
 //#about
-//*** End 6. Contact ***//
+
+//*** End 5. About***//
+
+//*** Achievements ***///
+#achievements{
+    margin-top:2em;
+    padding:0 33.3%;
+figure{
+    float:none;
+    width:100%;
+    p{
+        text-align: center !important;
+    }
+}//figure
+}//section#publications
+
 
 
 //*** 7. Project pages ***/

@@ -445,6 +445,15 @@ article header {
       font-weight: bold;
       padding-top: 10px; }
 
+#achievements {
+  margin-top: 2em;
+  padding: 0 33.3%; }
+  #achievements figure {
+    float: none;
+    width: 100%; }
+    #achievements figure p {
+      text-align: center !important; }
+
 #project {
   padding: 150px 15%;
   margin: 0 auto;
@@ -499,8 +508,7 @@ article header {
           color: white; }
     #project article a button {
       cursor: pointer;
-      margin: 50px auto;
-      display:block;
+      margin-top: 50px;
       background: black;
       border: 2px solid black;
       text-transform: uppercase;
