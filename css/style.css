@@ -302,7 +302,8 @@ article header {
       right: 0;
       width: 25%; }
       .grid figure .tag img {
-        background: none; }
+        background: none;
+        filter: grayscale(0.4); }
     .grid figure:hover h2,
     .grid figure:hover p {
       opacity: 1;
