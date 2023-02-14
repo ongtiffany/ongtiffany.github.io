@@ -18,7 +18,8 @@ a {
   a:hover {
     opacity: 0.6;
     border-bottom: 1px dotted;
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer; }
 
 section {
   display: block; }
@@ -295,6 +296,13 @@ article header {
       letter-spacing: 1px;
       font-size: 1vw;
       margin: 0; }
+    .grid figure .tag {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      width: 25%; }
+      .grid figure .tag img {
+        background: none; }
     .grid figure:hover h2,
     .grid figure:hover p {
       opacity: 1;

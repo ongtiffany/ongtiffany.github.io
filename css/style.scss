@@ -44,6 +44,7 @@ a {
         opacity: 0.6;
         border-bottom:1px dotted;
         text-decoration: none;
+        cursor: pointer;
     }
 }
 
@@ -551,6 +552,15 @@ article {
         }
 
         //p
+        .tag{
+            position: absolute;
+            z-index: 1;
+            right:0;
+            width:25%;
+            img{
+                background:none;
+            }
+        }
         &:hover {
 
             h2,
