@@ -99,17 +99,21 @@ figure img {
 
 figure figcaption {
     font-size: 12px;
-    background: gray;
-    color: white;
+    background: white;
+    color: darkgray;
     font-family: "Cutive Mono";
-    padding: 5px 10px;
+    padding: 0 10px;
+    text-align: center;
+    margin:0;
 }
 
 figure figcaption a {
-    color: white;
+    color: darkgray;
 }
 
-
+figure figcaption a:hover {
+    color: black;
+}
 
 
 
@@ -6127,7 +6131,7 @@ footer {
 
     body p.note {
         width: 100%;
-        margin: 2em 0;
+        margin: 2em 0 0 0;
     }
 
     body .tooltip .tooltiptext {
