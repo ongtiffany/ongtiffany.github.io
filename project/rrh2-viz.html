@@ -9,7 +9,6 @@
     <meta name="author" content="">
     <title>Tiffany Ong</title>
     <link rel="icon" type="image/png" href="../img/favicon.png">
-    <!-- Bootstrap Core CSS -->
     <!-- Style CSS -->
     <link href="../css/rrh2-viz.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -2306,37 +2305,38 @@
 <footer></footer>
     <!-- Custom script for nav menu functionality-->
     <script>
-    // Get all sections that have an ID defined
-    const sections = document.querySelectorAll("section[id]");
+//*** Active class on menu when in section ***//
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll("[id]");
 
-    // Add an event listener listening for scroll
-    window.addEventListener("scroll", navHighlighter);
+// Add an event listener listening for scroll
+window.addEventListener("scroll", navHighlighter);
 
-    function navHighlighter() {
+function navHighlighter() {
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
 
-        // Get current scroll position
-        let scrollY = window.pageYOffset;
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 150;
+    sectionId = current.getAttribute("id");
 
-        // Now we loop through sections to get height, top and ID values for each
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 50;
-            sectionId = current.getAttribute("id");
-
-            /*
-            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-            */
-            if (
-                scrollY > sectionTop &&
-                scrollY <= sectionTop + sectionHeight
-            ) {
-                document.querySelector("nav ol a[href*=" + sectionId + "]").classList.add("active");
-            } else {
-                document.querySelector("nav ol a[href*=" + sectionId + "]").classList.remove("active");
-            }
-        });
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelectorAll("ol a[href*=" + sectionId + "]")
+        .forEach((el) => el.classList.add("active"));
+    } else {
+      document
+        .querySelectorAll("ol a[href*=" + sectionId + "]")
+        .forEach((el) => el.classList.remove("active"));
     }
+  });
+}
     </script>
     <!-- Clicky Analytics code -->
     <script async src="//static.getclicky.com/101359440.js"></script>
