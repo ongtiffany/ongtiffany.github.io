@@ -403,12 +403,12 @@ section ul.vertical {
 
 section ol.vertical.locations,
 section ul.vertical.locations {
-    margin-bottom: 10vw;
+    margin-bottom: 0;
 }
 
 section ol.vertical.punctuation,
 section ul.vertical.punctuation {
-    margin-top: 10vw;
+    margin-top: 5vw;
     height: 15vw;
 }
 
@@ -724,10 +724,10 @@ section ul.vertical>li ul li.tooltip span.tooltiptext {
 
 section ol.vertical>li ul li:before,
 section ul.vertical>li ul li:before {
-    width: 0.55vw;
-    padding-bottom: 0.5vw;
+    width: 0.57vw;
+    padding-bottom: 0.56vw;
     margin-top: -0.8vw;
-    left: 1.8vw;
+    left: 1.78vw;
 }
 
 section ol.vertical>li ol,
@@ -2615,7 +2615,7 @@ section article ol li p {
 }
 
 section .reworked-wrapper {
-    padding: 5em 0 5em 0;
+    padding: 20vh 0 20vh 0;
     background-image: linear-gradient(rgba(255, 255, 255, 0.1), white 7%, white);
     position: relative;
     z-index: 9;
@@ -4214,7 +4214,6 @@ section .reworked-wrapper .page .word .tooltip:hover {
 }
 
 section .text-wrapper {
-    margin: 20vw 0 0 0;
     width: 100%;
     font-family: "Dancing Script";
     font-size: 1.7vw;
@@ -4222,7 +4221,7 @@ section .text-wrapper {
     top: 10vw;
     position: relative;
     text-align: center;
-    margin: 0 auto;
+    margin: 30vh auto;
     position: sticky;
     position: -webkit-sticky;
 }
@@ -4321,7 +4320,7 @@ section .notes {
     background: #f4f4f4;
     padding: 0 0 2em 0;
     width: 50%;
-    margin: 0 auto 20em auto;
+    margin: 20vh auto 20em auto;
 }
 
 section .notes h3 {
@@ -4340,7 +4339,7 @@ section .notes p {
     flex-direction: column;
     width: 80%;
     padding: 0 10%;
-    height: 30em;
+    height: 70vh;
     margin-bottom: 10em;
 }
 
@@ -4364,18 +4363,17 @@ section .notes p {
     cursor: default;
     border: 1px solid black;
     border-right: none;
-        background:black;
-    color:white;
+    color:black;
+    font-weight: bold;
 }
 
 .tab-container input[type=radio]:checked+label:hover {
-    background: black;
-    color: white;
+    color: black;
 }
 
 .tab-container input[type=radio]:focus+label {
     /* How the label appears to keyboard users when it is focused on  */
-    outline: 1px solid gray;
+    /*outline: 1px solid gray;*/
 }
 
 .tab-container input[type=radio]:checked+label+.panel {
@@ -4401,24 +4399,29 @@ section .notes p {
     /* The label of the input, this is what you see and click on instead of an ugly radio button */
     order: 1;
     cursor: pointer;
-    color: #c6c6c6;
-    background: #ededed;
+    color: black;
+    background: white;
     border: 1px solid #ededed;
     border-right: none;
     padding: 0.5% 1%;
     margin-bottom: 0.2%;
     transition: all ease-out 0.2s 0.1s;
-    width: 11em;
+    width: 20%;
     flex-basis: unset;
     flex-grow: 0;
     font-family: "Yomogi";
 }
 
 .tab-container label:hover {
-    background: black;
-    color: white;
-    border: 1px solid black;
+    color: black;
+    border: 1px dashed gray;
     border-right: none;
+}   
+
+.tab-container label figure{
+    width:100%;
+    margin:0;
+    padding:0;
 }
 
 .tab-container .panel {
@@ -4434,12 +4437,13 @@ section .notes p {
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-    display: flex;
+    /*display: flex;
+    align-items: center;*/
 }
 
 .tab-container .panel figure {
-    width: 250%;
-    margin: 0;
+    width: 80%;
+    margin: 0 10%;
     padding:0;
 }
 
@@ -4448,9 +4452,9 @@ section .notes p {
 }
 
 .tab-container .panel p {
-    width: 97%;
-    padding: 0 3% 0 0;
-    text-align: center;
+    width: 94%;
+    padding: 0 3% 0 3%;
+    
 }
 
 @media (max-width: 1000px) {
@@ -4469,8 +4473,17 @@ section .notes p {
     .tab-container label {
         width: 100%;
         flex-basis: 100%;
+        text-align:center;
     }
-
+    .tab-container label figure {
+        width: 50%;
+        margin:0 25%;
+    }
+.tab-container .panel figure {
+    width: 98%;
+    margin: 0 1%;
+    padding:0;
+}
     .tab-container input[type=radio]:checked+label+.panel {
         height: unset;
     }
