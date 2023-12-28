@@ -378,7 +378,7 @@ article header {
   .readmore-state:checked ~ .readmore-trigger:before {
     content: 'Show less'; }
   .readmore-state ~ .readmore-trigger:before {
-    content: 'Older work'; }
+    content: 'More'; }
   .readmore-state ~ label.readmore-trigger {
     margin: 5em 0 6em 0;
     display: inline-block;
