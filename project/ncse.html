@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability.">
+    <meta name="author" content="Tiffany Ong">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-black.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a class="active" href="../index.html#work">Work</a>
+                <a href="achievements.html">Achievements</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Nineteenth-Century Serials Edition Facsimiles</h2>
+            <h3>Periodicals Repository</h3>
+        </header>
+        <article>
+            <h4>Background:</h4>
+            <p>As detailed in the technical introduction of the 2008 edition of the facsimile component of the ncse project, ncse is large and varied resource, containing well over 400,000 articles that originally appeared in roughly 3500 issues of six nineteenth-century periodicals, published during a span of 84 years. Materials within the corpus exist in numbered editions, and include supplements, wrapper materials and visual elements. In 2005, when the project started, the key challenge for the technical partner in the project (at the time the Centre for Computing in the Humanities, King’s College London) was to create a digital system for the management of such a body of material that encompassed the design and development of an appropriate yet innovative set of tools to assist researchers in finding materials while also challenging and enabling new and innovative approaches toward research.
+            </p>
+            <h4>Process:</h4>
+            <p>
+                Since the backend was been restructured, KDL took the opportunity to redesign the frontend, taking to account the partners’ feedback of what features users found useful in the 2008 facsimiles edition.The amount of resources available to design the 2018 edition was limited so only selected improvements could be made. Our focus was to make the user journey and navigation smoother through the two main facsimile pathways, “explore” and “search”. Since the data counts were a large part of the interface, we thought it would be useful to aggregate some of that data to reveal some of the statistical aspects of ncse that cannot be deduced from the textual descriptions. On the facsimile page, the compiled data visualisation graphs feature a timeline of all the publications, while the individual publication graphs present the amount of items: text, pictures, ads.The interface was adapted to be usable on small screens such as mobile devices where some of the features described above will function in a slightly differently.
+            </p>
+            <p>
+                I was the designer on this project at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a> working with with two developers and an analyst. It was one of my first design refresh of an existing site with such a large database of items. There were only screenshots to work from the old site as the system already wasn’t working but could see that the user experience was not easy or intuitive. The partners wanted the colours to be the same and keeping with a similar look. Although after an accessibility assessment, some colours had to be tweaked to meet requirements.
+            </p>
+            <p>
+                Much thought and time was put into the new layout and journey, main compromises into two parts, the explore and search section. For the search, I wanted to have two views; grid - more visual, and list - more textual. Filters were also more streamlined.  For explore, it was more complex with many steps to consider.
+            </p>
+            <p>
+                Little additions were added on the way, like little characters taken from the old banner. I wanted to have an overview statistics of all the periodicals so put the years they spanned and the quantity published. Simple bar charts were added for some visual enhancement, divided into categories like in the data model. I made a <a href="https://codepen.io/ongtiffany/full/OoqwrZ" target="_blank">prototype</a> using mock data but the ratio of the actual data was quite different so would have done it differently in hindsight. 
+            </p>
+            <figure>
+                <img src="../img/project/ncse/screenshot-oldsite.jpg" alt="Screenshots of old site">
+                <figcaption>
+                    Screenshots of old site
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../img/project/ncse/sitemap.jpg" alt="Site map">
+                <p class="image-caption">
+                    <figcaption>
+                        Site map
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="../img/project/ncse/illustrations.jpg" alt="Reused adapted illustrations">
+                <figcaption>
+                    Reused adapted illustrations
+                </figcaption>
+
+            </figure>
+            <figure>
+                <img src="../img/project/ncse/mockup-charts.jpg" alt="mockup of charts">
+                <p class="image-caption">
+                    <figcaption>
+                        Mockup of charts
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="../img/project/ncse/screenshot-currentsite.jpg" alt="Screenshot of current site">
+                <p class="image-caption">
+                    <figcaption>
+                        Screenshot of current site
+</figcaption>
+            </figure>
+            <h4>Website:</h4>
+            <p>
+                <a href="https://ncse.ac.uk/periodicals/" target="_blank">ncse.ac.uk/periodicals</a>
+            </p>
+            <a href="../index.html">
+                <button>
+                    <span>&#x02A2F;</span> Close Project
+                </button>
+            </a>
+        </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>            
+            <li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; Tiffany Ong 2024</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+    function navHighlighter() {
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+
+<!-- Clicky Analytics code -->
+    <script async src="//static.getclicky.com/101359440.js"></script>
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p>
+    </noscript>
+    <!-- Statcounter Analytics code -->
+    <script type="text/javascript">
+    var sc_project = 12735011;
+    var sc_invisible = 1;
+    var sc_security = "0d2bfccc";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+
+    <!-- Goat Counter Analytics code -->
+    <script data-goatcounter="https://ongtiffany.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+
+</html>

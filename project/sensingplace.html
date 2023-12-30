@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability.">
+    <meta name="author" content="Tiffany Ong">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-black.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a class="active" href="../index.html#work">Work</a>
+                <a href="achievements.html">Achievements</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Sensing Place</h2>
+            <h3>Digital Heritage</h3>
+            </header>
+                <article>
+                    <h4>Project:</h4>
+                    <p>The goal is to build a digital platform to enable people in all corners of the country and from all walks of life to research and publish their heritage, to find out what it is that informs their ‘sense of place’. We also believe that heritage has a positive social, economic and cultural role to play in our diverse communities in 21st century Britain. Funded by HEFCE, and the Higher Education Innovation Fund, we bring together a team of heritage professionals and people with a passion for heritage.</p>
+                    <p>The website will act both as a platform for pedagogic and didactic materials and toolkits, and will provide a forum and venue for hosting digital heritage projects drawn from a wide range of partners. Working closely initially with schools in Tower Hamlets, we are seeking to broaden our scope of operations. Working in partnership with the Edge Foundation we aim additionally to help schools develop creative approaches to learning about tangible and intangible cultural heritage, with the aim of positively impacting upon pupils’ skill sets. It is not just schools and colleges where we are focusing; our goal is to knit together disparate approaches to community heritage, working from the bottom up, talking to people and trying to understand what they need as opposed to working from the top down.</p>
+                    <h4>Process:</h4>
+                    <p>I was the designer on the project <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, working closely together with a developer, analyst and project partners. Data protection and collection research was also important to consider. User testing for the submission form was requested but there wasn't much time so I devised a bit of a hack that the partners could print out give  to their students, who would take a photo on their phones, fill in the form, a photo of the phone and the form would be taken and all sent to me to review. This worked very well and I changed a some minor things based on the results. After working on the wireframes, I <a href="https://codepen.io/ongtiffany/full/GXVXmN" target="_blank">prototyped</a> the base framework to test responsiveness and interactions, then continued working on it, styling it up on the staging server alongside a developer who added the functionality and other aspects to produce the final website. 
+
+
+                    </p>
+                    <figure>
+                        <img src="../img/project/sensingplace/user-journey.jpg" alt="model of user jouney">
+                        <figcaption>
+                            General user journey, basic functions and elements.
+</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/sensingplace/university-of-winchester-site-screenshot.jpg" alt="Screenshot of the University of Winchester website">
+                        <figcaption>
+                            The style was to be similar to the University of Winchester's website.
+</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/sensingplace/wireframes1.jpg" alt="wireframes">
+                        <figcaption>
+                            Desktop to mobile wireframes using Adobe XD
+</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="../img/project/sensingplace/user-test-submissionform.jpg" alt="template and results of the user test submission form">
+                        <figcaption>
+                            Template and photographs of the results of quick user test submission form
+</figcaption>
+
+                    <figure>
+                        <img src="../img/project/sensingplace/wireframes2.jpg" alt="wireframes of the submission form">
+                        <figcaption>
+                            Wireframes of the submission form
+</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/project/sensingplace/sensingplace-site-screenshot.jpg" alt="Screenshot of Sensing Place website">
+                        <figcaption>
+                            Screenshot of the final site
+</figcaption>
+                    </figure>
+                    <h4>Website:</h4>
+                    <p>
+                        <a href="https://sensingplace.org" target="_blank">sensingplace.org</a>
+                    </p>
+                    <a href="../index.html">
+                        <button>
+                            <span>&#x02A2F;</span> Close Project
+                        </button>
+                    </a>
+                </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>            
+            <li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; Tiffany Ong 2024</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+    function navHighlighter() {
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+
+<!-- Clicky Analytics code -->
+    <script async src="//static.getclicky.com/101359440.js"></script>
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p>
+    </noscript>
+    <!-- Statcounter Analytics code -->
+    <script type="text/javascript">
+    var sc_project = 12735011;
+    var sc_invisible = 1;
+    var sc_security = "0d2bfccc";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+
+    <!-- Goat Counter Analytics code -->
+    <script data-goatcounter="https://ongtiffany.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+
+</html>

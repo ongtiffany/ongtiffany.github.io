@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability.">
+    <meta name="author" content="Tiffany Ong">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-black.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a class="active" href="../index.html#work">Work</a>
+                <a href="achievements.html">Achievements</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Entomological Knits</h2>
+            <h3>Textile Exhibition</h3>
+            </header>
+                <article>
+                    <h4>Project:</h4>
+                    <p>This was my final project and exhibition at the <a href="https://www.rca.ac.uk/" target="_blank">Royal College of Art</a>. This body of work was made because I felt many forms of needlecraft are slowly disappearing. I wanted to represent this but through the craft I knew best - knitting. I felt displaying the knitted pieces in a museum setting, behind glass with labels, taking away the ability to touch the objects would encourage more curiosity and investigation. I added labels with detailed technical knitting information for the more curious viewers. Although I wanted to move away from garments, I thought about where knitting came from and even after many centuries, knitting is still deeply rooted in garments. I looked at knitting patterns in vintage craft books and became very engaged with the construction and techniques ; details in sock heels, pockets, gussets, ribs, etc. I felt they were such beautiful objects and were lost within garments. These details play a different role when separated from the rest of the garment. The idea for repeating each detail with different colours came from looking at the current trend of manufacturing garments which usually are massed produced, and repeated again and again in different colours. But ultimately the main aim was to create an atmosphere for people to reflect and look at knitting in a different way.</p>
+                    
+
+                    <figure>
+                        <img src="../img/project/entomologicalknits/wallpieces.jpg" alt="wall pieces of entomological knits">
+                        <figcaption>
+                            Wall pieces: Shelf of jars, Three frames
+</figcaption>
+                    </figure> 
+
+                    <figure>
+                        <img src="../img/project/entomologicalknits/3wallframes.jpg" alt="3 frames of wall pieces of entomological knits">
+                        <figcaption>
+                            Wall frame collection: Molt Balls, Seven Ribs, Square Heels
+</figcaption>
+                    </figure> 
+
+                    <figure>
+                        <img src="../img/project/entomologicalknits/closeups.jpg" alt="closeups 3 frames of wall pieces of entomological knits">
+                        <figcaption>
+                            Close up of Molt Balls, Seven Ribs, Square Heels
+</figcaption>
+                    </figure> 
+
+
+
+
+                    <figure>
+                        <img src="../img/project/entomologicalknits/tablepieces.jpg" alt="table pieces of entomological knits">
+                        <figcaption>
+                            Table pieces: Three Heel Sock, Spatchcock Sock, Rib Rib Rib
+</figcaption>
+                    </figure>
+
+    <figure>
+                        <img src="../img/project/entomologicalknits/fullexhibit.jpg" alt="full exhibit entomological knits">
+                        <figcaption>
+                            "Entomological Knits"
+</figcaption>
+                    </figure> 
+
+                    <a href="../index.html">
+                        <button>
+                            <span>&#x02A2F;</span> Close Project
+                        </button>
+                    </a>
+                </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>            
+            <li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; Tiffany Ong 2024</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+    function navHighlighter() {
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+
+<!-- Clicky Analytics code -->
+    <script async src="//static.getclicky.com/101359440.js"></script>
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p>
+    </noscript>
+    <!-- Statcounter Analytics code -->
+    <script type="text/javascript">
+    var sc_project = 12735011;
+    var sc_invisible = 1;
+    var sc_security = "0d2bfccc";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+
+    <!-- Goat Counter Analytics code -->
+    <script data-goatcounter="https://ongtiffany.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+
+</html>
