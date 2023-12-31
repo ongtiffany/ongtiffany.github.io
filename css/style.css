@@ -667,6 +667,9 @@ footer p {
     border: 2px solid white;
     border-bottom: 0;
   }
+  #about {
+    padding: 20vh 0 30vh 0;
+  }
   #about p {
     padding: 0 24px 0 24px;
   }

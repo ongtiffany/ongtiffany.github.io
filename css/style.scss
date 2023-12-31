@@ -1017,9 +1017,12 @@
               }//&:checked
           }//#menu-toggle  
       }//.nav
-      #about p{
+      #about{
+        padding: 20vh 0 30vh 0;
+       p{
           padding: 0 24px 0 24px;
       }
+    }
   .grid{
           figure{
               width:100%;
