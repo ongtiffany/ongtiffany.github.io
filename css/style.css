@@ -446,19 +446,15 @@ article header h2 {
 }
 #about button {
   display: block;
-  background: black;
-  border: 2px solid;
+  background: #222;
   cursor: pointer;
-}
-#about button a {
-  border: none;
+  border: 2px solid #222;
   color: white;
   font-weight: bold;
 }
 #about button:hover {
   background: white;
-}
-#about button:hover a {
+  border: 2px solid;
   color: #222;
 }
 
@@ -580,11 +576,11 @@ footer ul li {
 }
 footer ul li a {
   text-decoration: none;
-  color: gray;
+  color: #666;
   border: none;
 }
 footer ul li a:hover {
-  color: black;
+  color: #333;
 }
 footer p {
   font-size: 11px;
@@ -605,10 +601,13 @@ footer p {
   }
 }
 @media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
   nav {
-    width: calc(100% - 45px);
+    width: 100%;
     height: 50px;
-    padding-top: 16px;
+    padding: 0 24px 0 24px;
   }
   nav a h1 {
     font-size: 18px;
@@ -668,9 +667,12 @@ footer p {
     border: 2px solid white;
     border-bottom: 0;
   }
+  #about p {
+    padding: 0 24px 0 24px;
+  }
   .grid figure {
     width: 100%;
-    margin-bottom: 1em;
+    margin: 0 0 1em 0;
   }
   .grid figure figcaption h2 {
     font-size: 6vw;
@@ -689,6 +691,7 @@ footer p {
   }
   #project article {
     width: calc(100% + 3px);
+    padding: 0 24px;
   }
   #project article h4, #project article p {
     padding: 0;
@@ -702,5 +705,26 @@ footer p {
   }
   article header h2 span {
     display: block;
+  }
+  footer {
+    padding: 40px 24px 10px 24px;
+  }
+}
+@media (hover: none) {
+  .grid figure img {
+    opacity: 0.3;
+  }
+  .grid figure figcaption {
+    padding: 12px;
+    opacity: 1;
+  }
+  .grid figure h2,
+  .grid figure p {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  .grid figure figcaption::before, .grid figure figcaption::after {
+    opacity: 1;
+    transform: scale(1);
   }
 }/*# sourceMappingURL=style.css.map */
