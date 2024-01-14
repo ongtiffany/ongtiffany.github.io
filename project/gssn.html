@@ -10,11 +10,12 @@
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <!-- Style CSS -->
     <link href="../css/style.css" rel="stylesheet">
+</head>
 <body>
     <!-- Navigation -->
     <nav>
         <a href="../index.html">
-            <img src="../img/to-black.png" alt="logo" />
+            <img src="../img/to-white.png" alt="logo" />
             <h1>Tiffany<span>Ong</span></h1>
         </a>
         <input id="menu-toggle" type="checkbox" />
@@ -24,11 +25,12 @@
         <ul class="menu">
             <li>
                 <a class="active" href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
                 <a href="achievements.html">Achievements</a>
             </li>
         </ul>
     </nav>
-
     <section id="project">
         <header>
             <!-- Project Details Go Here -->
@@ -45,43 +47,43 @@
             <p>Once the client’s requirements were complete, our research began. Logos ideas were sketched taking any inspiration from film to German flags. During internal meetings, these were discussed and the selection narrowed down. The site design also went through a similar process, starting with the site map, and page content and function requirements.
             </p>
             <figure>
-                <img src="../img/project/gssn/original-site-logo.jpg" alt="original basic minimal site and logo">
+                <img src="../img/project/gssn/original-site-logo.jpg" alt="original site and logo">
                 <figcaption>
                     Original tumblr site and logo
                 </figcaption>
                 </a>
             </figure>
             <figure>
-                <img src="../img/project/gssn/sketchbook-ideas.jpg" alt="logo ideas sketched in sketchbook">
+                <img src="../img/project/gssn/sketchbook-ideas.jpg" alt="ideas sketched in sketchbook">
                 <figcaption>
                     Sketchbook ideas
                 </figcaption>
                 </a>
             </figure>
             <figure>
-                <img src="../img/project/gssn/logo-options.jpg" alt="two version of logo options">
+                <img src="../img/project/gssn/logo-options.jpg" alt="logo options">
                 <figcaption>
                     Two final logo options
                 </figcaption>
                 </a>
             </figure>
             <figure>
-                <img src="../img/project/gssn/current-site1.jpg" alt="website news page image preview images, title, and side content column">
+                <img src="../img/project/gssn/current-site1.jpg" alt="screenshot of current site">
                 <p class="image-caption">
                     <figcaption>
-                        Screenshot of live site - News and events
+                        Screenshot of current site - News and events
 </figcaption>
             </figure>
             <figure>
-                <img src="../img/project/gssn/current-site2.jpg" alt="website events page image preview images, title, and side content column">
+                <img src="../img/project/gssn/current-site2.jpg" alt="screenshot of current site">
                 <p class="image-caption">
                     <figcaption>
-                        Screenshot of live site - Landing page
+                        Screenshot of current site - Landing page
 </figcaption>
             </figure>
             <h4>Website:</h4>
             <p>
-                http://germanscreenstudies.eu (migrated 2020)
+                <a href="http://germanscreenstudies.eu" target="_blank">germanscreenstudies.eu</a>
             </p>
             <a href="../index.html">
                 <button>
@@ -94,10 +96,14 @@
         <ul>            
             <li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
             </li>
+            <li><a href="https://codepen.io/ongtiffany" target="_blank">Codepen</a>
+            </li>
             <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
             </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
         </ul>
-        <p>Please do not use images or content without permission. Copyright &copy; Tiffany Ong 2024</p>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2024</p>
     </footer>
     <!-- Custom script for nav menu functionality-->
     <script>
@@ -106,7 +112,9 @@
 
     // Add an event listener listening for scroll
     window.addEventListener("scroll", navHighlighter);
+
     function navHighlighter() {
+
         // Get current scroll position
         let scrollY = window.pageYOffset;
 
@@ -131,25 +139,28 @@
         });
     }
     </script>
-
-<!-- Clicky Analytics code -->
+ 
+    <!-- Clicky Analytics code -->
     <script async src="//static.getclicky.com/101359440.js"></script>
-    <noscript>
-        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p>
-    </noscript>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p></noscript>
+
     <!-- Statcounter Analytics code -->
     <script type="text/javascript">
-    var sc_project = 12735011;
-    var sc_invisible = 1;
-    var sc_security = "0d2bfccc";
+    var sc_project=12735011; 
+    var sc_invisible=1; 
+    var sc_security="0d2bfccc"; 
     </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
-    </noscript>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
 
     <!-- Goat Counter Analytics code -->
-    <script data-goatcounter="https://ongtiffany.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://ongtiffany.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>

@@ -5,28 +5,25 @@ html {
 
 html,
 body {
-  margin: 0 auto;
+  margin: 0;
   height: 100%;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   width: 100%;
-  background: #FCFBFC;
-  max-width: 1400px;
 }
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
 }
 
 a {
   color: black;
   transition: all ease-out 300ms;
-  text-decoration: none;
-  border-bottom: 2px solid lightgray;
 }
 a:hover {
   opacity: 0.6;
   border-bottom: 1px dotted;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -36,7 +33,6 @@ section {
 
 figure {
   width: 100%;
-  margin: 0;
 }
 figure img {
   width: 100%;
@@ -48,35 +44,33 @@ nav {
   top: 0;
   z-index: 2;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: #FCFBFC;
-  color: #555;
-  height: 80px;
-  padding: 16px 0;
-}
-nav a {
-  border-bottom: none;
+  background: rgba(0, 0, 0, 0.7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to left, rgba(82, 81, 81, 0.7), rgba(0, 0, 0, 0.9));
+  color: #FFF;
+  height: 50px;
+  padding: 15px;
 }
 nav a img {
-  width: 30px;
-  margin-top: 12px;
+  width: 40px;
+  margin-top: 16px;
 }
 nav a h1 {
   float: right;
   text-transform: uppercase;
-  margin: 16px 10px 20px 10px;
-  font-size: 24px;
-  color: #222;
+  margin: 20px 10px 20px 10px;
+  font-size: 16px;
+  color: white;
   text-align: left;
   font-weight: 400;
   line-height: 1;
 }
 nav a h1 span {
+  display: block;
   font-weight: 100;
 }
 nav a:hover {
@@ -91,8 +85,7 @@ nav ul.menu li a {
   display: inline-block;
   position: relative;
   padding: 10px;
-  color: #222;
-  font-size: 18px;
+  color: white;
 }
 nav ul.menu li a:after {
   content: "";
@@ -102,17 +95,17 @@ nav ul.menu li a:after {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #222;
+  background-color: white;
   transition: transform 0.25s ease-out;
 }
 nav ul.menu li a:hover:after {
   transform: scaleX(1);
 }
 nav ul.menu li a:hover {
-  color: #222;
+  color: white;
 }
 nav ul.menu li a.active {
-  color: #222;
+  color: white;
   position: relative;
   padding: 10px;
 }
@@ -124,7 +117,7 @@ nav ul.menu li a.active:after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #222;
+  background-color: white;
   transition: transform 0.25s ease-out;
 }
 nav .menu-button-container {
@@ -143,7 +136,7 @@ nav .menu-button,
 nav .menu-button::before,
 nav .menu-button::after {
   display: block;
-  background-color: #222;
+  background-color: #fff;
   position: absolute;
   height: 2px;
   width: 30px;
@@ -169,6 +162,51 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   transform: rotate(-45deg);
 }
 
+@media (max-width: 600px) {
+  nav .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    width: calc(100% + 40px);
+    margin-left: -40px;
+  }
+  nav .menu > li {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  nav .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  nav .menu-button-container {
+    display: flex;
+  }
+  nav #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 100ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  nav #menu-toggle ~ .menu li a {
+    opacity: 0;
+    padding: 5vh 0;
+  }
+  nav #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 100vh;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 1;
+  }
+  nav #menu-toggle:checked ~ .menu li a {
+    opacity: 1;
+    display: block;
+  }
+}
 article header {
   text-align: center;
   background-attachment: scroll;
@@ -190,10 +228,22 @@ article header h2 {
   color: #cccccc;
 }
 
+@media (max-width: 600px) {
+  article header {
+    max-height: 100vh;
+    height: 100vh;
+  }
+  article header h2 {
+    padding: 40vh 5px 0 5px;
+  }
+  article header h2 span {
+    display: block;
+  }
+}
 #work {
   padding-top: 60px;
   max-width: 1700px;
-  margin: 0 auto 0 -5px;
+  margin: 0 auto;
 }
 #work .item {
   display: block;
@@ -241,10 +291,11 @@ article header h2 {
   position: relative;
   float: left;
   overflow: hidden;
-  width: 32.3%;
-  margin: 0.5%;
+  width: 33.3%;
+  background: #3085a3;
   text-align: center;
   cursor: pointer;
+  margin: 0;
   background: #000;
 }
 .grid figure img {
@@ -254,6 +305,12 @@ article header h2 {
   max-width: 100%;
   opacity: 0.8;
   background: black;
+}
+.grid figure a {
+  text-decoration: none;
+}
+.grid figure a:hover {
+  font-style: italic;
 }
 .grid figure figcaption {
   padding: 1.5vw;
@@ -320,12 +377,9 @@ article header h2 {
   opacity: 1;
   transition: opacity 0.3s;
   background: black;
-  transition: all 500ms ease-in;
 }
 .grid figure:hover img {
-  opacity: 0.2;
-  transform: scale(1.1);
-  transition: all 600ms ease-in;
+  opacity: 0.3;
 }
 .grid figure figcaption::before, .grid figure figcaption::after {
   position: absolute;
@@ -348,7 +402,7 @@ article header h2 {
   transform: scale(1, 0);
 }
 .grid figure h2 {
-  padding: 20% 4% 0 4%;
+  padding: 25% 4% 0 4%;
   transition: all 300ms ease-in;
   transform: translate3d(0, -20px, 0);
 }
@@ -373,22 +427,17 @@ article header h2 {
   height: auto;
   background: black;
 }
-.readmore-state:checked ~ .readmore-trigger {
-  margin-top: 56px;
-}
 .readmore-state:checked ~ .readmore-trigger:before {
-  content: "SHOW LESS";
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  content: "Show less";
 }
 .readmore-state ~ .readmore-trigger:before {
-  content: "VIEW MORE";
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  content: "More";
 }
 .readmore-state ~ label.readmore-trigger {
-  margin: 0 0 140px 0;
+  margin: 5em 0 6em 0;
   display: inline-block;
-  border: 2px solid black;
-  width: 120px;
+  border: 1px solid black;
+  width: 10em;
   text-align: center;
 }
 
@@ -407,55 +456,60 @@ article header h2 {
   display: inline-block;
   text-align: right;
   margin-right: 2em;
-  color: white;
+  color: #777;
   padding: 1em;
   font-size: 0.8em;
   right: 10%;
-  background-color: #222;
 }
 .readmore-trigger:hover {
-  background-color: white;
-  color: #222;
+  background-color: black;
+  color: white;
   transition: all 100ms ease-in;
 }
 
 #about {
-  padding: 30vh 0 40vh 0;
-  position: relative;
-  /*&:after{
-      content: '';
-     width:100px;
-     border-bottom: 1px solid lightgray; 
-     height: 20px;
-     position: relative;
-     display: block;
-  }*/
+  background-attachment: scroll;
+  background-image: url(../img/about.jpg);
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  -o-background-size: cover;
+  padding: 100px 0;
 }
 #about p {
-  text-align: left;
+  text-align: justify;
+  width: 80%;
+  margin: 20px auto;
   line-height: 2;
-  max-width: 500px;
-  /* &:last-of-type{
-       border-bottom: 1px solid lightgray;
-       padding-bottom: 32px;
+}
 
-   }*/
+@media (max-width: 600px) {
+  #about p {
+    width: 95%;
+  }
 }
-#about p strong {
-  font-weight: 600;
-}
-#about button {
-  display: block;
-  background: #222;
-  cursor: pointer;
-  border: 2px solid #222;
+#contact {
+  background-attachment: scroll;
+  background-image: url(../img/contact.jpg);
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  -o-background-size: cover;
   color: white;
-  font-weight: bold;
+  padding: 150px 0;
 }
-#about button:hover {
-  background: white;
-  border: 2px solid;
-  color: #222;
+#contact p {
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 2;
+}
+#contact p a {
+  color: white;
+}
+#contact p span {
+  display: block;
+  font-weight: bold;
+  padding-top: 10px;
 }
 
 #achievements {
@@ -473,6 +527,7 @@ article header h2 {
 #project {
   padding: 150px 15%;
   margin: 0 auto;
+  background-color: #f7f7f7;
 }
 #project header em {
   text-align: left;
@@ -490,6 +545,7 @@ article header h2 {
   margin: 5px 0 80px 0;
 }
 #project article {
+  max-width: 800px;
   margin: 0 auto;
 }
 #project article h4 {
@@ -526,7 +582,7 @@ article header h2 {
 }
 #project article figure figcaption {
   font-size: 12px;
-  background: #666;
+  background: gray;
   color: white;
   padding: 5px 0;
 }
@@ -539,6 +595,7 @@ article header h2 {
   background: black;
   border: 2px solid black;
   text-transform: uppercase;
+  font-weight: bold;
   padding: 10px 15px;
   font-size: 14px;
   color: white;
@@ -586,23 +643,11 @@ footer p {
   font-size: 11px;
 }
 
-@media (max-width: 1600px) {
-  body {
-    padding: 0 24px 0 24px;
-  }
-  nav {
-    width: calc(100% - 48px);
-  }
-  #project {
-    padding: 150px 60px 150px 40px;
-  }
-  #work {
-    margin: 0;
-  }
-}
 @media (max-width: 1200px), (hover: none) {
   .grid figure {
     background: none;
+    width: 32.3%;
+    margin: 0.5%;
   }
   .grid figure:hover img {
     opacity: 0.7;
@@ -710,7 +755,7 @@ footer p {
     padding: 20vh 0 30vh 0;
   }
   #about p {
-    padding: 0 24px 0 24px;
+    padding: 0 24px 16px 24px;
   }
   .grid figure {
     width: 100%;

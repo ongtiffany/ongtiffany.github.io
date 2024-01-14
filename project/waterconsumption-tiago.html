@@ -1,106 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability.">
     <meta name="author" content="Tiffany Ong">
-    <title>Tiffany Ong</title>
+    <title>Water Consumption</title>
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <!-- Style CSS -->
     <link href="../css/style.css" rel="stylesheet">
-<body>
-    <!-- Navigation -->
-    <nav>
-        <a href="../index.html">
-            <img src="../img/to-black.png" alt="logo" />
-            <h1>Tiffany<span>Ong</span></h1>
-        </a>
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-        <ul class="menu">
-            <li>
-                <a class="active" href="../index.html#work">Work</a>
-                <a href="achievements.html">Achievements</a>
-            </li>
-        </ul>
-    </nav>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet" type="text/css">
+</head>
 
+<body>
         <section id="project">
         <figure>
                 <img src="../img/project/waterconsumption/tiago-waterconsumption.jpg" alt="collage of lego people with constructed props made with lego, taking a shower, washing hands, with a washing machine, sitting on the toliet, with blocks of lego as bar charts with data annotation">
         </figure>
-<article>            
-<a href="../project/waterconsumption.html">
-  <button>
-    About this project
-  </button>
-</a>
-</article>
-</section><!-- end section -->
-<footer>
-<ul>            
-<li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
-</li>
-<li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
-</li>
-</ul>
-<p>Please do not use images or content without permission. Copyright &copy; Tiffany Ong 2024</p>
-</footer>
-<!-- Custom script for nav menu functionality-->
-<script>
+
+<footer><a href="https://ongtiffany.github.io/project/waterconsumption.html" target="_blank">About this project</a></footer>
+</section>
+    <!-- Custom script for nav menu functionality-->
+    <script>
 // Get all sections that have an ID defined
 const sections = document.querySelectorAll("section[id]");
 
 // Add an event listener listening for scroll
 window.addEventListener("scroll", navHighlighter);
+
 function navHighlighter() {
-// Get current scroll position
-let scrollY = window.pageYOffset;
-
-// Now we loop through sections to get height, top and ID values for each
-sections.forEach(current => {
-const sectionHeight = current.offsetHeight;
-const sectionTop = current.offsetTop - 50;
-sectionId = current.getAttribute("id");
-
-/*
-- If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-- To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-*/
-if (
-scrollY > sectionTop &&
-scrollY <= sectionTop + sectionHeight
-) {
-document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
-} else {
-document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+  
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
+  
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
+    
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ){
+      document.querySelector("nav ol a[href*=" + sectionId + "]").classList.add("active");
+    } else {
+      document.querySelector("nav ol a[href*=" + sectionId + "]").classList.remove("active");
+    }
+  });
 }
-});
-}
-</script>
 
-<!-- Clicky Analytics code -->
-<script async src="//static.getclicky.com/101359440.js"></script>
-<noscript>
-<p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p>
-</noscript>
-<!-- Statcounter Analytics code -->
-<script type="text/javascript">
-var sc_project = 12735011;
-var sc_invisible = 1;
-var sc_security = "0d2bfccc";
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-<noscript>
-<div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
-</noscript>
-
-<!-- Goat Counter Analytics code -->
-<script data-goatcounter="https://ongtiffany.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    </script>
+ 
+    <!-- Clicky Analytics code -->
+    <script async src="//static.getclicky.com/101359440.js"></script>
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p>
+    </noscript>
+    <!-- Statcounter Analytics code -->
+    <script type="text/javascript">
+    var sc_project = 12735011;
+    var sc_invisible = 1;
+    var sc_security = "0d2bfccc";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+    <!-- Goat Counter Analytics code -->
+    <script data-goatcounter="https://ongtiffany.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>

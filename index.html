@@ -11,11 +11,13 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <!-- Style CSS -->
     <link href="css/style.css" rel="stylesheet">
+</head>
+
 <body>
     <!-- Navigation -->
     <nav>
         <a href="index.html">
-            <img src="img/to-black.png" alt="logo" />
+            <img src="img/to-white.png" alt="logo" />
             <h1>Tiffany<span>Ong</span></h1>
         </a>
         <input id="menu-toggle" type="checkbox" />
@@ -24,42 +26,31 @@
         </label>
         <ul class="menu">
             <li>
-                <a href="#work">Work</a>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
                 <a href="project/achievements.html">Achievements</a>
             </li>
         </ul>
     </nav>
     <article>
-        <section id="about">
-            <p>I am a senior <strong>designer</strong> working at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a> creating <strong>digital</strong> concepts, prototypes, interfaces and products. I've worked in the field of journalism, fashion, marketing, advertising and now <strong>academic research</strong>. Below is selection of work from those areas. </p>
-            
-            
-            <p>Currently exploring <a href="https://www.datavisualizationsociety.org" target="_blank">data visualisation</a> and <a href="https://sustainablewebdesign.org" target="_blank">web sustainability</a>.</p>
-
-        </section>
-
-
-        
-        <!--<header>
+        <header>
             <h2>Designing digital interfaces <span>+</span> visualising data</h2>
-        </header>-->
+        </header>
         <section id="work">
+            <h2>WORK</h2>
             <div class="grid">
                 <figure>
-                    <!--<div class="tag"><img src="img/project/achievements/iib-longlist-2023.png">
-                    </div>-->
                     <a href="project/rrh2.html">
                         <img src="img/project/preview/rrh2-thumb.jpg" alt="cropped data visualisation of a sunburst like chart ">
                         <figcaption>
                             <h2>Red Riding Hood 2</h2>
-                            <p>Sentiment Emotion Analysis</p>
+                            <p>Data Visualisation</p>
                         </figcaption>
                     </a>
                 </figure>
 
                 <figure>
-                    <!--<div class="tag"><img src="img/project/achievements/iib-longlist-2022.png">
-                    </div>-->
                     <a href="project/redridinghood.html">
                         <img src="img/project/preview/redridinghood-thumb.jpg" alt="cropped data visualised with geometric shapes making a scene of green circle top trees, triangle top houses, multi shaped characters laid in around a green semicircle and legend in one box on black gray background with gradient">
                         <figcaption>
@@ -78,8 +69,6 @@
                     </a>
                 </figure>
                 <figure>
-                    <!--<div class="tag"><img src="img/project/achievements/iib-longlist-2022.png">
-                    </div>-->
                     <a href="project/waterconsumption.html">
                         <img src="img/project/preview/waterconsumption-thumb.jpg" alt="photograph of a lego person dressed in police uniform wearing sunglasses next to a lego constructed washing machine.">
                         <figcaption>
@@ -147,7 +136,7 @@
                         <img src="img/project/preview/mmc-thumb.jpg" alt="cropped view of 6 Mozart related images with text below each">
                         <figcaption>
                             <h2>Mozart & Material Culture</h2>
-                            <p>Entity Relationship</p>
+                            <p>Souvenirs</p>
                         </figcaption>
                     </a>
                 </figure>
@@ -164,7 +153,7 @@
                         <img src="img/project/preview/informationmodels.jpg" alt="cropped flow chart with blocks of colour">
                         <figcaption>
                             <h2>Information models</h2>
-                            <p>Process Structure Diagrams</p>
+                            <p>Diagram Drawing</p>
                         </figcaption>
                     </a>
                 </figure>
@@ -188,7 +177,7 @@
                         </figcaption>
                     </a>
                 </figure>
-                                <input type="checkbox" class="readmore-state" id="readmore" />
+                                <input type="checkbox" class="readmore-state" id="more-work" />
                 <div class="readmore-target">
 
                 <figure>
@@ -206,7 +195,7 @@
                             <img src="img/project/preview/agile-thumb.jpg" alt="left: illustration of a person driving a car without back or a roof over a bump with items falling out, right: illustration of a person driving a car with a back without a roof getting wet in the rain">
                             <figcaption>
                                 <h2>Agile Diagrams</h2>
-                                <p>Comic Illustration</p>
+                                <p>Illustration</p>
                             </figcaption>
                         </a>
                     </figure>
@@ -215,7 +204,7 @@
                             <img src="img/project/preview/workflow-thumb.jpg" alt="photograph coloured cubes with text annotating the different colours">
                             <figcaption>
                                 <h2>Workflow Blocks</h2>
-                                <p>Data Physicalization</p>
+                                <p>Cube Modelling</p>
                             </figcaption>
                         </a>
                     </figure>
@@ -250,7 +239,7 @@
                             <img src="img/project/preview/trinitymirror-thumb.jpg" alt="left: half of an old newspaper, center: text title, right: half of an ipad with news article">
                             <figcaption>
                                 <h2>Trinity Mirror</h2>
-                                <p>Digital Publishing</p>
+                                <p>Publishing</p>
                             </figcaption>
                         </a>
                     </figure>
@@ -310,20 +299,40 @@
                         </a>
                     </figure> -->
                 </div>
-                <label for="readmore" class="readmore-trigger"></label>
+                <label for="more-work" class="readmore-trigger"></label>
             </div><!-- end .grid -->
+        </section>
+        <section id="about">
+            <h2>ABOUT</h2>
+            <p>I am a <strong>designer</strong> working at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, focusing in digital design and recently exploring more with <strong>data visualisaton</strong> and <strong>sustainability</strong>. I've worked in the field of journalism, fashion, marketing, advertising and currently <strong>academic research</strong>. Above is selection of work from those areas.</p>
+            <input type="checkbox" class="readmore-state" id="more-about" />
+            <div class="readmore-target">
+            <p>I started my career as a knitwear designer, decided to further my education with a masters in textile design, but unfortunately graduated when the economy took a downturn. Out of necessity swapped beloved stitches to pixels, working first as a graphic designer, then transitioned to more web design roles after teaching myself a bit of coding. I didn't think I would enjoy working digitally but there's so much to learn with creativity challenges in an ever-changing and vibrant field. </p><p>I spend a lot of time researching and developing creative conceptual ideas to produce digital prototypes and products. With a lot of time spent looking at the screen, during my spare time when I need my tactile outlet, I still pick up my needles to craft something but only for my family or friends. Soil and seeds are another combination I have grown fond of, and also working with freshly cut wood to carve spoons and other objects.</p>
+            </div>
+            <label for="more-about" class="readmore-trigger"></label>
         </section>
 
 
+
+        <section id="contact">
+            <h2>CONTACT</h2>
+            <p>
+                If there is anything you would like to discuss, please send a message through <a href="mailto:tiffanyong@mail.com?Subject=Hello, hope this doesn't go to spam" target="_top">email</a> or <a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </p>
+        </section>
     </article>
     <footer>
         <ul>            
             <li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
             </li>
+            <li><a href="https://codepen.io/ongtiffany" target="_blank">Codepen</a>
+            </li>
             <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
             </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
         </ul>
-        <p>Please do not use images or content without permission. Copyright &copy; Tiffany Ong 2024</p>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2024</p>
     </footer>
     <!-- Custom script for nav menu functionality-->
     <script>
