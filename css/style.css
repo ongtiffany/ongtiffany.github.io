@@ -306,12 +306,6 @@ article header h2 {
   opacity: 0.8;
   background: black;
 }
-.grid figure a {
-  text-decoration: none;
-}
-.grid figure a:hover {
-  font-style: italic;
-}
 .grid figure figcaption {
   padding: 1.5vw;
   color: #fff;
@@ -667,6 +661,12 @@ footer p {
     transition: none;
     color: black;
     padding: 0;
+  }
+  .grid figure a {
+    text-decoration: none;
+  }
+  .grid figure a:hover {
+    font-style: italic;
   }
   .grid figure figcaption::before, .grid figure figcaption::after {
     opacity: 1;

@@ -492,13 +492,6 @@ article {
             opacity: 0.8;
             background: black;
         }
-        a{
-            text-decoration: none;
-            &:hover{
-                //text-decoration: underline;
-                font-style: italic;
-            }
-        }
 
         //img 
         figcaption {
@@ -1075,6 +1068,13 @@ margin: 0.5%;
             }
 
             //h2,p
+            a{
+                text-decoration: none;
+                &:hover{
+                    //text-decoration: underline;
+                    font-style: italic;
+                }
+            }
             figcaption {
 
                 &::before,
