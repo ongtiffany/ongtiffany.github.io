@@ -412,6 +412,29 @@ section ul.vertical.punctuation {
     height: 15vw;
 }
 
+
+section ul.vertical.punctuation li ol.tooltip span.tooltiptext {
+  line-height: 1.2;
+  position: absolute;
+  margin-top:-45px;
+  text-align: center;
+  color:black;
+  font-size: 1.1vw;
+  background:transparent;
+  font-family: "Yomogi";
+}
+
+section ul.vertical.punctuation li ol.tooltip span.tooltiptext:before {
+  content: "|";
+  position: absolute;
+  margin-top: 20px;
+}
+
+section ul.vertical.punctuation li ol:hover {
+  background:transparent;
+}
+
+
 section ol.vertical.punctuation li,
 section ul.vertical.punctuation li {
     width: 3.6vw;
@@ -4450,7 +4473,7 @@ section .notes p {
 .tab-container .panel p {
     width: 97%;
     padding: 0 3% 0 0;
-    text-align: center;
+    text-align: justify;
 }
 
 @media (max-width: 1000px) {
