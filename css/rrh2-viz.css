@@ -5379,7 +5379,7 @@ section .reworked-wrapper .page9 .word:nth-child(37)>span {
 }
 
 section .reworked-wrapper .page10 {
-    background: conic-gradient(black 7.34deg, white 29.36deg 36.7deg, black 36.7deg, white 66.06deg 73.4deg, black 73.4deg, white 95.42deg 102.76deg, black 102.76deg, white 132.12deg 139.46deg, black 139.46deg, white 168.82deg 176.16deg, black 176.16deg, white 198.18deg 205.52deg, black 205.52deg, white 234.88deg 242.22deg, black 242.22deg, white 271.58deg 278.92deg);
+  background: conic-gradient(black 7.34deg, white 36.7deg 44.04deg, black 44.04deg, white 73.4deg 80.74deg, black 80.74deg, white 102.76deg 110.1deg, black 110.1deg, white 139.46deg 146.8deg, black 146.8deg, white 176.16deg 183.5deg, black 183.5deg, white 205.52deg 212.86deg, black 205.52deg, white 242.22deg 249.56deg, black 249.56deg, white 278.92deg 286.26deg);
 }
 
 section .reworked-wrapper .page10>.emotion:nth-child(1)>span {
@@ -5418,13 +5418,13 @@ section .reworked-wrapper .page10 .word {
     /* SENTIMENT SHADES */
 }
 
-section .reworked-wrapper .page10 .word:nth-child(17)>span,
-section .reworked-wrapper .page10 .word:nth-child(26)>span {
+section .reworked-wrapper .page10 .word:nth-child(18)>span,
+section .reworked-wrapper .page10 .word:nth-child(28)>span {
     border-left: 0.2vw solid black;
 }
 
-section .reworked-wrapper .page10 .word:nth-child(35)>span,
-section .reworked-wrapper .page10 .word:nth-child(45)>span {
+section .reworked-wrapper .page10 .word:nth-child(36)>span,
+section .reworked-wrapper .page10 .word:nth-child(46)>span {
     border-right: 0.4vw double black;
 }
 
