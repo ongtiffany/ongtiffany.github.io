@@ -524,13 +524,13 @@ article header h2 {
 
 #mini-about {
   padding: 15vh 0;
-  font-size:24px;
+  font-size:20px;
 }
 
 #mini-about p {
   text-align: center;
   width: 90%;
-  line-height: 3.8;
+  line-height: 2.8;
   }
 
 #mini-about p strong{
@@ -538,7 +538,7 @@ article header h2 {
   font-family: "Londrina Outline", sans-serif;
   font-weight: 400;
   font-style: normal; 
-  line-height: 2.6;
+  line-height: 1.6;
 }
 }
 #contact {
@@ -708,6 +708,7 @@ footer ul li a:hover {
 }
 footer p {
   font-size: 11px;
+  line-height: 2;
 }
 
 @media (max-width: 1200px), (hover: none) {
