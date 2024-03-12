@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -257,6 +255,7 @@ article header h2 {
   font-weight: 400;
   font-size:60px;
   padding:10px 0;
+  letter-spacing: 3px;
 }
 #work .item {
   display: block;
@@ -448,6 +447,7 @@ article header h2 {
   text-align: center;
   font-family: "Londrina Solid", sans-serif;
   font-size:20px;
+  letter-spacing: 1px;
 }
 
 .readmore-target {
@@ -490,8 +490,9 @@ article header h2 {
 
 
 #mini-about p strong{
-  font-size:42px;
-  font-family: "Londrina Outline", sans-serif;
+  font-size:46px;
+  font-family: "Londrina Shadow", sans-serif;
+  letter-spacing: 3px;
   font-weight: 400;
   font-style: normal; 
   line-height: 2.2;
@@ -512,6 +513,7 @@ article header h2 {
   font-family: "Londrina Shadow", sans-serif;
   font-weight: 400;
   font-size:60px;
+  letter-spacing: 3px;
 }
 #about p {
   text-align: justify;
@@ -534,8 +536,7 @@ article header h2 {
   }
 
 #mini-about p strong{
-  font-size:36px;
-  font-family: "Londrina Outline", sans-serif;
+  font-size:38px;
   font-weight: 400;
   font-style: normal; 
   line-height: 1.6;
@@ -557,6 +558,7 @@ article header h2 {
   font-family: "Londrina Shadow", sans-serif;
   font-weight: 400;
   font-size:60px;
+  letter-spacing: 3px;
 }
 
 #contact p {
@@ -569,7 +571,8 @@ article header h2 {
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size:22px;
+  font-size:20px;
+  letter-spacing: 1px;
 }
 #contact p span {
   display: block;
@@ -668,9 +671,10 @@ article header h2 {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: "Londrina Solid", sans-serif;
 font-size: 20px;
+letter-spacing: 1px;
 }
 #project article a button span {
-  font-size: 30px;
+  font-size: 43px;
   line-height: 0;
 }
 #project article a button:hover {
@@ -814,6 +818,7 @@ footer p {
     opacity: 1;
     display: block;
     color: white;
+
   }
   nav #menu-toggle:checked ~ .menu li a:hover {
     background: #444;
