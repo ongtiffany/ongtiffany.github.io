@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability.">
+    <meta name="author" content="Tiffany Ong">
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">
+            <img src="../img/to-white.png" alt="logo" />
+            <h1>Tiffany<span>Ong</span></h1>
+        </a>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>
+                <a class="active" href="../index.html#work">Work</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="achievements.html">Achievements</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="project">
+        <header>
+            <!-- Project Details Go Here -->
+            <h2>Handle Repair</h2>
+            <h3>Sustainability</h3>
+        </header>
+        <article>
+            <h4>Project:</h4>
+            <p>This is not the usual project I would put up but it is the sort I've been doing over the years at home and wanted to document it showing my process, thoughts and perhaps could be useful for someone. This started when I decided it was too much trouble to grab a pair of shears and tried to cut a branch of rosemary with a small pair of scissors that were close to hand. and the handle evitably broke. Now these were very cheap scissors that I had for year, but somehow they were good at cutting and being a person that doesn't like to throw things out, I hunted for ways to repair them. I found great ideas, using 3D printers, carving out of wood, laser cutting, but none of those I had access to easily. There is a 3D printer at my work place but the thought of figuring out how to use, setting it up, and melted plastic was not appealing.</p>
+            <p>
+                
+            </p>
+    
+
+            <h4>Process:</h4>
+            <p>This started when I decided it was too much trouble to grab a pair of shears and tried to cut a branch of rosemary with a small pair of scissors that were close to hand. and the handle evitably broke. </p>
+
+            <figure>
+                <img src="../img/project/repair/cutandbreak.jpg" alt="left side drawing of a hand holding a pair of scissors cutting a branch, arrow point to, right side photograph of scissors laying flat on a white background and broken handle">
+                <figcaption>
+                    a sketch of that moment before the break, Scissors and its broken handle
+                </figcaption>
+            </figure>
+
+            <p>Now these were very cheap scissors that I had for years, and not the prettiest of types either, but somehow they were good at cutting and being a person that doesn't like to throw things out, I hunted for ways to repair them. I found great ideas, using 3D printers, carving out of wood, laser cutting, but none of those I had access to easily. There is a 3D printer at my work place but the thought of figuring out how to use it, setting it up, and having melted plastic was not appealing.</p>
+
+            <p>
+                Using wood as a material would be my first choice but it would take me a while to carve so I thought cardboard could be a good alternative. The carton that held shop bought mushrooms was ideal as it was thin enough for me to cut using another pair of scissors. I could have used a thicker cardboard cutting with a stanley knife but liked the idea of building up the layers, rather like plywood. A simple trace around the handle that wasn't broken was done several times, and cut out. 
+            </p>
+            <figure>
+                <img src="../img/project/repair/material.jpg" alt="photograph of a flatten cardboard food carton with scissors with one broken handle and a cardboard template of the handle ">
+                <figcaption>
+                    Mushroom cardboard carton with a template of the handle
+                </figcaption>
+            </figure>  
+
+            <p>
+                There were 8 layers altogether and the middle 2 had a portion cut out to fit the scissor part. PVA glue was brushed on each layer and clamped down with a press. 
+            </p>
+            <figure>
+                <img src="../img/project/repair/stacked.jpg" alt="photograph of carboard layers of the scissors handle">
+                <figcaption>
+                    layers of cardboard aligned and stacked
+                </figcaption>
+            </figure>  
+            <figure>
+                <img src="../img/project/repair/press.jpg" alt="photograph of carboard layers of the scissors handle clamped in a flower press">
+                <figcaption>
+                    Using a flower press to apply pressure to the glued layers.
+                </figcaption>
+            </figure>  
+
+
+
+            <h4>Conclusion:</h4>
+                <p>
+                 Altogether this project took less than a couple hours (plus some drying time) using materials I had at hand, and was deeply satisfying that I could involve my kids in the making as all materials and techiques were safe, and the scissors could be functional again.
+                </p>
+
+             <figure>
+                <img src="../img/project/repair/inuse.jpg" alt="">
+                <figcaption>
+                Repaired scissors in use
+                </figcaption>
+            </figure>
+            <p>...And I think looks better.</p>
+                                         <figure>
+                <img src="../img/project/repair/finished.jpg" alt="">
+                <figcaption>
+                The fully repaired pair of scissors
+                </figcaption>
+            </figure>
+
+        </article>
+    </section><!-- end section -->
+    <footer>
+        <ul>            
+            <li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
+            </li>
+            <li><a href="https://codepen.io/ongtiffany" target="_blank">Codepen</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
+            </li>
+            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
+            </li>
+        </ul>
+        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2024</p>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute("id");
+
+            /*
+            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+            */
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+    </script>
+
+    <!-- Clicky Analytics code -->
+    <script async src="//static.getclicky.com/101359440.js"></script>
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p>
+    </noscript>
+    <!-- Statcounter Analytics code -->
+    <script type="text/javascript">
+    var sc_project = 12735011;
+    var sc_invisible = 1;
+    var sc_security = "0d2bfccc";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+    <!-- Goat Counter Analytics code -->
+    <script data-goatcounter="https://ongtiffany.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+
+</html>
