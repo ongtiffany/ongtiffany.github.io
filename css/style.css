@@ -477,7 +477,6 @@ article header h2 {
 }
 
 #mini-about {
-  padding: 30vh 0;
   font-size:26px;
 }
 
@@ -486,6 +485,7 @@ article header h2 {
   width: 64%;
   margin: 20px auto;
   line-height: 3.3;
+    padding:15vw 0;
   }
 
 
@@ -525,7 +525,6 @@ article header h2 {
 @media (max-width: 600px) {
 
 #mini-about {
-  padding: 15vh 0;
   font-size:20px;
 }
 
@@ -533,6 +532,7 @@ article header h2 {
   text-align: center;
   width: 90%;
   line-height: 2.8;
+      padding:15vw 0;
   }
 
 #mini-about p strong{
@@ -619,17 +619,20 @@ article header h2 {
 #project article h4 {
   text-align: left;
   margin: 0;
-  font-size: 12px;
+  font-size: 32px;
   text-transform: uppercase;
   line-height: 1.8;
+  font-family: "Londrina Shadow", sans-serif;
 }
 #project article h5 {
   text-align: left;
-  border-left: 3px solid gray;
-  padding-left: 7px;
-  font-weight: normal;
-  font-size: 16px;
+  font-size: 20px;
   text-transform: uppercase;
+  font-family: "Londrina solid", sans-serif;
+  color: dimgray;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 #project article p {
   text-align: justify;
