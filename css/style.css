@@ -654,7 +654,7 @@ article header h2 {
 }
 #project article figure figcaption {
   font-size: 12px;
-  background: gray;
+  background: dimgray;
   color: white;
   padding: 5px 0;
 }
