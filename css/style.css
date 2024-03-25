@@ -32,6 +32,8 @@ a:hover {
 
 section {
   display: block;
+  float: left;
+width: 100%;
 }
 
 figure {
@@ -245,7 +247,6 @@ article header h2 {
 }
 #work {
   padding-top: 60px;
-  max-width: 1700px;
   margin: 0 auto;
   border-top:2px dashed lightgray;
 }
@@ -498,6 +499,28 @@ article header h2 {
   line-height: 2.2;
 }
 
+#orgs {
+  padding: 30px 0;
+  margin: 0 auto;
+  border-bottom:2px dashed lightgray;
+}
+
+#orgs > h2{
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-size:30px;
+  padding:10px 0;
+  letter-spacing: 1px;
+}
+
+#orgs img{
+  width:10%;
+  vertical-align: middle;
+  margin:0 1%;
+}
+
+
+
 #about {
   /**background-attachment: scroll;
   background-image: url(../img/about.jpg);
@@ -686,6 +709,7 @@ letter-spacing: 1px;
   color: black;
 }
 
+
 footer {
   display: block;
   width: 100%;
@@ -766,6 +790,14 @@ footer p {
     padding: 12px;
   }
 }
+
+@media (max-width: 800px) {
+  #orgs img{
+  width:20%;
+  margin:0 2%;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     padding: 0;
@@ -866,6 +898,7 @@ footer p {
     height: 25vw;
     padding: 12px;
   }
+
   #achievements {
     padding: 0;
   }
@@ -896,3 +929,10 @@ footer p {
     padding: 40px 24px 10px 24px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 400px) {
+  #orgs img{
+  width:30%;
+  margin:3% 5%;
+  }
+}
