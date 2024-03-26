@@ -248,7 +248,6 @@ article header h2 {
 #work {
   padding-top: 60px;
   margin: 0 auto;
-  border-top:2px dashed lightgray;
 }
 
 #work > h2{
@@ -257,6 +256,13 @@ article header h2 {
   font-size:60px;
   padding:10px 0;
   letter-spacing: 3px;
+}
+#work > h3{
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-size:30px;
+  padding:10px 0;
+  letter-spacing: 1px;
 }
 #work .item {
   display: block;
@@ -299,6 +305,7 @@ article header h2 {
   margin: 0 auto;
   list-style: none;
   text-align: center;
+    max-width: 1700px;
 }
 .grid figure {
   position: relative;
@@ -479,6 +486,7 @@ article header h2 {
 
 #mini-about {
   font-size:26px;
+    border-bottom:2px dashed lightgray;
 }
 
 #mini-about p {
@@ -502,10 +510,15 @@ article header h2 {
 #orgs {
   padding: 30px 0;
   margin: 0 auto;
-  border-bottom:2px dashed lightgray;
+}
+#orgs div{
+  position: relative;
+margin: 0 auto;
+text-align: center;
+max-width: 1700px;
 }
 
-#orgs > h2{
+#orgs > h3{
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
   font-size:30px;
@@ -636,16 +649,16 @@ article header h2 {
   margin: 5px 0 80px 0;
 }
 #project article {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 #project article h4 {
   text-align: left;
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
   text-transform: uppercase;
   line-height: 1.8;
-  font-family: "Londrina Shadow", sans-serif;
+  font-family: "Londrina Solid", sans-serif;
   font-weight:400;
 }
 #project article h5 {
