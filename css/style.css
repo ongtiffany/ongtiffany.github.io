@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -36,6 +36,20 @@ section {
 width: 100%;
 }
 
+section > h2{
+ font-weight: 800;
+  font-size:40px;
+}
+
+
+section > h3{
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size:30px;
+  padding:10px 0;
+  letter-spacing: 1px;
+}
+
 figure {
   width: 100%;
 }
@@ -62,13 +76,13 @@ nav {
 }
 nav a img {
   width: 40px;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 nav a h1 {
   float: right;
   text-transform: uppercase;
-  margin: 20px 10px 20px 10px;
-  font-size: 16px;
+  margin: 12px 12px 12px 12px;
+  font-size: 20px;
   color: white;
   text-align: left;
   font-weight: 400;
@@ -77,6 +91,9 @@ nav a h1 {
 nav a h1 span {
   display: block;
   font-weight: 100;
+  text-transform: none;
+  font-size: 12px;
+  margin-top: 4px;
 }
 nav a:hover {
   border: none;
@@ -245,18 +262,13 @@ article header h2 {
     display: block;
   }
 }
+
 #work {
-  padding-top: 60px;
+  padding-top: 80px;
   margin: 0 auto;
 }
 
-#work > h2{
-   font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-size:60px;
-  padding:10px 0;
-  letter-spacing: 3px;
-}
+
 #work > h3{
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
@@ -484,29 +496,6 @@ article header h2 {
   transition: all 100ms ease-in;
 }
 
-#mini-about {
-  font-size:26px;
-    border-bottom:2px dashed lightgray;
-}
-
-#mini-about p {
-  text-align: left;
-  width: 64%;
-  margin: 20px auto;
-  line-height: 3.3;
-    padding:15vw 0;
-  }
-
-
-#mini-about p strong{
-  font-size:46px;
-  font-family: "Londrina Shadow", sans-serif;
-  letter-spacing: 3px;
-  font-weight: 400;
-  font-style: normal; 
-  line-height: 2.2;
-}
-
 #orgs {
   padding: 30px 0;
   margin: 0 auto;
@@ -519,7 +508,7 @@ max-width: 1700px;
 }
 
 #orgs > h3{
-  font-family: "Londrina Solid", sans-serif;
+  font-family: "Lora", serif;
   font-weight: 400;
   font-size:30px;
   padding:10px 0;
@@ -545,12 +534,7 @@ max-width: 1700px;
   padding: 100px 0;
 }
 
-#about h2{
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-size:60px;
-  letter-spacing: 3px;
-}
+
 #about p {
   text-align: justify;
   width: 80%;
@@ -590,13 +574,6 @@ max-width: 1700px;
   padding: 100px 0;
 }
 
-#contact h2{
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-size:60px;
-  letter-spacing: 3px;
-}
-
 #contact p {
   max-width: 400px;
   margin: 0 auto;
@@ -604,16 +581,6 @@ max-width: 1700px;
 }
 #contact p a {
   color: white;
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size:20px;
-  letter-spacing: 1px;
-}
-#contact p span {
-  display: block;
-  font-weight: bold;
-  padding-top: 10px;
 }
 
 #achievements {
@@ -655,21 +622,18 @@ max-width: 1700px;
 #project article h4 {
   text-align: left;
   margin: 0;
-  font-size: 28px;
+  font-size: 16px;
   text-transform: uppercase;
   line-height: 1.8;
-  font-family: "Londrina Solid", sans-serif;
-  font-weight:400;
+  font-weight:800;
 }
 #project article h5 {
   text-align: left;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-family: "Londrina solid", sans-serif;
+  font-size: 28px;
   color: dimgray;
   margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-family: "Lora", serif;
+  font-weight:400;
 }
 #project article p {
   text-align: justify;
@@ -709,9 +673,8 @@ max-width: 1700px;
   color: white;
   text-decoration: none;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: "Londrina Solid", sans-serif;
 font-size: 20px;
-letter-spacing: 1px;
+di
 }
 #project article a button span {
   font-size: 43px;
