@@ -184,7 +184,7 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   transform: rotate(-45deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   nav .menu {
     position: absolute;
     top: 0;
