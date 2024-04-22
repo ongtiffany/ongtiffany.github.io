@@ -314,7 +314,7 @@ article header h2 {
 
 .grid {
   position: relative;
-  margin: 40px auto 80px auto;
+  margin: 40px auto 0 auto;
   list-style: none;
   text-align: center;
     max-width: 1700px;
@@ -466,7 +466,6 @@ article header h2 {
   border: 1px solid black;
   width: 10em;
   text-align: center;
-  font-family: "Londrina Solid", sans-serif;
   font-size:20px;
   letter-spacing: 1px;
 }
