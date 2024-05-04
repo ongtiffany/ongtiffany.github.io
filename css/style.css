@@ -245,7 +245,7 @@ article header {
   padding-top: 35vh;
 }
 article header:after {
-  content: "e";
+  content: "";
   position: absolute;
   top: -3px;
   left: -3px;
@@ -293,7 +293,8 @@ article header p {
     padding-top: 25vh;
   }
   article header h2 {
-    padding: 0 5px 0 5px;
+    font-size: 24px;
+    padding: 0 16px 0 16px;
   }
   article header h2 span {
     display: block;
@@ -818,7 +819,7 @@ footer p {
     height: 25vw;
   }
   .grid figure figcaption h2 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   .grid figure figcaption p {
     font-size: 3vw;
@@ -849,16 +850,6 @@ footer p {
   }
   #project article h4, #project article p {
     padding: 0;
-  }
-  article header {
-    max-height: 100vh;
-    height: 100vh;
-  }
-  article header h2 {
-    padding: 0 5px 0 5px;
-  }
-  article header h2 span {
-    display: block;
   }
   footer {
     padding: 40px 24px 10px 24px;

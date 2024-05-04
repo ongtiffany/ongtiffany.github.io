@@ -334,7 +334,7 @@ article header {
  height:100vh;
  padding-top:35vh;
 	&:after {
-		content: 'e';
+		content: '';
 		position: absolute;
 		top: calc(-1 * 3px);
 		left: calc(-1 * 3px);
@@ -384,7 +384,8 @@ article header {
 	padding-top:25vh;
 
     h2 {
-      padding: 0 5px 0 5px;
+      font-size:24px;
+      padding: 0 16px 0 16px;
 
       span {
         display: block;
@@ -994,7 +995,7 @@ footer {
         height: 25vw;
 
         h2 {
-          font-size: 6vw;
+          font-size: 5vw;
         }
 
         p {
@@ -1026,6 +1027,7 @@ footer {
     padding: 100px 0;
 
     header {
+      
       h2, h3 {
         padding: 0 2%;
       }
@@ -1034,25 +1036,13 @@ footer {
     article {
       width: calc(100% + 3px);
       padding: 0 24px;
-
       h4, p {
         padding: 0;
       }
     }
   }
 
-  article header {
-    max-height: 100vh;
-    height: 100vh;
 
-    h2 {
-      padding: 0 5px 0 5px;
-
-      span {
-        display: block;
-      }
-    }
-  }
 
   footer {
     padding: 40px 24px 10px 24px;
