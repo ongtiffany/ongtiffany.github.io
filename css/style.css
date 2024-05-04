@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap");
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  height: 100%;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  width: 100%;
 }
 
-html,
 body {
   margin: 0;
   height: 100%;
@@ -20,7 +25,7 @@ body {
 }
 
 a {
-  color: black;
+  color: #222;
   transition: all ease-out 300ms;
 }
 a:hover {
@@ -33,20 +38,17 @@ a:hover {
 section {
   display: block;
   float: left;
-width: 100%;
+  width: 100%;
 }
-
-section > h2{
- font-weight: 800;
-  font-size:40px;
+section > h2 {
+  font-weight: 800;
+  font-size: 40px;
 }
-
-
-section > h3{
+section > h3 {
   font-family: "Lora", serif;
   font-weight: 400;
-  font-size:30px;
-  padding:10px 0;
+  font-size: 30px;
+  padding: 10px 0;
   letter-spacing: 1px;
 }
 
@@ -55,7 +57,7 @@ figure {
 }
 figure img {
   width: 100%;
-  background: black;
+  background: #222;
 }
 
 nav {
@@ -70,7 +72,7 @@ nav {
   background: rgba(0, 0, 0, 0.7);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to left, rgba(82, 81, 81, 0.8), rgba(0, 0, 0, 0.9));
-  color: #FFF;
+  color: white;
   height: 50px;
   padding: 30px 15px;
 }
@@ -120,11 +122,11 @@ nav ul.menu li a:after {
   background-color: white;
   transition: transform 0.25s ease-out;
 }
-nav ul.menu li a:hover:after {
-  transform: scaleX(1);
-}
 nav ul.menu li a:hover {
   color: white;
+}
+nav ul.menu li a:hover:after {
+  transform: scaleX(1);
 }
 nav ul.menu li a.active {
   color: white;
@@ -154,11 +156,17 @@ nav .menu-button-container {
 nav #menu-toggle {
   display: none;
 }
-nav .menu-button,
-nav .menu-button::before,
-nav .menu-button::after {
+nav .menu-button {
   display: block;
-  background-color: #fff;
+  background-color: white;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+nav .menu-button::before, nav .menu-button::after {
+  display: block;
+  background-color: white;
   position: absolute;
   height: 2px;
   width: 30px;
@@ -230,50 +238,76 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   }
 }
 article header {
-  text-align: center;
-  background-attachment: scroll;
-  background-image: url(../img/header.jpg);
-  background-position: center center;
-  background-repeat: none;
-  background-size: cover;
-  -o-background-size: cover;
-  min-height: 150px;
-  max-height: 400px;
-  background-color: black;
+  margin: 0 auto;
+  border-width: 5px;
+  position: relative;
+  height: 100vh;
+  padding-top: 35vh;
+}
+article header:after {
+  content: "e";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  height: calc(100% + 6px);
+  width: calc(100% + 6px);
+  background: linear-gradient(60deg, #f37055, #f79533, #FFDC18, white, white, white, #FFDC18, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82, #D0F0C0, white, white, #D0F0C0, #6fba82, #07b39b, #5073b8);
+  z-index: -1;
+  animation: animatedgradient 16s ease alternate infinite;
+  background-size: 300% 300%;
+  background-size: 800% 100%;
+  opacity: 0.4;
 }
 article header h2 {
-  padding-top: 300px;
-  padding-bottom: 200px;
+  padding: 0 2% inherit 2%;
   margin: 0;
   font-weight: normal;
   font-style: italic;
-  color: #cccccc;
+  font-size: 40px;
+  color: #333;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+article header p {
+  line-height: 1.8;
+  font-size: 24px;
+  font-family: "Lora", serif;
 }
 
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @media (max-width: 600px) {
   article header {
     max-height: 100vh;
     height: 100vh;
+    padding-top: 25vh;
   }
   article header h2 {
-    padding: 40vh 5px 0 5px;
+    padding: 0 5px 0 5px;
   }
   article header h2 span {
     display: block;
   }
 }
-
 #work {
   padding-top: 80px;
   margin: 0 auto;
 }
-
-
-#work > h3{
+#work > h3 {
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
-  font-size:30px;
-  padding:10px 0;
+  font-size: 30px;
+  padding: 10px 0;
   letter-spacing: 1px;
 }
 #work .item {
@@ -284,32 +318,7 @@ article header h2 {
 }
 #work .item img {
   width: 100%;
-  background: black;
-}
-#work .item .overlay {
-  position: absolute;
-  width: 25%;
-  height: 85%;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.8);
-  transition: all ease 0.5s;
-}
-#work .item .overlay h3 {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 20px;
-  margin-top: -12px;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-}
-#work .item:hover .overlay {
-  opacity: 1;
-}
-#work .item:hover .overlay h2 {
-  opacity: 1;
-  margin-top: 8px;
+  background: #222;
 }
 
 .grid {
@@ -317,98 +326,30 @@ article header h2 {
   margin: 40px auto 0 auto;
   list-style: none;
   text-align: center;
-    max-width: 1700px;
-    float:left;
+  max-width: 1700px;
+  float: left;
 }
 .grid figure {
   position: relative;
   float: left;
   overflow: hidden;
   width: 31.3%;
-  background: #3085a3;
   text-align: center;
   cursor: pointer;
   margin: 1%;
-  background: #000;
+}
+.grid figure a {
+  text-decoration: none;
 }
 .grid figure img {
   position: relative;
   display: block;
   min-height: 100%;
   max-width: 100%;
-  opacity: 0.8;
-  background: black;
+  background: #222;
+  transition: all 500ms ease-in;
 }
-.grid figure figcaption {
-  padding: 1.5vw;
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  position: absolute;
-  width: 25%;
-  height: 85%;
-  opacity: 0;
-  transition: all ease 0.8s;
-}
-.grid figure figcaption::before, .grid figure figcaption::after {
-  pointer-events: none;
-}
-.grid figure figcaption a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
-.grid figure:hover figcaption {
-  opacity: 1;
-}
-.grid figure figcaption,
-.grid figure figcaption > a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.grid figure h2 {
-  font-weight: 300;
-  margin: 0;
-  font-size: 2vw;
-}
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 1vw;
-  margin: 0;
-}
-.grid figure .tag {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  width: 25%;
-}
-.grid figure .tag img {
-  background: none;
-  filter: grayscale(0.4);
-}
-.grid figure:hover h2,
-.grid figure:hover p {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-.grid figure:hover figcaption::before, .grid figure:hover figcaption::after {
-  opacity: 1;
-  transform: scale(1);
-}
-.grid figure img {
-  opacity: 1;
-  transition: opacity 0.3s;
-  background: black;
-}
-.grid figure:hover img {
-  opacity: 0.3;
-}
-.grid figure figcaption::before, .grid figure figcaption::after {
+.grid figure img::before, .grid figure img::after {
   position: absolute;
   top: 5%;
   right: 5%;
@@ -418,26 +359,75 @@ article header h2 {
   opacity: 0;
   transition: opacity 0.7s, transform 0.7s;
 }
-.grid figure figcaption::before {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+.grid figure img::before {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   transform: scale(0, 1);
 }
-.grid figure figcaption::after {
-  border-right: 1px solid #fff;
-  border-left: 1px solid #fff;
+.grid figure img::after {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
   transform: scale(1, 0);
 }
+.grid figure::before, .grid figure::after {
+  pointer-events: none;
+}
+.grid figure figcaption {
+  padding: 1.5vw;
+  color: #222;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  height: 5.5vw;
+}
 .grid figure h2 {
-  padding: 25% 4% 0 4%;
-  transition: all 300ms ease-in;
-  transform: translate3d(0, -20px, 0);
+  font-weight: 300;
+  margin: 0;
+  font-size: 1.4vw;
 }
 .grid figure p {
-  padding: 20px 2.5em;
-  opacity: 0;
-  transition: all 300ms ease-in;
-  transform: translate3d(0, 20px, 0);
+  letter-spacing: 1px;
+  font-size: 1vw;
+  margin: 0;
+  display: none;
+}
+.grid figure figcaption {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.grid figure h2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #333;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+.grid figure:hover img {
+  opacity: 0.8;
+}
+.grid figure:hover img::before, .grid figure:hover img::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.grid figure:hover a {
+  border-bottom: none;
+  opacity: 1;
+}
+.grid figure:hover h2 {
+  opacity: 1;
+}
+.grid figure:hover h2:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* Read more */
@@ -452,7 +442,7 @@ article header h2 {
 }
 .readmore-state:checked ~ .readmore-target figure img {
   height: auto;
-  background: black;
+  background: #222;
 }
 .readmore-state:checked ~ .readmore-trigger:before {
   content: "Show less";
@@ -463,10 +453,10 @@ article header h2 {
 .readmore-state ~ label.readmore-trigger {
   margin: 0 0 6em 0;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #222;
   width: 10em;
   text-align: center;
-  font-size:20px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
@@ -477,7 +467,7 @@ article header h2 {
 }
 .readmore-target figure img {
   height: 0;
-  background: black;
+  background: #222;
 }
 
 .readmore-trigger {
@@ -485,13 +475,13 @@ article header h2 {
   display: inline-block;
   text-align: right;
   margin-right: 2em;
-  color: #777;
+  color: #333;
   padding: 1em;
   font-size: 0.8em;
   right: 10%;
 }
 .readmore-trigger:hover {
-  background-color: black;
+  background-color: #222;
   color: white;
   transition: all 100ms ease-in;
 }
@@ -500,28 +490,24 @@ article header h2 {
   padding: 30px 0;
   margin: 0 auto;
 }
-#orgs div{
+#orgs div {
   position: relative;
-margin: 0 auto;
-text-align: center;
-max-width: 1700px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1700px;
 }
-
-#orgs > h3{
+#orgs > h3 {
   font-family: "Lora", serif;
   font-weight: 400;
-  font-size:30px;
-  padding:10px 0;
+  font-size: 30px;
+  padding: 10px 0;
   letter-spacing: 1px;
 }
-
-#orgs img{
-  width:10%;
+#orgs img {
+  width: 10%;
   vertical-align: middle;
-  margin:0 1%;
+  margin: 0 1%;
 }
-
-
 
 #about {
   /**background-attachment: scroll;
@@ -530,11 +516,9 @@ max-width: 1700px;
   background-repeat: none;
   background-size: cover;
   -o-background-size: cover;**/
-  background:rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   padding: 100px 0;
 }
-
-
 #about p {
   text-align: justify;
   width: 80%;
@@ -543,24 +527,21 @@ max-width: 1700px;
 }
 
 @media (max-width: 600px) {
-
-#mini-about {
-  font-size:20px;
-}
-
-#mini-about p {
-  text-align: center;
-  width: 90%;
-  line-height: 2.8;
-      padding:15vw 0;
+  #mini-about {
+    font-size: 20px;
   }
-
-#mini-about p strong{
-  font-size:38px;
-  font-weight: 400;
-  font-style: normal; 
-  line-height: 1.6;
-}
+  #mini-about p {
+    text-align: center;
+    width: 90%;
+    line-height: 2.8;
+    padding: 15vw 0;
+  }
+  #mini-about p strong {
+    font-size: 38px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+  }
 }
 #contact {
   /**background-attachment: scroll;
@@ -569,11 +550,10 @@ max-width: 1700px;
   background-repeat: none;
   background-size: cover;
   -o-background-size: cover;**/
-  background:rgba(0,0,0,0.95);
+  background: rgba(0, 0, 0, 0.95);
   color: white;
   padding: 100px 0;
 }
-
 #contact p {
   max-width: 400px;
   margin: 0 auto;
@@ -598,7 +578,10 @@ max-width: 1700px;
 #project {
   padding: 150px 15%;
   margin: 0 auto;
-  background-color: #f7f7f7;
+  background-color: white;
+}
+#project header {
+  padding-bottom: 50px;
 }
 #project header em {
   text-align: left;
@@ -611,32 +594,43 @@ max-width: 1700px;
 }
 #project header h3 {
   font-weight: normal;
-  font-style: italic;
   font-size: 16px;
   margin: 5px 0 40px 0;
+  font-family: "Lora", serif;
+  display: none;
 }
-
+#project header h4 {
+  margin-top: 40px;
+  font-weight: normal;
+  font-size: 14px;
+}
 #project header p {
   font-family: "Lora", serif;
-  font-weight:800;
-  margin: 5px 0 40px 0;
+  font-weight: normal;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 40px 0 0 0;
+  font-size: 20px;
 }
-
 #project article {
   max-width: 1200px;
-  margin: 80px auto 0 auto;
-
+  margin: 40px auto 0 auto;
+}
+#project article h3 {
+  font-family: "Lora", serif;
+  font-weight: normal;
+  line-height: 1.7;
+  font-style: italic;
 }
 #project article h4 {
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   margin: 40px 0 16px 0;
-  font-family: "Lora", serif;
-  font-weight:800;
   line-height: 1.4;
-}
-#project article h5 {
-
+  color: #666;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 3px solid #ccc;
 }
 #project article p {
   text-align: justify;
@@ -648,27 +642,30 @@ max-width: 1700px;
 }
 #project article figure {
   width: 100%;
-  margin: 60px 0;
+  margin: 60px auto;
   padding: 0;
 }
 #project article figure img {
   width: 100%;
-  background: black;
+  background: #222;
+}
+#project article figure img.small {
+  max-width: 800px;
 }
 #project article figure figcaption {
   font-size: 12px;
-  background: dimgray;
+  background: #333;
   color: white;
   padding: 5px 0;
 }
 #project article figure figcaption a {
   color: white;
 }
-#project article a button {
+#project a button {
   cursor: pointer;
-  margin-top: 50px;
-  background: black;
-  border: 2px solid black;
+  margin: 50px auto 0 auto;
+  background: #222;
+  border: 2px solid #222;
   text-transform: uppercase;
   font-weight: normal;
   padding: 10px 15px;
@@ -676,18 +673,17 @@ max-width: 1700px;
   color: white;
   text-decoration: none;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size: 20px;
-text-decoration: none;
+  font-size: 20px;
+  text-decoration: none;
 }
-#project article a button span {
+#project a button span {
   font-size: 43px;
   line-height: 0;
 }
-#project article a button:hover {
+#project a button:hover {
   background: white;
-  color: black;
+  color: #222;
 }
-
 
 footer {
   display: block;
@@ -696,7 +692,6 @@ footer {
   padding: 40px 0 10px 0;
   font-size: 12px;
 }
-
 footer ul {
   display: flex;
   flex-direction: row;
@@ -711,7 +706,7 @@ footer ul li {
 }
 footer ul li a {
   text-decoration: none;
-  color: #666;
+  color: #333;
   border: none;
 }
 footer ul li a:hover {
@@ -723,40 +718,6 @@ footer p {
 }
 
 @media (max-width: 1200px), (hover: none) {
-  .grid figure {
-    background: none;
-    width: 32.3%;
-    margin: 0.5%;
-  }
-  .grid figure:hover img {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  .grid figure figcaption {
-    padding: 12px;
-    opacity: 1;
-    position: relative;
-    transition: none;
-    height: 9vw;
-  }
-  .grid figure h2,
-  .grid figure p {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition: none;
-    color: black;
-    padding: 0;
-  }
-  .grid figure a {
-    text-decoration: none;
-  }
-  .grid figure a:hover {
-    font-style: italic;
-  }
-  .grid figure figcaption::before, .grid figure figcaption::after {
-    opacity: 1;
-    transform: scale(0);
-  }
   .readmore-target figure figcaption {
     height: 0;
     padding: 0;
@@ -769,14 +730,12 @@ footer p {
     padding: 12px;
   }
 }
-
 @media (max-width: 800px) {
-  #orgs img{
-  width:20%;
-  margin:0 2%;
+  #orgs img {
+    width: 20%;
+    margin: 0 2%;
   }
 }
-
 @media (max-width: 600px) {
   body {
     padding: 0;
@@ -833,7 +792,6 @@ footer p {
     opacity: 1;
     display: block;
     color: white;
-
   }
   nav #menu-toggle:checked ~ .menu li a:hover {
     background: #444;
@@ -851,7 +809,6 @@ footer p {
   #about p {
     padding: 0 24px 16px 24px;
     width: 95%;
-
   }
   .grid figure {
     width: 100%;
@@ -877,7 +834,6 @@ footer p {
     height: 25vw;
     padding: 12px;
   }
-
   #achievements {
     padding: 0;
   }
@@ -899,7 +855,7 @@ footer p {
     height: 100vh;
   }
   article header h2 {
-    padding: 40vh 5px 0 5px;
+    padding: 0 5px 0 5px;
   }
   article header h2 span {
     display: block;
@@ -907,11 +863,11 @@ footer p {
   footer {
     padding: 40px 24px 10px 24px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
 
 @media (max-width: 400px) {
-  #orgs img{
-  width:30%;
-  margin:3% 5%;
+  #orgs img {
+    width: 30%;
+    margin: 3% 5%;
   }
-}
+}/*# sourceMappingURL=style.css.map */

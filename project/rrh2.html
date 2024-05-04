@@ -37,12 +37,20 @@
             <!-- Project Details Go Here -->
             <h2>Red Riding Hood 2</h2>
             <h3>Emotion and Sentiment Visualisation</h3>
-            <p>      
+
+            <p>Deepen understanding and implementation of data visualization techniques, with a focus on sentiment analysis and the integration of emotional analysis</p>
+
+            <a href="rrh2-viz.html">
+                <button>
+                     Red Riding Hood 2 Visualisation
+                </button>
+            </a>
+            <h4>      
                 This project was longlisted in <a href="https://www.informationisbeautifulawards.com/showcase?action=index&award=2023&controller=showcase&page=1&pcategory=long-list&type=awards">Information is Beautiful 2023 awards</a>
-            </p>
+            </h4>
         </header>
         <article>
-            <h4>Elevating Data Visualisation Skills through New Course and Expanding Prior Work</h4>
+            <h4>Elevating Data Visualisation Skills and Expanding Prior Work</h4>
             <p>Since I learnt a lot from my <a href="redridinghood.html" target="_blank">last project</a> following a data visualisation course, I started <a href="https://www.domestika.org/en/courses/2495-data-visualization-and-information-design-create-a-visual-model/course" target="_blank">a similar data visualisation course</a> this time with Frederica Fragapane. I liked her style and was keen to learn about her processes and methods which are explained in the course. Initially, I thought of using a new topic and data set but there were a few ideas I didn't get to try out with my <a href="redridinghood.html" target="_blank">previous Red Riding Hood project</a>, and liked the idea of digging deeper into it and see how it could be presented differently. I used my <a href="https://en.wikipedia.org/wiki/Side_project_time" target="_blank">10% research time</a> at <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a>, and my personal time (about 70%). </p>
 
             <figure>
@@ -51,14 +59,10 @@
                 Image on left: scan of page 1 of a book edition from <a href="https://www.worthpoint.com/worthopedia/louis-prang-shapebook-lydia-red-1821911201" target="_blank">Worthpoint</a>. Image on right:  screenshot of page 1 of final visualisation
                 </figcaption>
             </figure>
-                <a href="rrh2-viz.html">
-                    <button>
-                         Red Riding Hood 2 Visualisation
-                    </button>
-                </a>
-                <br><br><br><br><br>
 
-            <h4>Incorporating Sentiment Analysis and Exploring Visual Representation Techniques</h4>
+    
+
+            <h4>Incorporating Sentiment Analysis and Exploring Techniques</h4>
             <p>
             In my previous project on <a href="redridinghood.html" target="_blank">Red Riding Hood</a>, my colleague Arianna Ciula, gave me the idea to add sentiment analysis to the inner circles which represent each word to add an extra layer of interpretation and meaning. I had little knowledge of sentiment analysis so had to look it up to understand the basics. As I dug a bit deeper, I thought of different ways to represent the sentiment data that could be visually quite interesting. I wanted to show the sentiment for all the words by putting them around in a circle to be able to identify their position on the page, rather than the random placement of circles I had used previously. I tried a few different ways to implement this but they all changed the look of the "trees" too much and so I left the presentation minimal, just showing the top 20 positive and negative words, represented by light and dark outline circles, and also the page sentiment, represented by arcs above the page "tree". One of the methods in this second course was very similar to how I had tried to visualise the words previously placing data points around a circle. </p>
             <figure>
@@ -68,7 +72,7 @@
                 </figcaption>
             </figure>
             <p>I was excited to follow the Fragapane’s process which involved putting the data in a radar graph and manually placing each data point to fit. The process was tedious and repetitive, but I didn't mind that. What I did mind, after trying it out with some data, was that it was far too easy for me to make an error with the placement. I knew I had to adapt to make the process less error prone for myself. The data presented also wasn't that clear in the previous project and I knew improvements could be made to the sentiment analysis and that I could present that more clearly. </p>
-            <h4>Reevaluating Sentiment Analysis Tools for Improved Data Accuracy and Efficiency</h4>
+            <h4>Reevaluating Sentiment Analysis Tools</h4>
             <p>I thought I could fast-track this stage since I was reusing the same data, but I was wrong. I had used the free online sentiment analysis tool <a href="http://monkeylearn.com" target="_blank">MonkeyLearn</a> in the previous project as it was the best, I found at the time that fit my requirements (details in <a href="redridinghood.html" target="_blank">previous project</a>). I wanted to use it again so both projects would have the same data but when I looked at the results it gave for all the words on the first page, I wasn't satisfied with the results. "hood"(91.1%) and "above" (86.3%) were the top negative words, compared to "died" (54.8%) and "lonely" (51.8%) which I intuitively think are more negative. I was rather annoyed I didn't spot this earlier for the previous project. I had already spent quite a while searching for a sentiment analysis tool that would fit my requirements previously so I knew the search for an alternative would not be easy. I really wanted to stick with MonkeyLearn but the results just didn't sit well with me. I searched for quite a long time, past the first few pages of what the search results would give, and finally came across <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>. 
 
             The results were far better, "lonely" (-0.927) and "died" (-0.797) were the top negative words for the first page, and the process was also going to be much easier. With <a href="http://monkeylearn.com" target="_blank">MonkeyLearn</a>, I had to supply the page text by copying and pasting to get the page sentiment value and input each word individually to get each word sentiment value. With <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>, I only had to supply the page text and it gave the results for page sentiment together with results of all the positive and negative words on that page in one go so it would save me a lot of time. It didn't give neutral word values but it was better that way as I would have felt tempted to use and visualise them. </p>
@@ -78,7 +82,7 @@
                     Comparison of words of a page with <a href="http://monkeylearn.com" target="_blank">MonkeyLearn</a> and <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a> showing excel spreadsheet, bar chart and RAWgraph bubble chart
                 </figcaption>
             </figure>
-            <h4>Iterative Design Process: From Sketching Ideas to Data Manipulation for Custom Visualisations</h4>
+            <h4>Sketching Ideas and Data Wrangling</h4>
             <p>Once I was satisfied with the new and additional sentiment data I collected, I started with my usual process of sketching down some ideas and layouts. With the previous project, there was a visual focus on the characters, and locations. With this project, I wanted to the focus to be on the sentiment and the words. 
             </p>
             <figure>
@@ -101,7 +105,7 @@
                         Mockup of layout and individual pages in illustrator and photoshop
                     </figcaption>
                 </figure>
-                <h4>Expanding Visualization by Incorporating Emotion Analysis, Sentences, and Rhyme Patterns</h4>
+                <h4>Incorporating Emotion Analysis, Sentences, and Rhyme Patterns</h4>
                 <p>
                     When browsing through <a href="https://www.twinword.com/api/sentiment-analysis.php" target="_blank">twinword</a>'s site, I found out it had more tools and one I thought would be interesting to have alongside the sentiment analysis I was already including was <a href="https://www.twinword.com/api/emotion-analysis.php" target="_blank">emotion analysis</a>  and to add that for each page. I also wanted to show the sentences since there were always 8 on each page and the rhymes as it was written as a poem. So, I ended up having a rather long process. For each page my process would be: 
 
@@ -128,7 +132,7 @@
                             Steps of my initial process of a page
                         </figcaption>
                     </figure>
-                    <h4>Transitioning to Code-Based Prototyping: Leveraging CSS for Responsive, Interactive and Accessible Visualizations</h4>
+                    <h4>Prototyping: Leveraging CSS for Responsive, Interactive and Accessible Visualizations</h4>
                     <p>It was taking me about 2-3 hours per page and I hadn't even finished 3 when I stopped to think. I could continue and finish them all but I also knew I wanted to eventually make the final piece interactive and responsive as it had quite a lot of information that would make the visualisation quite cluttered if it was shown in a static format. I decided to stop my work in Illustrator and start playing around with code. </p>
                     <p>I know a lot of data developer/visualisers were using D3 to make their very impressive data visualisation pieces. I had tried a few times to learn Javascript but never got it and usually spent a lot of time debugging my errors. I just wasn’t ready to try again just yet. I really liked working with CSS, had done quite a few side projects previously and have seen some amazing work with just CSS so wanted to see how far I could get with it, knowing it has its limitations. </p>
                     <p>I started making some prototypes in <a href="https://codepen.io/" target="_blank">codepen</a> which I have found really useful to code with since: it shows both code and results in the same browser window, refreshes automatically; and what I particularly found useful for this project was their HTML and CSS preprocessors, in which I used Pug and SCSS so I didn't have to write as much and could structure the code more easily. I managed to come up with a <a href="https://codepen.io/ongtiffany/full/zYpEEWv" target="_blank">prototype</a> that looked very similar to the design in Illustrator. It was responsive, semi-accessible for screen readers (I think), but some elements just didn’t scale well. The connecting lines and the dots to mark the beginning and end of a sentence get misaligned when scaled due to some elements being positioned manually.</p>
@@ -142,7 +146,7 @@
                             Design of 'Page 3' in Illustrator as a mockup, Codepen early and later prototypes
                         </figcaption>
                     </figure>
-                    <h4>Evolving Towards a Scrollytelling Approach to Improve Interaction and Responsiveness</h4>
+                    <h4>Evolving Approach to Improve Interaction and Responsiveness</h4>
                     <p>
                         I wanted to have a default overview of all sixteen pages and to be able to zoom in to view each page in more detail. At first, I thought I could scale down each page and on hover over it would expand but it kept flickering from each expanded page during the interactions. After a few trials, I got it working using the modal interaction I have used previously in several projects but with some added transitions. But I didn't like the way the <a href="https://codepen.io/ongtiffany/full/XWVPjjO" target="_blank">prototype</a> worked. There would be too many clicks or taps to interact with just the basic part of the visualisation to view each page. 
                     </p>
@@ -155,7 +159,7 @@
                         Sketches and Mockups of two layouts
                     </figcaption>
                 </figure>
-                <h4>Laborious Data Integration Workflow for Individual Page Visualizations</h4>
+                <h4>Data Integration Workflow</h4>
                 <p>Until this point, I had only input data for one page and left the other pages until the end since I knew it was just a case of data entry once I had all the structure in place. What I didn't realise was how long it would take as there were so many stages in the process I had added along the way. It took about 40 minutes - 1 hour per page. This was my process to input the individual page data into HTML and CSS after the general code structure had been finalised:</p>
                 <figure>
                     <img src="../img/project/rrh2/data-entry-to-code-process.jpg" alt="screenshots of the some of the code process">
@@ -180,7 +184,7 @@
                     <li>Add Sentiment colour and opacity in CSS</li>
                     <li>Add Page Text in HTML</li>
                 </ol>
-                <h4>Seeking Feedback Enhancing Narrative Clarity and Design Refinements</h4>
+                <h4>Seeking Feedback</h4>
                 <p>I had entered the first few pages of data so the end was near (or so I thought). Since there were so many parts to this visualisation, I knew I had to ask for feedback. I asked around my usual circle for feedback but I didn’t get any replies. I carried on with the data entry, continued testing it out but had a growing feeling something was lacking. I went back to the previous Red Riding Hood project to recall what it looked like and realise it looked a lot more interesting. Apart from it having more colour, which I made a conscious decision to minimise for this one, I concluded it was because the narrative of the story was much more evident. I couldn’t add much more data as it would add more clutter and probably add confusion to an already unfamiliar and unconventional format. I thought at minimum, I could show the narrative. Also, after reviewing the previous project and after a bit of thought, I narrowed it down to two characters (Red Riding Hood, Wolf) and two locations (Red Riding Hood’s House,  Grandma’s House). Those four things I thought could give a sense of the story and I could replace the page numbers with the characters, add some sort of house indication, and made a mock up of it. 
                 </p>
                 <figure>
@@ -233,11 +237,11 @@
                 </figure>
 
 
-                <h4>Iterating "How to Read" Section to improve Accessibility and User Experience</h4>
+                <h4>Iterating to improve Accessibility and User Experience</h4>
                 <p>I made the changes and wanted to show my colleagues at work what I had done so asked if I could book a meeting slot to present. It was important to me to show them what I had been working on, especially since part of the time was done using the 10% allocated time at work to work on projects like this, and I also wanted to see if this was the type of work that could be integrated into the work the lab does. </p>
 
                 <p>I took a lot of time to prep for the presentation, had a lot of material, did a trial run with another colleague then dropped about half of the slides as it felt irrelevant. The feedback I got was very useful. There were questions on why I made certain choices, which made me reflect on them, and suggestions for improvements.</p>
-                <h4>Continuing Iterative Improvements by Introducing Overview section and Mobile Responsiveness</h4>
+                <h4>Continuing Iterative Improvements</h4>
                 <p>
                  I was getting very good at tweaking things and felt I could work on improvements forever. But I gave myself a few tasks and worked on making those changes. One of those changes was adding a punctuation view to the page overview based on the feedback I had received and decided to add the emotions there also. </p>
                 <figure>
@@ -261,16 +265,11 @@
 
 
                 <h4>Reflections on Lessons Learned from a Challenging yet Rewarding Project</h4>
-                <p>This project took a lot longer than I expected with lots of late nights, but I have achieved what I set out to do and even more. It definitely takes much longer to code up and make a data visualisation interactive than a flat design due to all the time spent fixing elements that break each time I added or edited some code. Having to test and code up various breakpoints, testing and editing for different screen sizes and browsers, many of which I hadn't yet covered as I only tested on the devices and browsers I had to hand also extended the project duration </p>
+                <p>This project took a lot longer than I expected with lots of late nights, but I have achieved what I set out to do and even more. It definitely takes much longer to code up and make a <a href="https://ongtiffany.github.io/project/rrh2-viz.html" target="_blank">data visualisation</a>
+                    (best viewed on a Chrome or Firefox browser on a non-touch device, medium sized screen) interactive than a flat design due to all the time spent fixing elements that break each time I added or edited some code. Having to test and code up various breakpoints, testing and editing for different screen sizes and browsers, many of which I hadn't yet covered as I only tested on the devices and browsers I had to hand also extended the project duration </p>
 
 
                 <p>Of course as with all projects there is so much more I could do, lots of different directions I could have taken, many improvements I still want to make... but overall I have learnt so much from this project and need to finish it to move on. I will take new learnings and any unfinished ideas to my next project.</p>
-                </p>
-
-                <h4>Visualisation:</h4>
-                <p>
-                    <a href="https://ongtiffany.github.io/project/rrh2-viz.html" target="_blank">https://ongtiffany.github.io/project/rrh2-viz.html</a><br>
-                    (best viewed on a Chrome or Firefox browser on a non-touch device, medium sized screen)
                 </p>
 
                 <hr>
