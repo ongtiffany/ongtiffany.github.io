@@ -860,4 +860,15 @@ footer p {
     width: 30%;
     margin: 3% 5%;
   }
+  nav {
+    padding: 0 8px;
+    min-width: 300px;
+    display: block;
+  }
+  nav a h1 {
+    margin: 12px 0 12px 8px;
+  }
+  nav a h1 span {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */

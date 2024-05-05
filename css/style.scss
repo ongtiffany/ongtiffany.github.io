@@ -161,6 +161,7 @@ nav {
     }
   }
 
+
   ul.menu {
     list-style-type: none;
 
@@ -1000,7 +1001,7 @@ footer {
       }
     }
 
-    .readmore-target figure figcaption {
+project/achievements.html    .readmore-target figure figcaption {
       height: 0;
       padding: 0;
     }
@@ -1051,5 +1052,14 @@ footer {
   #orgs img {
     width: 30%;
     margin: 3% 5%;
+  }
+    nav {
+      padding: 0 8px;
+    a h1{
+      margin: 12px 0 12px 8px;
+      span{
+        font-size: 12px;
+      }
+    }
   }
 }
