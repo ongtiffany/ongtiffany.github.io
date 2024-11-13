@@ -111,74 +111,110 @@
         </article>
     </section><!-- end section -->
     <footer>
-        <ul>            
-            <li><a href="https://github.com/ongtiffany" target="_blank">Github</a>
-            </li>
-            <li><a href="https://codepen.io/ongtiffany" target="_blank">Codepen</a>
-            </li>
-            <li><a href="https://www.linkedin.com/in/tiffanyong" target="_blank">Linkedin</a>
-            </li>
-            <li><a href="mailto:tiffanyong@mail.com?Subject=Hello" target="_top">email</a>
-            </li>
+        <ul>
+          <li>
+            <a href="https://github.com/ongtiffany" target="_blank">Github</a>
+          </li>
+          <li>
+            <a href="https://codepen.io/ongtiffany" target="_blank">Codepen</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/tiffanyong" target="_blank"
+              >Linkedin</a
+            >
+          </li>
         </ul>
-        <p>Please do not use images or content without permission. Copyright &copy; <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank">Tiffany Ong</a> 2024</p>
-    </footer>
-    <!-- Custom script for nav menu functionality-->
-    <script>
-    // Get all sections that have an ID defined
-    const sections = document.querySelectorAll("section[id]");
-
-    // Add an event listener listening for scroll
-    window.addEventListener("scroll", navHighlighter);
-
-    function navHighlighter() {
-
-        // Get current scroll position
-        let scrollY = window.pageYOffset;
-
-        // Now we loop through sections to get height, top and ID values for each
-        sections.forEach(current => {
+        <p>
+          Please do not use images or content without permission. Copyright &copy;
+          <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank"
+            >Tiffany Ong</a
+          >
+          2024
+        </p>
+        <div id="wcb" class="carbonbadge wcb-d"></div>
+      </footer>
+      <!-- Custom script for nav menu functionality-->
+      <script>
+        // Get all sections that have an ID defined
+        const sections = document.querySelectorAll("section[id]");
+  
+        // Add an event listener listening for scroll
+        window.addEventListener("scroll", navHighlighter);
+  
+        function navHighlighter() {
+          // Get current scroll position
+          let scrollY = window.pageYOffset;
+  
+          // Now we loop through sections to get height, top and ID values for each
+          sections.forEach((current) => {
             const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 50;
             sectionId = current.getAttribute("id");
-
+  
             /*
-            - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-            - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-            */
-            if (
-                scrollY > sectionTop &&
-                scrollY <= sectionTop + sectionHeight
-            ) {
-                document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+              - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+              - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+              */
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+              document
+                .querySelector("nav a[href*=" + sectionId + "]")
+                .classList.add("active");
             } else {
-                document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+              document
+                .querySelector("nav a[href*=" + sectionId + "]")
+                .classList.remove("active");
             }
-        });
-    }
-    </script>
- 
-    <!-- Clicky Analytics code -->
-    <script async src="//static.getclicky.com/101359440.js"></script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101359440ns.gif" /></p></noscript>
-
-    <!-- Statcounter Analytics code -->
-    <script type="text/javascript">
-    var sc_project=12735011; 
-    var sc_invisible=1; 
-    var sc_security="0d2bfccc"; 
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/12735011/0/0d2bfccc/1/" alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-
-
-    <!-- Goat Counter Analytics code -->
-    <script data-goatcounter="https://ongtiffany.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-</body>
-
-</html>
+          });
+        }
+      </script>
+  
+      <!-- Clicky Analytics code -->
+      <script async src="//static.getclicky.com/101359440.js"></script>
+      <noscript>
+        <p>
+          <img
+            alt="Clicky"
+            width="1"
+            height="1"
+            src="//in.getclicky.com/101359440ns.gif"
+          />
+        </p>
+      </noscript>
+      <!-- Statcounter Analytics code -->
+      <script type="text/javascript">
+        var sc_project = 12735011;
+        var sc_invisible = 1;
+        var sc_security = "0d2bfccc";
+      </script>
+      <script
+        type="text/javascript"
+        src="https://www.statcounter.com/counter/counter.js"
+        async
+      ></script>
+      <noscript>
+        <div class="statcounter">
+          <a title="Web Analytics" href="https://statcounter.com/" target="_blank"
+            ><img
+              class="statcounter"
+              src="https://c.statcounter.com/12735011/0/0d2bfccc/1/"
+              alt="Web Analytics"
+              referrerpolicy="no-referrer-when-downgrade"
+          /></a>
+        </div>
+      </noscript>
+  
+      <!-- Goat Counter Analytics code -->
+      <script
+        data-goatcounter="https://ongtiffany.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+      ></script>
+    </body>
+  
+    <!-- Carbon calculator -->
+    <script
+      src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+      defer
+    ></script>
+  </html>
+  
