@@ -648,12 +648,12 @@ article header p {
   margin: 60px auto;
   padding: 0;
 }
+#project article figure.small {
+  max-width: 800px;
+}
 #project article figure img {
   width: 100%;
   background: #222;
-}
-#project article figure img.small {
-  max-width: 800px;
 }
 #project article figure figcaption {
   font-size: 12px;

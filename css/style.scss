@@ -10,41 +10,41 @@ $light-gray:#ccc;
 
 //Mixins
 @mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	   -moz-border-radius: $radius;
-		-ms-border-radius: $radius;
-			border-radius: $radius;
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+      border-radius: $radius;
   }
   
   @mixin rotate($degrees) {
-	-webkit-transform: rotate($degrees);
-	   -moz-transform: rotate($degrees);
-		-ms-transform: rotate($degrees);
-		 -o-transform: rotate($degrees);
-			transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+     -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+     -o-transform: rotate($degrees);
+      transform: rotate($degrees);
   }
   
   @mixin transform($transforms) {
-		 -moz-transform: $transforms;
-		   -o-transform: $transforms;
-		  -ms-transform: $transforms;
-	  -webkit-transform: $transforms;
-			transform: $transforms;
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+      transform: $transforms;
   }
   
   @mixin animation($animation...) {
-		 -o-animation: $animation;
-	   -moz-animation: $animation;
-	-webkit-animation: $animation;
-			animation: $animation;
+     -o-animation: $animation;
+     -moz-animation: $animation;
+  -webkit-animation: $animation;
+      animation: $animation;
   }
   
   @mixin transition($args...) {
-	-webkit-transition: $args;
-	-moz-transition: $args;
-	-ms-transition: $args;
-	-o-transition: $args;
-	transition: $args;
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
   }
 
 html {
@@ -329,61 +329,61 @@ nav {
 
 article header {
 
-	margin: 0 auto;
-	border-width:5px;
+  margin: 0 auto;
+  border-width:5px;
   position: relative;
  height:100vh;
  padding-top:35vh;
-	&:after {
-		content: '';
-		position: absolute;
-		top: calc(-1 * 3px);
-		left: calc(-1 * 3px);
-		height: calc(100% + 3px * 2);
-		width: calc(100% + 3px * 2);
-		background: linear-gradient(60deg,#f37055,#f79533, #FFDC18, white, white, white, #FFDC18, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82,#D0F0C0, white, white,#D0F0C0, #6fba82, #07b39b,#5073b8);
-		z-index: -1;
-		animation: animatedgradient 16s ease alternate infinite;
-		background-size: 300% 300%;
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * 3px);
+    left: calc(-1 * 3px);
+    height: calc(100% + 3px * 2);
+    width: calc(100% + 3px * 2);
+    background: linear-gradient(60deg,#f37055,#f79533, #FFDC18, white, white, white, #FFDC18, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82,#D0F0C0, white, white,#D0F0C0, #6fba82, #07b39b,#5073b8);
+    z-index: -1;
+    animation: animatedgradient 16s ease alternate infinite;
+    background-size: 300% 300%;
     background-size: 800% 100%;
-		opacity: 0.4;
-	  }	  
+    opacity: 0.4;
+    }   
   h2 {
     padding: 0 16px 0 16px;
     margin: 0;
-	font-weight: normal;
-	font-size: 48px;
+  font-weight: normal;
+  font-size: 48px;
     color: $dark-gray;
-	line-height: 1.8;
-	max-width: 1000px;
-	margin: 0 auto;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin: 0 auto;
   font-weight: 500;
   font-family: "Lora", serif;
   font-style: italic;
   }
   p{
-	line-height: 1.8;
-	font-size: 24px;
-	font-family: "Lora", serif;
+  line-height: 1.8;
+  font-size: 24px;
+  font-family: "Lora", serif;
   }
 }
 @keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (max-width: 600px) {
   article header {
     max-height: 100vh;
     height: 100vh;
-	padding-top:25vh;
+  padding-top:25vh;
 
     h2 {
       font-size:28px;
@@ -436,17 +436,17 @@ article header {
     text-align: center;
     cursor: pointer;
     margin: 1%;
-	a{
-		text-decoration: none;
-	  }
+  a{
+    text-decoration: none;
+    }
     img {
       position: relative;
       display: block;
       min-height: 100%;
       max-width: 100%;
       background: $black;
-	  @include transition(all 500ms ease-in);
-	  &::before, &::after {
+    @include transition(all 500ms ease-in);
+    &::before, &::after {
         position: absolute;
         top: 5%;
         right: 5%;
@@ -475,10 +475,10 @@ article header {
       }
     figcaption {
       padding: 1.5vw;
-	  color:$black;
+    color:$black;
       text-transform: uppercase;
       backface-visibility: hidden;
-	  height: 5.5vw;
+    height: 5.5vw;
     }
 
     h2 {
@@ -491,51 +491,51 @@ article header {
       letter-spacing: 1px;
       font-size: 1vw;
       margin: 0;
-	  display:none;
+    display:none;
     }
 
-	  figcaption {
-		text-transform: uppercase;
-		text-decoration: none;
-		letter-spacing: 0.15em;
-		display: inline-block;
-		padding: 15px 20px;
-		position: relative;
-	  }
-	  h2:after {    
-		content: '';
-		position: absolute;
-		width: 100%;
-		transform: scaleX(0);
-		border-radius: 5px;
-		height: 3px;
-		bottom: 0;
-		left: 0;
-		background: $dark-gray;
-		transform-origin: bottom right;
-		transition: transform 0.5s ease-out;
-	  }
-	 
+    figcaption {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    }
+    h2:after {    
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: $dark-gray;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+    }
+   
 
     &:hover {
-		img{
-			opacity: 0.8;
-		&::before, &::after {
-			opacity: 1;
-			transform: scale(1);
-		  }
-		}
-		a{
-			border-bottom: none;
-			opacity: 1;
-		}
-		h2{
-			opacity: 1;
-		&:after { 
-			transform: scaleX(1);
-  			transform-origin: bottom left;
-		  }
-		}
+    img{
+      opacity: 0.8;
+    &::before, &::after {
+      opacity: 1;
+      transform: scale(1);
+      }
+    }
+    a{
+      border-bottom: none;
+      opacity: 1;
+    }
+    h2{
+      opacity: 1;
+    &:after { 
+      transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
     }
 
   }
@@ -715,7 +715,7 @@ article header {
   background-color: $white;
 
   header {
-	padding-bottom:50px;
+  padding-bottom:50px;
     em {
       text-align: left;
       display: block;
@@ -731,43 +731,43 @@ article header {
       font-weight: normal;
       font-size: 16px;
       margin: 5px 0 40px 0;
-	  font-family: "Lora", serif;
-	  display: none;
+    font-family: "Lora", serif;
+    display: none;
     }
-	h4{
-		margin-top:40px;
-		font-weight: normal;
-		font-size: 14px;
-	}
+  h4{
+    margin-top:40px;
+    font-weight: normal;
+    font-size: 14px;
+  }
 
     p {
-		font-family: "Lora", serif;
-		font-weight: normal;
-		line-height: 1.7;
-		font-style: italic;
-      	margin: 40px 0 40px 0;
-		font-size:20px;
+    font-family: "Lora", serif;
+    font-weight: normal;
+    line-height: 1.7;
+    font-style: italic;
+        margin: 40px 0 40px 0;
+    font-size:20px;
     }
   }
 
   article {
     max-width: 1200px;
     margin: 40px auto 0 auto;
-	h3{
-		font-family: "Lora", serif;
-		font-weight: normal;
-		line-height: 1.7;
-		font-style: italic;
-	}
+  h3{
+    font-family: "Lora", serif;
+    font-weight: normal;
+    line-height: 1.7;
+    font-style: italic;
+  }
     h4 {
       text-align: left;
       font-size: 18px;
       margin: 40px 0 16px 0;
       line-height: 1.4;
-	  color:$mid-gray;
-	  font-weight:normal;
-	  text-transform: uppercase;
-	  border-bottom:3px solid $light-gray;
+    color:$mid-gray;
+    font-weight:normal;
+    text-transform: uppercase;
+    border-bottom:3px solid $light-gray;
     }
 
     p {
@@ -784,21 +784,18 @@ article header {
       width: 100%;
       margin: 60px auto;
       padding: 0;
-
+      &.small{
+        max-width:800px;
+      }
       img {
         width: 100%;
         background: $black;
-		&.small{
-			max-width:800px;
-		}
       }
-
       figcaption {
         font-size: 12px;
         background: $dark-gray;
         color: $white;
         padding: 5px 0;
-
         a {
           color: $white;
         }
@@ -808,29 +805,29 @@ article header {
 
   }
   a button {
-	cursor: pointer;
-	margin: 40px auto 0 auto;
-	background: $black;
-	border: 2px solid $black;
-	text-transform: uppercase;
-	font-weight: normal;
-	padding: 10px 15px;
-	font-size: 14px;
-	color: $white;
-	text-decoration: none;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 20px;
-	text-decoration: none;
+  cursor: pointer;
+  margin: 40px auto 0 auto;
+  background: $black;
+  border: 2px solid $black;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: $white;
+  text-decoration: none;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
 
-	span {
-	  font-size: 43px;
-	  line-height: 0;
-	}
+  span {
+    font-size: 43px;
+    line-height: 0;
+  }
 
-	&:hover {
-	  background: $white;
-	  color: $black;
-	}
+  &:hover {
+    background: $white;
+    color: $black;
+  }
   }
 }
 
