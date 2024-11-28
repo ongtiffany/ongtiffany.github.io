@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability."
+    />
+    <meta name="author" content="Tiffany Ong" />
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="../index.html">
+        <img src="../img/to-white.png" alt="logo" />
+        <h1>Tiffany Ong <span>Product + Data Visualisation Designer</span></h1>
+      </a>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li>
+          <a class="active" href="../index.html#work">Work</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../achievements.html">Achievements</a>
+          <a href="../play.html">Play</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="project">
+      <header>
+        <!-- Project Details Go Here -->
+        <h2>Living with Machines</h2>
+        <h3>Data Exploration dashboard</h3>
+        <p>
+          A Multidisciplinary Collaborative Approach to 19th-Century Historical
+          Research in the Industrial Age
+        </p>
+        <figure>
+          <img
+            src="../img/project/livingwithmachines/insitu.jpg"
+            alt="2 computer screens, one with line graphs overlaying area charts, the other aa mixed scatter plot"
+          />
+        </figure>
+        <a
+          href="https://observablehq.com/@jmiguelv/language-of-mechanisation"
+          target="_blank"
+        >
+          <button>Language of Mechanisation</button>
+        </a>
+        <a
+          href="https://observablehq.com/@jmiguelv/lwm-language-of-accidents"
+          target="_blank"
+        >
+          <button>Language of Accidents</button>
+        </a>
+      </header>
+      <article>
+        <h4>Data-Driven Insights into the Past</h4>
+        <p>
+          The Living with Machines project represents a groundbreaking
+          multidisciplinary collaboration involving the British Library, the
+          Alan Turing Institute, and universities including Cambridge, East
+          Anglia, Exeter, Queen Mary, and King’s College London. Its mission is
+          to explore historical narratives by employing data science, machine
+          learning, and public engagement activities, including crowdsourcing
+          tasks on the Zooniverse platform. A core focus has been analysing
+          19th-century newspapers to uncover insights into societal shifts
+          during the industrial age.
+        </p>
+
+        <p>
+          In 2022 and 2023 the team ran a series of tasks in the citizen science
+          platform Zooniverse. They asked members of the public to look at
+          articles from 19th century newspapers that mentioned specific types of
+          machine that they thought would yield interesting results.
+        </p>
+
+        <figure class="small">
+          <img
+            src="../img/project/livingwithmachines/DAVIZCT-workflow.jpg"
+            alt="Flowchart"
+          />
+          <figcaption>
+            Example of a crowdsourcing task of "How did machines change
+            accidents?" workflow diagram
+          </figcaption>
+        </figure>
+        <h4>Key Research Strands and Outputs for Public Engagement</h4>
+        <p>
+          The project includes two primary research strands, each with
+          interactive notebooks designed to analyse data, visualise findings and
+          engage diverse audiences:
+        </p>
+
+        <p>
+          <strong>The Language of Accidents</strong> notebook explores how
+          mechanisation influenced accident trends. It offers visualisations of
+          accident frequencies by year, geographic distribution, and victim
+          demographics, such as age and gender. The tool also includes
+          background information about the data sources, allowing users to
+          contextualise their findings.
+        </p>
+        <p>
+          <strong>The Language of Mechanisation</strong> notebook investigates
+          how words related to mechanisation evolved over time. It enables users
+          to explore changes in word meanings by year, location, and newspaper
+          publication, offering a rich view of language dynamics in the 19th
+          century.
+        </p>
+
+        <p>Experiments were first done in jupyter notebooks</p>
+
+        <figure>
+          <img
+            src="../img/project/livingwithmachines/screenshots-jupyter-notebook.jpg"
+            alt="Flowchart"
+          />
+          <figcaption>Collage of jupyter notebook graphs</figcaption>
+        </figure>
+        <p>
+          Eventually hosted on the Observable platform, provide interactive
+          visualisations designed to engage a broad audience. Both notebooks
+          allow users to drill down to the original source documents, linking
+          individual data points with contextual references.
+        </p>
+
+        <h4>A Collaborative and Adaptive Design Process</h4>
+        <p>
+          In the Discovery phase, the project team conducted detailed
+          discussions to understand datasets, such as crowdsourced annotations
+          and metadata from historical newspapers. User research was conducted
+          through open-ended questionnaires, allowing stakeholders to clarify
+          objectives and user needs. This phase also involved defining a
+          high-level data model to support interactive features and
+          visualisations.
+        </p>
+
+        <p>
+          The Define phase integrated discovery insights with project
+          requirements. Using a Miro board, the team mapped out iterative design
+          solutions, ensuring alignment with project goals and audience needs.
+          During the Develop phase, various technical solutions were explored.
+          Constraints like time and budget guided the decision to adopt existing
+          notebook platforms, such as Observable and Jupyter. While Observable’s
+          default design system introduced limitations, the team focused on
+          enhancing user experience by refining the narrative structure,
+          simplifying terminology, and testing chart types and interactions.
+          Accessibility considerations were prioritised, although some
+          challenges, such as colour-based visual distinctions and
+          browser-specific issues, were noted.
+        </p>
+
+        <figure>
+          <img
+            src="../img/project/livingwithmachines/Screenshot-miro-board1.jpg"
+            alt="Flowchart"
+          />
+          <figcaption>Miro board working</figcaption>
+        </figure>
+
+        <h4>User-Centred Testing and Iterative Refinements</h4>
+        <p>
+          To validate the notebooks’ design, usability testing was conducted in
+          the latter stages of development. Two rounds of testing, each with
+          8–10 participants, provided quick feedback on functionality and
+          usability. Open-ended questions guided the sessions, highlighting key
+          issues, which were promptly addressed.
+        </p>
+
+        <figure>
+          <img
+            src="../img/project/livingwithmachines/Screenshot-miro-board2.jpg"
+            alt="Flowchart"
+          />
+          <figcaption>Miro board working</figcaption>
+        </figure>
+        <p>
+          The Deploy phase incorporated iterative adjustments based on user
+          feedback, ensuring the notebooks remained intuitive and engaging. This
+          continuous refinement reflected the project’s commitment to delivering
+          tools that met diverse audience needs, from quick overviews to
+          detailed data exploration.
+        </p>
+        <figure>
+          <img
+            src="../img/project/livingwithmachines/collage.jpg"
+            alt="Flowchart"
+          />
+          <figcaption>Collage of jupyter notebook graphs</figcaption>
+        </figure>
+
+        <h4>Conclusion</h4>
+        <p>
+          The Living with Machines project exemplifies how interdisciplinary
+          collaboration and thoughtful design can reimagine historical research.
+          By blending data science, public engagement, and accessible tools, it
+          has illuminated new perspectives on 19th-century societal changes. The
+          project’s success underscores the importance of integrating research,
+          design, and user input to create impactful, lasting contributions to
+          our understanding of history.
+        </p>
+
+        <a href="../index.html#work">
+          <button><span>&#x02A2F;</span> Close Project</button>
+        </a>
+      </article>
+    </section>
+    <!-- end section -->
+  </body>
+</html>
