@@ -248,7 +248,8 @@ article header {
   border-width: 5px;
   position: relative;
   height: 100vh;
-  padding-top: 35vh;
+  min-height: 50vh;
+  padding-top: 30vh;
 }
 article header:after {
   content: "";
