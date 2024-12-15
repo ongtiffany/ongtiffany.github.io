@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability."
+    />
+    <meta name="author" content="Tiffany Ong" />
+    <title>Tiffany Ong</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="../index.html">
+        <img src="../img/to-white.png" alt="logo" />
+        <h1>Tiffany Ong <span>Product + Data Visualisation Designer</span></h1>
+      </a>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li>
+          <a class="active" href="../index.html#work">Work</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../achievements.html">Achievements</a>
+          <a href="../play.html">Play</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="project">
+      <header>
+        <!-- Project Details Go Here -->
+        <h2>Little Pictures</h2>
+        <h3>Data Visualisation</h3>
+        <p>
+          A Journey in Accessible and Sustainable Data Visualisation with
+          Climate Data
+        </p>
+
+        <figure>
+          <img
+            src="../img/project/littlepictures/insitu.jpg"
+            alt="4 minimal graphical visuals in a card format laid out in a tablet on a wooden table with a pen and paper beside"
+          />
+        </figure>
+
+        <a href="littlepictures-viz.html" target="_blank">
+          <button>Little Pictures Visualisation</button>
+        </a>
+      </header>
+      <article>
+        <h4>Inspiration from the Little Pictures Project</h4>
+        <p>
+          I have been wanting to work on a data visualisation with climate data
+          but never felt confident enough to until now and was excited to begin
+          my next one using my personal and 10% time at my organisation,
+          <a href="https://kdl.kcl.ac.uk" target="_blank">King's Digital Lab</a
+          >. While searching for a climate-related dataset, I discovered the
+          Little Pictures project from
+          <a href="https://climate.esa.int/en/littlepictures/"
+            >ESA Climate Office</a
+          >. I was immediately drawn to the simplicity of their visuals. The
+          open-source nature of the project and the straightforward data made it
+          an ideal starting point. Their visuals became a direct inspiration for
+          my own project.
+        </p>
+        <figure>
+          <img
+            src="../img/project/littlepictures/gallery.jpg"
+            alt="16 colourful graphical images laid out in 2 rows"
+          />
+          <figcaption>
+            Screenshot of images from the ESA Climate Office Little Pictures
+            Gallery
+          </figcaption>
+        </figure>
+        <h4>Initial Plan and Prototype</h4>
+        <p>
+          Initially, I planned to replicate 4–6 examples directly from Little
+          Pictures, making slight style tweaks, integrating interaction with a
+          pause and play button to scroll through years of data. I developed a
+          prototype that I was quite happy with, but decided to change
+          directions.
+        </p>
+        <div class="codepen" style="max-width: 600px; margin: 0 auto">
+          <p
+            class="codepen"
+            data-height="670"
+            data-theme-id="dark"
+            data-default-tab="result"
+            data-slug-hash="vYMOOZK"
+            data-pen-title="seaiceloss - v14 start pause button"
+            data-user="ongtiffany"
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/ongtiffany/pen/vYMOOZK">
+                seaiceloss - v14 start pause button</a
+              >
+              by Tiffany Ong (<a href="https://codepen.io/ongtiffany"
+                >@ongtiffany</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <h5>Sea Ice loss scroll through data animation prototype</h5>
+        </div>
+
+        <h4>Shifting Focus to Accessibility and Sustainability</h4>
+        <p>
+          I knew from reading articles like
+          <a href="https://fossheim.io/writing/posts/accessible-dataviz-design/"
+            >Sarah Fossheim’s</a
+          >
+          how difficult it is to make a data visualisation accessible for screen
+          reader users. At the time, when I was researching using certain
+          visualisation tools, it involved adding aria labels data points, alt
+          text to images, having the replicate the dataset in another ways to
+          accomodate different users, and seemed like a good opportunity to find
+          other options combining it with the methods I have been building on
+          with my past projects.
+        </p>
+        <p>
+          The new concept involved making a more accessible and sustainable
+          visualisation, still using climate data and visual inspiration from
+          Little Pictures - hence the project name. It uses an HTML table
+          output, styled in various ways, allowing users to choose their
+          preferred way of reading the data. Sustainability was ensured by
+          dynamically sourcing data from JSON, using JavaScript for output, and
+          relying only on CSS for styling. This approach eliminated dependencies
+          and reduced code complexity.
+        </p>
+        <h4>Designing with Intentional Constraints</h4>
+        <p>
+          To maintain focus on the project’s core concepts, I deliberately
+          limited the design. I avoided gradients, used a black-and-white
+          palette, and incorporated only simple chart elements. This helped keep
+          my efforts directed toward functionality rather than visual
+          experimentation. For the card layout, I had a few sources of
+          inspiration and mocked a few versions in Illustrator before moving on
+          to coding the prototype.
+        </p>
+        <figure>
+          <img
+            src="../img/project/littlepictures/illustrator.jpg"
+            alt="many frames and images compiled together showing work in progress"
+          />
+          <figcaption>
+            Screenshot of Illustrator file showing layout ideas, inspiration and
+            mockups
+          </figcaption>
+        </figure>
+
+        <h4>Development Steps</h4>
+        <p>
+          The development process was non-linear, requiring multiple iterations
+          to refine each step:
+        </p>
+        <ul>
+          <li>JSON to HTML conversion</li>
+          <li>Adding and styling tabs</li>
+          <li>Styling the visual tab</li>
+          <li>Styling the bar chart</li>
+          <li>Styling the line chart</li>
+          <li>Card layout</li>
+          <li>Styling cards</li>
+        </ul>
+        <p>
+          Styling the bar chart was straightforward, involving adjustments to
+          element heights based on data values. However, styling the line chart
+          was trickier. Using a clip-path method to draw dynamic lines based on
+          data values, I encountered alignment issues. Although I explored an
+          alternative method with better output, its lack of responsiveness
+          forced me to postpone further refinement.
+        </p>
+        <figure>
+          <img
+            src="../img/project/littlepictures/graph-prototypes.jpg"
+            alt="4 frames showing line graph, bar chart and table formats"
+          />
+          <figcaption>Screenshot of graph prototypes</figcaption>
+        </figure>
+
+        <h4>Layout Challenges and Solutions</h4>
+        <p>
+          For the card layout, I initially tried to use Flexbox but switched to
+          CSS Grid after encountering challenges. Using this
+          <a href="https://cssgrid-generator.netlify.app">CSS Grid generator</a>
+          helped me understand and implement the layout effectively.
+        </p>
+        <p>
+          Browser testing revealed alignment issues, particularly on Firefox and
+          Chrome, which were not present in Safari. After two days of
+          troubleshooting, I resolved the issue by adding position:relative; to
+          the tbody. Additional media queries were necessary to address scaling
+          inconsistencies.
+        </p>
+
+        <h4>Data Integration and Visual Styling</h4>
+        <p>
+          Integrating the data turned out to be more complex than expected. Some
+          datasets needed simplification, and I had to source alternatives when
+          the originals were too detailed. The javascript had to be amended
+          repeatedly to allow it to dynamically adapt to new features and data.
+          Previously, I would have to bother a developer (usually my partner),
+          but this time, I had ChatGPT and even though it wasn’t always smooth
+          sailing, it was a huge help and also helped me learn as it explained
+          and commented the code very clearly. When it came to styling, I
+          focused on using simple graphic elements such as lines, rectangles,
+          and circles.
+        </p>
+        <h4>Feedback and Enhancements</h4>
+        <p>
+          I had planned to get feedback from my whole team but I was so delayed
+          I only managed to show a couple and already I could tell that it
+          wasn’t that well received compared to my past projects. I had expected
+          it as there was no colour and minimal styling but still it didn’t feel
+          great. I decided add the animation that scrolled though the data that
+          I initially abandoned, but this time to have it on hover, in hope it
+          would give more interest, not only for my ego but more importantly to
+          highlight the data which had a strong message which I was drawn into
+          originally not only by the subject but also by the visuals.
+        </p>
+        <h4>Conclusion</h4>
+        <p>
+          The Little Pictures-inspired project became a meaningful exploration
+          of accessible and sustainable data visualisation. Although challenges
+          remained, the project laid the groundwork for future improvements and
+          reinforced the importance of balancing functionality, inclusivity, and
+          visual appeal.
+        </p>
+
+        <a href="../index.html">
+          <button><span>&#x02A2F;</span> Close Project</button>
+        </a>
+      </article>
+    </section>
+    <!-- end section -->
+    <footer>
+      <ul>
+        <li>
+          <a href="https://github.com/ongtiffany" target="_blank">Github</a>
+        </li>
+        <li>
+          <a href="https://codepen.io/ongtiffany" target="_blank">Codepen</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/tiffanyong" target="_blank"
+            >Linkedin</a
+          >
+        </li>
+      </ul>
+      <p>
+        Please do not use images or content without permission. Copyright &copy;
+        <a href="https://www.linkedin.com/in/tiffanyong/" target="_blank"
+          >Tiffany Ong</a
+        >
+        2024
+      </p>
+      <div id="wcb" class="carbonbadge wcb-d"></div>
+    </footer>
+    <!-- Custom script for nav menu functionality-->
+    <script>
+      // Get all sections that have an ID defined
+      const sections = document.querySelectorAll("section[id]");
+
+      // Add an event listener listening for scroll
+      window.addEventListener("scroll", navHighlighter);
+
+      function navHighlighter() {
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach((current) => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 50;
+          sectionId = current.getAttribute("id");
+
+          /*
+              - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+              - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+              */
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document
+              .querySelector("nav a[href*=" + sectionId + "]")
+              .classList.add("active");
+          } else {
+            document
+              .querySelector("nav a[href*=" + sectionId + "]")
+              .classList.remove("active");
+          }
+        });
+      }
+    </script>
+
+    <!-- Clicky Analytics code -->
+    <script async src="//static.getclicky.com/101359440.js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101359440ns.gif"
+        />
+      </p>
+    </noscript>
+    <!-- Statcounter Analytics code -->
+    <script type="text/javascript">
+      var sc_project = 12735011;
+      var sc_invisible = 1;
+      var sc_security = "0d2bfccc";
+    </script>
+    <script
+      type="text/javascript"
+      src="https://www.statcounter.com/counter/counter.js"
+      async
+    ></script>
+    <noscript>
+      <div class="statcounter">
+        <a title="Web Analytics" href="https://statcounter.com/" target="_blank"
+          ><img
+            class="statcounter"
+            src="https://c.statcounter.com/12735011/0/0d2bfccc/1/"
+            alt="Web Analytics"
+            referrerpolicy="no-referrer-when-downgrade"
+        /></a>
+      </div>
+    </noscript>
+
+    <!-- Goat Counter Analytics code -->
+    <script
+      data-goatcounter="https://ongtiffany.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+  </body>
+
+  <!-- Carbon calculator -->
+  <script
+    src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+    defer
+  ></script>
+
+  <!-- Codepen embeds -->
+  <script
+    async
+    src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+  ></script>
+</html>
