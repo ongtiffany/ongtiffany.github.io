@@ -610,6 +610,12 @@ article header p {
   margin: 0 auto;
   background-color: white;
 }
+#project h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 #project header {
   padding-bottom: 50px;
 }
