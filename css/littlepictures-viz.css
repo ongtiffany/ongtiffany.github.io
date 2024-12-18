@@ -36,8 +36,8 @@ header p {
   box-shadow: 0.2vw 0.2vw 0.3vw lightgray;
   font-size: 1.3vw;
   font-family: "Anonymous Pro", serif;
-  background: #111;
-  color: #fff;
+  background: #fff;
+  color: #111;
   /* tav navigation styling */
 }
 .card h2 {
@@ -46,20 +46,20 @@ header p {
   z-index: 1;
   margin: 0;
   padding: 5vw 35px 0 1.5vw;
-  border-bottom: 0.5px dashed #fff;
+  border-bottom: 0.5px dashed #111;
   background: white;
   font-family: "Geologica", sans-serif;
   text-transform: uppercase;
   font-size: 2.5vw;
   width: calc(100% - 33px);
-  background: #111;
-  color: #fff;
+  background: #fff;
+  color: #111;
 }
 .card p {
   grid-area: 2/1/3/5;
   margin: 0;
   padding: 0.5vw 5vw 1vw 1.5vw;
-  border-bottom: 0.5px dashed #fff;
+  border-bottom: 0.5px dashed #111;
   font-family: "Geologica", sans-serif;
   font-weight: 200;
 }
@@ -85,12 +85,12 @@ header p {
   position: absolute;
 }
 .card .tabs .tab-label {
-  border-bottom: 0.5px dashed #fff;
+  border-bottom: 0.5px dashed #111;
   padding: 0.9vw 0 1vw 1.5vw;
   margin-top: 0;
   position: sticky;
   top: 0;
-  background: #111;
+  background: #fff;
   z-index: 2;
 }
 .card .tabs .tab-label label {
@@ -104,13 +104,13 @@ header p {
   display: inline-block;
   margin-right: 0.7vw;
   margin-bottom: -0.2vw;
-  border: 1px dashed #fff;
+  border: 1px dashed #111;
 }
 .card .tabs .tab-label label:hover {
   font-weight: bold;
 }
 .card .tabs .tab-label label:hover:before {
-  border: 1px solid #fff;
+  border: 1px solid #111;
 }
 .card .tabs #tab1-0:checked ~ .tab-label label[for=tab1-0],
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0],
@@ -120,14 +120,14 @@ header p {
 .card .tabs #tab1-0:checked ~ .tab-label label[for=tab1-0]:before,
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0]:before,
 .card .tabs #tab3-0:checked ~ .tab-label label[for=tab3-0]:before {
-  border: 1.5px solid #fff;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #fff 42%, #fff 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #111;
+  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-0:checked ~ .tab-label label[for=tab1-0]:hover:before,
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0]:hover:before,
 .card .tabs #tab3-0:checked ~ .tab-label label[for=tab3-0]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #fff 45%, #fff 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
 }
 .card .tabs #tab1-1:checked ~ .tab-label label[for=tab1-1],
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1],
@@ -137,14 +137,14 @@ header p {
 .card .tabs #tab1-1:checked ~ .tab-label label[for=tab1-1]:before,
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1]:before,
 .card .tabs #tab3-1:checked ~ .tab-label label[for=tab3-1]:before {
-  border: 1.5px solid #fff;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #fff 42%, #fff 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #111;
+  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-1:checked ~ .tab-label label[for=tab1-1]:hover:before,
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1]:hover:before,
 .card .tabs #tab3-1:checked ~ .tab-label label[for=tab3-1]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #fff 45%, #fff 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
 }
 .card .tabs #tab1-2:checked ~ .tab-label label[for=tab1-2],
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2],
@@ -154,14 +154,14 @@ header p {
 .card .tabs #tab1-2:checked ~ .tab-label label[for=tab1-2]:before,
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2]:before,
 .card .tabs #tab3-2:checked ~ .tab-label label[for=tab3-2]:before {
-  border: 1.5px solid #fff;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #fff 42%, #fff 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #111;
+  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-2:checked ~ .tab-label label[for=tab1-2]:hover:before,
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2]:hover:before,
 .card .tabs #tab3-2:checked ~ .tab-label label[for=tab3-2]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #fff 45%, #fff 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
 }
 .card .tabs #tab1-3:checked ~ .tab-label label[for=tab1-3],
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3],
@@ -171,14 +171,14 @@ header p {
 .card .tabs #tab1-3:checked ~ .tab-label label[for=tab1-3]:before,
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3]:before,
 .card .tabs #tab3-3:checked ~ .tab-label label[for=tab3-3]:before {
-  border: 1.5px solid #fff;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #fff 42%, #fff 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #111;
+  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-3:checked ~ .tab-label label[for=tab1-3]:hover:before,
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3]:hover:before,
 .card .tabs #tab3-3:checked ~ .tab-label label[for=tab3-3]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #fff 45%, #fff 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
 }
 .card .tabs #tab1-4:checked ~ .tab-label label[for=tab1-4],
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4],
@@ -188,14 +188,14 @@ header p {
 .card .tabs #tab1-4:checked ~ .tab-label label[for=tab1-4]:before,
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4]:before,
 .card .tabs #tab3-4:checked ~ .tab-label label[for=tab3-4]:before {
-  border: 1.5px solid #fff;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #fff 42%, #fff 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #111;
+  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-4:checked ~ .tab-label label[for=tab1-4]:hover:before,
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4]:hover:before,
 .card .tabs #tab3-4:checked ~ .tab-label label[for=tab3-4]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #fff 45%, #fff 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
 }
 .card .tabs #tab1-5:checked ~ .tab-label label[for=tab1-5],
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5],
@@ -205,14 +205,14 @@ header p {
 .card .tabs #tab1-5:checked ~ .tab-label label[for=tab1-5]:before,
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5]:before,
 .card .tabs #tab3-5:checked ~ .tab-label label[for=tab3-5]:before {
-  border: 1.5px solid #fff;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #fff 42%, #fff 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #111;
+  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-5:checked ~ .tab-label label[for=tab1-5]:hover:before,
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5]:hover:before,
 .card .tabs #tab3-5:checked ~ .tab-label label[for=tab3-5]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #fff 45%, #fff 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content {
   /* styling content of tab 3 */
@@ -241,10 +241,10 @@ header p {
   top: -1vw;
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .year:before {
-  background: #111;
+  background: #fff;
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #fff;
+  background: #111;
   z-index: 1;
   position: absolute;
   left: 50%;
@@ -258,7 +258,7 @@ header p {
   top: 1vw;
   transform: translate(-50%, 0);
   font-size: 1.1vw;
-  color: #fff;
+  color: #111;
   z-index: 1;
   font-family: "Geologica", sans-serif;
 }
@@ -267,16 +267,16 @@ header p {
   position: absolute;
   width: 1vw;
   height: 1vw;
-  border: 1px solid #fff;
+  border: 1px solid #111;
   margin-left: -2vw;
-  background: #111;
+  background: #fff;
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar {
   position: absolute;
   left: 100%;
   transform: translate(-50%, 0);
-  border: 1px solid #fff;
-  background: #111;
+  border: 1px solid #111;
+  background: #fff;
   width: 20vw;
   padding-bottom: 2vw;
   top: calc(var(--value) * 1.5);
@@ -720,7 +720,7 @@ header p {
   bottom: 0;
   left: 5px;
   width: calc(100% + 15px);
-  background-color: #fff;
+  background-color: #111;
   -webkit-clip-path: circle(3px at calc(100% - 16px) calc(100% - var(--value) + 5px));
           clip-path: circle(3px at calc(100% - 16px) calc(100% - var(--value) + 5px));
 }
@@ -733,7 +733,7 @@ header p {
   position: absolute;
   bottom: 0;
   width: calc(100% + 3px);
-  background-color: #fff;
+  background-color: #111;
   height: calc(90% - 5px);
   -webkit-clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 1px), 0 calc(100% - var(--previous-value) + 1px));
           clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 1px), 0 calc(100% - var(--previous-value) + 1px));
@@ -754,8 +754,8 @@ header p {
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content table {
   display: flex;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 1px solid #111;
+  border-bottom: 1px solid #111;
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content td.year { /* hide years */
   position: absolute;
@@ -767,7 +767,7 @@ header p {
   position: absolute;
   width: 1px;
   height: 5px;
-  background: #fff;
+  background: #111;
   margin-top: -0.4vw;
   margin-left: 1vw;
 }
@@ -791,7 +791,7 @@ header p {
 }
 .card .tabs > input:nth-child(3):checked ~ .tab-content table th, .card .tabs > input:nth-child(3):checked ~ .tab-content table td {
   padding: 8px;
-  border: 1px solid #111;
+  border: 1px solid #fff;
   text-align: left;
 }
 .card .bottom {
@@ -801,7 +801,7 @@ header p {
   height: 3vw;
   bottom: 0;
   background: white;
-  border-top: 0.5px dashed #fff;
+  border-top: 0.5px dashed #111;
   font-weight: 200;
   line-height: 2.3;
   z-index: 3;
@@ -810,7 +810,7 @@ header p {
   padding: 0.8vw 5vw 0.8vw 1.5vw;
 }
 .card .bottom span:first-of-type {
-  border-right: 0.5px dashed #fff;
+  border-right: 0.5px dashed #111;
 }
 .card dl.references {
   grid-area: 1/2/8/3;
@@ -821,8 +821,8 @@ header p {
   position: absolute;
   right: 0;
   bottom: 0;
-  border-right: 0.5px dashed #fff;
-  background: #111;
+  border-right: 0.5px dashed #111;
+  background: #fff;
   padding: calc(3vw - 0.2px) 0 0 0;
   line-height: 2;
   display: flex;
@@ -830,7 +830,7 @@ header p {
   z-index: 3;
 }
 .card dl.references dt {
-  border-top: 0.5px dashed #fff;
+  border-top: 0.5px dashed #111;
   margin: 0 0 1vw 0;
   padding-top: 2vw;
 }
@@ -841,7 +841,7 @@ header p {
   padding: 0 0 1.5vw 0;
 }
 .card dl.references dd a {
-  color: #fff;
+  color: #111;
   text-decoration-style: dotted;
   text-decoration-thickness: 1px;
 }
@@ -963,18 +963,18 @@ header p {
   animation: none;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #111;
+  background: #fff;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar span {
-  color: #fff;
+  color: #111;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
   opacity: 1;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar {
   position: absolute;
-  border: 1px solid #fff;
-  background: #111;
+  border: 1px solid #111;
+  background: #fff;
   width: calc(var(--value) * 0.5);
   padding-bottom: calc(var(--value) * 0.5);
   top: calc(var(--value) * 0.7);
@@ -993,7 +993,7 @@ header p {
 .card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:before {
   position: absolute;
   content: "";
-  border-left: 1px solid #fff;
+  border-left: 1px solid #111;
   width: 5vw;
   height: 30vw;
   top: 1vw;
@@ -1197,7 +1197,7 @@ header p {
   animation: none;
 }
 .card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #111;
+  background: #fff;
 }
 .card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
   opacity: 1;
@@ -1207,7 +1207,7 @@ header p {
   top: calc(var(--value) * -2.7 + 29vw);
   left: 50%;
   border-radius: 50%;
-  background: #fff;
+  background: #111;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content {
   /* styling content of tab 3 */
@@ -1352,7 +1352,7 @@ header p {
   left: 50%;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar span {
-  color: #fff;
+  color: #111;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
   opacity: 1;
@@ -1364,7 +1364,7 @@ header p {
   transform: translate(-50%, 0);
   border: 1px solid black;
   border-radius: 50%;
-  background: #fff;
+  background: #111;
   width: calc(var(--value) * 0.8);
   padding-bottom: calc(var(--value) * 0.8);
   z-index: 1;
@@ -1376,7 +1376,7 @@ header p {
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:before {
   position: absolute;
   content: "";
-  border-left: 1px solid #111;
+  border-left: 1px solid #fff;
   width: 5vw;
   height: 34vw;
   top: -1vw;
@@ -1478,7 +1478,7 @@ header p {
   animation: none;
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #111;
+  background: #fff;
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
   opacity: 1;
@@ -1487,7 +1487,7 @@ header p {
   width: 20vw;
   padding-bottom: 0.5vw;
   top: calc(var(--value) * -5.9 + 30vw);
-  background: #fff;
+  background: #111;
   left: 50%;
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar span {
@@ -1581,7 +1581,7 @@ footer a:hover {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: -0.2vw;
-    border: 1px dashed #fff;
+    border: 1px dashed #111;
   }
   .card-wrapper .card dl.references {
     height: 130vw;

@@ -43,8 +43,8 @@
 
 
 //Color
-$black:#111;
-$white:#fff;
+$black:#fff;
+$white:#111;
 $lightgray:#f0f0f0;
 
 body{
@@ -766,12 +766,12 @@ top: -1vw;
 }//.card
 
 footer{
-  border-top: 1px solid $black;
+  border-top: 1px solid $white;
   margin:0 auto;
   text-align: center;
   padding:20px 0 0 0;
   a{
-    color:$black;
+    color:$white;
     text-decoration: none;
     cursor: pointer;
     &:hover{
