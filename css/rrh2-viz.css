@@ -1,7 +1,8 @@
 /*** MIXINS ***/
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Clicker+Script&family=Coming+Soon&family=Cutive+Mono&family=Dancing+Script&family=Gwendolyn&family=Homemade+Apple&family=Meow+Script&family=Sacramento&family=Waterfall&family=Yomogi&family=Are+You+Serious&family=Great+Vibes&family=Parisienne&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Antic&family=Antic+Slab&family=Cutive&family=Montserrat:ital,wght@0,200;0,300;0,600;1,200;1,300&family=Poppins:ital,wght@0,200;0,300;1,200;1,300&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Clicker+Script&family=Coming+Soon&family=Cutive+Mono&family=Dancing+Script&family=Gwendolyn&family=Homemade+Apple&family=Meow+Script&family=Sacramento&family=Waterfall&family=Yomogi&family=Are+You+Serious&family=Great+Vibes&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic&family=Antic+Slab&family=Cutive&family=Montserrat:ital,wght@0,200;0,300;0,600;1,200;1,300&family=Poppins:ital,wght@0,200;0,300;1,200;1,300&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap");*/
 
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Clicker+Script&family=Cutive+Mono&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&family=Sacramento&display=swap");
 html {
     scroll-behavior: smooth;
 }
@@ -10,6 +11,7 @@ body {
     width: 90%;
     padding: 0 5%;
     margin: 0 auto;
+    font-family: "Raleway", serif;
 }
 
 h1 {
@@ -43,17 +45,20 @@ h2.story {
 }
 
 h3 {
-    font-family: "Dancing Script";
+
     font-size: 1em;
     display: inline-block;
     margin: 5% 10% 0 10%;
 }
 
 p {
-    font-family: "Yomogi";
+    font-family: "Cutive Mono";
     text-align: justify;
     width: 80%;
     padding: 0 10%;
+    font-family: "Raleway", serif;
+    font-size:18px;
+    line-height: 1.7;
 }
 
 p a {
@@ -64,8 +69,8 @@ p a {
 }
 
 p a:hover {
-    opacity: 0.7;
-    border-bottom: 1px dashed;
+    opacity: 0.8;
+    text-decoration-style: dashed;
 }
 
 p.note {
@@ -73,9 +78,8 @@ p.note {
     display: inline-block;
     margin: 2em 10%;
     padding: 2%;
-    font-size: 0.9em;
     background: #f9f9f9;
-    font-family: "Cutive Mono";
+    font-size:16px;
 }
 
 hr.end {
@@ -98,9 +102,8 @@ figure img {
 }
 
 figure figcaption {
-    font-size: 12px;
+    font-size: 16px;
     background: white;
-    color: darkgray;
     font-family: "Cutive Mono";
     padding: 0 10px;
     text-align: center;
@@ -155,7 +158,6 @@ figure figcaption a:hover {
 }
 
 #menu ol a li {
-    font-family: "Homemade Apple";
     font-family: "Clicker Script";
     font-size: 1.5em;
     display: block;
@@ -174,7 +176,7 @@ figure figcaption a:hover {
 }
 
 #menu ol ul li {
-    font-family: "Yomogi";
+    font-family: "Cutive Mono";
     text-align: left;
 }
 
@@ -193,7 +195,6 @@ figure figcaption a:hover {
 }
 
 #menu ol figure figcaption {
-    font-family: "Homemade Apple";
     font-size: 0.9em;
 }
 
@@ -421,7 +422,7 @@ section ul.vertical.punctuation li ol.tooltip span.tooltiptext {
   color:black;
   font-size: 1.1vw;
   background:transparent;
-  font-family: "Yomogi";
+  font-family: "Cutive Mono";
 }
 
 section ul.vertical.punctuation li ol.tooltip span.tooltiptext:before {
@@ -463,7 +464,7 @@ section ol.vertical.punctuation li ol li,
 section ul.vertical.punctuation li ol li {
     height: 1.5em;
     display: block;
-    font-family: "Yomogi";
+    font-family: "Cutive Mono";
     font-size: 0.6em;
     width: 2.6vw;
 }
@@ -1025,7 +1026,7 @@ section ul li.tooltip span.tooltiptext {
     right: -13vw;
     z-index: 9999;
     width: 10vw;
-    font-family: "Yomogi";
+    font-family: "Cutive Mono";
     font-weight: normal;
     font-size: 0.9vw;
     letter-spacing: -0.01vw;
@@ -1095,10 +1096,8 @@ nav ol a {
     text-align: center;
     font-size: 1.7vw;
     border-radius: 50%;
-    font-family: "Amatic SC", cursive;
     line-height: 2.4;
-    font-family: "Coming Soon";
-    font-family: "Yomogi";
+    font-family: "Cutive Mono";
     font-size: 1.2vw;
     line-height: 3;
     list-style-type: none;
@@ -1681,8 +1680,8 @@ nav ol a .wordcount>.tooltiptext {
     width: 6vw;
     padding: 0;
     line-height: 1;
-    top: -5.8vw;
-    left: 0.9vw;
+    top: -6.8vw;
+    left: -0.7vw;
     text-shadow: -0.3vw 0.3vw 0.2vw white, -0.4vw 0.4vw 0.2vw white, -0.1vw -0.1vw 0.1vw white, -0.2vw -0.2vw 0.1vw white, -0.1vw 0.1vw 0.1vw white, -0.2vw 0.2vw 0.1vw white, -0.05vw 0.05vw 0.05vw white, -0.1vw 0.1vw 0.05vw white, 0.05vw 0.05vw 0.05vw white, 0.1vw 0.1vw 0.05vw white, 0.1vw 0.1vw 0.1vw white, 0.2vw 0.2vw 0.1vw white, 0.1vw -0.1vw 0.1vw white, 0.2vw -0.2vw 0.1vw white, 0.3vw -0.1vw 0.1vw white, 0.3vw -0.1vw 0.1vw white, 0.3vw 0.3vw 0.2vw white, 0.4vw 0.4vw 0.2vw white;
 }
 
@@ -1691,9 +1690,9 @@ nav ol a .wordcount>.tooltiptext:before {
     content: "";
     width: 0.1vw;
     height: 0.8vw;
-    border-left: 0.06vw solid gray;
-    top: 1.2vw;
-    left: 0.9vw;
+    border-left: 0.08vw solid gray;
+    top: 2.2vw;
+    left: 2.5vw;
 }
 
 nav ol a .sentiment>.tooltiptext {
@@ -1805,10 +1804,8 @@ nav.emotionnav ol a {
     text-align: center;
     font-size: 1.7vw;
     border-radius: 50%;
-    font-family: "Amatic SC", cursive;
     line-height: 2.4;
-    font-family: "Coming Soon";
-    font-family: "Yomogi";
+    font-family: "Cutive Mono";
     font-size: 1.2vw;
     line-height: 3;
     list-style-type: none;
@@ -2651,7 +2648,7 @@ section .reworked-wrapper .page {
     padding-bottom: 30%;
     border-radius: 50%;
     margin: 10% 0 5em 35%;
-    font-family: "Yomogi", mono;
+    font-family: "Cutive Mono";
     border-radius: 50%;
     transform-origin: center center;
 }
@@ -2902,12 +2899,10 @@ section .reworked-wrapper .page .innercircle span.tooltiptext dl dt {
     line-height: 0.7;
     margin-top: 1vw;
     font-size: 0.8vw;
-    font-family: "Dancing Script";
+
 }
 
 section .reworked-wrapper .page .innercircle span.tooltiptext dl dd {
-    font-family: "Meow Script";
-    font-family: "Gwendolyn";
     line-height: 1.6;
     font-size: 1.1em;
     font-family: "Amatic SC", cursive;
@@ -4239,7 +4234,7 @@ section .reworked-wrapper .page .word .tooltip:hover {
 section .text-wrapper {
     margin: 20vw 0 0 0;
     width: 100%;
-    font-family: "Dancing Script";
+
     font-size: 1.7vw;
     letter-spacing: 0.07vw;
     top: 10vw;
@@ -4345,14 +4340,11 @@ section .notes {
     padding: 0 0 2em 0;
     width: 50%;
     margin: 0 auto 20em auto;
+    
 }
 
-section .notes h3 {
-    font-family: "Homemade Apple";
-}
 
 section .notes p {
-    font-family: "Coming Soon";
     font-size: 1vw;
 }
 
@@ -6147,7 +6139,6 @@ footer {
     }
 
     body section .notes p {
-        font-size: 0.9em;
         padding: 0 10%;
         width: 80%;
     }

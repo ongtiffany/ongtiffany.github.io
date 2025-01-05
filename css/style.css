@@ -30,9 +30,8 @@ a {
   display: inline-block;
 }
 a:hover {
-  opacity: 0.6;
-  border-bottom: 1px dotted;
-  text-decoration: none;
+  opacity: 0.8;
+  text-decoration-style: dashed;
   cursor: pointer;
 }
 
@@ -100,7 +99,7 @@ nav a h1 span {
   display: block;
   font-weight: 200;
   text-transform: none;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 4px;
 }
 nav a:hover {
@@ -638,7 +637,7 @@ article header p {
 #project header h4 {
   margin-top: 40px;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
 }
 #project header p {
   font-family: "Lora", serif;
@@ -651,6 +650,7 @@ article header p {
 #project article {
   max-width: 1200px;
   margin: 40px auto 0 auto;
+  font-size: 18px;
 }
 #project article h3 {
   font-family: "Lora", serif;
@@ -660,7 +660,7 @@ article header p {
 }
 #project article h4 {
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   margin: 40px 0 16px 0;
   line-height: 1.4;
   color: #666;
@@ -689,10 +689,10 @@ article header p {
   background: #222;
 }
 #project article figure figcaption {
-  font-size: 12px;
+  font-size: 14px;
   background: #333;
   color: white;
-  padding: 5px 0;
+  padding: 5px;
 }
 #project article figure figcaption a {
   color: white;
@@ -706,7 +706,7 @@ a button {
   text-transform: uppercase;
   font-weight: normal;
   padding: 10px 15px;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
