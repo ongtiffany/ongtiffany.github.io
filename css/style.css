@@ -728,7 +728,7 @@ footer {
   width: 100%;
   float: left;
   padding: 40px 0 10px 0;
-  font-size: 12px;
+  font-size: 14px;
   border-top: 1px solid #222;
 }
 footer ul {
@@ -752,7 +752,7 @@ footer ul li a:hover {
   color: #333;
 }
 footer p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 2;
 }
 
