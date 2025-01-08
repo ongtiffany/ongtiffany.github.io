@@ -269,7 +269,7 @@ header p {
   height: 1vw;
   border: 1px solid #111;
   margin-left: -2vw;
-  background: #fff;
+  background: #111;
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar {
   position: absolute;
@@ -963,7 +963,7 @@ header p {
   animation: none;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #fff;
+  background: #111;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar span {
   color: #111;

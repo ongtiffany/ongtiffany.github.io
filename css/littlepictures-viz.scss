@@ -256,7 +256,7 @@ height:120%;
           height:1vw;
           border:1px solid $white;
           margin-left:-2vw;
-          background:$black;
+          background:$white;
         }
       }//.year
       .extent-bar {
@@ -552,7 +552,7 @@ grid-area: 1 / 2 / 8 / 3;
         opacity: 1;
         animation: none; // Disable animation for the first child
         .extent-bar{
-          background:$black;
+          background:$white;
           span{
             color:$white;
           }//span
