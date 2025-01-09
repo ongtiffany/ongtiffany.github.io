@@ -76,7 +76,7 @@ header p {
 }
 .card .tabs .tab-content table {
   padding: 0;
-  margin: 30px 0.5vw 30px 1.5vw;
+  margin: 30px 0.5vw 15vh 1.5vw;
 }
 .card .tabs input[type=radio] {
   opacity: 0;
