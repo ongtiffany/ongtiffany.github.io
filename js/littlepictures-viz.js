@@ -178,7 +178,7 @@ const jsonData = [
     th2: "Extent (million square per mile)",
     side: {
       data:
-        "<a href='https://https://osi-saf.eumetsat.int/products/sea-ice-products'>EUMETSAT</a>",
+        "<a href='https://osi-saf.eumetsat.int/products/sea-ice-products'>EUMETSAT</a>",
       credit:
         "<a href='https://climate.esa.int/nl/little-pictures-gallery/Arctic-sea-ice-loss-little-picture/'>ESA Climate Office</a>"
     }
