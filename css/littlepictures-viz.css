@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Geologica:wght@100..900&display=swap");
 /*** MIXINS ***/
 body {
-  background: #f0f0f0;
+  background: #f1f1f1;
   font-family: "Anonymous Pro", serif;
   font-family: "Geologica", sans-serif;
   padding: 3vw 3vw;
+  background: #e5e5e5;
 }
 
-header h1 {
-  padding: 0 2vw;
-}
-header p {
+header {
   font-weight: 200;
   padding: 0 2vw;
+}
+header a {
+  color: black;
 }
 
 .card-wrapper {
@@ -36,8 +37,7 @@ header p {
   box-shadow: 0.2vw 0.2vw 0.3vw lightgray;
   font-size: 1.3vw;
   font-family: "Anonymous Pro", serif;
-  background: #fff;
-  color: #111;
+  background: #f4f4f4;
   /* tav navigation styling */
 }
 .card h2 {
@@ -46,20 +46,18 @@ header p {
   z-index: 1;
   margin: 0;
   padding: 5vw 35px 0 1.5vw;
-  border-bottom: 0.5px dashed #111;
-  background: white;
+  border-bottom: 0.5px dashed #222;
+  background: #f4f4f4;
   font-family: "Geologica", sans-serif;
   text-transform: uppercase;
   font-size: 2.5vw;
   width: calc(100% - 33px);
-  background: #fff;
-  color: #111;
 }
 .card p {
   grid-area: 2/1/3/5;
   margin: 0;
   padding: 0.5vw 5vw 1vw 1.5vw;
-  border-bottom: 0.5px dashed #111;
+  border-bottom: 0.5px dashed #222;
   font-family: "Geologica", sans-serif;
   font-weight: 200;
 }
@@ -72,11 +70,11 @@ header p {
   overscroll-behavior: none;
 }
 .card .tabs .tab-content {
-  padding-right: 3vw;
+  padding-right: 1vw;
 }
 .card .tabs .tab-content table {
   padding: 0;
-  margin: 30px 0.5vw 15vh 1.5vw;
+  margin: 30px 0.5vw 30px 1.5vw;
 }
 .card .tabs input[type=radio] {
   opacity: 0;
@@ -85,12 +83,12 @@ header p {
   position: absolute;
 }
 .card .tabs .tab-label {
-  border-bottom: 0.5px dashed #111;
+  border-bottom: 0.5px dashed #222;
   padding: 0.9vw 0 1vw 1.5vw;
   margin-top: 0;
   position: sticky;
   top: 0;
-  background: #fff;
+  background: #f4f4f4;
   z-index: 2;
 }
 .card .tabs .tab-label label {
@@ -104,13 +102,13 @@ header p {
   display: inline-block;
   margin-right: 0.7vw;
   margin-bottom: -0.2vw;
-  border: 1px dashed #111;
+  border: 1px dashed #222;
 }
 .card .tabs .tab-label label:hover {
   font-weight: bold;
 }
 .card .tabs .tab-label label:hover:before {
-  border: 1px solid #111;
+  background: linear-gradient(-45deg, transparent, transparent 42%, #ffcbb3 42%, #ffcbb3 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-0:checked ~ .tab-label label[for=tab1-0],
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0],
@@ -120,14 +118,14 @@ header p {
 .card .tabs #tab1-0:checked ~ .tab-label label[for=tab1-0]:before,
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0]:before,
 .card .tabs #tab3-0:checked ~ .tab-label label[for=tab3-0]:before {
-  border: 1.5px solid #111;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #222;
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 97, 26) 42%, rgb(255, 97, 26) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-0:checked ~ .tab-label label[for=tab1-0]:hover:before,
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0]:hover:before,
 .card .tabs #tab3-0:checked ~ .tab-label label[for=tab3-0]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-1:checked ~ .tab-label label[for=tab1-1],
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1],
@@ -137,14 +135,14 @@ header p {
 .card .tabs #tab1-1:checked ~ .tab-label label[for=tab1-1]:before,
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1]:before,
 .card .tabs #tab3-1:checked ~ .tab-label label[for=tab3-1]:before {
-  border: 1.5px solid #111;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #222;
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 97, 26) 42%, rgb(255, 97, 26) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-1:checked ~ .tab-label label[for=tab1-1]:hover:before,
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1]:hover:before,
 .card .tabs #tab3-1:checked ~ .tab-label label[for=tab3-1]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-2:checked ~ .tab-label label[for=tab1-2],
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2],
@@ -154,14 +152,14 @@ header p {
 .card .tabs #tab1-2:checked ~ .tab-label label[for=tab1-2]:before,
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2]:before,
 .card .tabs #tab3-2:checked ~ .tab-label label[for=tab3-2]:before {
-  border: 1.5px solid #111;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #222;
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 97, 26) 42%, rgb(255, 97, 26) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-2:checked ~ .tab-label label[for=tab1-2]:hover:before,
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2]:hover:before,
 .card .tabs #tab3-2:checked ~ .tab-label label[for=tab3-2]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-3:checked ~ .tab-label label[for=tab1-3],
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3],
@@ -171,14 +169,14 @@ header p {
 .card .tabs #tab1-3:checked ~ .tab-label label[for=tab1-3]:before,
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3]:before,
 .card .tabs #tab3-3:checked ~ .tab-label label[for=tab3-3]:before {
-  border: 1.5px solid #111;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #222;
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 97, 26) 42%, rgb(255, 97, 26) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-3:checked ~ .tab-label label[for=tab1-3]:hover:before,
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3]:hover:before,
 .card .tabs #tab3-3:checked ~ .tab-label label[for=tab3-3]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-4:checked ~ .tab-label label[for=tab1-4],
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4],
@@ -188,14 +186,14 @@ header p {
 .card .tabs #tab1-4:checked ~ .tab-label label[for=tab1-4]:before,
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4]:before,
 .card .tabs #tab3-4:checked ~ .tab-label label[for=tab3-4]:before {
-  border: 1.5px solid #111;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #222;
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 97, 26) 42%, rgb(255, 97, 26) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-4:checked ~ .tab-label label[for=tab1-4]:hover:before,
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4]:hover:before,
 .card .tabs #tab3-4:checked ~ .tab-label label[for=tab3-4]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-5:checked ~ .tab-label label[for=tab1-5],
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5],
@@ -205,14 +203,14 @@ header p {
 .card .tabs #tab1-5:checked ~ .tab-label label[for=tab1-5]:before,
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5]:before,
 .card .tabs #tab3-5:checked ~ .tab-label label[for=tab3-5]:before {
-  border: 1.5px solid #111;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #111 42%, #111 57%, transparent 57%, transparent 100%);
+  border: 1.5px solid #222;
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 97, 26) 42%, rgb(255, 97, 26) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-5:checked ~ .tab-label label[for=tab1-5]:hover:before,
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5]:hover:before,
 .card .tabs #tab3-5:checked ~ .tab-label label[for=tab3-5]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, #f0f0f0, #f0f0f0 45%, #111 45%, #111 55%, #f0f0f0 55%, #f0f0f0 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content {
   /* styling content of tab 3 */
@@ -241,10 +239,11 @@ header p {
   top: -1vw;
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .year:before {
-  background: #fff;
+  background: #f1f1f1;
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #111;
+  background: white;
+  border: 0.5px solid #f4f4f4;
   z-index: 1;
   position: absolute;
   left: 50%;
@@ -258,7 +257,7 @@ header p {
   top: 1vw;
   transform: translate(-50%, 0);
   font-size: 1.1vw;
-  color: #111;
+  color: #222;
   z-index: 1;
   font-family: "Geologica", sans-serif;
 }
@@ -267,7 +266,7 @@ header p {
   position: absolute;
   width: 1vw;
   height: 1vw;
-  border: 1px solid #111;
+  border: 1px solid gray;
   margin-left: -2vw;
   background: #111;
 }
@@ -275,8 +274,10 @@ header p {
   position: absolute;
   left: 100%;
   transform: translate(-50%, 0);
-  border: 1px solid #111;
-  background: #fff;
+  box-shadow: inset 10px 10px 25px 0px #0f0f0f;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -5px 5px rgba(100, 100, 100, 0.1), inset 0 5px 5px rgba(255, 255, 255, 0.2);
+  background: #111;
   width: 20vw;
   padding-bottom: 2vw;
   top: calc(var(--value) * 1.5);
@@ -287,420 +288,80 @@ header p {
   left: 50%;
   opacity: 0;
 }
-.card .tabs > input:nth-child(1):checked ~ .tab-content {
-  display: block;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr {
-  opacity: 0;
-  transition: opacity 1s ease-out;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(1) {
+.card .tab-content input {
   display: none;
 }
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) {
-  opacity: 1;
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
-  opacity: 1;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(3) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(4) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(5) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(6) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(7) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(8) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(9) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(10) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(11) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(12) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(13) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(14) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(15) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(16) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(17) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(18) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(19) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(20) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(21) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(22) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(23) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(24) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(25) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(26) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(27) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(28) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(29) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(30) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(31) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(32) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(33) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(34) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(35) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(36) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(37) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(38) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(39) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(40) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(41) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(42) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(43) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(44) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(45) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(46) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(47) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(48) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(49) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(50) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(51) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(52) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(53) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(54) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(55) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(56) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(57) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(58) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(59) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(60) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(61) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(62) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(63) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(64) {
-  animation: none;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr {
-  opacity: 0;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(2) {
-  animation: fadeInOut 1s ease-out 0.45s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(3) {
-  animation: fadeInOut 1s ease-out 0.9s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(4) {
-  animation: fadeInOut 1s ease-out 1.35s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(5) {
-  animation: fadeInOut 1s ease-out 1.8s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(6) {
-  animation: fadeInOut 1s ease-out 2.25s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(7) {
-  animation: fadeInOut 1s ease-out 2.7s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(8) {
-  animation: fadeInOut 1s ease-out 3.15s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(9) {
-  animation: fadeInOut 1s ease-out 3.6s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(10) {
-  animation: fadeInOut 1s ease-out 4.05s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(11) {
-  animation: fadeInOut 1s ease-out 4.5s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(12) {
-  animation: fadeInOut 1s ease-out 4.95s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(13) {
-  animation: fadeInOut 1s ease-out 5.4s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(14) {
-  animation: fadeInOut 1s ease-out 5.85s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(15) {
-  animation: fadeInOut 1s ease-out 6.3s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(16) {
-  animation: fadeInOut 1s ease-out 6.75s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(17) {
-  animation: fadeInOut 1s ease-out 7.2s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(18) {
-  animation: fadeInOut 1s ease-out 7.65s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(19) {
-  animation: fadeInOut 1s ease-out 8.1s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(20) {
-  animation: fadeInOut 1s ease-out 8.55s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(21) {
-  animation: fadeInOut 1s ease-out 9s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(22) {
-  animation: fadeInOut 1s ease-out 9.45s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(23) {
-  animation: fadeInOut 1s ease-out 9.9s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(24) {
-  animation: fadeInOut 1s ease-out 10.35s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(25) {
-  animation: fadeInOut 1s ease-out 10.8s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(26) {
-  animation: fadeInOut 1s ease-out 11.25s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(27) {
-  animation: fadeInOut 1s ease-out 11.7s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(28) {
-  animation: fadeInOut 1s ease-out 12.15s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(29) {
-  animation: fadeInOut 1s ease-out 12.6s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(30) {
-  animation: fadeInOut 1s ease-out 13.05s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(31) {
-  animation: fadeInOut 1s ease-out 13.5s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(32) {
-  animation: fadeInOut 1s ease-out 13.95s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(33) {
-  animation: fadeInOut 1s ease-out 14.4s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(34) {
-  animation: fadeInOut 1s ease-out 14.85s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(35) {
-  animation: fadeInOut 1s ease-out 15.3s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(36) {
-  animation: fadeInOut 1s ease-out 15.75s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(37) {
-  animation: fadeInOut 1s ease-out 16.2s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(38) {
-  animation: fadeInOut 1s ease-out 16.65s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(39) {
-  animation: fadeInOut 1s ease-out 17.1s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(40) {
-  animation: fadeInOut 1s ease-out 17.55s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(41) {
-  animation: fadeInOut 1s ease-out 18s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(42) {
-  animation: fadeInOut 1s ease-out 18.45s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(43) {
-  animation: fadeInOut 1s ease-out 18.9s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(44) {
-  animation: fadeInOut 1s ease-out 19.35s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(45) {
-  animation: fadeInOut 1s ease-out 19.8s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(46) {
-  animation: fadeInOut 1s ease-out 20.25s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(47) {
-  animation: fadeInOut 1s ease-out 20.7s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(48) {
-  animation: fadeInOut 1s ease-out 21.15s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(49) {
-  animation: fadeInOut 1s ease-out 21.6s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(50) {
-  animation: fadeInOut 1s ease-out 22.05s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(51) {
-  animation: fadeInOut 1s ease-out 22.5s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(52) {
-  animation: fadeInOut 1s ease-out 22.95s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(53) {
-  animation: fadeInOut 1s ease-out 23.4s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(54) {
-  animation: fadeInOut 1s ease-out 23.85s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(55) {
-  animation: fadeInOut 1s ease-out 24.3s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(56) {
-  animation: fadeInOut 1s ease-out 24.75s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(57) {
-  animation: fadeInOut 1s ease-out 25.2s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(58) {
-  animation: fadeInOut 1s ease-out 25.65s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(59) {
-  animation: fadeInOut 1s ease-out 26.1s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(60) {
-  animation: fadeInOut 1s ease-out 26.55s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(61) {
-  animation: fadeInOut 1s ease-out 27s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(62) {
-  animation: fadeInOut 1s ease-out 27.45s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(63) {
-  animation: fadeInOut 1s ease-out 27.9s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(64) {
-  animation: fadeInOut 1s ease-out 28.35s;
-}
-.card .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:last-child {
-  animation: fadeIn 1s ease-in-out 28.35s;
-  animation-fill-mode: both;
+.card .tab-content label {
+  z-index: 1;
+  margin: 3.5vw 0 0 0;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  width: 4vw;
+  height: 4vw;
+  right: 4.9vw;
+  border-radius: 50%;
+}
+.card .tab-content label:before {
+  content: "";
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 5%, rgba(0, 0, 0, 0.3) 11%, transparent 12%, transparent 40%, rgba(255, 255, 255, 0.8) 90%);
+  box-shadow: rgb(255, 255, 255) 0 0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.45) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.25) 0 1.1vw 1.5vw -0.2vw;
+}
+.card .tab-content label:after {
+  content: "start";
+  top: 4vw;
+  position: absolute;
+  width: 3.7vw;
+  height: 3.7vw;
+  font-size: 0.8vw;
+  text-align: center;
+  font-family: "Geologica", sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.card .tab-content label:hover:before {
+  background: radial-gradient(circle at center, rgba(255, 97, 26, 0.3) 5%, rgba(181, 61, 4, 0.4) 11%, transparent 12%, transparent 40%, rgba(255, 255, 255, 0.8) 90%);
+  box-shadow: rgb(255, 255, 255) 0 0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.3) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.2) 0 1.1vw 1.5vw -0.2vw;
+  transition: all 200ms ease-in-out;
+}
+.card .tab-content :checked + label:hover:before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(255, 97, 26, 0.8) 5%, rgb(181, 61, 4) 11%, transparent 12%, transparent 40%, rgb(255, 255, 255) 90%);
+  box-shadow: rgb(255, 255, 255) 0 0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.15) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.12) 0 1.1vw 1.5vw -0.2vw;
+  transition: all 200ms ease-in-out;
+}
+.card .tab-content :checked + label:before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(255, 97, 26, 0.8) 5%, rgba(181, 61, 4, 0.8) 11%, transparent 12%, transparent 40%, rgba(255, 255, 255, 0.8) 90%);
+  box-shadow: rgb(255, 255, 255) 0 0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.1) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.1) 0 1.1vw 1.5vw -0.2vw;
+}
+.card .tab-content :checked + label:after {
+  content: "stop";
 }
 @keyframes fadeInOut {
   0%, 100% {
     opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  100% {
+  3% {
     opacity: 1;
   }
+  5% {
+    opacity: 0;
+  }
+}
+.card .tabs > input:nth-child(1):checked ~ .tab-content {
+  display: block;
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content { /* styling content of tab 2 */
   display: block;
@@ -720,7 +381,7 @@ header p {
   bottom: 0;
   left: 5px;
   width: calc(100% + 15px);
-  background-color: #111;
+  background-color: black;
   -webkit-clip-path: circle(3px at calc(100% - 16px) calc(100% - var(--value) + 5px));
           clip-path: circle(3px at calc(100% - 16px) calc(100% - var(--value) + 5px));
 }
@@ -733,7 +394,7 @@ header p {
   position: absolute;
   bottom: 0;
   width: calc(100% + 3px);
-  background-color: #111;
+  background-color: black;
   height: calc(90% - 5px);
   -webkit-clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 1px), 0 calc(100% - var(--previous-value) + 1px));
           clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 1px), 0 calc(100% - var(--previous-value) + 1px));
@@ -754,8 +415,8 @@ header p {
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content table {
   display: flex;
-  border-left: 1px solid #111;
-  border-bottom: 1px solid #111;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content td.year { /* hide years */
   position: absolute;
@@ -767,7 +428,7 @@ header p {
   position: absolute;
   width: 1px;
   height: 5px;
-  background: #111;
+  background: black;
   margin-top: -0.4vw;
   margin-left: 1vw;
 }
@@ -784,6 +445,9 @@ header p {
   margin-top: -21px;
   margin-left: -2px;
 }
+.card .tabs > input:nth-child(2):checked ~ .tab-content label {
+  display: none;
+}
 .card .tabs > input:nth-child(3):checked ~ .tab-content table {
   width: 95%;
   max-width: 500px;
@@ -791,26 +455,29 @@ header p {
 }
 .card .tabs > input:nth-child(3):checked ~ .tab-content table th, .card .tabs > input:nth-child(3):checked ~ .tab-content table td {
   padding: 8px;
-  border: 1px solid #111;
+  border: 1px solid #ddd;
   text-align: left;
 }
-.card .bottom {
+.card .tabs > input:nth-child(3):checked ~ .tab-content label {
+  display: none;
+}
+.card footer {
   grid-area: 7/1/8/3;
   position: absolute;
   width: 100%;
   height: 3vw;
   bottom: 0;
-  background: white;
-  border-top: 0.5px dashed #111;
+  background: #f4f4f4;
+  border-top: 0.5px dashed #222;
   font-weight: 200;
   line-height: 2.3;
   z-index: 3;
 }
-.card .bottom span {
+.card footer span {
   padding: 0.8vw 5vw 0.8vw 1.5vw;
 }
-.card .bottom span:first-of-type {
-  border-right: 0.5px dashed #111;
+.card footer span:first-of-type {
+  border-right: 0.5px dashed #222;
 }
 .card dl.references {
   grid-area: 1/2/8/3;
@@ -821,16 +488,16 @@ header p {
   position: absolute;
   right: 0;
   bottom: 0;
-  border-right: 0.5px dashed #111;
-  background: #fff;
-  padding: calc(3vw - 0.2px) 0 0 0;
+  border-right: 0.5px dashed #222;
+  background: #f4f4f4;
+  padding: calc(3vw - 0.5px) 0 0 0;
   line-height: 2;
   display: flex;
   margin: 0;
   z-index: 3;
 }
 .card dl.references dt {
-  border-top: 0.5px dashed #111;
+  border-top: 0.5px dashed #222;
   margin: 0 0 1vw 0;
   padding-top: 2vw;
 }
@@ -841,7 +508,7 @@ header p {
   padding: 0 0 1.5vw 0;
 }
 .card dl.references dd a {
-  color: #111;
+  color: #222;
   text-decoration-style: dotted;
   text-decoration-thickness: 1px;
 }
@@ -852,129 +519,133 @@ header p {
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content {
   display: block;
 }
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr {
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr {
   opacity: 0;
+  animation: fadeInOut 18s linear infinite;
+  animation-fill-mode: forwards;
 }
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(3) {
-  animation: fadeInOut 1s ease-out 0.9s;
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(1) {
+  display: none;
 }
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(4) {
-  animation: fadeInOut 1s ease-out 1.35s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(5) {
-  animation: fadeInOut 1s ease-out 1.8s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(6) {
-  animation: fadeInOut 1s ease-out 2.25s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(7) {
-  animation: fadeInOut 1s ease-out 2.7s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(8) {
-  animation: fadeInOut 1s ease-out 3.15s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(9) {
-  animation: fadeInOut 1s ease-out 3.6s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(10) {
-  animation: fadeInOut 1s ease-out 4.05s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(11) {
-  animation: fadeInOut 1s ease-out 4.5s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(12) {
-  animation: fadeInOut 1s ease-out 4.95s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(13) {
-  animation: fadeInOut 1s ease-out 5.4s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(14) {
-  animation: fadeInOut 1s ease-out 5.85s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(15) {
-  animation: fadeInOut 1s ease-out 6.3s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(16) {
-  animation: fadeInOut 1s ease-out 6.75s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(17) {
-  animation: fadeInOut 1s ease-out 7.2s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(18) {
-  animation: fadeInOut 1s ease-out 7.65s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(19) {
-  animation: fadeInOut 1s ease-out 8.1s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(20) {
-  animation: fadeInOut 1s ease-out 8.55s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(21) {
-  animation: fadeInOut 1s ease-out 9s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(22) {
-  animation: fadeInOut 1s ease-out 9.45s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(23) {
-  animation: fadeInOut 1s ease-out 9.9s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(24) {
-  animation: fadeInOut 1s ease-out 10.35s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(25) {
-  animation: fadeInOut 1s ease-out 10.8s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(26) {
-  animation: fadeInOut 1s ease-out 11.25s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(27) {
-  animation: fadeInOut 1s ease-out 11.7s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(28) {
-  animation: fadeInOut 1s ease-out 12.15s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(29) {
-  animation: fadeInOut 1s ease-out 12.6s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(30) {
-  animation: fadeInOut 1s ease-out 13.05s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(31) {
-  animation: fadeInOut 1s ease-out 13.5s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(32) {
-  animation: fadeInOut 1s ease-out 13.95s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(33) {
-  animation: fadeInOut 1s ease-out 14.4s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(34) {
-  animation: fadeInOut 1s ease-out 14.85s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(35) {
-  animation: fadeInOut 1s ease-out 15.3s;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:last-child {
-  animation: fadeIn 1s ease-in-out 15.3s;
-  animation-fill-mode: both;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) {
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(2) {
   opacity: 1;
   animation: none;
 }
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(2) {
+  animation-delay: 0s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(4) {
+  animation-delay: 1s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(5) {
+  animation-delay: 1.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(6) {
+  animation-delay: 2s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(7) {
+  animation-delay: 2.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(8) {
+  animation-delay: 3s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(9) {
+  animation-delay: 3.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(10) {
+  animation-delay: 4s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(11) {
+  animation-delay: 4.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(12) {
+  animation-delay: 5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(13) {
+  animation-delay: 5.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(14) {
+  animation-delay: 6s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(15) {
+  animation-delay: 6.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(16) {
+  animation-delay: 7s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(17) {
+  animation-delay: 7.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(18) {
+  animation-delay: 8s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(19) {
+  animation-delay: 8.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(20) {
+  animation-delay: 9s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(21) {
+  animation-delay: 9.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(22) {
+  animation-delay: 10s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(23) {
+  animation-delay: 10.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(24) {
+  animation-delay: 11s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(25) {
+  animation-delay: 11.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(26) {
+  animation-delay: 12s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(27) {
+  animation-delay: 12.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(28) {
+  animation-delay: 13s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(29) {
+  animation-delay: 13.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(30) {
+  animation-delay: 14s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(31) {
+  animation-delay: 14.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(32) {
+  animation-delay: 15s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(33) {
+  animation-delay: 15.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(34) {
+  animation-delay: 16s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(35) {
+  animation-delay: 16.5s;
+}
+.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-0:checked ~ table tr:nth-child(36) {
+  animation-delay: 17s;
+}
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #111;
+  background: #f1f1f1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  border: 0.05vw solid #8e8e8e;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar span {
-  color: #111;
-}
-.card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
-  opacity: 1;
+  color: #222;
 }
 .card:nth-child(1) .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar {
   position: absolute;
-  border: 1px solid #111;
-  background: #fff;
   width: calc(var(--value) * 0.5);
   padding-bottom: calc(var(--value) * 0.5);
   top: calc(var(--value) * 0.7);
@@ -990,214 +661,215 @@ header p {
   /* styling content of tab 3 */
   display: block;
 }
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr {
+  opacity: 0;
+  animation: fadeInOut 32.5s linear infinite;
+  animation-fill-mode: forwards;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(1) {
+  display: none;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(2) {
+  opacity: 1;
+  animation: none;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(4) {
+  animation-delay: 1s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(5) {
+  animation-delay: 1.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(6) {
+  animation-delay: 2s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(7) {
+  animation-delay: 2.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(8) {
+  animation-delay: 3s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(9) {
+  animation-delay: 3.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(10) {
+  animation-delay: 4s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(11) {
+  animation-delay: 4.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(12) {
+  animation-delay: 5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(13) {
+  animation-delay: 5.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(14) {
+  animation-delay: 6s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(15) {
+  animation-delay: 6.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(16) {
+  animation-delay: 7s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(17) {
+  animation-delay: 7.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(18) {
+  animation-delay: 8s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(19) {
+  animation-delay: 8.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(20) {
+  animation-delay: 9s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(21) {
+  animation-delay: 9.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(22) {
+  animation-delay: 10s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(23) {
+  animation-delay: 10.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(24) {
+  animation-delay: 11s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(25) {
+  animation-delay: 11.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(26) {
+  animation-delay: 12s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(27) {
+  animation-delay: 12.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(28) {
+  animation-delay: 13s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(29) {
+  animation-delay: 13.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(30) {
+  animation-delay: 14s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(31) {
+  animation-delay: 14.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(32) {
+  animation-delay: 15s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(33) {
+  animation-delay: 15.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(34) {
+  animation-delay: 16s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(35) {
+  animation-delay: 16.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(36) {
+  animation-delay: 17s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(37) {
+  animation-delay: 17.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(38) {
+  animation-delay: 18s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(39) {
+  animation-delay: 18.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(40) {
+  animation-delay: 19s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(41) {
+  animation-delay: 19.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(42) {
+  animation-delay: 20s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(43) {
+  animation-delay: 20.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(44) {
+  animation-delay: 21s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(45) {
+  animation-delay: 21.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(46) {
+  animation-delay: 22s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(47) {
+  animation-delay: 22.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(48) {
+  animation-delay: 23s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(49) {
+  animation-delay: 23.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(50) {
+  animation-delay: 24s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(51) {
+  animation-delay: 24.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(52) {
+  animation-delay: 25s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(53) {
+  animation-delay: 25.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(54) {
+  animation-delay: 26s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(55) {
+  animation-delay: 26.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(56) {
+  animation-delay: 27s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(57) {
+  animation-delay: 27.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(58) {
+  animation-delay: 28s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(59) {
+  animation-delay: 28.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(60) {
+  animation-delay: 29s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(61) {
+  animation-delay: 29.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(62) {
+  animation-delay: 30s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(63) {
+  animation-delay: 30.5s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(64) {
+  animation-delay: 31s;
+}
+.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-1:checked ~ table tr:nth-child(65) {
+  animation-delay: 31.5s;
+}
 .card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:before {
   position: absolute;
   content: "";
-  border-left: 1px solid #111;
+  border-left: 1px solid black;
   width: 5vw;
   height: 30vw;
   top: 1vw;
   left: 50%;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr {
-  opacity: 0;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(3) {
-  animation: fadeInOut 1s ease-out 0.9s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(4) {
-  animation: fadeInOut 1s ease-out 1.35s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(5) {
-  animation: fadeInOut 1s ease-out 1.8s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(6) {
-  animation: fadeInOut 1s ease-out 2.25s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(7) {
-  animation: fadeInOut 1s ease-out 2.7s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(8) {
-  animation: fadeInOut 1s ease-out 3.15s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(9) {
-  animation: fadeInOut 1s ease-out 3.6s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(10) {
-  animation: fadeInOut 1s ease-out 4.05s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(11) {
-  animation: fadeInOut 1s ease-out 4.5s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(12) {
-  animation: fadeInOut 1s ease-out 4.95s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(13) {
-  animation: fadeInOut 1s ease-out 5.4s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(14) {
-  animation: fadeInOut 1s ease-out 5.85s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(15) {
-  animation: fadeInOut 1s ease-out 6.3s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(16) {
-  animation: fadeInOut 1s ease-out 6.75s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(17) {
-  animation: fadeInOut 1s ease-out 7.2s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(18) {
-  animation: fadeInOut 1s ease-out 7.65s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(19) {
-  animation: fadeInOut 1s ease-out 8.1s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(20) {
-  animation: fadeInOut 1s ease-out 8.55s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(21) {
-  animation: fadeInOut 1s ease-out 9s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(22) {
-  animation: fadeInOut 1s ease-out 9.45s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(23) {
-  animation: fadeInOut 1s ease-out 9.9s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(24) {
-  animation: fadeInOut 1s ease-out 10.35s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(25) {
-  animation: fadeInOut 1s ease-out 10.8s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(26) {
-  animation: fadeInOut 1s ease-out 11.25s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(27) {
-  animation: fadeInOut 1s ease-out 11.7s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(28) {
-  animation: fadeInOut 1s ease-out 12.15s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(29) {
-  animation: fadeInOut 1s ease-out 12.6s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(30) {
-  animation: fadeInOut 1s ease-out 13.05s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(31) {
-  animation: fadeInOut 1s ease-out 13.5s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(32) {
-  animation: fadeInOut 1s ease-out 13.95s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(33) {
-  animation: fadeInOut 1s ease-out 14.4s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(34) {
-  animation: fadeInOut 1s ease-out 14.85s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(35) {
-  animation: fadeInOut 1s ease-out 15.3s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(36) {
-  animation: fadeInOut 1s ease-out 15.75s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(37) {
-  animation: fadeInOut 1s ease-out 16.2s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(38) {
-  animation: fadeInOut 1s ease-out 16.65s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(39) {
-  animation: fadeInOut 1s ease-out 17.1s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(40) {
-  animation: fadeInOut 1s ease-out 17.55s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(41) {
-  animation: fadeInOut 1s ease-out 18s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(42) {
-  animation: fadeInOut 1s ease-out 18.45s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(43) {
-  animation: fadeInOut 1s ease-out 18.9s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(44) {
-  animation: fadeInOut 1s ease-out 19.35s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(45) {
-  animation: fadeInOut 1s ease-out 19.8s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(46) {
-  animation: fadeInOut 1s ease-out 20.25s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(47) {
-  animation: fadeInOut 1s ease-out 20.7s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(48) {
-  animation: fadeInOut 1s ease-out 21.15s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(49) {
-  animation: fadeInOut 1s ease-out 21.6s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(50) {
-  animation: fadeInOut 1s ease-out 22.05s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(51) {
-  animation: fadeInOut 1s ease-out 22.5s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(52) {
-  animation: fadeInOut 1s ease-out 22.95s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(53) {
-  animation: fadeInOut 1s ease-out 23.4s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(54) {
-  animation: fadeInOut 1s ease-out 23.85s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(55) {
-  animation: fadeInOut 1s ease-out 24.3s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(56) {
-  animation: fadeInOut 1s ease-out 24.75s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(57) {
-  animation: fadeInOut 1s ease-out 25.2s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(58) {
-  animation: fadeInOut 1s ease-out 25.65s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(59) {
-  animation: fadeInOut 1s ease-out 26.1s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(60) {
-  animation: fadeInOut 1s ease-out 26.55s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(61) {
-  animation: fadeInOut 1s ease-out 27s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(62) {
-  animation: fadeInOut 1s ease-out 27.45s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(63) {
-  animation: fadeInOut 1s ease-out 27.9s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(64) {
-  animation: fadeInOut 1s ease-out 28.35s;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:last-child {
-  animation: fadeIn 1s ease-in-out 28.35s;
-  animation-fill-mode: both;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) {
-  opacity: 1;
-  animation: none;
-}
-.card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #fff;
 }
 .card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
   opacity: 1;
@@ -1207,278 +879,294 @@ header p {
   top: calc(var(--value) * -2.7 + 29vw);
   left: 50%;
   border-radius: 50%;
-  background: #111;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content {
   /* styling content of tab 3 */
   display: block;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr {
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr {
   opacity: 0;
+  animation: fadeInOut 22s linear infinite;
+  animation-fill-mode: forwards;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(3) {
-  animation: fadeInOut 1s ease-out 0.9s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(1) {
+  display: none;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(4) {
-  animation: fadeInOut 1s ease-out 1.35s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(2) {
+  opacity: 1;
+  animation: none;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(5) {
-  animation: fadeInOut 1s ease-out 1.8s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(3) {
+  animation-delay: 0.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(6) {
-  animation: fadeInOut 1s ease-out 2.25s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(4) {
+  animation-delay: 1s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(7) {
-  animation: fadeInOut 1s ease-out 2.7s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(5) {
+  animation-delay: 1.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(8) {
-  animation: fadeInOut 1s ease-out 3.15s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(6) {
+  animation-delay: 2s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(9) {
-  animation: fadeInOut 1s ease-out 3.6s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(7) {
+  animation-delay: 2.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(10) {
-  animation: fadeInOut 1s ease-out 4.05s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(8) {
+  animation-delay: 3s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(11) {
-  animation: fadeInOut 1s ease-out 4.5s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(9) {
+  animation-delay: 3.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(12) {
-  animation: fadeInOut 1s ease-out 4.95s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(10) {
+  animation-delay: 4s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(13) {
-  animation: fadeInOut 1s ease-out 5.4s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(11) {
+  animation-delay: 4.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(14) {
-  animation: fadeInOut 1s ease-out 5.85s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(12) {
+  animation-delay: 5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(15) {
-  animation: fadeInOut 1s ease-out 6.3s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(13) {
+  animation-delay: 5.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(16) {
-  animation: fadeInOut 1s ease-out 6.75s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(14) {
+  animation-delay: 6s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(17) {
-  animation: fadeInOut 1s ease-out 7.2s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(15) {
+  animation-delay: 6.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(18) {
-  animation: fadeInOut 1s ease-out 7.65s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(16) {
+  animation-delay: 7s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(19) {
-  animation: fadeInOut 1s ease-out 8.1s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(17) {
+  animation-delay: 7.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(20) {
-  animation: fadeInOut 1s ease-out 8.55s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(18) {
+  animation-delay: 8s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(21) {
-  animation: fadeInOut 1s ease-out 9s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(19) {
+  animation-delay: 8.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(22) {
-  animation: fadeInOut 1s ease-out 9.45s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(20) {
+  animation-delay: 9s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(23) {
-  animation: fadeInOut 1s ease-out 9.9s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(21) {
+  animation-delay: 9.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(24) {
-  animation: fadeInOut 1s ease-out 10.35s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(22) {
+  animation-delay: 10s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(25) {
-  animation: fadeInOut 1s ease-out 10.8s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(23) {
+  animation-delay: 10.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(26) {
-  animation: fadeInOut 1s ease-out 11.25s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(24) {
+  animation-delay: 11s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(27) {
-  animation: fadeInOut 1s ease-out 11.7s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(25) {
+  animation-delay: 11.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(28) {
-  animation: fadeInOut 1s ease-out 12.15s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(26) {
+  animation-delay: 12s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(29) {
-  animation: fadeInOut 1s ease-out 12.6s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(27) {
+  animation-delay: 12.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(30) {
-  animation: fadeInOut 1s ease-out 13.05s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(28) {
+  animation-delay: 13s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(31) {
-  animation: fadeInOut 1s ease-out 13.5s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(29) {
+  animation-delay: 13.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(32) {
-  animation: fadeInOut 1s ease-out 13.95s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(30) {
+  animation-delay: 14s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(33) {
-  animation: fadeInOut 1s ease-out 14.4s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(31) {
+  animation-delay: 14.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(34) {
-  animation: fadeInOut 1s ease-out 14.85s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(32) {
+  animation-delay: 15s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(35) {
-  animation: fadeInOut 1s ease-out 15.3s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(33) {
+  animation-delay: 15.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(36) {
-  animation: fadeInOut 1s ease-out 15.75s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(34) {
+  animation-delay: 16s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(37) {
-  animation: fadeInOut 1s ease-out 16.2s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(35) {
+  animation-delay: 16.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(38) {
-  animation: fadeInOut 1s ease-out 16.65s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(36) {
+  animation-delay: 17s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(39) {
-  animation: fadeInOut 1s ease-out 17.1s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(37) {
+  animation-delay: 17.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(40) {
-  animation: fadeInOut 1s ease-out 17.55s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(38) {
+  animation-delay: 18s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(41) {
-  animation: fadeInOut 1s ease-out 18s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(39) {
+  animation-delay: 18.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(42) {
-  animation: fadeInOut 1s ease-out 18.45s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(40) {
+  animation-delay: 19s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(43) {
-  animation: fadeInOut 1s ease-out 18.9s;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(41) {
+  animation-delay: 19.5s;
 }
-.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:last-child {
-  animation: fadeIn 1s ease-in-out 18.9s;
-  animation-fill-mode: both;
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(42) {
+  animation-delay: 20s;
+}
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(43) {
+  animation-delay: 20.5s;
+}
+.card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-2:checked ~ table tr:nth-child(44) {
+  animation-delay: 21s;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) {
   opacity: 1;
   animation: none;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: transparent;
   left: 50%;
+  z-index: 0;
+  background: linear-gradient(135deg, #f1f1f1, rgb(238, 238, 238) 0%, #f1f1f1, rgb(227, 227, 227) 100%);
+  box-shadow: rgba(0, 0, 0, 0.39) 3px 3px 7px 0px, rgb(255, 255, 255) -3px -3px 4px 1px, rgba(255, 255, 255, 0) 1px 1px 8px 0px inset;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar span {
-  color: #111;
+  color: #222;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
   opacity: 1;
 }
 .card:nth-child(3) .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar {
   position: absolute;
-  top: 1vw;
+  top: 3vw;
   left: 50%;
   transform: translate(-50%, 0);
-  border: 1px solid black;
   border-radius: 50%;
+  width: calc(var(--value) * 0.65);
+  padding-bottom: calc(var(--value) * 0.65);
   background: #111;
-  width: calc(var(--value) * 0.8);
-  padding-bottom: calc(var(--value) * 0.8);
   z-index: 1;
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content {
   /* styling content of tab 3 */
   display: block;
 }
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr {
+  opacity: 0;
+  animation: fadeInOut 15.5s linear infinite;
+  animation-fill-mode: forwards;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(1) {
+  display: none;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(2) {
+  opacity: 1;
+  animation: none;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(4) {
+  animation-delay: 1s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(5) {
+  animation-delay: 1.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(6) {
+  animation-delay: 2s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(7) {
+  animation-delay: 2.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(8) {
+  animation-delay: 3s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(9) {
+  animation-delay: 3.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(10) {
+  animation-delay: 4s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(11) {
+  animation-delay: 4.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(12) {
+  animation-delay: 5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(13) {
+  animation-delay: 5.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(14) {
+  animation-delay: 6s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(15) {
+  animation-delay: 6.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(16) {
+  animation-delay: 7s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(17) {
+  animation-delay: 7.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(18) {
+  animation-delay: 8s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(19) {
+  animation-delay: 8.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(20) {
+  animation-delay: 9s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(21) {
+  animation-delay: 9.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(22) {
+  animation-delay: 10s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(23) {
+  animation-delay: 10.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(24) {
+  animation-delay: 11s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(25) {
+  animation-delay: 11.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(26) {
+  animation-delay: 12s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(27) {
+  animation-delay: 12.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(28) {
+  animation-delay: 13s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(29) {
+  animation-delay: 13.5s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(30) {
+  animation-delay: 14s;
+}
+.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content #replayButton-3:checked ~ table tr:nth-child(31) {
+  animation-delay: 14.5s;
+}
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:before {
   position: absolute;
   content: "";
-  border-left: 1px solid #fff;
+  border-left: 1px solid black;
   width: 5vw;
   height: 34vw;
   top: -1vw;
   transform: translate(12vw, 0);
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr {
-  opacity: 0;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(3) {
-  animation: fadeInOut 1s ease-out 0.9s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(4) {
-  animation: fadeInOut 1s ease-out 1.35s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(5) {
-  animation: fadeInOut 1s ease-out 1.8s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(6) {
-  animation: fadeInOut 1s ease-out 2.25s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(7) {
-  animation: fadeInOut 1s ease-out 2.7s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(8) {
-  animation: fadeInOut 1s ease-out 3.15s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(9) {
-  animation: fadeInOut 1s ease-out 3.6s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(10) {
-  animation: fadeInOut 1s ease-out 4.05s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(11) {
-  animation: fadeInOut 1s ease-out 4.5s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(12) {
-  animation: fadeInOut 1s ease-out 4.95s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(13) {
-  animation: fadeInOut 1s ease-out 5.4s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(14) {
-  animation: fadeInOut 1s ease-out 5.85s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(15) {
-  animation: fadeInOut 1s ease-out 6.3s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(16) {
-  animation: fadeInOut 1s ease-out 6.75s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(17) {
-  animation: fadeInOut 1s ease-out 7.2s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(18) {
-  animation: fadeInOut 1s ease-out 7.65s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(19) {
-  animation: fadeInOut 1s ease-out 8.1s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(20) {
-  animation: fadeInOut 1s ease-out 8.55s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(21) {
-  animation: fadeInOut 1s ease-out 9s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(22) {
-  animation: fadeInOut 1s ease-out 9.45s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(23) {
-  animation: fadeInOut 1s ease-out 9.9s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(24) {
-  animation: fadeInOut 1s ease-out 10.35s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(25) {
-  animation: fadeInOut 1s ease-out 10.8s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(26) {
-  animation: fadeInOut 1s ease-out 11.25s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(27) {
-  animation: fadeInOut 1s ease-out 11.7s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(28) {
-  animation: fadeInOut 1s ease-out 12.15s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(29) {
-  animation: fadeInOut 1s ease-out 12.6s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:nth-child(30) {
-  animation: fadeInOut 1s ease-out 13.05s;
-}
-.card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table:hover tr:last-child {
-  animation: fadeIn 1s ease-in-out 13.05s;
-  animation-fill-mode: both;
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) {
   opacity: 1;
   animation: none;
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
-  background: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr:last-child {
   opacity: 1;
@@ -1486,8 +1174,7 @@ header p {
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar {
   width: 20vw;
   padding-bottom: 0.5vw;
-  top: calc(var(--value) * -5.9 + 30vw);
-  background: #111;
+  top: calc(var(--value) * -4.9 + 30vw);
   left: 50%;
 }
 .card:nth-child(4) .tabs > input:nth-child(1):checked ~ .tab-content table tr .extent-bar span {
@@ -1495,22 +1182,6 @@ header p {
   bottom: 0;
   left: 50%;
   opacity: 0;
-}
-
-footer {
-  border-top: 1px solid #111;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px 0 0 0;
-}
-footer a {
-  color: #111;
-  text-decoration: none;
-  cursor: pointer;
-}
-footer a:hover {
-  text-decoration: underline;
-  opacity: 0.7;
 }
 
 @media (max-width: 1200px) {
@@ -1549,6 +1220,58 @@ footer a:hover {
     margin: 30px 20px 30px 20px;
     width: calc(100% - 33px);
   }
+  .card-wrapper .card .tabs .tab-content label {
+    z-index: 1;
+    margin: 35px 0 0 0;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    right: 65px;
+    border-radius: 50%;
+  }
+  .card-wrapper .card .tabs .tab-content label:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 5%, rgba(0, 0, 0, 0.3) 11%, transparent 12%, transparent 40%, rgba(255, 255, 255, 0.8) 90%);
+    box-shadow: rgb(255, 255, 255) 0 0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.45) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.25) 0 1.1vw 1.5vw -0.2vw;
+  }
+  .card-wrapper .card .tabs .tab-content label:after {
+    content: "start";
+    top: 45px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+    text-align: center;
+  }
+  .card-wrapper .card .tabs .tab-content label:hover:before {
+    background: radial-gradient(circle at center, rgba(255, 97, 26, 0.3) 5%, rgba(181, 61, 4, 0.4) 11%, transparent 12%, transparent 40%, rgba(255, 255, 255, 0.8) 90%);
+    box-shadow: rgb(255, 255, 255) 0 0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.2vw 0.3vw 0.1vw inset, rgba(0, 0, 0, 0.3) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.2) 0 1.1vw 1.5vw -0.2vw;
+    transition: all 200ms ease-in-out;
+  }
+  .card-wrapper .card .tabs .tab-content :checked + label:hover:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(255, 97, 26, 0.8) 5%, rgb(181, 61, 4) 11%, transparent 12%, transparent 40%, rgb(255, 255, 255) 90%);
+    box-shadow: rgb(255, 255, 255) 0 0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.15) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.12) 0 1.1vw 1.5vw -0.2vw;
+    transition: all 200ms ease-in-out;
+  }
+  .card-wrapper .card .tabs .tab-content :checked + label:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(255, 97, 26, 0.8) 5%, rgba(181, 61, 4, 0.8) 11%, transparent 12%, transparent 40%, rgba(255, 255, 255, 0.8) 90%);
+    box-shadow: rgb(255, 255, 255) 0 0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.25) 0 -0.3vw 0.4vw 0.1vw inset, rgba(0, 0, 0, 0.1) 0 0.2vw 0.4vw -0.1vw, rgba(0, 0, 0, 0.1) 0 1.1vw 1.5vw -0.2vw;
+  }
+  .card-wrapper .card .tabs .tab-content :checked + label:after {
+    content: "stop";
+  }
   .card-wrapper .card .tabs > input:nth-child(1):checked ~ .tab-content {
     display: block;
   }
@@ -1581,14 +1304,14 @@ footer a:hover {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: -0.2vw;
-    border: 1px dashed #111;
+    border: 1px dashed #222;
   }
   .card-wrapper .card dl.references {
     height: 130vw;
     width: 34px;
-    padding-top: 33px;
+    padding-top: 32.5px;
   }
-  .card-wrapper .card .bottom {
+  .card-wrapper .card footer {
     height: 33px;
   }
   .card-wrapper .card:nth-child(2) .tabs > input:nth-child(1):checked ~ .tab-content table:before {
