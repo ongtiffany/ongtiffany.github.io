@@ -38,14 +38,14 @@ const jsonData = [
       { year: "2021", CO2Emissions: 36.198618 },
       { year: "2022", CO2Emissions: 36.496956 },
       { year: "2023", CO2Emissions: 37.007293 },
-      { year: "2024", CO2Emissions: 37.406451 }
+      { year: "2024", CO2Emissions: 37.406451 },
     ],
     th2: "Emissions in billion metric tons",
     side: {
       data: "<a href='https://www.globalcarbonproject.org'>GCP</a>",
       credit:
-        "<a href='https://climate.esa.int/en/little-pictures-gallery/carbon-dioxide-spiral/'>ESA Climate Office</a>"
-    }
+        "<a href='https://climate.esa.int/en/little-pictures-gallery/carbon-dioxide-spiral/'>ESA Climate Office</a>",
+    },
   },
   {
     title: "Temperature Rise",
@@ -115,15 +115,14 @@ const jsonData = [
       { year: "2020", temperatureAnomaly: 1.01 },
       { year: "2021", temperatureAnomaly: 0.85 },
       { year: "2022", temperatureAnomaly: 0.89 },
-      { year: "2023", temperatureAnomaly: 1.17 }
+      { year: "2023", temperatureAnomaly: 1.17 },
     ],
     th2: "Land-Ocean Temperature Index (C)",
     side: {
-      data:
-        "<a href='https://climate.nasa.gov/vital-signs/global-temperature/?intent=121'>NASA</a>",
+      data: "<a href='https://climate.nasa.gov/vital-signs/global-temperature/?intent=121'>NASA</a>",
       credit:
-        "<a href='https://climate.esa.int/nl/little-pictures-gallery/Arctic-sea-ice-loss-little-picture/'>ESA Climate Office</a>"
-    }
+        "<a href='https://climate.esa.int/nl/little-pictures-gallery/Arctic-sea-ice-loss-little-picture/'>ESA Climate Office</a>",
+    },
   },
 
   {
@@ -173,15 +172,14 @@ const jsonData = [
       { year: "2019", arcticSeaIceExtent: 4.8 },
       { year: "2020", arcticSeaIceExtent: 4.6 },
       { year: "2021", arcticSeaIceExtent: 5.5 },
-      { year: "2022", arcticSeaIceExtent: 5.4 }
+      { year: "2022", arcticSeaIceExtent: 5.4 },
     ],
     th2: "Extent (million square per mile)",
     side: {
-      data:
-        "<a href='https://osi-saf.eumetsat.int/products/sea-ice-products'>EUMETSAT</a>",
+      data: "<a href='https://https://osi-saf.eumetsat.int/products/sea-ice-products'>EUMETSAT</a>",
       credit:
-        "<a href='https://climate.esa.int/nl/little-pictures-gallery/Arctic-sea-ice-loss-little-picture/'>ESA Climate Office</a>"
-    }
+        "<a href='https://climate.esa.int/nl/little-pictures-gallery/Arctic-sea-ice-loss-little-picture/'>ESA Climate Office</a>",
+    },
   },
   {
     title: "Sea Level Rise",
@@ -217,16 +215,15 @@ const jsonData = [
       { year: "2019", seaLevelHeight: 53.25 },
       { year: "2020", seaLevelHeight: 53.52 },
       { year: "2021", seaLevelHeight: 54.01 },
-      { year: "2022", seaLevelHeight: 54.45 }
+      { year: "2022", seaLevelHeight: 54.45 },
     ],
     th2: "Sea height variation in millimeters",
     side: {
-      data:
-        "<a href='https://www.nasa.gov/stem-content/sea-level-height-data-set/'>NASA</a>",
+      data: "<a href='https://www.nasa.gov/stem-content/sea-level-height-data-set/'>NASA</a>",
       credit:
-        "<a href='https://climate.esa.int/nl/little-pictures-gallery/Arctic-sea-ice-loss-little-picture/'>ESA Climate Office</a>"
-    }
-  }
+        "<a href='https://climate.esa.int/nl/little-pictures-gallery/Arctic-sea-ice-loss-little-picture/'>ESA Climate Office</a>",
+    },
+  },
 ];
 
 // Function to create the HTML structure for a single card
@@ -284,6 +281,19 @@ function createCard(json, index) {
   // Create tab content container
   const tabContent = document.createElement("div");
   tabContent.className = "tab-content";
+
+  // Add the replay button only for the first tab
+  const replayButton = document.createElement("input");
+  replayButton.type = "checkbox";
+  replayButton.id = `replayButton-${index}`;
+  replayButton.checked = false; // Ensure replay button is not checked by default
+
+  const replayLabel = document.createElement("label");
+  replayLabel.htmlFor = `replayButton-${index}`;
+
+  // Append the replay button and label inside the tab-content only for the first tab
+  tabContent.appendChild(replayButton);
+  tabContent.appendChild(replayLabel);
 
   // Create the table
   const table = document.createElement("table");
@@ -345,7 +355,7 @@ function createCard(json, index) {
     table.appendChild(row);
   });
 
-  // Append the table directly to the tab content (no dataContainer)
+  // Append the table directly to the tab content
   tabContent.appendChild(table);
 
   // Append the tab content to the tabs
@@ -360,8 +370,7 @@ function createCard(json, index) {
   const yearsRange = lastYear - firstYear + 1;
 
   // Add footer
-  const footer = document.createElement("div");
-  footer.className = "bottom";
+  const footer = document.createElement("footer");
   footer.innerHTML = `<span>${yearsRange} Years</span> <span>${firstYear} - ${lastYear}</span>`;
   card.appendChild(footer);
 
