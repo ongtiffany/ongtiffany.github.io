@@ -243,7 +243,7 @@ height:120%;
         }
         .extent-bar{
           background:lighten($col-card, 10%);
-          border:0.5px solid $col-card;
+          border:0.05vw solid darken($col-card,30%);
           z-index:1;
           position: absolute;
           left: 50%;
@@ -283,7 +283,7 @@ height:120%;
      
        
     background-color: rgba(0, 0, 0, 0);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -5px 5px rgba(100, 100, 100, 0.1), inset 0 5px 5px rgba(255,255,255, 0.2);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -5px 5px rgba(100, 100, 100, 0.1), inset 0 5px 5px rgba(255,255,255, 0.2), rgba(255,255,255, 0.2) 3px 3px 4px 1px inset,rgba(0,0,0, 0.3) 3px 3px 6px 1px;
          background: $col-lastyear;
       width:20vw;
       padding-bottom:2vw;
@@ -640,8 +640,8 @@ grid-area: 1 / 2 / 8 / 3;
       &:nth-child(2) {
         .extent-bar{
   background:$col-firstyear;
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-          border:0.05vw solid darken($col-card,40%);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+          border:0.05vw solid black;
           span{
             color:$col-text;
           }//span
@@ -767,7 +767,7 @@ $full-animation-duration: $animation-duration * $numYears; // Total duration of 
           left:50%;
           z-index:0;
            background: linear-gradient(135deg, $col-firstyear, rgb(238, 238, 238) 0%, $col-firstyear, rgb(227, 227, 227) 100%);
-          box-shadow: rgba(0, 0, 0, 0.39) 3px 3px 7px 0px, rgb(255, 255, 255) -3px -3px 4px 1px, rgba(255, 255, 255, 0) 1px 1px 8px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.39) 3px 3px 7px 0px, rgb(255, 255, 255) 3px 3px 4px -1px inset, rgba(255, 255, 255, 0) 1px 1px 8px 0px inset;
           span{
             color:$col-text;
           }//span
