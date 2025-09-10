@@ -424,7 +424,7 @@ article header p {
   text-decoration: none;
   letter-spacing: 0.15em;
   display: inline-block;
-  padding: 15px 20px;
+  padding: 5px 20px;
   position: relative;
 }
 .grid figure h2:after {
