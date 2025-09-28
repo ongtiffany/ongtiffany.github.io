@@ -1711,7 +1711,7 @@ nav ol a .sentiment>.tooltiptext:before {
     border-bottom: 0.095vw dotted lightgray;
     top: 7vw;
 }
-
+ 
 nav .active {
     color: white;
 }

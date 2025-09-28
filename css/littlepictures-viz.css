@@ -5,7 +5,7 @@ body {
   font-family: "Anonymous Pro", serif;
   font-family: "Geologica", sans-serif;
   padding: 3vw 3vw;
-  background: #e5e5e5;
+  background: rgb(228.7, 228.7, 228.7);
 }
 
 a {
@@ -112,7 +112,7 @@ header {
   font-weight: bold;
 }
 .card .tabs .tab-label label:hover:before {
-  background: linear-gradient(-45deg, transparent, transparent 42%, #ffcbb3 42%, #ffcbb3 57%, transparent 57%, transparent 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 202.5633187773, 179) 42%, rgb(255, 202.5633187773, 179) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-0:checked ~ .tab-label label[for=tab1-0],
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0],
@@ -129,7 +129,7 @@ header {
 .card .tabs #tab2-0:checked ~ .tab-label label[for=tab2-0]:hover:before,
 .card .tabs #tab3-0:checked ~ .tab-label label[for=tab3-0]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 167.3755458515, 128) 42%, rgb(255, 167.3755458515, 128) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-1:checked ~ .tab-label label[for=tab1-1],
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1],
@@ -146,7 +146,7 @@ header {
 .card .tabs #tab2-1:checked ~ .tab-label label[for=tab2-1]:hover:before,
 .card .tabs #tab3-1:checked ~ .tab-label label[for=tab3-1]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 167.3755458515, 128) 42%, rgb(255, 167.3755458515, 128) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-2:checked ~ .tab-label label[for=tab1-2],
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2],
@@ -163,7 +163,7 @@ header {
 .card .tabs #tab2-2:checked ~ .tab-label label[for=tab2-2]:hover:before,
 .card .tabs #tab3-2:checked ~ .tab-label label[for=tab3-2]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 167.3755458515, 128) 42%, rgb(255, 167.3755458515, 128) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-3:checked ~ .tab-label label[for=tab1-3],
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3],
@@ -180,7 +180,7 @@ header {
 .card .tabs #tab2-3:checked ~ .tab-label label[for=tab2-3]:hover:before,
 .card .tabs #tab3-3:checked ~ .tab-label label[for=tab3-3]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 167.3755458515, 128) 42%, rgb(255, 167.3755458515, 128) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-4:checked ~ .tab-label label[for=tab1-4],
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4],
@@ -197,7 +197,7 @@ header {
 .card .tabs #tab2-4:checked ~ .tab-label label[for=tab2-4]:hover:before,
 .card .tabs #tab3-4:checked ~ .tab-label label[for=tab3-4]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 167.3755458515, 128) 42%, rgb(255, 167.3755458515, 128) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs #tab1-5:checked ~ .tab-label label[for=tab1-5],
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5],
@@ -214,7 +214,7 @@ header {
 .card .tabs #tab2-5:checked ~ .tab-label label[for=tab2-5]:hover:before,
 .card .tabs #tab3-5:checked ~ .tab-label label[for=tab3-5]:hover:before {
   background: #f0f0f0;
-  background: linear-gradient(-45deg, transparent, transparent 42%, #ffa780 42%, #ffa780 57%, transparent 57%, transparent 100%);
+  background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 167.3755458515, 128) 42%, rgb(255, 167.3755458515, 128) 57%, transparent 57%, transparent 100%);
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content {
   /* styling content of tab 3 */
@@ -247,7 +247,7 @@ header {
 }
 .card .tabs > input:nth-child(1):checked ~ .tab-content table tr:nth-child(2) .extent-bar {
   background: white;
-  border: 0.05vw solid #a8a8a8;
+  border: 0.05vw solid rgb(167.5, 167.5, 167.5);
   z-index: 1;
   position: absolute;
   left: 50%;
@@ -278,7 +278,7 @@ header {
   position: absolute;
   left: 100%;
   transform: translate(-50%, 0);
-  box-shadow: inset 10px 10px 25px 0px #0f0f0f;
+  box-shadow: inset 10px 10px 25px 0px rgb(14.5, 14.5, 14.5);
   background-color: rgba(0, 0, 0, 0);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -5px 5px rgba(100, 100, 100, 0.1), inset 0 5px 5px rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 3px 3px 4px 1px inset, rgba(0, 0, 0, 0.3) 3px 3px 6px 1px;
   background: #111;
@@ -386,12 +386,10 @@ header {
   left: 5px;
   width: calc(100% + 15px);
   background-color: black;
-  -webkit-clip-path: circle(3px at calc(100% - 16px) calc(100% - var(--value) + 5px));
-          clip-path: circle(3px at calc(100% - 16px) calc(100% - var(--value) + 5px));
+  clip-path: circle(3px at calc(100% - 16px) calc(100% - var(--value) + 5px));
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar:hover::before {
-  -webkit-clip-path: circle(5px at calc(100% - 16px) calc(100% - var(--value) + 5px));
-          clip-path: circle(5px at calc(100% - 16px) calc(100% - var(--value) + 5px));
+  clip-path: circle(5px at calc(100% - 16px) calc(100% - var(--value) + 5px));
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar::after {
   content: "";
@@ -400,12 +398,10 @@ header {
   width: calc(100% + 3px);
   background-color: black;
   height: calc(90% - 5px);
-  -webkit-clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 1px), 0 calc(100% - var(--previous-value) + 1px));
-          clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 1px), 0 calc(100% - var(--previous-value) + 1px));
+  clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 1px), 0 calc(100% - var(--previous-value) + 1px));
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar:hover::after {
-  -webkit-clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 2px), 0 calc(100% - var(--previous-value) + 2px));
-          clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 2px), 0 calc(100% - var(--previous-value) + 2px));
+  clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 2px), 0 calc(100% - var(--previous-value) + 2px));
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar span {
   position: absolute;
@@ -476,7 +472,7 @@ header {
   font-weight: 200;
   line-height: 2.3;
   z-index: 3;
-  padding-top:0;
+  padding-top: 0;
 }
 .card footer span {
   padding: 0.8vw 5vw 0.8vw 1.5vw;

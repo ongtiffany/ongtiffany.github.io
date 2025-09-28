@@ -428,12 +428,12 @@ article header {
 
 .grid {
   position: relative;
-  margin: 40px auto 0 auto;
+  margin: 40px 2% 0 2%;
   list-style: none;
   text-align: center;
   max-width: 1700px;
   float: left;
-  width: 100%;
+  width: 96%;
   .codepen{
     position: relative;
     float: left;
@@ -458,10 +458,10 @@ article header {
     position: relative;
     float: left;
     overflow: hidden;
-    width: 31.3%;
+    width: 40%;
     text-align: center;
     cursor: pointer;
-    margin: 1%;
+    margin: 0 5% 0 5%;
   a{
     text-decoration: none;
     }
@@ -502,30 +502,30 @@ article header {
     figcaption {
       padding: 1.5vw;
     color:$black;
-      text-transform: uppercase;
       backface-visibility: hidden;
     height: 5.5vw;
+      height:170px;
+      text-align: left;
     }
 
     h2 {
-      font-weight: 300;
+      font-weight: 600;
       margin: 0;
-      font-size: 1.4vw;
+      margin-bottom: 8px;
+      font-size: 16px;
+      //text-transform: uppercase;
     }
 
     p {
-      letter-spacing: 1px;
-      font-size: 1vw;
+      font-size: 16px;
       margin: 0;
-    display:none;
+      line-height: 1.5;
     }
 
     figcaption {
-    text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.15em;
     display: inline-block;
-    padding: 5px 20px;
+    padding: 25px 0;
     position: relative;
     }
     h2:after {    
@@ -533,9 +533,9 @@ article header {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    border-radius: 5px;
-    height: 3px;
-    bottom: 0;
+    height: 6px;
+    //margin-top:15px;
+    top: 0;
     left: 0;
     background: $dark-gray;
     transform-origin: bottom right;
@@ -545,7 +545,8 @@ article header {
 
     &:hover {
     img{
-      opacity: 0.8;
+      opacity: 0.9;
+      transform: scale(1.03);
     &::before, &::after {
       opacity: 1;
       transform: scale(1);
@@ -563,7 +564,6 @@ article header {
       }
     }
     }
-
   }
 }
 
@@ -735,7 +735,8 @@ article header {
   }
 }
 
-#project {
+
+#project, #contributions {
   padding: 150px 15%;
   margin: 0 auto;
   background-color: $white;
@@ -808,8 +809,14 @@ article header {
       line-height: 2;
     }
 
-    ul, ol {
+    >ul, ol {
       text-align: left;
+      >li{
+        margin: 10px 0;
+        >ul{
+        margin: 10px 0;
+        }
+      }
     }
 
     figure {
@@ -852,6 +859,27 @@ article header {
   }
 }
 
+#contributions {
+  padding: 80px 20%;
+  font-size: 16px;
+  h1{
+    padding-top:120px;
+    border-top:1px solid black;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  h2{
+    text-align: left;
+    font-weight: 200;
+  }
+  strong{
+    font-weight:600;
+  }
+  ul{
+    font-size: 16px;
+  }
+}
+
 a button {
   cursor: pointer;
   margin: 40px auto 0 auto;
@@ -866,7 +894,7 @@ a button {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   text-decoration: none;
-
+  border-radius: 10px;
   span {
     font-size: 43px;
     line-height: 0;
@@ -1091,7 +1119,9 @@ footer {
     }
   }
 
-
+#contributions {
+  padding: 100px 20px;
+}
 
   footer {
     padding: 40px 24px 10px 24px;

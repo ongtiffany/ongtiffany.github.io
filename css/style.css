@@ -331,12 +331,12 @@ article header p {
 
 .grid {
   position: relative;
-  margin: 40px auto 0 auto;
+  margin: 40px 2% 0 2%;
   list-style: none;
   text-align: center;
   max-width: 1700px;
   float: left;
-  width: 100%;
+  width: 96%;
 }
 .grid .codepen {
   position: relative;
@@ -362,10 +362,10 @@ article header p {
   position: relative;
   float: left;
   overflow: hidden;
-  width: 31.3%;
+  width: 40%;
   text-align: center;
   cursor: pointer;
-  margin: 1%;
+  margin: 0 5% 0 5%;
 }
 .grid figure a {
   text-decoration: none;
@@ -404,27 +404,26 @@ article header p {
 .grid figure figcaption {
   padding: 1.5vw;
   color: #222;
-  text-transform: uppercase;
   backface-visibility: hidden;
   height: 5.5vw;
+  height: 170px;
+  text-align: left;
 }
 .grid figure h2 {
-  font-weight: 300;
+  font-weight: 600;
   margin: 0;
-  font-size: 1.4vw;
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 .grid figure p {
-  letter-spacing: 1px;
-  font-size: 1vw;
+  font-size: 16px;
   margin: 0;
-  display: none;
+  line-height: 1.5;
 }
 .grid figure figcaption {
-  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.15em;
   display: inline-block;
-  padding: 5px 20px;
+  padding: 25px 0;
   position: relative;
 }
 .grid figure h2:after {
@@ -432,16 +431,16 @@ article header p {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  border-radius: 5px;
-  height: 3px;
-  bottom: 0;
+  height: 6px;
+  top: 0;
   left: 0;
   background: #333;
   transform-origin: bottom right;
   transition: transform 0.5s ease-out;
 }
 .grid figure:hover img {
-  opacity: 0.8;
+  opacity: 0.9;
+  transform: scale(1.03);
 }
 .grid figure:hover img::before, .grid figure:hover img::after {
   opacity: 1;
@@ -604,42 +603,42 @@ article header p {
   text-align: center !important;
 }
 
-#project {
+#project, #contributions {
   padding: 150px 15%;
   margin: 0 auto;
   background-color: white;
 }
-#project h1 {
+#project h1, #contributions h1 {
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 600;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#project header {
+#project header, #contributions header {
   padding-bottom: 50px;
 }
-#project header em {
+#project header em, #contributions header em {
   text-align: left;
   display: block;
 }
-#project header h2 {
+#project header h2, #contributions header h2 {
   text-transform: uppercase;
   font-size: 30px;
   margin: 0;
 }
-#project header h3 {
+#project header h3, #contributions header h3 {
   font-weight: normal;
   font-size: 16px;
   margin: 5px 0 40px 0;
   font-family: "Lora", serif;
   display: none;
 }
-#project header h4 {
+#project header h4, #contributions header h4 {
   margin-top: 40px;
   font-weight: normal;
   font-size: 16px;
 }
-#project header p {
+#project header p, #contributions header p {
   font-family: "Lora", serif;
   font-weight: normal;
   line-height: 1.7;
@@ -647,18 +646,18 @@ article header p {
   margin: 40px 0 40px 0;
   font-size: 20px;
 }
-#project article {
+#project article, #contributions article {
   max-width: 1200px;
   margin: 40px auto 0 auto;
   font-size: 18px;
 }
-#project article h3 {
+#project article h3, #contributions article h3 {
   font-family: "Lora", serif;
   font-weight: normal;
   line-height: 1.7;
   font-style: italic;
 }
-#project article h4 {
+#project article h4, #contributions article h4 {
   text-align: left;
   font-size: 20px;
   margin: 60px 0 16px 0;
@@ -668,31 +667,37 @@ article header p {
   text-transform: uppercase;
   border-bottom: 3px solid #ccc;
 }
-#project article p {
+#project article p, #contributions article p {
   text-align: left;
   margin: 0 0 30px 0;
   line-height: 2;
 }
-#project article ul, #project article ol {
+#project article > ul, #project article ol, #contributions article > ul, #contributions article ol {
   text-align: left;
 }
-#project article figure {
+#project article > ul > li, #project article ol > li, #contributions article > ul > li, #contributions article ol > li {
+  margin: 10px 0;
+}
+#project article > ul > li > ul, #project article ol > li > ul, #contributions article > ul > li > ul, #contributions article ol > li > ul {
+  margin: 10px 0;
+}
+#project article figure, #contributions article figure {
   width: 100%;
   margin: 60px auto;
   padding: 0;
 }
-#project article figure.small {
+#project article figure.small, #contributions article figure.small {
   max-width: 800px;
 }
-#project article figure img {
+#project article figure img, #contributions article figure img {
   width: 100%;
   background: #222;
 }
-#project article figure figcaption {
+#project article figure figcaption, #contributions article figure figcaption {
   font-size: 14px;
   padding: 5px;
 }
-#project article .four-col {
+#project article .four-col, #contributions article .four-col {
   position: relative;
   margin: 40px auto;
   list-style: none;
@@ -701,7 +706,7 @@ article header p {
   float: left;
   width: 100%;
 }
-#project article .four-col figure {
+#project article .four-col figure, #contributions article .four-col figure {
   position: relative;
   float: left;
   overflow: hidden;
@@ -709,6 +714,27 @@ article header p {
   text-align: center;
   cursor: pointer;
   margin: 1%;
+}
+
+#contributions {
+  padding: 80px 20%;
+  font-size: 16px;
+}
+#contributions h1 {
+  padding-top: 120px;
+  border-top: 1px solid black;
+  font-size: 40px;
+  font-weight: 800;
+}
+#contributions h2 {
+  text-align: left;
+  font-weight: 200;
+}
+#contributions strong {
+  font-weight: 600;
+}
+#contributions ul {
+  font-size: 16px;
 }
 
 a button {
@@ -725,6 +751,7 @@ a button {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   text-decoration: none;
+  border-radius: 10px;
 }
 a button span {
   font-size: 43px;
@@ -905,6 +932,9 @@ footer p {
   }
   #project article h4, #project article p {
     padding: 0;
+  }
+  #contributions {
+    padding: 100px 20px;
   }
   footer {
     padding: 40px 24px 10px 24px;
