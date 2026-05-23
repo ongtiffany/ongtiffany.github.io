@@ -42,7 +42,6 @@ header {
   font-size: 1.3vw;
   font-family: "Anonymous Pro", serif;
   background: #f4f4f4;
-  /* tav navigation styling */
 }
 .card h2 {
   grid-area: 1/1/2/5;
@@ -216,6 +215,9 @@ header {
   background: #f0f0f0;
   background: linear-gradient(-45deg, transparent, transparent 42%, rgb(255, 167.3755458515, 128) 42%, rgb(255, 167.3755458515, 128) 57%, transparent 57%, transparent 100%);
 }
+.card {
+  /* tav navigation styling */
+}
 .card .tabs > input:nth-child(1):checked ~ .tab-content {
   /* styling content of tab 3 */
   display: block;
@@ -370,13 +372,14 @@ header {
 .card .tabs > input:nth-child(2):checked ~ .tab-content { /* styling content of tab 2 */
   display: block;
   /* Styling the extent column as bars */
-  /* Bar styling using ::before */
-  /* Style the extent value text */
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar {
   position: relative;
   height: 50vh;
   width: 100vw;
+}
+.card .tabs > input:nth-child(2):checked ~ .tab-content {
+  /* Bar styling using ::before */
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar::before {
   content: "";
@@ -402,6 +405,9 @@ header {
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar:hover::after {
   clip-path: polygon(0 calc(100% - var(--previous-value)), 100% calc(100% - var(--value)), 100% calc(100% - var(--value) + 2px), 0 calc(100% - var(--previous-value) + 2px));
+}
+.card .tabs > input:nth-child(2):checked ~ .tab-content {
+  /* Style the extent value text */
 }
 .card .tabs > input:nth-child(2):checked ~ .tab-content .extent-bar span {
   position: absolute;

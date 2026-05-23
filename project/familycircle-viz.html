@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -6,71 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A senior UI/UX designer working at King's Digital Lab creating digital concepts, prototypes, interfaces and products. Currently exploring data visualisation and web sustainability."
+      content="Lead designer creating digital concepts, prototypes, interfaces and products, with a focus on data visualisation, digital accessibility and web sustainability."
     />
     <meta name="author" content="Tiffany Ong" />
     <title>Family Circle</title>
     <link rel="icon" type="image/png" href="../img/favicon.png" />
     <!-- Style CSS -->
     <link href="../css/style.css" rel="stylesheet" />
-    <!-- Custom Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
   </head>
 
   <body>
     <section id="project">
+      <div
+        class="cursor"
+        id="cursor"
+        aria-hidden="true"
+        style="left: 697px; top: 543px"
+      ></div>
       <figure>
         <img
+          style="
+            width: 90%;
+            height: auto;
+            margin-inline: auto;
+            display: flex;
+            justify-content: center;
+          "
           src="../img/project/familycircle/howtoread.jpg"
           alt="A colorful circle made of yarn symbolizing continuity and connection"
         />
       </figure>
-      <br /><br /><br />
-      <footer>
-        <a href="../project/familycircle.html" target="_blank"
+      <br /><br />
+      <hr />
+      <footer
+        style="
+          margin-inline: auto;
+          display: flex;
+          justify-content: center;
+          margin: 20px;
+        "
+      >
+        <a
+          href="../project/familycircle.html"
+          style="color: black"
+          target="_blank"
           >About this project</a
         >
       </footer>
     </section>
     <!-- Custom script for nav menu functionality-->
-    <script>
-      // Get all sections that have an ID defined
-      const sections = document.querySelectorAll("section[id]");
-
-      // Add an event listener listening for scroll
-      window.addEventListener("scroll", navHighlighter);
-
-      function navHighlighter() {
-        // Get current scroll position
-        let scrollY = window.pageYOffset;
-
-        // Now we loop through sections to get height, top and ID values for each
-        sections.forEach((current) => {
-          const sectionHeight = current.offsetHeight;
-          const sectionTop = current.offsetTop - 50;
-          sectionId = current.getAttribute("id");
-
-          /*
-    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-    */
-          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document
-              .querySelector("nav ol a[href*=" + sectionId + "]")
-              .classList.add("active");
-          } else {
-            document
-              .querySelector("nav ol a[href*=" + sectionId + "]")
-              .classList.remove("active");
-          }
-        });
-      }
-    </script>
-
+    <script src="../js/main.js"></script>
     <!-- Goat Counter Analytics code -->
     <script
       data-goatcounter="https://ongtiffany.goatcounter.com/count"
