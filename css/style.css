@@ -582,15 +582,25 @@ ul.skills-items li {
 footer[role=contentinfo] {
   padding: 2rem 3.5rem;
   border-top: 0.5px solid #d3d1c7;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
 }
 
 .footer-name {
   font-size: 12px;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.03em;
   color: #6b6a66;
+}
+.footer-name span {
+  font-style: italic;
+  font-size: 14px;
+  font-family: "Cormorant Garamond", serif;
+  margin-top: 12px;
+  display: block;
+  letter-spacing: 0;
 }
 
 @media (max-width: 640px) {
@@ -611,6 +621,9 @@ footer[role=contentinfo] {
 .footer-links {
   display: flex;
   gap: 1.5rem;
+  justify-content: center; /* centers children horizontally */
+  width: 100%;
+  margin-bottom: 1rem;
 }
 .footer-links a {
   font-size: 12px;
@@ -909,7 +922,7 @@ h2.proj-section-label {
 }
 .related-projects {
   border-top: 5px solid #d3d1c7;
-  padding: 3rem 0;
+  padding: 7rem 0 3rem 0;
   margin-top: 3rem;
 }
 
