@@ -355,7 +355,7 @@
     "title": "Red Riding Hood",
     "slug": "redridinghood",
     "thumbnail": "../img/project/preview/redridinghood-thumb.jpg || Data visualisation poster using geometric shapes to represent the Red Riding Hood story",
-    "hero": "../img/project/redridinghood/insitu.jpg  || Data visualisation poster using geometric shapes to represent the Red Riding Hood story",
+    "hero": "../img/project/redridinghood/insitu.jpg || Data visualisation poster using geometric shapes to represent the Red Riding Hood story",
     "category": "Data",
     "rationale": "Story-driven data interpretation",
     "oneliner": "Narrative data visualisation using children’s literature as source material",
