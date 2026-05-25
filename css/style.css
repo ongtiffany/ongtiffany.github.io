@@ -627,12 +627,8 @@ footer[role=contentinfo] {
 }
 .footer-links a {
   font-size: 12px;
-  color: #6b6a66;
   text-decoration: none;
   transition: color 0.2s;
-}
-.footer-links a:hover {
-  color: #1a1a18;
 }
 
 .proj-page-header {
