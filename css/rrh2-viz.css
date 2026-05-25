@@ -4426,7 +4426,6 @@ section .notes p {
     width: 11em;
     flex-basis: unset;
     flex-grow: 0;
-    font-family: "Yomogi";
 }
 
 .tab-container label:hover {
