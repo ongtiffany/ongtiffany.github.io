@@ -193,11 +193,42 @@ async function loadProject() {
       .join(", ");
 
     return `
-      <div class="proj-meta-item">
-        <p class="proj-meta-label">${label}</p>
-        <p class="proj-meta-value">${content}</p>
-      </div>
-    `;
+    <div class="proj-meta-item">
+      <p class="proj-meta-label">${label}</p>
+      <p class="proj-meta-value">${content}</p>
+    </div>
+  `;
+  }
+
+  function renderMetaList(label, items) {
+    if (!items.length) return "";
+
+    const content = items
+      .map((item) => {
+        if (item.link) {
+          return `
+          <li>
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer">
+              ${item.label}<span class="cta" aria-hidden="true"></span>
+            </a>
+          </li> 
+          
+        `;
+        }
+
+        return `<li>${item.label}</li>`;
+      })
+      .join("");
+
+    return `
+    <div class="proj-meta-item">
+      <p class="proj-meta-label">${label}</p>
+
+      <ul class="proj-meta-value proj-meta-list">
+        ${content}
+      </ul>
+    </div>
+  `;
   }
 
   // ------------------------
@@ -240,7 +271,7 @@ async function loadProject() {
 
         <!-- TEAM SECTION COMMENTED OUT -->
 
-        ${renderMetaInline("Outputs", outputs)}
+${renderMetaList("Outputs", outputs)}
 
         ${renderMetaInline("Funders", funders)}
 
