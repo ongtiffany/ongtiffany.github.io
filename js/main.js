@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ----- CUSTOM CURSOR -----
   const cursor = document.querySelector(".cursor");
+
   if (cursor) {
+    // Desktop mouse movement
     document.addEventListener("mousemove", (e) => {
       cursor.style.left = e.clientX + "px";
       cursor.style.top = e.clientY + "px";
     });
 
+    // Desktop hover
     document.addEventListener("mouseover", (e) => {
       if (e.target.closest("a, button, .proj-row")) {
         cursor.classList.add("cursor--hover");
@@ -18,6 +21,44 @@ document.addEventListener("DOMContentLoaded", () => {
         cursor.classList.remove("cursor--hover");
       }
     });
+
+    // Touch devices
+    document.addEventListener(
+      "touchstart",
+      (e) => {
+        const target = e.target.closest("a, button, .proj-row");
+
+        if (!target) return;
+
+        const touch = e.touches[0];
+
+        // Move cursor to tap position
+        cursor.style.left = touch.clientX + "px";
+        cursor.style.top = touch.clientY + "px";
+
+        // Show hover effect
+        cursor.classList.add("cursor--hover");
+      },
+      { passive: true },
+    );
+
+    document.addEventListener(
+      "touchend",
+      () => {
+        setTimeout(() => {
+          cursor.classList.remove("cursor--hover");
+        }, 200);
+      },
+      { passive: true },
+    );
+
+    document.addEventListener(
+      "touchcancel",
+      () => {
+        cursor.classList.remove("cursor--hover");
+      },
+      { passive: true },
+    );
   }
 
   // ----- STICKY NAV ACTIVE HIGHLIGHTING -----
