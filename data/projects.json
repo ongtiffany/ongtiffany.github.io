@@ -28,8 +28,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "agec || issa ||livingwithmachines "
+    "related": "agec || issa ||livingwithmachines ",
+    "": ""
   },
   {
     "title": "Inclusive Tangible Adaptive Programming Environments",
@@ -60,8 +60,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Ageing and Gender in European Cinema",
@@ -92,8 +92,8 @@
     "detail_9": "What the project is teaching || Working at under 1.5 days a month across a six-month timeline with a large international team is a specific kind of design challenge, high-stakes decisions made infrequently, with long gaps between touchpoints. It's sharpened how I structure design decisions to be legible to a team that isn't living with them day to day. || || ||",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "livingwithmachines || illustratingimpact || issa"
+    "related": "livingwithmachines || illustratingimpact || issa",
+    "": ""
   },
   {
     "title": "Inclusive Requirements Elicitation for AI in Libraries to support respectful management of Indigenous knowledges",
@@ -124,8 +124,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Little Pictures",
@@ -144,7 +144,7 @@
     "lead": "Designed data narratives to make complex climate datasets legible and accessible across audiences",
     "context": "This self-initiated project explored how climate data visualisations could be made more accessible and sustainable, particularly for screen reader users. It emerged from a desire to move beyond conventional charting approaches and rethink how data could be structured and presented with minimal dependencies.",
     "approach": "I reframed the visualisation problem by treating the HTML table as the core data structure, layering multiple visual outputs through CSS and lightweight JavaScript. Through iterative prototyping, I explored different representations of the same dataset, balancing clarity, accessibility, and performance while working within intentionally constrained design parameters.",
-    "impact": "This project demonstrates an alternative approach to data visualisation that prioritises accessibility and sustainability from the outset. It informed my broader approach to building lightweight, inclusive systems, and highlights how constraint-led design can produce flexible and scalable solutions.",
+    "impact": "This project demonstrated an alternative approach to data visualisation that prioritises accessibility and sustainability from the outset. By reducing technical and visual complexity, it showed how meaningful data experiences can be created using lightweight, low-resource approaches that remain inclusive to a broader range of users. In developing the project, I refined my approach to building lightweight, accessible systems and strengthened my belief that accessibility and sustainability should be considered core design principles rather than secondary considerations.",
     "detail_1": "Inspiration from the Little Pictures Project || I have been wanting to work with climate data for a while but never felt confident, until now. After a busy period, I began exploring datasets and discovered the Little Pictures project from the ESA Climate Office. The simplicity of the visuals, open-source nature, and accessible data made it an ideal starting point. || ../img/project/littlepictures/gallery.jpg || Gallery of colourful climate visualisations || Screenshot of images from the ESA Climate Office Little Pictures Gallery",
     "detail_2": "Shifting focus to accessibility and sustainability || I knew from reading articles how difficult it is to make data visualisation accessible for screen reader users. The concept evolved into using a single HTML table per dataset, styled in multiple ways, allowing both accessibility and visual exploration without duplication. || || ||",
     "detail_3": "Designing with intentional constraints || To maintain focus on the project’s core concepts, I deliberately limited the design. I avoided gradients, used a black-and-white palette, and incorporated only simple elements. || ../img/project/littlepictures/illustrator.jpg || Illustrator file showing layout explorations || Layout ideas, inspiration and mockups",
@@ -156,8 +156,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "rrh2 || sharc || athenaswan"
+    "related": "rrh2 || sharc || athenaswan",
+    "": ""
   },
   {
     "title": "Family Circle",
@@ -176,7 +176,7 @@
     "lead": "Developed visual systems to explore relational family data structures and narrative patterns",
     "context": "Using leftover materials, this project became an opportunity to revisit data visualisation in a more tactile, personal form, building on a previous project with my children. The focus shifted from digital representation to something physical, relational, and grounded in making.",
     "approach": "Explored how generational data could be translated into a physical system using colour, sequence, and repetition. Rather than defining everything upfront, the structure evolved through sketching, testing, and making, with decisions shaped by material behaviour and simplicity. The process balanced intention with openness, allowing the form to emerge through iteration.",
-    "impact": "Resulted in a physical representation of family data that is both visual and experiential. It created a shared activity that combined making, reflection, and storytelling, strengthening connections through the process itself. More broadly, it demonstrates how data visualisation can extend beyond screens into material and relational forms.",
+    "impact": "The project transformed family information into a shared participatory experience, encouraging storytelling, reflection, and intergenerational engagement. By combining data, craft, and interaction, it demonstrated how personal information can become a catalyst for conversation and collective memory-making, while strengthening my interest in designing experiences that prioritise participation and emotional connection alongside information sharing.",
     "detail_1": "Crafting a Family Bond || This was spontaneous weekend project which came about when my colleague offered some cotton string cutoffs from hand weaving a kākahu, a traditional Māori cloak she was lovingly weaving for her sister with beautiful patterns, colours and finished with feathers. Inspired by the cultural significance of kākahu as family heirlooms, I thought it would be a nice opportunity to craft something with my kids, connecting it to our family. It had been four years since we last made a <a href=‘.’./projects/waterconsumption.html target='_blank'>data visualisation</a> together, and I was ready to try another one. The activity needed to be engaging, relatable, and simple enough for my children, while remaining manageable for me.|| ../img/project/familycircle/kakahu.jpg || White blue and yellow pattern weaving with different stitches and white feathers at the bottom || Close up of kākahu, photo courtesy of Samantha Callaghan",
     "detail_2": "Translating Family Structure into Visual Form || After brainstorming and searching for ideas with my children, we settled on creating round macrame-inspired pieces that could double as coasters. Each person would knot their age number in their favourite colour, starting with the children, followed by the parents. Initial sketches engaged the kids, leading to discussions about colours and counting age markers for family members. Seeing their enthusiasm, I decided to include grandparents to expand the project. Although we initially considered showing two family sides merging, it was too complex, so we opted for a simpler sequence from youngest to oldest. || ../img/project/familycircle/sketches.jpg || Four colorful circles, each with a different design, representing a vibrant array of patterns and colors. || Sketches on paper and on sketching app",
     "detail_3": "Refining Design Through Constraints and Collaborations ||   Macrame wasn’t suitable for the spiral pattern I envisioned due to its complexity and need for longer strings. Switching to a wrapping method offered simplicity and allowed us to add frayed sections, a detail the kids loved, to indicate male or female. After testing, we decided on frayed edges for females and knots for males. Their father suggested placing frayed edges at the start or end of sections to balance the design.",
@@ -188,8 +188,8 @@
     "detail_9": "From Data Representation to Shared Artefact || The completed piece brought together data, material, and shared effort into a single object, representing both the structure of the family and the experience of making it. It functions not only as a visualisation but also as a record of time spent together, with potential to exist as a small heirloom. || ../img/project/familycircle/annotated.jpg || A colorful circle made of yarn symbolizing continuity and connection ||",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "waterconsumption || familytree || entomologicalknits"
+    "related": "waterconsumption || familytree || entomologicalknits",
+    "": ""
   },
   {
     "title": "Digital Accessibility Reimagined",
@@ -208,7 +208,7 @@
     "lead": "Initiated organisational change embedding accessibility into shared delivery workflows across disciplines",
     "context": "Digital accessibility at King's Digital Lab began as a compliance-driven effort across a large portfolio of projects, but lacked a clear structure for how the work should be carried out across roles. The result was inconsistent delivery and low adoption. This project focused on redesigning the process itself to make accessibility workable and sustainable across the team.",
     "approach": "I led the redesign of the digital accessibility process by aligning it with the lab's Software Development Life Cycle, defining role-based responsibilities, and testing the approach across live projects. The goal was to shift from fragmented, role-heavy effort to a shared system the team could realistically adopt and sustain.",
-    "impact": "The work was accepted at conferences (RSECon2025 and DH2026), and shared not just as a report of what changed, but as an invitation for others to build on, adapt, or challenge the approach. It contributed to wider sector discussions on collective responsibility for digital accessibility in research software teams.",
+    "impact": "This work documented and shared a practical model for embedding accessibility within research software teams, providing a framework that other organisations can adapt to their own contexts. By presenting the project at conferences, it contributed to wider sector discussions around accessibility practice while reinforcing my belief that successful accessibility strategies must be tailored to organisational realities rather than relying solely on prescriptive frameworks.",
     "detail_1": "Establishing a shared understanding and direction || In 2023, I initiated and led the formation of a small dedicated digital accessibility team (designer, engineer, project manager) to address these structural issues. Rather than introducing a prescriptive framework, the work began by making the problem visible and shared across the team. Workshops, discussions, and iterative documentation helped surface where the existing approach was breaking down, while aligning different perspectives. This created a foundation for change based on evidence rather than assumption. || ../img/project/digitalaccessibility/miro-iterations.jpg || Miro board showing multiple iterations of digital accessibility process diagrams with comments and feedback from team members over time || Iterative process development through shared workshops and feedback",
     "detail_2": "Reframing digital accessibility as a shared responsibility || A key shift was moving digital accessibility away from being treated as a specialist task toward a shared responsibility across roles. Previous approaches had concentrated the majority of the work within design and development, which was neither sustainable nor aligned with how projects functioned in practice. Inclusive design frameworks helped make digital accessibility more tangible and relatable, supporting clearer conversations about how each role contributes without overloading any single discipline. || ../img/project/digitalaccessibility/responsibility-roles.jpg || Illustrated avatars showing different roles responsible for accessibility tasks across a project lifecycle from https://www.ontario.ca/page/inclusive-design-toolkit || Defining accessibility as a distributed responsibility across roles",
     "detail_3": "Embedding digital accessibility into the development lifecycle || With a shared understanding in place, the focus shifted to structure. Digital accessibility was aligned with the Software Development Life Cycle, mapping responsibilities to specific phases so they became visible, actionable, and easier to adopt within existing workflows. This ensured each role understood what they were responsible for, when it should happen, and how it connected to the wider delivery process. || ../img/project/digitalaccessibility/sdlc-integration.jpg || Diagram showing digital accessibility steps integrated into the software development lifecycle stages || Digital accessibility integrated into the lab’s existing development lifecycle",
@@ -220,8 +220,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "redesigningorg || informationmodels"
+    "related": "redesigningorg || newspaperdesignsystem",
+    "": ""
   },
   {
     "title": "Red Riding Hood 2",
@@ -252,8 +252,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": " family circle",
-    "related": "redridinghood || littlepictures || waterconsumption"
+    "related": "redridinghood || littlepictures || waterconsumption",
+    "": ""
   },
   {
     "title": "King's Past",
@@ -284,8 +284,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Redesigning Organisational Systems",
@@ -316,8 +316,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "digitalaccessibility || informationmodels"
+    "related": "digitalaccessibility || informationmodels || newspaperdesignsystem",
+    "": ""
   },
   {
     "title": "Living with Machines",
@@ -348,8 +348,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "agec || illustratingimpact || ncse"
+    "related": "agec || illustratingimpact || ncse",
+    "": ""
   },
   {
     "title": "Red Riding Hood",
@@ -380,8 +380,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "rrh2 || littlepictures || sharc"
+    "related": "rrh2 || littlepictures || sharc",
+    "": ""
   },
   {
     "title": "Alice Thornton’s Books",
@@ -412,8 +412,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "REF Impact Data Analysis",
@@ -444,8 +444,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Information Models",
@@ -476,8 +476,8 @@
     "detail_9": "Embedding Accessibility into Delivery Workflows || Accessibility process visualisations integrated inclusive design practices into everyday workflows, shifting accessibility from a reactive consideration to a proactive, embedded part of delivery. || ../img/project/informationmodels/accessibility-overview.jpg || Accessibility process flowchart || Accessibility process overview ",
     "detail_10": "Improving Operational Visibility and Task Tracking || Time and task tagging workflows increased transparency around workload, ownership, and progress, supporting better resource planning and accountability across teams. || ../img/project/informationmodels/timetasktag.jpg || Time and task tagging workflow diagram || Time and task tagging workflow ",
     "detail_11": "Clarifying Roles and Decision-Making Structures || Responsibility mapping models made ownership and decision boundaries explicit, reducing ambiguity and enabling more efficient collaboration and governance across projects. || ../img/project/informationmodels/responsibility-percentage.jpg || Diagram showing role responsibilities distribution || Role responsibilities and distribution",
-    "": "",
-    "related": "redesigningorg || digitalaccessibility "
+    "related": "redesigningorg || digitalaccessibility || illustratingimpact ",
+    "": ""
   },
   {
     "title": "Visible Skin",
@@ -508,8 +508,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Brightening the Covenant Chain",
@@ -540,8 +540,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Culture Case",
@@ -572,8 +572,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Water Consumption",
@@ -592,7 +592,7 @@
     "lead": "Explored physicalisation methods to translate environmental data into tangible interaction forms",
     "context": "A personal project based on the very long showers my kids take. I wanted a way to explain to them how important water is and should be used sparingly but in a very simplified way that they could relate, understand and empathise with, so some elements and concepts might not be completely accurate. I was inspired by a lot by data comics and wanted to make something that had a similar feel.",
     "approach": "I worked collaboratively with my children to co-create two visualisations using mediums they were naturally drawn to. By grounding the data in their own habits and involving them in the making process, the project combined data physicalisation, storytelling, and visual design to foster understanding and emotional connection.",
-    "impact": "Encouraged short-term behavioural change while demonstrating how participatory, creative approaches can make data more meaningful and accessible for younger audiences. The project also highlights the potential of combining individual interests, physical making with data storytelling to support early awareness of sustainability issues.",
+    "impact": "The project encouraged reflection on personal resource consumption by transforming abstract environmental data into a tangible, participatory experience. By making the information more accessible and engaging, particularly for younger audiences, it demonstrated the value of combining physical interaction with data communication, an approach that continues to inform my thinking around engagement and learning.",
     "detail_1": "Teaching Water Conservation || It started with a very ordinary parental frustration. Repeatedly asking my children to take shorter showers wasn't working, nor were the other usual methods, so I wanted to try a different approach to get them to understand the impact of water use. I also wanted to make it enjoyable both for them and myself, combining all our interests. || || ||",
     "detail_2": "Framing Everyday Water Usage as Measurable Behaviour || To ground the concept in familiar behaviours, I worked with my children to identify how water was used in everyday scenarios, narrowing this down to showering, washing hands, laundry, and flushing the toilet. I asked them how many times or how long they think they did each activity, and we wrote it down. With laundry it was the amount of clothes they would wash a week and converted roughly into the load per day. Together, we estimated frequency and duration, translating into daily usage to make it understandable. || || ||",
     "detail_3": "Designing Learning Through Favourite Mediums || The approach was tailored to how each child engaged with the world. Tiago was 6 years old at the time and obsessed with Lego, made the four scenarios with blocks parts all by himself. || ../img/project/waterconsumption/tiago-scenes.jpg || 4 photographs in a row of lego scenes and people || Lego  scenes:  washing hands,  flushing the toilet. showering, laundry",
@@ -604,8 +604,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "redridinghood || familycircle "
+    "related": "redridinghood || familycircle || littlepictures ",
+    "": ""
   },
   {
     "title": "Family Tree",
@@ -624,7 +624,7 @@
     "lead": "Explored hierarchical relationship structures through genealogical data modelling",
     "context": "Traditional family trees often prioritise hierarchy over time, limiting the ability to uncover patterns across generations. This project explored how combining relational structures with timelines could surface more nuanced insights, while working with incomplete and privacy-sensitive data.",
     "approach": "A personal project translating a fragmented dataset into a structured visual system, mapping individuals by birth date while preserving relational connections across generations. Through sketching and iterative layout testing, I explored how spatial positioning and minimal visual encoding could reveal trends without relying on rigid axes or complete data.",
-    "impact": "The project demonstrated how even incomplete personal data can be structured to reveal meaningful patterns when visualised thoughtfully. It also established a flexible model for combining relational and temporal data, forming a foundation for future interactive and scalable implementations.",
+    "impact": "The project demonstrated how fragmented and incomplete datasets can still reveal meaningful patterns when organised through thoughtful visual structures, making complex genealogical information easier to explore and interpret. Through the process, I gained a deeper appreciation of how visual systems can support discovery and understanding even when the underlying information contains uncertainty or gaps.",
     "detail_1": "Exploring Visualisation of Relational and Incomplete Data || The project investigated how to represent multi-generational family data through a hybrid model combining timelines and relationships. Designed under constraints of incomplete and sensitive data, it explored alternative approaches to traditional hierarchical family trees. || || || ",
     "detail_2": "Working with Evolving and Partial Datasets || The dataset originated from a long-term spreadsheet with gaps due to privacy considerations, requiring a flexible approach to representation. The goal was to surface patterns across four generations despite incomplete information. || ../img/project/familytree/sketches.jpg || Sketches exploring layout ideas for family tree visualisation || Early sketches exploring structure and layout ",
     "detail_3": "Designing a Flexible Visual System || Individuals were positioned along a vertical timeline based on birth date, while relationships were expressed without a fixed horizontal axis. This prioritised relational clarity over strict quantitative structure, enabling more expressive representation of connections. || ../img/project/familytree/mockups.jpg || Mockups testing layout and relationships between nodes || Mockups used to test layout and relationships ",
@@ -636,8 +636,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "sharc || littlepictures || rrh2"
+    "related": "sharc || littlepictures || rrh2",
+    "": ""
   },
   {
     "title": "Text, materiality, and multiculturalism at the crossroads of the ancient Mediterranean",
@@ -658,18 +658,18 @@
     "approach": "",
     "impact": "",
     "detail_1": "",
-    "detail_2": "",
-    "detail_3": "",
-    "detail_4": "",
-    "detail_5": "",
+    "detail_2": "Target Audience and Conceptualisation || At the outset of the design process, the team engaged in extensive brainstorming sessions to define the vision and objectives of the ERR platform. This phase involved identifying key stakeholders, understanding their needs and pain points, and establishing the overarching goals for the project. Policymakers, members of the public, academics, auditors, and business leaders form the diverse spectrum of target audiences for the ERR platform. The platform aims to cater to these stakeholders by providing comprehensive and accessible information on business activities and their social impact. || || ||",
+    "detail_3": "Task Flow Analysis || Following the conceptualization phase, the team delved into task flow analysis to map out the various user interactions and pathways within the ERR platform. This involved identifying the primary tasks that users would need to accomplish and determining the most intuitive and efficient flow for achieving these tasks. || ../img/project/illustratingimpact/ill-0.jpg || Task flow diagram showing frontend and admin pathways || Diagram of task flow between frontend and admin pages",
+    "detail_4": "Understanding User Journeys || With a clear understanding of the user tasks and interactions, the team proceeded to develop journey maps to visualize the end-to-end user experience on the ERR platform. These journey maps outlined the steps users would take to accomplish their goals, highlighting key touchpoints, pain points, and opportunities for improvement. || ../img/project/illustratingimpact/ill-1.jpg || User journey map showing platform pages and interactions || Diagram of journey map showing pages",
+    "detail_5": "Mockup Development and Refinements || Armed with insights from task flow analysis and journey mapping, the team began crafting mockups to visualize the user interface and interactive reporting features of the ERR platform. These mockups served as prototypes for the platform, allowing iteration, stakeholder feedback, and refinement before development. || ../img/project/illustratingimpact/ill-2.jpg || Grayscale mockups of multiple platform pages || Mockups of the ERR platform interface",
     "detail_6": "",
     "detail_7": "",
     "detail_8": "",
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Illustrating Impact",
@@ -689,19 +689,19 @@
     "context": "Social impact measurement across business activities is often fragmented, inconsistent, and difficult to interpret. This project explored how a unified platform could support clearer analysis and communication of impact data across policymakers, businesses, and the public along with unifying analysis and reporting into a more accessible, transparent system for diverse audiences.",
     "approach": "I led a user-centred design process to translate complex analytical requirements into a structured, navigable product experience. This included defining key user groups, mapping task flows, and designing interaction models that supported both high-level insights and deeper exploration. Through iterative prototyping, I aligned research, data structures, and interface design into a cohesive reporting system that balanced clarity with analytical depth.",
     "impact": "Delivered a working prototype that reframed social impact reporting as an interactive, user-driven experience. The platform concept demonstrated how complex datasets could be made accessible and comparable, supporting better decision-making and engagement across sectors. It also established a scalable foundation for future product development in impact measurement.",
-    "detail_1": "Sketching ideas and data wrangling || I explored multiple layouts and data transformations, including adapting RAWGraphs outputs into circular structures and refining them in Illustrator. || ../img/project/rrh2/sketchbook.jpg || Sketchbook showing layout and data exploration ideas || Concept sketches and layout exploration",
-    "detail_2": "Target Audience and Conceptualisation || At the outset of the design process, the team engaged in extensive brainstorming sessions to define the vision and objectives of the ERR platform. This phase involved identifying key stakeholders, understanding their needs and pain points, and establishing the overarching goals for the project. Policymakers, members of the public, academics, auditors, and business leaders form the diverse spectrum of target audiences for the ERR platform. The platform aims to cater to these stakeholders by providing comprehensive and accessible information on business activities and their social impact. || || ||",
-    "detail_3": "Task Flow Analysis || Following the conceptualization phase, the team delved into task flow analysis to map out the various user interactions and pathways within the ERR platform. This involved identifying the primary tasks that users would need to accomplish and determining the most intuitive and efficient flow for achieving these tasks. || ../img/project/illustratingimpact/ill-0.jpg || Task flow diagram showing frontend and admin pathways || Diagram of task flow between frontend and admin pages",
-    "detail_4": "Understanding User Journeys || With a clear understanding of the user tasks and interactions, the team proceeded to develop journey maps to visualize the end-to-end user experience on the ERR platform. These journey maps outlined the steps users would take to accomplish their goals, highlighting key touchpoints, pain points, and opportunities for improvement. || ../img/project/illustratingimpact/ill-1.jpg || User journey map showing platform pages and interactions || Diagram of journey map showing pages",
-    "detail_5": "Mockup Development and Refinements || Armed with insights from task flow analysis and journey mapping, the team began crafting mockups to visualize the user interface and interactive reporting features of the ERR platform. These mockups served as prototypes for the platform, allowing iteration, stakeholder feedback, and refinement before development. || ../img/project/illustratingimpact/ill-2.jpg || Grayscale mockups of multiple platform pages || Mockups of the ERR platform interface",
+    "detail_1": "Designing for Speed and Clarity Under Constraints || A pragmatic approach used a pre-existing one-page template to accelerate development, allowing focus on content structure, layout, and user experience rather than building from scratch. This tradeoff balanced speed and clarity while delivering a functional and effective outcome. || ../img/project/archetype/screenshot-site.jpg || Screenshot of the Archetype one-page website design || One-page site design ",
+    "detail_2": "Making Complex Systems Understandable || Custom icons and workflow models translated abstract processes into clear visual representations, supporting user understanding of how the system operates. These visual elements improved accessibility and engagement with complex content. || ../img/project/archetype/workflow-mockup.jpg || Mockup of the Archetype workflow model || Workflow model exploration ",
+    "detail_3": "Refining Visual Models for Clarity and Use || Iteration on workflow diagrams ensured clarity and usability, resulting in a final model that effectively communicates system structure and processes. || ../img/project/archetype/workflow-final.png || Final version of the Archetype workflow model || Final workflow model ",
+    "detail_4": "Outcome and Impact || The final platform communicates the value of the Archetype framework clearly and efficiently, demonstrating how strategic design decisions can maximise impact within constrained timelines and budgets while supporting understanding and adoption. || || || ",
+    "detail_5": "",
     "detail_6": "",
     "detail_7": "",
     "detail_8": "",
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "agec || informationmodels || redesigningorg"
+    "related": "agec || informationmodels || redesigningorg",
+    "": ""
   },
   {
     "title": "Archetype",
@@ -722,18 +722,18 @@
     "approach": "I led the design and development of the website, making a deliberate decision to leverage a pre-existing template to accelerate delivery without compromising clarity. I adapted the structure, integrated content, and introduced custom visual elements such as icons and workflow diagrams to simplify complex concepts, ensuring the framework could be understood by both technical and non-specialist audiences.",
     "impact": "The site clarified the value of a complex research framework, enabling broader understanding beyond specialist audiences. By prioritising speed, clarity, and visual communication, the project showed how constrained delivery can still produce meaningful, user-friendly outcomes. It also established a repeatable approach for translating technical systems into accessible digital experiences.",
     "detail_1": "Translating a Complex Research Framework into an Accessible Platform || Archetype is an open-source system for analysing palaeographical materials, requiring a clear and accessible web presence to communicate its value. The project focused on translating a complex technical framework into a lightweight, user-facing platform under tight constraints. || || || ",
-    "detail_2": "Designing for Speed and Clarity Under Constraints || A pragmatic approach used a pre-existing one-page template to accelerate development, allowing focus on content structure, layout, and user experience rather than building from scratch. This tradeoff balanced speed and clarity while delivering a functional and effective outcome. || ../img/project/archetype/screenshot-site.jpg || Screenshot of the Archetype one-page website design || One-page site design ",
-    "detail_3": "Making Complex Systems Understandable || Custom icons and workflow models translated abstract processes into clear visual representations, supporting user understanding of how the system operates. These visual elements improved accessibility and engagement with complex content. || ../img/project/archetype/workflow-mockup.jpg || Mockup of the Archetype workflow model || Workflow model exploration ",
-    "detail_4": "Refining Visual Models for Clarity and Use || Iteration on workflow diagrams ensured clarity and usability, resulting in a final model that effectively communicates system structure and processes. || ../img/project/archetype/workflow-final.png || Final version of the Archetype workflow model || Final workflow model ",
-    "detail_5": "Outcome and Impact || The final platform communicates the value of the Archetype framework clearly and efficiently, demonstrating how strategic design decisions can maximise impact within constrained timelines and budgets while supporting understanding and adoption. || || || ",
+    "detail_2": "",
+    "detail_3": "",
+    "detail_4": "",
+    "detail_5": "",
     "detail_6": "",
     "detail_7": "",
     "detail_8": "",
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "ncse || redesigningorg || maoeraobjects"
+    "related": "ncse || redesigningorg || maoeraobjects",
+    "": ""
   },
   {
     "title": "Sensing Place",
@@ -764,8 +764,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "maoeraobjects || mmc || renaissanceskin "
+    "related": "maoeraobjects || mmc || renaissanceskin ",
+    "": ""
   },
   {
     "title": "Radical Translations: The Transfer of Revolutionary Culture between Britain, France and Italy",
@@ -796,15 +796,15 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Athena Swan",
     "slug": "athenaswan",
     "thumbnail": "../img/project/preview/athenaswan-thumb.jpg || Laptop displaying a snakes and ladders game grid with animal illustrations",
     "hero": "../img/project/athenaswan/insitu.jpg  || Laptop displaying a snakes and ladders game grid with animal illustrations",
-    "category": "Platforms",
+    "category": "Systems",
     "rationale": "Research reframed through interaction and insight",
     "oneliner": "Gender equity research findings, reframed as an interactive infographic people chose to explore",
     "date": "2018",
@@ -816,7 +816,7 @@
     "lead": "Designed an interactive engaging  infographic to communicate  research insights on gender equality",
     "context": "Humanities departments working towards Athena SWAN accreditation faced challenges in translating qualitative research and institutional practices into clear, shareable formats. Existing outputs were often report-heavy and difficult to engage with beyond academic audiences. This project explored how research findings and best practices could be communicated more effectively through a digital, interactive format.",
     "approach": "I designed an interactive infographic that reframed research insights into a narrative-driven experience, balancing clarity with engagement under tight time and budget constraints. Drawing on collaborative workshops with researchers, I translated interview and focus group findings into a structured visual system, using a game-based metaphor to guide users through progress and setbacks. The final output combined bespoke illustration, interaction design, and lightweight prototyping to make complex content more accessible and engaging. ",
-    "impact": "The interactive format demonstrated how qualitative research and institutional practices could be translated into a more engaging and accessible experience for broader audiences. By reframing dense report content into a narrative, visual system, the project expanded the reach and usability of the findings beyond academic contexts. It also provides a replicable approach for communicating complex research through lightweight, interactive design.",
+    "impact": "The project translated institutional research and policy information into a more accessible and engaging format, supporting wider understanding of equality initiatives across the organisation. The interactive approach demonstrated how complex qualitative material can be communicated effectively to diverse audiences while strengthening my ability to design for sensitive organisational topics in ways that encourage engagement and discussion.",
     "detail_1": "Communicating Research Through Interactive Visual Storytelling || The project translated research on Athena SWAN into an interactive infographic, making complex findings more engaging and accessible for academic audiences. By reframing static content into an exploratory format, it supported broader understanding and dissemination. || || || ",
     "detail_2": "Designing Under Time and Budget Constraints || With limited resources, the design approach focused on maximising impact through collaboration and selective use of illustration. This enabled a richer and more engaging output while maintaining feasibility within constraints. || || || ",
     "detail_3": "Developing a Game-Based Interaction Model || Inspiration from snakes and ladders introduced a structured interaction model representing progress and setbacks, translating research insights into a familiar and engaging format. || ../img/project/athenaswan/inspiration.jpg || Vintage snakes and ladders board inspiration collage || Inspiration drawn from vintage snakes and ladders game boards ",
@@ -828,8 +828,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "littlepictures || sharc || rrh2"
+    "related": "littlepictures || sharc || rrh2",
+    "": ""
   },
   {
     "title": "Mao Era in Objects",
@@ -860,8 +860,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "mmc || renaissanceskin || gssn"
+    "related": "mmc || renaissanceskin || gssn",
+    "": ""
   },
   {
     "title": "Henslowe-Alleyn",
@@ -892,8 +892,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Farm-level Interdisciplinary Approaches to Endemic Livestock Disease",
@@ -924,8 +924,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Shakespeare in the Royal Collection",
@@ -944,7 +944,7 @@
     "lead": "Translated archival acquisition data into structured visual mapping system",
     "context": "Existing project materials highlighted a gap between the intended narrative, illustrating relationships between Shakespeare, the royals, and collected objects, and what was represented in the interface. Using dedicated exploration time, I revisited the data and project goals to investigate how visualisation could better support this core argument.",
     "approach": "I iteratively explored multiple visual models, manually plotting data and testing different ways to balance depth, clarity, and narrative. Each version refined how relationships, timelines, and object counts were represented, using feedback and feasibility to guide simplification and structure. The process prioritised experimentation, progressively reducing complexity to identify more legible and scalable approaches.",
-    "impact": "The exploration surfaced multiple viable approaches for visualising complex historical relationships, highlighting tradeoffs between detail, clarity, and scalability. It demonstrated how iterative prototyping can uncover structural challenges early, informing more effective design decisions for future implementation once complete data becomes available.",
+    "impact": "The project explored different approaches to communicating complex historical relationships, helping establish principles for balancing depth, clarity, and scalability in cultural heritage visualisation. The work contributed to broader discussions around making interconnected collections more accessible to public audiences while deepening my understanding of the trade-offs involved in designing exploratory systems for complex datasets.",
     "detail_1": "Exploring Visualisation of Complex Cultural Data || The project explored how to represent relationships between Shakespeare, royal figures, and associated artefacts, identifying gaps in the existing platform where these connections were not clearly communicated. This initiated a design-led investigation into how data visualisation could surface meaningful patterns within incomplete and evolving datasets. || || || ",
     "detail_2": "Iterating Through Visual Exploration || Early concepts were developed through sketches and mockups, manually plotting data points to understand structure, hierarchy, and relationships. This exploratory phase established a foundation for testing different visual approaches to representing complex historical data. || ../img/project/sharc/sketches.jpg || Digitally drawn sketches exploring data visualisation concepts || Early sketches exploring layout and structure ",
     "detail_3": "Testing Layered Timeline Approaches || The first iteration introduced a layered timeline combining lifespans, acquisitions, and key events to provide a comprehensive overview. While conceptually rich, feedback highlighted challenges with clarity and overlap, particularly when multiple data layers competed for attention. || ../img/project/sharc/prototype1.jpg || First prototype showing layered timeline visualisation || Version 1 ",
@@ -956,8 +956,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "littlepictures || familytree || rrh2"
+    "related": "littlepictures || familytree || rrh2",
+    "": ""
   },
   {
     "title": "Masonic Periodicals Online",
@@ -988,8 +988,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "ncse || mmc || maoeraobjects ",
+    "": ""
   },
   {
     "title": "Georgian Papers Programme",
@@ -1020,8 +1020,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "",
+    "": ""
   },
   {
     "title": "Nineteenth-Century Serials Edition",
@@ -1052,8 +1052,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "mmc || renaissanceskin || maoeraobjects "
+    "related": "mmc || renaissanceskin || maoeraobjects ",
+    "": ""
   },
   {
     "title": "Renaissance Skin",
@@ -1084,8 +1084,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "mmc || renaissanceskin || maoeraobjects "
+    "related": "mmc || renaissanceskin || maoeraobjects ",
+    "": ""
   },
   {
     "title": "Mozart & Material Culture",
@@ -1116,8 +1116,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "renaissanceskin || maoeraobjects || agec"
+    "related": "renaissanceskin || maoeraobjects || agec",
+    "": ""
   },
   {
     "title": "German Screen Studies Network",
@@ -1148,21 +1148,21 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "mmc || renaissanceskin || renaissanceskin"
+    "related": "mmc || renaissanceskin || renaissanceskin",
+    "": ""
   },
   {
     "title": "National & Regional Newspaper Design Systems",
-    "slug": "",
-    "thumbnail": "../img/project/preview/nationalregional-thumb.jpg || 4 laptops with different regional newpaper websites",
-    "hero": "",
+    "slug": "newspaperdesignsystem",
+    "thumbnail": "../img/project/preview/newspaperdesignsystem-thumb.jpg || 4 laptops with different regional newpaper websites",
+    "hero": "../img/project/trinitymirror/newspaperdesignsystem.jpg || 4 laptops with different regional newpaper websites",
     "category": "Systems",
     "rationale": "Responsive design framework unifying multiple national and regional publishing platforms",
     "oneliner": "Multi-brand responsive design system consolidating separate desktop and mobile news experiences",
     "date": "2015",
     "role": "Designer",
     "team": "",
-    "output": "",
+    "output": "Design systems",
     "funder": "",
     "partners": "Trinity Mirror (Product  team)",
     "lead": "Contributed to the implementation of a scalable design system supporting consistent experiences across national and regional newspaper brands",
@@ -1180,8 +1180,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "editorialmodules || eeditions || emailtemplates",
+    "": ""
   },
   {
     "title": "Eeditions",
@@ -1198,9 +1198,9 @@
     "funder": "",
     "partners": "Trinity Mirror (Product  team)",
     "lead": "Designer on a tablet newspaper app redesign,  working within strict brand guidelines, at commercial pace, for a conservative audience making their first move from print to digital.",
-    "context": "The Mirror newspaper app for tablets was underperforming — users weren't engaging, subscribing, or getting value from the tablet format. Working at pace within strict brand guidelines and for a conservative newspaper audience, the challenge was to improve the experience without making the change feel jarring.",
-    "approach": "I led the design of the icon system and visual language, and the help screens and onboarding flow — the two areas most directly affecting first impressions and ongoing usability. Decisions were grounded in informal user feedback and guided by a creative director. Accessibility ran through the work throughout: visuals and content had to meet audience needs across a wide range of users and contexts.",
-    "impact": "The redesigned app saw improvements across downloads, subscriptions, and engagement metrics including time in app and pages read. A measurable result in a fast-moving commercial environment, working within some of the tightest brand constraints I've encountered.",
+    "context": "The Mirror newspaper app for tablets was underperforming,  Users weren't engaging, subscribing, or getting value from the tablet format. Working at pace within strict brand guidelines and for a conservative newspaper audience, the challenge was to improve the experience without making the change feel jarring.",
+    "approach": "I led the design of the icon system and visual language, and the help screens and onboarding flow: the two areas most directly affecting first impressions and ongoing usability. Decisions were grounded in informal user feedback and guided by a creative director. Accessibility ran through the work throughout: visuals and content had to meet audience needs across a wide range of users and contexts.",
+    "impact": "The redesigned app saw improvements across downloads, subscriptions, and engagement metrics including time in app and pages read. A measurable result in a fast-moving commercial environment, working within tight brand constraints.",
     "detail_1": "Building Foundations in Commercial Product Design || This project marked my first experience in a fast-paced commercial newsroom environment, where strong brand expectations and rapid decision-making required a shift in how I approached design, shaping my ability to work effectively within real-world constraints. || || ||",
     "detail_2": "Designing for a Non-Digital-Native Audience || Understanding that tablet newspaper readers were often transitioning from print, I approached interaction design with sensitivity to familiarity, ensuring that changes felt like improvements rather than disruptions, and grounding decisions in audience behaviour rather than trends. || || ||",
     "detail_3": "Creating a Functional and Scalable Icon System || The icon system became a central part of the product experience, requiring clarity, consistency, and adaptability across contexts, with iterative refinement alongside creative and development teams to ensure effectiveness. || ../img/project/eeditions/eeditionsicons.jpg || layout of icon set || Toolbar and Interactive icon sets",
@@ -1212,15 +1212,15 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "trinitymirror || redesigningorg  "
+    "related": "editorialmodules || newspaperdesignsystem || redesigningorg",
+    "": ""
   },
   {
     "title": "Interactive Maps",
     "slug": "mapwidget",
     "thumbnail": "../img/project/preview/mapwidget-thumb.jpg || hand holding mobile device in front of a laptop screen, both showing the same watercoloured styled map with a list on the side or below",
     "hero": "../img/project/mapwidget/insitu.jpg || hand holding mobile device in front of a laptop screen, both showing the same watercoloured styled map with a list on the side or below",
-    "category": "Products",
+    "category": "Systems",
     "rationale": "Reusable interactive system for location-based data storytelling",
     "oneliner": "Interactive mapping component enabling scalable location-based storytelling",
     "date": "2014",
@@ -1230,7 +1230,7 @@
     "funder": "",
     "partners": "Trinity Mirror (Editorial  team)",
     "lead": "Designed and developed a reusable map-based interface for structuring and exploring geospatial editorial content",
-    "context": "The Editorial team at Trinity Mirror (now Reach plc) needed a consistent way to present location-based stories across multiple titles. Existing approaches were largely static or bespoke, leading to inconsistent user experiences and repeated development effort.",
+    "context": "The Editorial team needed a consistent way to present location-based stories across multiple titles. Existing approaches were largely static or bespoke, leading to inconsistent user experiences and repeated development effort.",
     "approach": "I designed and built a modular interactive map component that combined geospatial navigation with structured content. The solution prioritised usability across devices, reusability across teams, and flexibility for different editorial contexts.",
     "impact": "Delivered a reusable component that reduced the need for one-off map builds and enabled consistent interactive storytelling across articles. The system improved editorial efficiency and established a scalable foundation for future data-driven features.",
     "detail_1": "Framing the problem through research || I began by reviewing how leading news and data platforms approached map-based storytelling, alongside identifying common usability issues—particularly on mobile where precision interactions are limited. This highlighted the need for an approach that balanced spatial exploration with straightforward content access. || ../img/project/mapwidget/research.jpg || Collage of visual research || Visual research exploring map interaction patterns and layouts",
@@ -1244,8 +1244,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "eeditions || trinitymirror"
+    "related": "touritinerary || stolendogbreeds || babycompetition",
+    "": ""
   },
   {
     "title": "Baby of the Year Competition",
@@ -1276,15 +1276,15 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "londonolympics || stolendogbreeds || touritinerary",
+    "": ""
   },
   {
     "title": "Email Templates",
-    "slug": "",
-    "thumbnail": "../img/project/preview/emailtemplates-thumb.jpg || person holding a mobile phone near an airplane window with screen showing a map with date and travel information",
-    "hero": "../img/project/emailtemplates/insitu.jpg || person holding a mobile phone near an airplane window with screen showing a map with date and travel information",
-    "category": "Product",
+    "slug": "emailtemplates",
+    "thumbnail": "../img/project/preview/emailtemplates-thumb.jpg || person holding a mobile phone with promotional items on screen",
+    "hero": "../img/project/emailtemplates/hero.jpg || person holding a mobile phone with promotional items on screen",
+    "category": "Products",
     "rationale": "Reusable communication system for multi-brand editorial email distribution",
     "oneliner": "Flexible HTML email templates for national and regional campaigns",
     "date": "2014",
@@ -1296,26 +1296,26 @@
     "lead": "Designed responsive email templates supporting multiple editorial brands across marketing and regional teams",
     "context": "Multiple editorial and marketing teams required a consistent approach to producing email campaigns across different brands and sections, including national offers and regional content. The templates needed to work across a wide range of email clients, devices, and unpredictable content formats.",
     "approach": "I designed and built a set of flexible HTML email templates using constrained CSS techniques to ensure compatibility across email platforms. The system needed to support variable content types, including images, headlines, and editorial copy, while maintaining brand consistency across multiple publications.",
-    "impact": "Delivered a reusable email template system used across multiple teams and editorial brands, improving consistency, reducing production effort, and enabling faster campaign delivery across both national and regional outputs.",
+    "impact": "Delivered a reusable email template system used across multiple teams and editorial brands, improving consistency, reducing production effort, and enabling faster campaign delivery across both national and regional outputs. The templates needed to accommodate varying content structures, including different image ratios, text lengths, and editorial formats. This required a flexible layout system that could adapt without breaking visual hierarchy or readability across devices. ",
     "detail_1": "Designing for unpredictable content || The templates needed to accommodate varying content structures, including different image ratios, text lengths, and editorial formats. This required a flexible layout system that could adapt without breaking visual hierarchy or readability across devices. ||",
-    "detail_2": "Navigating email client constraints || Development required careful use of HTML tables and inline CSS due to inconsistent support across email clients such as Outlook, Gmail, and mobile mail apps. This introduced significant constraints around layout, spacing, and responsive behaviour. ||",
-    "detail_3": "../img/project/email/mirror-celebs.jpg || Mirror Celebs email template || Branded email template for entertainment and celebrity content",
-    "detail_4": "Supporting regional editorial workflows || The system was extended to support regional newspapers such as Manchester Evening News and Wales Online, each with their own content structures and audience expectations. This required balancing a shared template system with local flexibility. ||",
-    "detail_5": "Adapting templates for sports content || Sports-focused templates required more dynamic layouts to accommodate fixtures, results, and imagery. I ensured the structure could handle dense informational content while maintaining readability and hierarchy. ||",
+    "detail_2": "Supporting regional editorial workflows || The system was extended to support regional newspapers such as Manchester Evening News and Wales Online, each with their own content structures and audience expectations. This required balancing a shared template system with local flexibility. Sports-focused templates required more dynamic layouts to accommodate fixtures, results, and imagery. I ensured the structure could handle dense informational content while maintaining readability and hierarchy. ||",
+    "detail_3": "",
+    "detail_4": "",
+    "detail_5": "",
     "detail_6": "",
     "detail_7": "",
     "detail_8": "",
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "editorialmodules || newspaperdesignsystem || eeditions",
+    "": ""
   },
   {
     "title": "Advertising & Promotional Campaigns",
-    "slug": "",
+    "slug": "advertising",
     "thumbnail": "../img/project/preview/trinitymirror-thumb.jpg || Half of an old newspaper next to half a tablet device with a news article",
-    "hero": "../img/project/trinitymirror/insitu.jpg || Half of an old newspaper next to half a tablet device with a news article",
+    "hero": "../img/project/trinitymirror/insitu.jpg  || Half of an old newspaper next to half a tablet device with a news article",
     "category": "Products",
     "rationale": "Digital advertising and promotional assets adapted for editorial publishing environments",
     "oneliner": "Digital advertising campaigns tailored for high-visibility placements across news platforms",
@@ -1340,14 +1340,14 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "eeditions || redesigningorg  "
+    "related": "eeditions || editorialmodules || newspaperdesignsystem ",
+    "": ""
   },
   {
     "title": "Editorial Content Modules",
-    "slug": "",
+    "slug": "editorialmodules",
     "thumbnail": "../img/project/preview/footballpredictions-thumb.jpg || person using laptop with a table of football teams, badges and prediction scores",
-    "hero": "",
+    "hero": "../img/project/trinitymirror/footballpredictions.jpg || person using laptop with a table of football teams, badges and prediction scores",
     "category": "Products",
     "rationale": "Reusable editorial components supporting content delivery across multiple news platforms",
     "oneliner": "Modular editorial widgets supporting dynamic content across national and regional news brands",
@@ -1372,12 +1372,12 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "emailtemplates || newspaperdesignsystem || eeditions",
+    "": ""
   },
   {
     "title": "London Olympics ",
-    "slug": "",
+    "slug": "londonolympics",
     "thumbnail": "../img/project/preview/londonolympics-thumb.jpg || laptop on table with hands using it, on screen is a image gallery with swimmers",
     "hero": "",
     "category": "Products",
@@ -1404,12 +1404,12 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "touritinerary || mapwidget || babycompetition",
+    "": ""
   },
   {
     "title": "Stolen Dog Breeds ",
-    "slug": "",
+    "slug": "stolendogbreeds",
     "thumbnail": "../img/project/preview/stolendogbreeds-thumb.jpg || person holding a mobile phone near an airplane window with screen showing a map with date and travel information",
     "hero": "../img/project/stolendogbreeds/hero.jpg || person holding a mobile phone near an airplane window with screen showing a map with date and travel information",
     "category": "Data",
@@ -1426,18 +1426,18 @@
     "approach": "I implemented an interactive image map that revealed contextual data on hover, using a low-complexity front-end solution. The goal was to deliver clarity and interactivity without introducing unnecessary development overhead.",
     "impact": "Delivered a lightweight, responsive visualisation that enhanced a news feature with minimal build time. The approach enabled fast turnaround while still providing meaningful regional data interaction.",
     "detail_1": "Working within existing assets || The visual design for the UK map already existed, so the challenge was to add interactivity without rebuilding the underlying graphics. This required a pragmatic approach that prioritised speed and reuse over structural redesign. ||",
-    "detail_2": "../img/project/email/mirror-offers.jpg || Mirror email offers template || Email template designed for promotional editorial content",
-    "detail_3": "Adding mobile interaction support || To ensure usability on touch devices, I added a small JavaScript enhancement to enable a close interaction pattern, adapting the hover-based experience for mobile users where hover states are not available. ||",
-    "detail_4": "../img/project/email/manchester-business.jpg || Manchester Evening News business email || Regional email template for business content",
-    "detail_5": "../img/project/email/wales-rugby.jpg || Wales Online rugby email template || Sports-focused email template for rugby content",
+    "detail_2": "Adding mobile interaction support || To ensure usability on touch devices, I added a small JavaScript enhancement to enable a close interaction pattern, adapting the hover-based experience for mobile users where hover states are not available. ||",
+    "detail_3": "",
+    "detail_4": "",
+    "detail_5": "",
     "detail_6": "",
     "detail_7": "",
     "detail_8": "",
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "touritinerary || londonolympics || babycompetition",
+    "": ""
   },
   {
     "title": "William and Kate's Royal Tour",
@@ -1468,8 +1468,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "londonolympics || stolendogbreeds || mapwidget",
+    "": ""
   },
   {
     "title": "Livingstone Studio",
@@ -1500,8 +1500,8 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": ""
+    "related": "newspaperdesignsystem || redesigningorg || mmc",
+    "": ""
   },
   {
     "title": "Nepalese Nettle",
@@ -1532,8 +1532,8 @@
     "detail_9": "Prototyping Through Improvisation and Iteration || Prototyping involved adapting available materials and tools, including improvising knitting needles from sharpened wooden sticks and experimenting with construction methods such as circular knitting to reduce assembly time. A sample bag was created by repurposing an existing shawl, combining lining and strap techniques into a working prototype. || ../img/project/dunsmore/samplebag.jpg || Photograph a sample bag || Sample bag I put together by cutting up a shawl",
     "detail_10": "Refining Techniques Through Shared Practice || The process of making, including learning and demonstrating techniques such as casting on and strap weaving, became a collaborative activity, with knowledge shared across the group and refined through repetition and experimentation. || ../img/project/dunsmore/castingon.jpg || Photograph of some women casting on || Some women casting on with bamboo stcks",
     "detail_11": "Delivering a Viable and Adaptable Product || The first completed bag demonstrated the viability of the concept, with subsequent versions produced by the group. The initial pieces were intentionally small to ensure completion within the timeframe, with potential for scaling and adaptation after the project concluded. || ../img/project/dunsmore/firstbag.jpg || Photograph of the first finished bag || The first finished bag!",
-    "": "",
-    "related": "entomologicalknits || familycircle"
+    "related": "entomologicalknits || familycircle || waterconsumption",
+    "": ""
   },
   {
     "title": "Entomological Knits",
@@ -1564,7 +1564,7 @@
     "detail_9": "",
     "detail_10": "",
     "detail_11": "",
-    "": "",
-    "related": "dunsmore || familycircle"
+    "related": "dunsmore || familycircle || waterconsumption",
+    "": ""
   }
 ]
