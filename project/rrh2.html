@@ -28,7 +28,7 @@
           <a href="../index.html" class="nav-name">Tiffany Ong</a>
           <nav aria-label="Main navigation">
             <a href="/work.html">Work</a>
-
+            <a href="../index.html#contributions">Contributions</a>
             <a href="../index.html#about">About</a>
           </nav>
         </header>
@@ -117,15 +117,11 @@
                 <button
                   onclick="toggleDetail(this, 'details')"
                   class="detail-toggle-btn"
-                  aria-expanded="false"
+                  aria-expanded="true"
                 >
                   Hide details
                 </button>
-                <div
-                  id="details"
-                  class="detail-content open"
-                  style="max-height: 2820px"
-                >
+                <div id="details" class="detail-content">
                   <div class="detail-section">
                     <h2 class="detail-section-title">
                       Elevating Data Visualisation Skills and Expanding Prior
@@ -284,14 +280,14 @@
             <div class="proj-impact">
               <p class="proj-impact-label">Impact</p>
               <p class="proj-impact-body">
-                The project significantly advanced my approach to data
-                visualisation, particularly in integrating multiple analytical
-                layers into a cohesive system. It demonstrated how narrative
-                clarity can be strengthened through interaction design,
-                extending design thinking, enabling more flexible, responsive,
-                and exploratory ways of engaging with complex datasets. It also
-                established a more sustainable and transferable workflow for
-                future projects.
+                This project demonstrated how multiple analytical perspectives
+                could be integrated into a single visual system, enabling users
+                to explore narrative content through different interpretive
+                lenses while maintaining clarity and coherence. In tackling this
+                challenge, I significantly advanced my approach to data
+                visualisation, particularly in designing systems that bring
+                together multiple layers of analysis without overwhelming the
+                user.
               </p>
             </div>
             <br />
@@ -392,10 +388,6 @@
         </div>
 
         <footer role="contentinfo">
-          <span class="footer-name"
-            >Please do not use images or content without permission.
-            <br />Copyright © Tiffany Ong 2026</span
-          >
           <nav class="footer-links">
             <a href="https://www.linkedin.com/in/tiffanyong" target="_blank"
               >LinkedIn</a
@@ -403,10 +395,19 @@
             <a href="https://github.com/ongtiffany" target="_blank">GitHub</a>
             <a href="https://codepen.io/ongtiffany" target="_blank">CodePen</a>
           </nav>
+
+          <div class="footer-name">
+            Copyright © Tiffany Ong 2026 <br />
+            <span
+              >Certain images are sourced from Pexels, Unsplash, past
+              collaborative projects, or original. Please do not use images or
+              content without permission.</span
+            >
+          </div>
         </footer>
       </div>
     </div>
     <script src="../js/main.js"></script>
-    <script src="../js/layout.js"></script>
+    <script src="../js/project.js"></script>
   </body>
 </html>
