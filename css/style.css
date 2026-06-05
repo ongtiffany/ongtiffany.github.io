@@ -782,6 +782,27 @@ ul li {
   font-size: 14px;
 }
 
+ul.proj-meta-list {
+  margin-left: 0px;
+}
+ul.proj-meta-list li {
+  list-style-type: none;
+}
+ul.proj-meta-list li a .cta {
+  display: block;
+  line-height: 0;
+  margin-bottom: 12px;
+}
+ul.proj-meta-list li a:hover {
+  font-weight: 600;
+}
+ul.proj-meta-list li a:hover .cta {
+  gap: 16px;
+}
+ul.proj-meta-list li a:hover .cta::after {
+  width: 32px;
+}
+
 /* === Section Layout === */
 .proj-section {
   margin-bottom: 2.5rem;

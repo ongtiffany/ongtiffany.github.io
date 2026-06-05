@@ -844,6 +844,28 @@ ul.proj-list{
   }
 }
 
+ul.proj-meta-list {
+  margin-left:0px;
+  li{
+    list-style-type: none;
+    a{
+    // cta expand on hover
+    .cta{
+      display: block;
+      line-height: 0;
+      margin-bottom: 12px;
+    }
+  &:hover {
+    font-weight: 600;
+    .cta{
+    gap: 16px;
+    &::after { width: 32px; }
+  }
+  }
+}
+  }
+}
+
 /* === Section Layout === */
 
 .proj-section{
