@@ -1199,6 +1199,10 @@ h2.proj-section-label {
   list-style-type: none;
   border-right: 0.5px solid #d3d1c7;
   border-bottom: 0.5px solid #d3d1c7;
+  transition: background 0.8s;
+}
+.work-grid li:hover {
+  background: #f2f0ec;
 }
 .work-grid:hover h2.work-item-name {
   color: #444441;
@@ -1218,9 +1222,6 @@ h2.proj-section-label {
 }
 .work-item:nth-child(3n) {
   border-right: none;
-}
-.work-item:hover {
-  background: #f2f0ec;
 }
 .work-item:hover .work-item-img img {
   transform: scale(1.04);

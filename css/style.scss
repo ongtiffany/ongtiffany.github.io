@@ -1277,10 +1277,15 @@ padding-right:0;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   margin-left: 0;
+    
   li{
     list-style-type: none;
     border-right: 0.5px solid $border;
     border-bottom: 0.5px solid $border;
+    transition: background 0.8s;
+          &:hover{
+    background: $hover-bg;
+  }
   }
   &:hover{
     h2.work-item-name{
@@ -1304,8 +1309,6 @@ padding-right:0;
   &:nth-child(3n) { border-right: none; }
 
   &:hover {
-    background: $hover-bg;
-
     .work-item-img img {
       transform: scale(1.04);
       filter: grayscale(0%);
