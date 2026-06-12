@@ -11,9 +11,9 @@ function loadLayout() {
       <header role="banner" class="site-header">
         <a href="../index.html" class="nav-name">Tiffany Ong</a>
         <nav aria-label="Main navigation">
-          <a href="/work.html">Work</a>
-          <a href="../index.html#contributions">Contributions</a>
           <a href="../index.html#about">About</a>
+          <a href="../index.html#contributions">Contributions</a>
+          <a href="/work.html">Work</a>
         </nav>
       </header>
 
