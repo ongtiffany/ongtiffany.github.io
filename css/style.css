@@ -43,20 +43,32 @@
   --sans: Raleway, sans-serif;
 }
 
+:root[data-theme=dark] {
+  --bg: #111111;
+  --border: #2d2d2d;
+  --border-light: #3a3a3a;
+  --text-primary: #f5f5f2;
+  --text-body: #d4d4cf;
+  --text-secondary: #9a9a92;
+  --accent: #d07a50;
+  --accent-light: #e08a60;
+  --hover-bg: #1b1b1b;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #fafaf8;
   font-family: "Raleway", sans-serif;
-  color: #444441;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
+  background: var(--bg);
+  color: var(--text-body);
 }
 
 .page {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -68,18 +80,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.5px solid #d3d1c7;
+  border-bottom: 0.5px solid var(--border);
   background: rgba(250, 250, 248, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .nav-name {
-  font-size: 20px;
+  font-size: 30px;
   color: #1a1a18;
   text-decoration: none;
-  transition: color 0.2s;
   font-family: "Cormorant Garamond", serif;
+  overflow: hidden;
+  transition: color 0.2s;
 }
 .nav-name:hover {
   color: #9e4f2a;
@@ -91,12 +104,13 @@ nav[aria-label="Main navigation"] {
   gap: 2rem;
 }
 nav[aria-label="Main navigation"] a {
-  font-size: 14px;
+  font-size: 17px;
   letter-spacing: 0.05em;
   color: #6b6a66;
   text-decoration: none;
   position: relative;
   transition: color 0.2s;
+  font-weight: 300;
 }
 nav[aria-label="Main navigation"] a::after {
   content: "";
@@ -113,6 +127,20 @@ nav[aria-label="Main navigation"] a:hover, nav[aria-label="Main navigation"] a.a
 }
 nav[aria-label="Main navigation"] a:hover::after, nav[aria-label="Main navigation"] a.active::after {
   width: 100%;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  color: var(--accent);
 }
 
 .hero {
@@ -138,14 +166,13 @@ nav[aria-label="Main navigation"] a:hover::after, nav[aria-label="Main navigatio
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: end;
 }
 
 .hero-line {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.6rem;
+  font-size: 44px;
+  line-height: 1.05;
   font-weight: 300;
-  line-height: 1.18;
   color: #1a1a18;
   letter-spacing: -0.01em;
   opacity: 0;
@@ -169,10 +196,10 @@ nav[aria-label="Main navigation"] a:hover::after, nav[aria-label="Main navigatio
 
 .hero-sub {
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #6b6a66;
   margin-bottom: 1.5rem;
   opacity: 0;
@@ -236,16 +263,17 @@ a:hover .cta::after {
 }
 
 .section-label {
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #6b6a66;
+  color: #1a1a18;
   margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .section-intro {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.1rem;
+  font-size: 22px;
   font-weight: 300;
   font-style: italic;
   color: #6b6a66;
@@ -253,51 +281,53 @@ a:hover .cta::after {
   margin-bottom: 2rem;
 }
 
-.reveal-ready {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal-ready.revealed {
-  opacity: 1;
-  transform: translateY(0);
+#philosophy header {
+  position: sticky;
+  top: 88px;
+  background: #fafaf8;
+  padding: 3rem 3.5rem 0 3.5rem;
+  margin: -3rem -3.5rem 0 -3.5rem;
+  border-bottom: 0.5px solid #d3d1c7;
+  z-index: 9;
 }
 
-.phil-list {
+ul.phil-list {
   list-style: none;
+  margin-left: 0;
 }
 
 .phil-item {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 1.5rem 2.5rem;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   border-top: 0.5px solid #d3d1c7;
+  background: #fafaf8;
   align-items: start;
-  transition: background 0.2s;
+  transition: transform 0.35s ease, background 0.25s ease;
 }
 .phil-item:last-child {
   border-bottom: 0.5px solid #d3d1c7;
 }
 .phil-item:hover {
-  margin: 0 -3.5rem;
-  padding: 1.5rem 3.5rem;
+  transform: translateX(10px);
 }
 
 .phil-num {
-  font-size: 12px;
+  font-size: 17px;
   text-transform: uppercase;
   color: #b85c38;
   font-family: "Raleway", sans-serif;
   margin-right: 6px;
   font-weight: 400;
+  line-height: 1.05;
 }
 
 .phil-title {
-  font-size: 22px;
+  font-size: 30px;
+  line-height: 1.15;
   font-weight: 400;
   color: #1a1a18;
-  line-height: 1.4;
   padding-top: 2px;
   font-family: "Cormorant Garamond", serif;
   transition: letter-spacing 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -307,10 +337,19 @@ a:hover .cta::after {
 }
 
 .phil-body {
-  font-size: 16px;
-  line-height: 1.75;
-  color: #6b6a66;
+  font-size: 17px;
   margin: 0;
+  font-weight: 300;
+}
+
+#selectedwork header {
+  position: sticky;
+  top: 88px;
+  background: #fafaf8;
+  padding: 3rem 3.5rem 0 3.5rem;
+  margin: -3rem -3.5rem 0 -3.5rem;
+  border-bottom: 0.5px solid #d3d1c7;
+  z-index: 9;
 }
 
 .proj-list {
@@ -373,7 +412,8 @@ a:hover .cta::after {
      object-fit: cover;
   display: block;
   filter: grayscale(15%);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s;
+  will-change: transform;
 }
 
 .proj-img-placeholder {
@@ -391,7 +431,7 @@ a:hover .cta::after {
 
 .proj-name {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem;
+  font-size: 30px;
   font-weight: 400;
   color: #1a1a18;
   margin-bottom: 0.25rem;
@@ -401,24 +441,23 @@ a:hover .cta::after {
 
 .proj-signal {
   font-family: "Raleway", sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 300;
-  color: #6b6a66;
   line-height: 1.55;
   margin-bottom: 0.5rem;
 }
 
 .proj-type {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   color: #9e4f2a;
 }
 
 .proj-partners {
   font-family: "Cormorant Garamond", serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
-  color: #6b6a66;
+  color: #1a1a18;
   line-height: 1.55;
   font-style: italic;
   margin-bottom: 0.2rem;
@@ -448,14 +487,14 @@ a:hover .cta::after {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 0.7fr 2fr;
   gap: 4rem;
   align-items: start;
 }
 
 .about-aside {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
+  font-size: 22px;
   font-weight: 300;
   font-style: italic;
   color: #6b6a66;
@@ -463,10 +502,11 @@ a:hover .cta::after {
 }
 
 .about-body p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #444441;
+  font-size: 17px;
+  line-height: 1.6;
   margin-bottom: 1rem;
+  font-weight: 300;
+  color: #1a1a18;
 }
 .about-body p:last-child {
   margin-bottom: 0;
@@ -483,14 +523,15 @@ a:hover .cta::after {
   margin-left: 0;
 }
 .orgs-list li {
-  opacity: 0.6;
   list-style-type: none;
 }
 .orgs-list li:hover {
   opacity: 1;
 }
 .orgs-list img {
-  width: 100px;
+  width: 140px;
+  height: 140px;
+  margin-right: 70px;
 }
 
 img {
@@ -529,11 +570,12 @@ ul.skills-items li {
 }
 
 .skill-pill {
-  font-size: 12px;
+  font-size: 17px;
   color: #444441;
   border: 0.5px solid #d3d1c7;
   padding: 4px 10px;
   border-radius: 0;
+  font-weight: 300;
 }
 .skill-pill.tools {
   color: #6b6a66;
@@ -546,12 +588,13 @@ ul.skills-items li {
 }
 
 .contrib-group-label {
-  font-size: 12px;
+  font-size: 17px;
   text-transform: uppercase;
   color: #6b6a66;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 0.5px solid #d3d1c7;
+  font-weight: 300;
 }
 
 .contrib-item {
@@ -563,7 +606,7 @@ ul.skills-items li {
 }
 
 .contrib-title {
-  font-size: 19px;
+  font-size: 22px;
   color: #1a1a18;
   line-height: 1.3;
   margin-bottom: 2px;
@@ -575,8 +618,13 @@ ul.skills-items li {
 }
 
 .contrib-meta {
-  font-size: 13px;
+  font-size: 17px;
   color: #9e4f2a;
+  font-weight: 300;
+}
+
+footer {
+  font-size: 14px;
 }
 
 footer[role=contentinfo] {
@@ -589,18 +637,24 @@ footer[role=contentinfo] {
   line-height: 1;
 }
 
+.footer-links a {
+  font-size: 14px;
+}
+
 .footer-name {
-  font-size: 12px;
   letter-spacing: 0.03em;
-  color: #6b6a66;
+  color: #1a1a18;
+  font-size: 14px;
 }
 .footer-name span {
   font-style: italic;
-  font-size: 14px;
   font-family: "Cormorant Garamond", serif;
-  margin-top: 12px;
   display: block;
   letter-spacing: 0;
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #6b6a66;
 }
 
 @media (max-width: 640px) {
@@ -626,7 +680,6 @@ footer[role=contentinfo] {
   margin-bottom: 1rem;
 }
 .footer-links a {
-  font-size: 12px;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -700,7 +753,7 @@ ul li {
 
 .proj-page-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.4rem;
+  font-size: 30px;
   font-weight: 300;
   color: #1a1a18;
   line-height: 1.15;
@@ -713,7 +766,7 @@ ul li {
 
 .proj-page-lead {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.15rem;
+  font-size: 22px;
   font-weight: 300;
   font-style: italic;
   color: #6b6a66;
@@ -774,12 +827,12 @@ ul li {
 }
 
 .proj-meta-value {
-  font-size: 14px;
+  font-size: 17px;
   color: #1a1a18;
   line-height: 1.4;
 }
 .proj-meta-value a {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 ul.proj-meta-list {
@@ -791,7 +844,7 @@ ul.proj-meta-list li {
 ul.proj-meta-list li a .cta {
   display: block;
   line-height: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 ul.proj-meta-list li a:hover {
   font-weight: 600;
@@ -814,6 +867,7 @@ h2.proj-section-label {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   line-height: 2.3;
+  font-weight: 600;
 }
 
 /* Mobile */
@@ -906,7 +960,7 @@ h2.proj-section-label {
 
 .detail-section-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.25rem;
+  font-size: 22px;
   font-weight: 300;
   font-style: italic;
   line-height: 1.65;
@@ -938,9 +992,20 @@ h2.proj-section-label {
   }
 }
 .related-projects {
-  border-top: 5px solid #d3d1c7;
+  border-top: 10px solid #d3d1c7;
   padding: 7rem 0 3rem 0;
-  margin-top: 3rem;
+  margin-top: 7rem;
+}
+.related-projects .section-label {
+  font-size: 17px;
+  font-weight: 300;
+}
+.related-projects .proj-name {
+  font-size: 22px;
+  font-weight: 500;
+}
+.related-projects .proj-signal {
+  font-size: 16px;
 }
 
 @media (max-width: 640px) {
@@ -1118,7 +1183,7 @@ h2.proj-section-label {
 }
 
 .proj-impact-body {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.7;
   color: #444441;
 }
@@ -1181,7 +1246,7 @@ h2.proj-section-label {
 }
 
 .long-section-body {
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.8;
   color: #444441;
 }
@@ -1205,13 +1270,7 @@ h2.proj-section-label {
   background: #f2f0ec;
 }
 .work-grid:hover h2.work-item-name {
-  color: #444441;
-}
-.work-grid:hover p.work-item-desc {
-  font-weight: 400;
-}
-.work-grid:hover p.work-item-type {
-  font-weight: 400;
+  color: #1a1a18;
 }
 
 .work-item {
@@ -1263,22 +1322,23 @@ h2.proj-section-label {
 .work-item-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 500;
   color: #1a1a18;
-  margin-bottom: 0.2rem;
+  margin-bottom: 8px;
   line-height: 1.25;
   transition: color 0.2s;
 }
 
 .work-item-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: #6b6a66;
   line-height: 1.45;
   margin-bottom: 0.3rem;
+  font-weight: 300;
 }
 
 .work-item-type {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #9e4f2a;
@@ -1299,7 +1359,7 @@ h2.proj-section-label {
     gap: 1.5rem;
   }
   .hero-line {
-    font-size: 1.9rem;
+    font-size: 2.8rem;
   }
   .phil-item {
     grid-template-columns: 1fr;
@@ -1398,4 +1458,17 @@ body, a, button {
 .cursor.cursor--hover::after {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+}
+
+main {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: pageContentEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageContentEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
