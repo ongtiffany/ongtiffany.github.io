@@ -290,6 +290,15 @@ a{
 .section {
   padding: 3rem $pad-x;
   border-top: 0.5px solid $border;
+  header{
+    position: sticky;
+    top: 88px;
+    background: $bg;
+    padding: 3rem 3.5rem 0 3.5rem;
+    margin: -3rem -3.5rem 0 -3.5rem;
+    border-bottom: 0.5px solid $border;
+    z-index: 9;
+  }
 }
 
 .section-label {
@@ -315,15 +324,6 @@ a{
 // PHILOSOPHY
 // =============================
 
-#philosophy header{
-position: sticky;
-top: 88px;
-background: $bg;
-padding: 3rem 3.5rem 0 3.5rem;
-margin: -3rem -3.5rem 0 -3.5rem;
-border-bottom: 0.5px solid $border;
-z-index: 9;
-}
 ul.phil-list { 
   list-style: none; 
     margin-left:0;
@@ -381,16 +381,6 @@ ul.phil-list {
 // =============================
 // PROJECT LIST
 // =============================
-
-#selectedwork header{
-position: sticky;
-top: 88px;
-background: $bg;
-padding: 3rem 3.5rem 0 3.5rem;
-margin: -3rem -3.5rem 0 -3.5rem;
-border-bottom: 0.5px solid $border;
-z-index: 9;
-}
 
 .proj-list { 
   list-style: none; 
@@ -541,26 +531,21 @@ z-index: 9;
 // =============================
 .about-grid {
   display: grid;
-  grid-template-columns: 0.7fr 2fr;
   gap: 4rem;
   align-items: start;
-}
-
-.about-aside {
-  font-family: $serif;
-  font-size: $type-m;
-  font-weight: 300;
-  font-style: italic;
-  color: $text-secondary;
-  line-height: 1.6;
+  padding-top:28px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .about-body p {
-  font-size: $type-s;
-  line-height: 1.6;
+  font-size: $type-m;
+  line-height: 1.3;
   margin-bottom: 1rem;
   font-weight: 300;
   color: $text-primary;
+  text-align: justify;
+  font-family: $serif;
   &:last-child { margin-bottom: 0; }
 }
 
@@ -1079,7 +1064,7 @@ h2.proj-section-label{
 // =============================
 
 .related-projects {
-  border-top: 10px solid $border;
+  border-top: 10px solid $text-primary;
   padding: 7rem 0 3rem 0;
   margin-top:7rem;
   .section-label{
@@ -1451,7 +1436,9 @@ padding-right:0;
     padding-left: $pad-x-sm;
     padding-right: $pad-x-sm;
   }
-
+  .site-header{padding-top: inherit; padding-bottom:inherit;}
+  .nav-name {font-size:26px; height: 50px; line-height: 0.8; padding-top:13px;}
+  nav[aria-label="Main navigation"] a{font-size: 16px; letter-spacing: -0.1px;}
   .hero-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .hero-line {font-size: 2.8rem;}
   .phil-item { grid-template-columns: 1fr; gap: 0.5rem; }
@@ -1459,13 +1446,31 @@ padding-right:0;
   .proj-row { grid-template-columns: 1fr; }
   .proj-img { width: 100%; height: 180px; }
   .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-body p {text-align: left;}
   .contrib-cols { grid-template-columns: 1fr; }
   .proj-meta-row { grid-template-columns: repeat(1, 1fr);}
   .proj-short-grid { grid-template-columns: 1fr; gap: 0.5rem; }
   .long-section { grid-template-columns: 1fr; gap: 0.75rem; }
   .work-grid { grid-template-columns: 1fr; }
   .work-item { border-right: none; }
-  .orgs-list { gap: 0; }
+  .orgs-list { gap: 0; img{
+    width: 100px;
+height: 100px;
+margin: 0 1rem;
+  }}
+  .proj-impact {padding: 1.25rem 0.5rem;
+  border-left: none;
+  border-top: 1px solid $accent;
+}
+.section {
+  header{
+    top: 18px;
+    .section-intro{
+      margin-bottom: 14px;
+    }
+  }
+}
+
   nav[aria-label="Main navigation"] { gap: 0.8rem; }
 }
 

@@ -261,6 +261,15 @@ a:hover .cta::after {
   padding: 3rem 3.5rem;
   border-top: 0.5px solid #d3d1c7;
 }
+.section header {
+  position: sticky;
+  top: 88px;
+  background: #fafaf8;
+  padding: 3rem 3.5rem 0 3.5rem;
+  margin: -3rem -3.5rem 0 -3.5rem;
+  border-bottom: 0.5px solid #d3d1c7;
+  z-index: 9;
+}
 
 .section-label {
   font-size: 12px;
@@ -279,16 +288,6 @@ a:hover .cta::after {
   color: #6b6a66;
   line-height: 1.6;
   margin-bottom: 2rem;
-}
-
-#philosophy header {
-  position: sticky;
-  top: 88px;
-  background: #fafaf8;
-  padding: 3rem 3.5rem 0 3.5rem;
-  margin: -3rem -3.5rem 0 -3.5rem;
-  border-bottom: 0.5px solid #d3d1c7;
-  z-index: 9;
 }
 
 ul.phil-list {
@@ -340,16 +339,6 @@ ul.phil-list {
   font-size: 17px;
   margin: 0;
   font-weight: 300;
-}
-
-#selectedwork header {
-  position: sticky;
-  top: 88px;
-  background: #fafaf8;
-  padding: 3rem 3.5rem 0 3.5rem;
-  margin: -3rem -3.5rem 0 -3.5rem;
-  border-bottom: 0.5px solid #d3d1c7;
-  z-index: 9;
 }
 
 .proj-list {
@@ -487,26 +476,21 @@ ul.phil-list {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 0.7fr 2fr;
   gap: 4rem;
   align-items: start;
-}
-
-.about-aside {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 22px;
-  font-weight: 300;
-  font-style: italic;
-  color: #6b6a66;
-  line-height: 1.6;
+  padding-top: 28px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .about-body p {
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 22px;
+  line-height: 1.3;
   margin-bottom: 1rem;
   font-weight: 300;
   color: #1a1a18;
+  text-align: justify;
+  font-family: "Cormorant Garamond", serif;
 }
 .about-body p:last-child {
   margin-bottom: 0;
@@ -992,7 +976,7 @@ h2.proj-section-label {
   }
 }
 .related-projects {
-  border-top: 10px solid #d3d1c7;
+  border-top: 10px solid #1a1a18;
   padding: 7rem 0 3rem 0;
   margin-top: 7rem;
 }
@@ -1354,6 +1338,20 @@ h2.proj-section-label {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+  .site-header {
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+  .nav-name {
+    font-size: 26px;
+    height: 50px;
+    line-height: 0.8;
+    padding-top: 13px;
+  }
+  nav[aria-label="Main navigation"] a {
+    font-size: 16px;
+    letter-spacing: -0.1px;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1380,6 +1378,9 @@ h2.proj-section-label {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+  .about-body p {
+    text-align: left;
+  }
   .contrib-cols {
     grid-template-columns: 1fr;
   }
@@ -1402,6 +1403,22 @@ h2.proj-section-label {
   }
   .orgs-list {
     gap: 0;
+  }
+  .orgs-list img {
+    width: 100px;
+    height: 100px;
+    margin: 0 1rem;
+  }
+  .proj-impact {
+    padding: 1.25rem 0.5rem;
+    border-left: none;
+    border-top: 1px solid #9e4f2a;
+  }
+  .section header {
+    top: 18px;
+  }
+  .section header .section-intro {
+    margin-bottom: 14px;
   }
   nav[aria-label="Main navigation"] {
     gap: 0.8rem;
