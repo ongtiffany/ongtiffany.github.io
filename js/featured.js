@@ -21,9 +21,11 @@ async function loadSelectedWork() {
   // ------------------------
   const featuredSlugs = [
     "issa",
-    "agec",
     "redesigningorg",
+    "agec",
+    "livingwithmachines",
     "digitalaccessibility",
+    "illustratingimpact",
   ];
 
   function parseImage(cell = "") {
