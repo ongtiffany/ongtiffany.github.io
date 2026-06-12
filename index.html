@@ -16,13 +16,15 @@
   <body>
     <div class="page" id="landing">
       <header role="banner" class="site-header">
-        <a href="index.html" class="nav-name">Tiffany Ong</a>
+        <a href="index.html" class="nav-name logo-reveal"> Tiffany Ong </a>
         <nav aria-label="Main navigation">
           <a href="/work.html">Work</a>
           <a href="#contributions">Contributions</a>
           <a href="#about">About</a>
         </nav>
       </header>
+
+      <!--<button id="theme-toggle" class="theme-toggle">Light / Dark</button>-->
 
       <main>
         <!-- HERO -->
@@ -51,8 +53,10 @@
           id="philosophy"
           aria-labelledby="philosophy-heading"
         >
-          <p class="section-label" id="philosophy-heading">Philosophy</p>
-          <p class="section-intro">How I work.</p>
+          <header>
+            <p class="section-label" id="philosophy-heading">Philosophy</p>
+            <p class="section-intro">How I work.</p>
+          </header>
           <ul class="phil-list" aria-label="Design principles">
             <li class="phil-item">
               <h2 class="phil-title">
@@ -117,12 +121,13 @@
           id="selectedwork"
           aria-labelledby="selectedwork-heading"
         >
-          <p class="section-label" id="selectedwork-heading">Selected Work</p>
-          <p class="section-intro">
-            Selected work designed for researchers, archivists, policymakers,
-            and newspaper readers.
-          </p>
-
+          <header>
+            <p class="section-label" id="selectedwork-heading">Selected Work</p>
+            <p class="section-intro">
+              Selected work designed for researchers, archivists, policymakers,
+              and newspaper readers.
+            </p>
+          </header>
           <ul class="proj-list" id="selected-work"></ul>
           <div class="work-link">
             <span class="work-text">All projects</span>
@@ -136,8 +141,7 @@
           <div class="about-grid">
             <div>
               <p class="about-aside">
-                Designer. King's Digital Lab — academic research. Previously:
-                fashion, journalism, marketing.
+                Designer: Products, Platforms, Systems, and Data.
               </p>
             </div>
             <div class="about-body">
@@ -158,10 +162,9 @@
                 on long research horizons.
               </p>
               <p>
-                I currently work at King's Digital Lab at King's College London,
-                where I've led design across funded projects from interactive
-                data visualisations and digital archives to AI-informed tools
-                and internal systems redesign. Collaboration is central to how I
+                I've led design across funded projects from interactive data
+                visualisations and digital archives to AI-informed tools and
+                internal systems redesign. Collaboration is central to how I
                 work. Most of my projects involve researchers, engineers,
                 historians, and policymakers, which has sharpened how I
                 communicate design decisions and build shared ownership across
