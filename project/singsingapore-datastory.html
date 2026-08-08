@@ -339,8 +339,14 @@
         gap: 98px;
         flex-wrap: wrap;
       }
+      @media (max-width: 700px) {
+        .hero-stats {
+          margin-top: 0;
+          gap: 28px;
+        }
+      }
       .hero-stat b {
-        font-family: "Inter", sans-serif;
+        font-family: "Instrument Sans", sans-serif;
         font-size: 92px;
         color: var(--ink);
         font-weight: 800;
@@ -449,7 +455,7 @@
       }
       .tooltip b {
         display: block;
-        font-family: "Inter", sans-serif;
+        font-family: "Instrument Sans", sans-serif;
         font-weight: 700;
         margin-bottom: 2px;
         font-size: 13.5px;
@@ -515,7 +521,7 @@
 
       .leaflet-popup-content-wrapper {
         border-radius: 0;
-        font-family: "Inter", sans-serif;
+        font-family: "Instrument Sans", sans-serif;
       }
       .leaflet-popup-content {
         font-size: 13px;
@@ -575,7 +581,7 @@
         align-items: baseline;
         gap: 16px;
         color: var(--ink);
-        font-family: "Inter", sans-serif;
+        font-family: "Instrument Sans", sans-serif;
         font-size: 15.5px;
       }
       .acc-head:hover {
@@ -751,7 +757,7 @@
         padding: 9px 12px;
         margin-bottom: 8px;
         cursor: pointer;
-        font-family: "Inter", sans-serif;
+        font-family: "Instrument Sans", sans-serif;
         font-size: 14px;
       }
       #modal .m-pick:hover {
@@ -2291,9 +2297,7 @@
               fillOpacity: 0.6,
             })
               .addTo(leafletMap)
-              .bindPopup(
-                `<b>${name}</b><br>${n} years (${rangeTxt})<br>Click bars on the timeline above for full year-by-year detail.`,
-              );
+              .bindPopup(`<b>${n} years</b> at <b>${name}</b>`);
           });
 
           DECENTRALISED_COORDS.forEach((d) => {
@@ -2431,12 +2435,12 @@
             d3
               .axisLeft(y)
               .tickValues([0, 1, 2, 3])
-              .tickFormat((d) => (d === 0 ? "no song" : String(d))),
+              .tickFormat((d) => (d === 0 ? "0" : String(d))),
           );
         addStripePattern(svg, "stripe-bilingual", "--ink", "--red");
 
         function fillFor(d) {
-          if (!d.hasSong) return "var(--empty-fill)";
+          if (!d.hasSong) return "transparent";
           return d.hasZh ? "url(#stripe-bilingual)" : "var(--ink)";
         }
         const bars = svg
@@ -2529,13 +2533,13 @@
           .append("div")
           .attr("class", "sw")
           .html(
-            `<span class="sq" style="background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 2px,var(--red) 1px,var(--red) 4px)">"></span>English + Mandarin`,
+            `<span class="sq" style="background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 2px,var(--red) 1px,var(--red) 4px)"></span>English + Mandarin`,
           );
         legend
           .append("div")
           .attr("class", "sw")
           .html(
-            `<span class="sq" style="background:var(--empty-fill)"></span>No song`,
+            `<span class="sq" style="border:1px solid var(--muted); background:transparent"></span>No song`,
           );
       }
       document.getElementById("fig-titlebar")._render = renderTitleBar;
