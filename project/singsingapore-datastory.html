@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What Singapore Sings — NDP Songs, 1966–2026</title>
+    <title>Sing Singapore</title>
+    <meta
+      name="description"
+      content="A visual exploration of Singapore’s National Day songs from 1965 to 2026. The page shows 61 years, 3 main venues, and 38 songs, with sections visualizing parade locations, songs by year and language, composers and performers, official slogans, recurring words, and a chronological songbook."
+    />
+    <meta name="author" content="Tiffany Ong" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -2239,7 +2244,7 @@
           .append("div")
           .attr("class", "sw")
           .html(
-            `<span class="sq" style="background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 2px,var(--red) 1px,var(--red) 4px)"></span>Decentralised`,
+            `<span class="sq" style="background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 3px,var(--red) 1px,var(--red) 4px)"></span>Decentralised`,
           );
       }
       document.getElementById("fig-venue")._render = renderVenue;
@@ -2533,7 +2538,7 @@
           .append("div")
           .attr("class", "sw")
           .html(
-            `<span class="sq" style="background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 2px,var(--red) 1px,var(--red) 4px)"></span>English + Mandarin`,
+            `<span class="sq" style="background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 3px,var(--red) 1px,var(--red) 4px)"></span>English + Mandarin`,
           );
         legend
           .append("div")
@@ -2701,6 +2706,7 @@
         const margin = { top: 16, right: 10, bottom: 30, left: 10 };
         const svg = d3.select(el).attr("viewBox", `0 0 ${width} ${height}`);
         svg.selectAll("*").remove();
+        addStripePattern(svg, "stripe-slogan", "--ink", "--red");
 
         const x = d3
           .scaleBand()
@@ -2719,10 +2725,10 @@
           st === "none"
             ? "var(--empty-fill)"
             : st === "theme"
-              ? "var(--red)"
+              ? "var(--ink)"
               : st === "slogan"
-                ? "var(--accent)"
-                : "var(--ink)";
+                ? "var(--red)"
+                : "url(#stripe-slogan)";
 
         svg
           .selectAll("rect")
@@ -2767,19 +2773,17 @@
         legend
           .append("div")
           .attr("class", "sw")
-          .html(
-            `<span class="sq" style="background:var(--red)"></span>Documented theme`,
-          );
+          .html(`<span class="sq" style="background:var(--red)"></span>slogan`);
+        legend
+          .append("div")
+          .attr("class", "sw")
+          .html(`<span class="sq" style="background:var(--ink)"></span>theme`);
         legend
           .append("div")
           .attr("class", "sw")
           .html(
-            `<span class="sq" style="background:var(--accent)"></span>Documented slogan`,
+            `<span class="sq" style="background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 3px,var(--red) 1px,var(--red) 4px)"></span>Both`,
           );
-        legend
-          .append("div")
-          .attr("class", "sw")
-          .html(`<span class="sq" style="background:var(--ink)"></span>Both`);
         legend
           .append("div")
           .attr("class", "sw")
@@ -2800,7 +2804,7 @@
       function renderMatrix() {
         const el = document.getElementById("chart-matrix");
         const box = el.getBoundingClientRect();
-        const width = Math.max(box.width, 420);
+        const width = Math.max(box.width, 520);
         const words = [
           "singapore",
           "home",
@@ -2858,7 +2862,7 @@
           .enter()
           .append("text")
           .attr("class", "rowlabel")
-          .attr("x", margin.left - 10)
+          .attr("x", margin.left - 3)
           .attr("y", (d, i) => margin.top + i * rowH + rowH / 2)
           .attr("dy", "0.32em")
           .attr("text-anchor", "end")
