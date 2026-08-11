@@ -6,7 +6,7 @@
     <title>Sing Singapore</title>
     <meta
       name="description"
-      content="A visual exploration of Singapore’s National Day songs from 1965 to 2026. The page shows 61 years, 3 main venues, and 38 songs, with sections visualizing parade locations, songs by year and language, composers and performers, official slogans, recurring words, and a chronological songbook."
+      content="A visual exploration of Singapore’s National Day songs from 1966 to 2026. The page shows 61 years, 3 main venues, and 38 songs, with sections visualizing parade locations, songs by year and language, composers and performers, official slogans, recurring words, and a chronological songbook."
     />
     <meta name="author" content="Tiffany Ong" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -288,6 +288,11 @@
         padding: 110px 32px 50px;
         overflow: hidden;
       }
+      @media (max-width: 700px) {
+        #hero {
+          padding: 70px 20px 50px;
+        }
+      }
       #hero-sky {
         position: absolute;
         inset: 0;
@@ -347,7 +352,10 @@
       @media (max-width: 700px) {
         .hero-stats {
           margin-top: 0;
-          gap: 28px;
+          display: block;
+        }
+        .hero-stat b {
+          font-size: 82px;
         }
       }
       .hero-stat b {
@@ -826,10 +834,10 @@
         </p>
         <div class="hero-stats">
           <div class="hero-stat"><b>61</b><span>years</span></div>
-          <div class="hero-stat"><b>3</b><span>venues</span></div>
           <div class="hero-stat"><b>38</b><span>songs</span></div>
+          <div class="hero-stat"><b>3</b><span>venues</span></div>
         </div>
-        <div class="eyebrow">1965–2026 · Singapore's National Day</div>
+        <div class="eyebrow">1966–2026 · Singapore's National Day</div>
       </div>
     </section>
 
@@ -1006,7 +1014,7 @@
             often used loosely and interchangeably across different sources;
             only 2005 clearly documents both as distinct things at once ("<b
               >The Future Is Ours To Make</b
-            >" as the slogan, and<b>40 Years of Nation Building</b>" as the
+            >" as the slogan, and <b>40 Years of Nation Building</b>" as the
             theme).
           </p>
         </div>
@@ -1025,7 +1033,7 @@
       <div class="wrap">
         <div class="chapter-head">
           <div class="chapter-num">06 — Words</div>
-          <h2 class="chapter-title">Titles, slogans and themes</h2>
+          <h2 class="chapter-title">Song titles, slogans and themes</h2>
           <p class="chapter-dek">
             This looks at the frequent words across three sources per year: the
             song title, the slogan, and the parade theme. A dot splits when a
@@ -1088,49 +1096,15 @@
           </p>
         </details>
         <details class="endnote">
-          <summary>Why this exists</summary>
-          <p>
-            I remember singing happily along to National Day songs, buying a
-            cassette and memorising the lyrics from the small folded sheet
-            inside the case.
-          </p>
-          <p>
-            On my children’s first National Day living in Singapore, what feels
-            nostalgic and completely normal to me landed as something a little
-            overwhelming and odd for them, right down to a school assignment
-            asking them to listen to National Day Parade (NDP) songs and answer
-            questions about them.
-          </p>
-          <p>
-            It got me wondering how the songs I grew up with compare with the
-            ones Singapore sings today. What has changed? What has stayed? And
-            what can the songs, their titles and the world around them tell us
-            about Singapore over time?
-          </p>
-          <p>
-            I originally wanted to explore the lyrics themselves. But rather
-            than reproduce or text-mine copyrighted lyrics, I decided to build
-            this around information that is openly documented: song titles,
-            languages, composers, performers, official NDP themes, parade venues
-            and other published details.
-          </p>
-          <p>
-            The result is a small data story built mostly out of curiosity; a
-            way to look at a familiar national tradition from a different angle,
-            and hopefully something my kids, other Singaporeans and newcomers to
-            Singapore can explore and make sense of too.
-          </p>
-          <p>
-            It’s a work in progress. If you spot something I’ve missed or find a
-            pattern I haven’t, I’d love to hear about it.
-          </p>
-          <br />
-          <hr />
-
-          <p style="font-size: 13px; color: var(--red-deep); margin-top: 30px">
-            Built as a prototype: static HTML, D3.js and Leaflet, no build step,
-            one embedded data object.
-          </p>
+          <summary>
+            <a
+              href="../project/singsingapore.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Why this exists<span class="cta" aria-hidden="true"></span>
+            </a>
+          </summary>
         </details>
       </div>
     </section>
