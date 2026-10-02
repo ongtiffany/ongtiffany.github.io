@@ -121,8 +121,8 @@ async function loadSelectedWork() {
 
                 ${renderPartnerPreview(project.partners)}
 
-                <p class="proj-type">
-                  ${project.category || ""}
+                <p class="proj-type typing-hover">
+                  <span>${project.category || ""}</span>
                 </p>
 
               </div>

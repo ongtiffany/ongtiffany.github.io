@@ -101,11 +101,11 @@ async function loadWork() {
 
         ${renderPartnerPreview(project.partners)}
 
-        <p class="work-item-type">
-          ${project.category || ""} · ${project.date || ""}
+        <p class="work-item-type typing-hover">
+          <span>${project.category || ""} · ${project.date || ""}</span>
         </p>
 
-        ${hasSlug ? `<span class="cta" aria-hidden="true"></span>` : ""}
+        ${hasSlug ? `<div class="cta" aria-hidden="true"></div>` : ""}
 
       </div>
     `;

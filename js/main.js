@@ -5,59 +5,142 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cursor = document.querySelector(".cursor");
 
-  if (cursor) {
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
+  if (!cursor) return;
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  // Keep your existing cursor behaviour
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    cursor.style.left = mouseX + "px";
+    cursor.style.top = mouseY + "px";
+  });
+
+  // =====================================================
+  // COLOUR TRAIL
+  // =====================================================
+
+  const trailCount = 18;
+  const trails = [];
+
+  for (let i = 0; i < trailCount; i++) {
+    const el = document.createElement("div");
+
+    el.className = "cursor-trail";
+
+    document.body.appendChild(el);
+
+    trails.push({
+      el: el,
+      x: mouseX,
+      y: mouseY,
     });
-
-    document.addEventListener("mouseover", (e) => {
-      if (e.target.closest("a, button, .proj-row")) {
-        cursor.classList.add("cursor--hover");
-      }
-    });
-
-    document.addEventListener("mouseout", (e) => {
-      if (e.target.closest("a, button, .proj-row")) {
-        cursor.classList.remove("cursor--hover");
-      }
-    });
-
-    document.addEventListener(
-      "touchstart",
-      (e) => {
-        const target = e.target.closest("a, button, .proj-row");
-
-        if (!target) return;
-
-        const touch = e.touches[0];
-
-        cursor.style.left = touch.clientX + "px";
-        cursor.style.top = touch.clientY + "px";
-
-        cursor.classList.add("cursor--hover");
-      },
-      { passive: true },
-    );
-
-    document.addEventListener(
-      "touchend",
-      () => {
-        setTimeout(() => {
-          cursor.classList.remove("cursor--hover");
-        }, 200);
-      },
-      { passive: true },
-    );
-
-    document.addEventListener(
-      "touchcancel",
-      () => {
-        cursor.classList.remove("cursor--hover");
-      },
-      { passive: true },
-    );
   }
+
+  function animate() {
+    let x = mouseX;
+    let y = mouseY;
+
+    trails.forEach((trail, i) => {
+      // Each blob follows the one before it
+      const speed = 0.25;
+
+      trail.x += (x - trail.x) * speed;
+      trail.y += (y - trail.y) * speed;
+
+      trail.el.style.left = trail.x + "px";
+      trail.el.style.top = trail.y + "px";
+
+      // Next trail follows this one
+      x = trail.x;
+      y = trail.y;
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // =====================================================
+  // HOVER
+  // =====================================================
+
+  document.addEventListener("mouseover", (e) => {
+    if (e.target.closest("a, button, .proj-row")) {
+      cursor.classList.add("cursor--hover");
+
+      trails.forEach((trail) => {
+        trail.el.classList.add("is-hidden");
+      });
+    }
+  });
+
+  document.addEventListener("mouseout", (e) => {
+    if (e.target.closest("a, button, .proj-row")) {
+      cursor.classList.remove("cursor--hover");
+
+      trails.forEach((trail) => {
+        trail.el.classList.remove("is-hidden");
+      });
+    }
+  });
+  // =====================================================
+  // TOUCH
+  // =====================================================
+
+  document.addEventListener(
+    "touchstart",
+    (e) => {
+      const touch = e.touches[0];
+
+      if (!touch) return;
+
+      mouseX = touch.clientX;
+      mouseY = touch.clientY;
+
+      cursor.style.left = mouseX + "px";
+      cursor.style.top = mouseY + "px";
+
+      cursor.classList.add("cursor--hover");
+    },
+    { passive: true },
+  );
+
+  document.addEventListener(
+    "touchmove",
+    (e) => {
+      const touch = e.touches[0];
+
+      if (!touch) return;
+
+      mouseX = touch.clientX;
+      mouseY = touch.clientY;
+
+      // Move the actual filled cursor
+      cursor.style.left = mouseX + "px";
+      cursor.style.top = mouseY + "px";
+    },
+    { passive: true },
+  );
+
+  document.addEventListener(
+    "touchend",
+    () => {
+      cursor.classList.remove("cursor--hover");
+    },
+    { passive: true },
+  );
+
+  document.addEventListener(
+    "touchcancel",
+    () => {
+      cursor.classList.remove("cursor--hover");
+    },
+    { passive: true },
+  );
 
   // =====================================================
   // NAV ACTIVE STATE
@@ -158,12 +241,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =====================================================
-// DETAIL BUTTON LABELS
+// DETAIL TOGGLE
 // =====================================================
 
-document.querySelectorAll(".detail-toggle-btn").forEach((btn) => {
-  btn.textContent = "More details";
-});
+function toggleDetail(btn, id) {
+  const el = document.getElementById(id);
+
+  if (!el) return;
+
+  const isOpen = el.classList.contains("open");
+
+  if (!isOpen) {
+    el.classList.add("open");
+    el.style.maxHeight = el.scrollHeight + "px";
+  } else {
+    el.style.maxHeight = el.scrollHeight + "px";
+
+    requestAnimationFrame(() => {
+      el.style.maxHeight = "0px";
+      el.classList.remove("open");
+    });
+  }
+
+  btn.setAttribute("aria-expanded", String(!isOpen));
+
+  btn.textContent = isOpen ? "Read more details" : "Hide details";
+}
 
 // =====================================================
 // DETAIL TOGGLE
@@ -190,7 +293,12 @@ function toggleDetail(btn, id) {
 
   btn.setAttribute("aria-expanded", String(!isOpen));
 
-  btn.textContent = isOpen ? "More details" : "Hide details";
+  // Keep the <span> intact for the typing-hover animation
+  const label = btn.querySelector("span");
+
+  if (label) {
+    label.textContent = isOpen ? "Read more details" : "Hide details";
+  }
 }
 
 // =====================================================

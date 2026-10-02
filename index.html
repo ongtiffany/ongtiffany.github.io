@@ -16,116 +16,50 @@
   <body>
     <div class="page" id="landing">
       <header role="banner" class="site-header">
-        <a href="index.html" class="nav-name logo-reveal"> Tiffany Ong </a>
+        <a href="index.html" class="nav-name">
+          <img src="img/to-white.png" alt="logo" />
+          <span class="logo-text">Tiffany <em>Ong</em></span>
+        </a>
         <nav aria-label="Main navigation">
+          <a href="/work.html">Work</a>
           <a href="#about">About</a>
           <a href="#contributions">Contributions</a>
-          <a href="/work.html">Work</a>
         </nav>
       </header>
-
-      <!--<button id="theme-toggle" class="theme-toggle">Light / Dark</button>-->
 
       <main>
         <!-- HERO -->
         <section class="hero" aria-label="Introduction">
           <div class="hero-rule" aria-hidden="true"></div>
-          <p class="hero-title">Lead Designer</p>
+          <p class="hero-title">Lead Product Designer & Consultant</p>
+
+          <h1 class="hero-line">
+            <span class="hero-typing">
+              <span class="hero-line-text">Turning ambiguous</span>
+              <span class="hero-line-text"><em>problems</em> into</span>
+              <span class="hero-line-text">shipped <em>products</em>.</span>
+            </span>
+          </h1>
+
+          <p class="hero-sub">
+            I help organisations translate complex information and research into
+            useful experiences across product strategy, UX, interaction and
+            delivery. Experienced in data-rich products, visualisation, design
+            systems, accessiblity and sustainability.
+          </p>
           <div class="hero-grid">
-            <div>
-              <h1 class="hero-line">
-                I design for <em>clarity</em><br />in complex systems.
-              </h1>
-            </div>
-            <div class="hero-right">
-              <p class="hero-sub">
-                I question what's being asked, work through the layers, and keep
-                sight of what happens beyond delivery.
-              </p>
-              <a href="#selectedwork" class="cta"> VIEW SELECTED WORK</a>
-            </div>
+            <a href="#selectedwork" class="cta"> What I bring</a>
+            <a href="#selectedwork" class="cta"> VIEW SELECTED WORK</a>
           </div>
         </section>
 
-        <!-- PHILOSOPHY -->
-        <section
-          class="section"
-          id="philosophy"
-          aria-labelledby="philosophy-heading"
-        >
-          <header>
-            <p class="section-label" id="philosophy-heading">Philosophy</p>
-            <p class="section-intro">How I work.</p>
-          </header>
-          <ul class="phil-list" aria-label="Design principles">
-            <li class="phil-item">
-              <h2 class="phil-title">
-                <span class="phil-num" aria-hidden="true">01</span>Question the
-                brief
-              </h2>
-              <p class="phil-body">
-                Briefs describe what someone thinks they need. My role is to
-                figure out what they actually need, and for whom. That
-                questioning is part of the design, not a delay to it.
-              </p>
-            </li>
-            <li class="phil-item">
-              <h2 class="phil-title">
-                <span class="phil-num" aria-hidden="true">02</span>Think past
-                the delivery
-              </h2>
-              <p class="phil-body">
-                I care about what happens after something ships. Sustainability
-                and longevity are part of what good design means to me, not
-                constraints to work around.
-              </p>
-            </li>
-            <li class="phil-item">
-              <h2 class="phil-title">
-                <span class="phil-num" aria-hidden="true">03</span>Make
-                complexity legible
-              </h2>
-              <p class="phil-body">
-                I measure success by whether something that was opaque now feels
-                obvious. If it needs someone to explain, it isn't finished.
-              </p>
-            </li>
-            <li class="phil-item">
-              <h2 class="phil-title">
-                <span class="phil-num" aria-hidden="true">04</span>Build
-                accessibility in early
-              </h2>
-              <p class="phil-body">
-                Designing for the full range of people who might use something
-                almost always makes the work better. Usually it's what reveals
-                where the thinking wasn't rigorous enough yet.
-              </p>
-            </li>
-            <li class="phil-item">
-              <h2 class="phil-title">
-                <span class="phil-num" aria-hidden="true">05</span>Leave the
-                team stronger
-              </h2>
-              <p class="phil-body">
-                Good collaboration isn't about process. It's about building
-                enough trust that people share what they actually think, and
-                making sure non-designers feel like the work is theirs too.
-              </p>
-            </li>
-          </ul>
-        </section>
-
         <!-- WORK -->
-        <section
-          class="section"
-          id="selectedwork"
-          aria-labelledby="selectedwork-heading"
-        >
+        <section id="selectedwork" aria-labelledby="selectedwork-heading">
           <header>
-            <p class="section-label" id="selectedwork-heading">Selected Work</p>
+            <h2 class="section-label" id="selectedwork-heading">Selected Work</h2>
             <p class="section-intro">
-              Selected work designed for researchers, archivists, policymakers,
-              and newspaper readers.
+              Designing products, platforms and systems for complex
+              environments.
             </p>
           </header>
           <ul class="proj-list" id="selected-work"></ul>
@@ -138,147 +72,216 @@
         <!-- ABOUT -->
         <section class="section" id="about" aria-labelledby="about-heading">
           <header>
-            <p class="section-label" id="about-heading">About</p>
-            <p class="section-intro">
-              Designer of Products, Platforms, Systems, Data.
-            </p>
+            <h2 class="section-label" id="about-heading">About</h2>
+            <p class="section-intro">Designer, strategist, and maker.</p>
           </header>
           <div class="about-grid">
-            <div class="about-section-row">
-              <h2 class="about-section-label">Designing for Understanding</h2>
-              <p class="about-section-body">
-                I'm a designer specialising in translating complex research,
-                data and societal challenges into accessible and engaging
-                experiences. Through design, visual storytelling and digital
-                products, I help people navigate complexity, uncover insights
-                and make informed decisions. My work spans research, public
-                engagement, accessibility, sustainability and digital product
-                design, helping organisations transform complex information into
-                meaningful experiences.
+            <h3 class="about-section-label">
+              <div class="about-stat reveal-ready revealed">
+                <p class="about-stat-num">50+</p>
+                <p class="about-stat-label">
+                  Products, Platforms, Systems delivered
+                </p>
+              </div>
+              <div class="about-stat reveal-ready revealed">
+                <p class="about-stat-num">15+</p>
+                <p class="about-stat-label">years of experience</p>
+              </div>
+              <div class="about-stat reveal-ready revealed">
+                <p class="about-stat-num">8x</p>
+                <p class="about-stat-label">Publications and Awards</p>
+              </div>
+            </h2>
+            <div class="about-section-body">
+              <p>
+                I'm a product designer with a focus on data visualisation,
+                digital accessibility, and the kind of complexity that resists
+                simple solutions. I work independently and collaboratively —
+                with research institutions, cultural organisations, and teams
+                building tools that need to work for real people under real
+                constraints.
               </p>
-            </div>
-            <div class="about-section-row">
-              <h2 class="about-section-label">Making Sense of Complexity</h2>
-              <p class="about-section-body">
-                Complexity is a common thread throughout my work. Whether
-                working with research findings, institutional data, service
-                ecosystems or emerging technologies, I enjoy uncovering
-                patterns, identifying what matters most and creating clear
-                pathways for understanding. My approach focuses not only on what
-                information to communicate, but also on what can be simplified,
-                reframed or omitted to help audiences engage with a topic more
-                effectively.
+              <p>
+                My career started in knitwear. I studied Textile Design at the
+                Royal College of Art, which taught me to think about making
+                things with care, constraint, and a strong point of view. An
+                economic downturn pushed me to pivot into digital design, where
+                I taught myself to code and found that the instincts transferred
+                well. Since then I've worked across fashion, journalism,
+                marketing, and academic research, designing for mass audiences
+                and niche specialists, under commercial pressure and on long
+                research horizons.
               </p>
-            </div>
-            <div class="about-section-row">
-              <h2 class="about-section-label">
-                Bridging Research and Practice
-              </h2>
-              <p class="about-section-body">
-                Much of my work sits between research and implementation. I
-                collaborate with researchers, analysts, engineers, project
-                managers and leadership teams to translate evidence, insights
-                and strategy into practical outcomes. I enjoy working across
-                disciplines, connecting different perspectives and helping teams
-                transform complex ideas into experiences that are useful,
-                meaningful and actionable.
-              </p>
-            </div>
-            <div class="about-section-row">
-              <h2 class="about-section-label">
-                Accessibility and Sustainability
-              </h2>
-              <p class="about-section-body">
-                I advocate for accessibility and sustainability throughout the
-                design process. By considering inclusion, usability,
-                maintainability and long-term impact from the outset, I help
-                teams create products, services and experiences that are
-                inclusive, maintainable and adaptable over time. This includes
-                designing for diverse audiences, improving usability and
-                considering the long-term environmental and operational impact
-                of digital products and services.
-              </p>
-            </div>
-            <div class="about-section-row">
-              <h2 class="about-section-label">Collaboration and Leadership</h2>
-              <p class="about-section-body">
-                I have experience leading projects, facilitating workshops,
-                mentoring colleagues and supporting multidisciplinary teams
-                through discovery, delivery and continuous improvement. I enjoy
-                creating alignment around complex problems, building shared
-                understanding and helping teams move confidently from
-                uncertainty towards informed decisions.
-              </p>
-            </div>
-            <div class="about-section-row">
-              <h2 class="about-section-label">A Different Perspective</h2>
-              <p class="about-section-body">
-                My career began in knitwear design before moving into digital
-                design and user experience. Although the disciplines may seem
-                different, both require systems thinking, problem solving and an
-                understanding of how people interact with designed experiences.
-                This journey has shaped my multidisciplinary perspective and
-                continues to influence how I approach complex challenges today.
+              <p>
+                Most of my projects involve researchers, engineers, historians,
+                and policymakers working on things that matter. That's sharpened
+                how I communicate design decisions, build shared ownership
+                across disciplines, and stay invested in what happens after
+                something ships.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- ORGANISATIONS -->
-        <section class="section" id="orgs" aria-labelledby="orgs-heading">
+        <!-- PHILOSOPHY -->
+        <section
+          class="section"
+          id="philosophy"
+          aria-labelledby="philosophy-heading"
+        >
           <header>
-            <p class="section-label" id="orgs-heading">Collaborations</p>
-            <p class="section-intro">Some organisations I've worked with.</p>
+            <h2 class="section-label" id="philosophy-heading">Approach</h2>
+            <p class="section-intro">How I work.</p>
           </header>
-          <ul class="orgs-list" aria-label="Organisations">
-            <li>
-              <img
-                src="img/logos/oxford-university-logo_quad.jpg"
-                alt="University of Oxford"
-              />
+          <ul class="phil-list" aria-label="Design principles">
+            <li class="phil-item">
+              <h2 class="phil-title">
+                <span class="phil-num" aria-hidden="true">01</span>
+                <span class="typing-hover">Question the brief</span>
+              </h2>
+
+              <p class="phil-body">
+                Briefs describe what someone thinks they need. My role is to
+                figure out what they actually need, and for whom. That
+                questioning is part of the design, not a delay to it.
+              </p>
             </li>
-            <li>
-              <img src="img/logos/RoyalLibraryLogo.png" alt="Royal Library" />
+            <li class="phil-item">
+              <h2 class="phil-title">
+                <span class="phil-num" aria-hidden="true">02</span>
+                <span class="typing-hover">Think past the delivery</span>
+              </h2>
+
+              <p class="phil-body">
+                I care about what happens after something ships. Sustainability
+                and longevity are part of what good design means to me, not
+                constraints to work around.
+              </p>
             </li>
-            <li>
-              <img src="img/logos/rct.png" alt="Royal Collection Trust" />
+            <li class="phil-item">
+              <h2 class="phil-title">
+                <span class="phil-num" aria-hidden="true">03</span>
+                <span class="typing-hover">Make complexity legible</span>
+              </h2>
+
+              <p class="phil-body">
+                I measure success by whether something that was opaque now feels
+                obvious. If it needs someone to explain, it isn't finished.
+              </p>
             </li>
-            <li>
-              <img
-                src="img/logos/Alan_Turing_Institute_logo.png"
-                alt="Alan Turing Institute"
-              />
+            <li class="phil-item">
+              <h2 class="phil-title">
+                <span class="phil-num" aria-hidden="true">04</span>
+                <span class="typing-hover">Build accessibility in early</span>
+              </h2>
+
+              <p class="phil-body">
+                Designing for the full range of people who might use something
+                almost always makes the work better. Usually it's what reveals
+                where the thinking wasn't rigorous enough yet.
+              </p>
             </li>
-            <li>
-              <img
-                src="img/logos/william-mary.jpg"
-                alt="William &amp; Mary Libraries"
-              />
-            </li>
-            <li>
-              <img
-                src="img/logos/wiedemann-lampe-avatar.png"
-                alt="Wiedemann Lampe"
-              />
-            </li>
-            <li>
-              <img
-                src="img/logos/universityofedinburgh.jpg"
-                alt="University of Edinburgh"
-              />
-            </li>
-            <li>
-              <img
-                src="img/logos/kings-college-london.jpg"
-                alt="King's College London"
-              />
+            <li class="phil-item">
+              <h2 class="phil-title">
+                <span class="phil-num" aria-hidden="true">05</span>
+                <span class="typing-hover">Leave the team stronger</span>
+              </h2>
+
+              <p class="phil-body">
+                Good collaboration isn't about process. It's about building
+                enough trust that people share what they actually think, and
+                making sure non-designers feel like the work is theirs too.
+              </p>
             </li>
           </ul>
         </section>
 
+        <!-- ORGANISATIONS -->
+        <section class="section" id="orgs" aria-labelledby="orgs-heading">
+          <header>
+            <h2 class="section-label" id="orgs-heading">Collaborations</h2>
+            <p class="section-intro">Some organisations I've worked with.</p>
+          </header>
+
+          <div class="orgs-marquee">
+            <ul class="orgs-list" aria-label="Organisations">
+              <li>
+                <img
+                  src="img/logos/oxford-university-logo_quad.jpg"
+                  alt="University of Oxford"
+                />
+              </li>
+              <li>
+                <img src="img/logos/RoyalLibraryLogo.png" alt="Royal Library" />
+              </li>
+              <li>
+                <img src="img/logos/rct.png" alt="Royal Collection Trust" />
+              </li>
+              <li>
+                <img
+                  src="img/logos/Alan_Turing_Institute_logo.png"
+                  alt="Alan Turing Institute"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/logos/william-mary.jpg"
+                  alt="William &amp; Mary Libraries"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/logos/wiedemann-lampe-avatar.png"
+                  alt="Wiedemann Lampe"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/logos/universityofedinburgh.jpg"
+                  alt="University of Edinburgh"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/logos/kings-college-london.jpg"
+                  alt="King's College London"
+                />
+              </li>
+            </ul>
+
+            <!-- Duplicate for seamless animation -->
+            <ul class="orgs-list" aria-hidden="true">
+              <li>
+                <img src="img/logos/oxford-university-logo_quad.jpg" alt="" />
+              </li>
+              <li>
+                <img src="img/logos/RoyalLibraryLogo.png" alt="" />
+              </li>
+              <li>
+                <img src="img/logos/rct.png" alt="" />
+              </li>
+              <li>
+                <img src="img/logos/Alan_Turing_Institute_logo.png" alt="" />
+              </li>
+              <li>
+                <img src="img/logos/william-mary.jpg" alt="" />
+              </li>
+              <li>
+                <img src="img/logos/wiedemann-lampe-avatar.png" alt="" />
+              </li>
+              <li>
+                <img src="img/logos/universityofedinburgh.jpg" alt="" />
+              </li>
+              <li>
+                <img src="img/logos/kings-college-london.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </section>
+
         <!-- SKILLS -->
         <section class="section" aria-labelledby="skills-heading">
-          <p class="section-label" id="skills-heading">Skills</p>
+          <h2 class="section-label" id="skills-heading">Skills</h2>
           <div class="skills-layers">
             <div class="skills-layer">
               <p class="skills-layer-label">Domains</p>
@@ -330,7 +333,7 @@
           id="contributions"
           aria-labelledby="contributions-heading"
         >
-          <p class="section-label" id="contributions-heading">Contributions</p>
+          <h2 class="section-label" id="contributions-heading">Contributions</h2>
           <div class="contrib-cols">
             <div>
               <h2 class="contrib-group-label">Publications</h2>
@@ -340,50 +343,50 @@
                     Living with Machines: Computational Histories of the Age of
                     Industry
                   </dt>
-                  <dd class="contrib-meta">Book, Co-Author · 2024</dd>
+                  <dd class="contrib-meta typing-hover"><span> Co-Author · 2024</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Small Data and Process in Data Visualisation
                   </dt>
-                  <dd class="contrib-meta">Paper, Co-Author · 2024</dd>
+                  <dd class="contrib-meta typing-hover"><span>Paper, Co-Author · 2024</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     The Place of Models and Modelling in Digital Humanities
                   </dt>
-                  <dd class="contrib-meta">Book, Co-Author · 2023</dd>
+                  <dd class="contrib-meta typing-hover"><span>Book, Co-Author · 2023</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     On Making in the Digital Humanities
                   </dt>
-                  <dd class="contrib-meta">Book, Contributor · 2023</dd>
+                  <dd class="contrib-meta typing-hover"><span>Book, Contributor · 2023</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Humans in the Loop: Epistemology &amp; Method in King's
                     Digital Lab
                   </dt>
-                  <dd class="contrib-meta">Article, Contributor · 2020</dd>
+                  <dd class="contrib-meta typing-hover"><span>Article, Contributor · 2020</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Visual Research Methods in Fashion
                   </dt>
-                  <dd class="contrib-meta">Book, Contributor · 2011</dd>
+                  <dd class="contrib-meta typing-hover"><span>Book, Contributor · 2011</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">Textile View magazine</dt>
-                  <dd class="contrib-meta">
+                  <dd class="contrib-meta typing-hover"><span>
                     Magazine, Contributor · Issue 88 · 2009
-                  </dd>
+                  </span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">International Textiles Magazine</dt>
-                  <dd class="contrib-meta">
+                  <dd class="contrib-meta typing-hover"><span>
                     Magazine, Contributor · June/July 2004
-                  </dd>
+                  </span></dd>
                 </div>
               </dl>
             </div>
@@ -394,41 +397,41 @@
                   <dt class="contrib-title">
                     Information is Beautiful Awards — Longlist × 6
                   </dt>
-                  <dd class="contrib-meta">2022–2024</dd>
+                  <dd class="contrib-meta typing-hover"><span>2022–2024</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">RSECon2025 — Poster Award</dt>
-                  <dd class="contrib-meta">Lead Designer</dd>
+                  <dd class="contrib-meta typing-hover"><span>Lead Designer</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">RSECon2022 — Poster Award</dt>
-                  <dd class="contrib-meta">Lead Designer</dd>
+                  <dd class="contrib-meta typing-hover"><span>Lead Designer</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Knit Happens: A Celebration of the Art of Knitting
                   </dt>
-                  <dd class="contrib-meta">
+                  <dd class="contrib-meta typing-hover"><span>
                     Woodend Creative Workspace, Leeds, UK · 2010
-                  </dd>
+                  </span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     John Dunsmore Travel Scholarship
                   </dt>
-                  <dd class="contrib-meta">Field research, Nepal · 2009</dd>
+                  <dd class="contrib-meta typing-hover"><span>Field research, Nepal · 2009</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">Entomological Knits</dt>
-                  <dd class="contrib-meta">
+                  <dd class="contrib-meta typing-hover"><span>
                     Few and Far, South Kensington, London · 2009
-                  </dd>
+                  </span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">Off The Wall Exhibition</dt>
-                  <dd class="contrib-meta">
+                  <dd class="contrib-meta typing-hover"><span>
                     The Gallery Room Russell Square, London · 2009
-                  </dd>
+                  </span></dd>
                 </div>
               </dl>
             </div>
@@ -440,37 +443,37 @@
                     Reimagining Digital Accessibility: From Compliance to
                     Collective Responsibility
                   </dt>
-                  <dd class="contrib-meta">
+                  <dd class="contrib-meta typing-hover"><span>
                     Abstract, Main Author · RSECon2025 · DH2026
-                  </dd>
+                  </span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Intelligent Systems for Screen Archives
                   </dt>
-                  <dd class="contrib-meta">Demonstrator Event · 2026</dd>
+                  <dd class="contrib-meta typing-hover"><span>Demonstrator Event · 2026</span></dd>
                 </div>
 
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Building Robust Practices for Research Outputs
                   </dt>
-                  <dd class="contrib-meta">Abstract, Co-Author · RSECon2025</dd>
+                  <dd class="contrib-meta typing-hover"><span>Abstract, Co-Author · RSECon2025</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Research Excellence Framework 2021 Impact Data Analysis
                   </dt>
-                  <dd class="contrib-meta">Abstract, Co-Author · RSECon2022</dd>
+                  <dd class="contrib-meta typing-hover"><span>Abstract, Co-Author · RSECon2022</span></dd>
                 </div>
                 <div class="contrib-item">
                   <dt class="contrib-title">
                     Data and Process in Data Visualization: The Radical
                     Translations Case Study
                   </dt>
-                  <dd class="contrib-meta">
+                  <dd class="contrib-meta typing-hover"><span>
                     Abstract, Co-Author · IIIE · 2021
-                  </dd>
+                  </span></dd>
                 </div>
               </dl>
             </div>

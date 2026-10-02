@@ -7,13 +7,15 @@ function loadLayout() {
     <div class="cursor" id="cursor" aria-hidden="true"></div>
 
     <div class="page">
-
       <header role="banner" class="site-header">
-        <a href="../index.html" class="nav-name">Tiffany Ong</a>
+        <a href="/index.html" class="nav-name">
+          <img src="/img/to-white.png" alt="logo" />
+          <span class="logo-text">Tiffany <em>Ong</em></span>
+        </a>
         <nav aria-label="Main navigation">
+         <a href="/work.html">Work</a>
           <a href="../index.html#about">About</a>
           <a href="../index.html#contributions">Contributions</a>
-          <a href="/work.html">Work</a>
         </nav>
       </header>
 

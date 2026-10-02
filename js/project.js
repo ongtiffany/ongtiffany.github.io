@@ -304,11 +304,11 @@ ${renderMetaList("Outputs", outputs)}
 
                       <button
                         onclick="toggleDetail(this, 'details')"
-                        class="detail-toggle-btn"
+                        class="detail-toggle-btn typing-hover"
                         aria-expanded="false"
-                      >
+                      ><span>
                         Read more details
-                      </button>
+                      </span></button>
 
                       <div id="details" class="detail-content">
                         ${detailsHTML}
@@ -407,8 +407,8 @@ ${renderMetaList("Outputs", outputs)}
 
                 ${renderPartnerPreview(p.partners)}
 
-                <p class="proj-type">
-                  ${p.category || ""}
+                <p class="proj-type typing-hover">
+                  <span>${p.category || ""}</span>
                 </p>
 
               </div>
