@@ -1,0 +1,12 @@
+{
+  "name": "gaze-the-haze",
+  "private": true,
+  "scripts": {
+    "css": "sass --no-source-map css/style.scss css/style.css",
+    "watch": "sass --no-source-map --watch css/style.scss css/style.css",
+    "data": "node scripts/update.mjs"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
