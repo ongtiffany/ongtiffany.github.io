@@ -36,7 +36,7 @@ h2, .sq, .sq i, .ci, .ci i, .hc, .mt {
   font-weight: 400;
 }
 
-#mc, .dark .t, .lead, #cmp b {
+#mc, .lead, #cmp b {
   font-family: var(--fr);
   font-weight: 300;
 }
@@ -51,8 +51,18 @@ h1, #mn {
 
 h1 {
   font-size: clamp(88px, 24vw, 130px);
-  line-height: 0.92;
-  margin: 18px 0 14px;
+  line-height: 0.4;
+  margin: 40px 0 14px;
+}
+h1 em {
+  font-size: clamp(16px, 6vw, 18px);
+  font-style: normal;
+  color: #919191;
+  opacity: 0.8;
+  text-shadow: none;
+  margin: 0;
+  padding-left: 6px;
+  text-transform: uppercase;
 }
 
 .glow {
@@ -60,7 +70,7 @@ h1 {
 }
 .glow::after {
   opacity: 0;
-  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+  text-shadow: 5px 5px 20px #444;
   content: attr(data-text);
   position: absolute;
   inset: 0;
@@ -92,6 +102,7 @@ p {
 .lead {
   font-size: 18px;
   max-width: 52ch;
+  margin-top: 40px;
 }
 
 .mut {
@@ -176,6 +187,7 @@ button:hover {
   left: 100%;
   bottom: 8px;
   margin-left: 12px;
+  margin-bottom: 20px;
   width: 132px;
   text-align: left;
   white-space: normal;
@@ -290,7 +302,7 @@ button:hover {
   color: #999;
 }
 
-.acc {
+button.acc {
   display: flex;
   position: relative;
   width: 100%;
@@ -300,6 +312,11 @@ button:hover {
   padding: 12px 40px;
   margin-top: 10px;
   font-weight: 600;
+  background: #111;
+  color: #fff;
+}
+button.acc:hover {
+  opacity: 0.9;
 }
 
 .acc .ch {
@@ -631,8 +648,9 @@ button:hover {
 }
 
 .dark .t {
-  font-size: 26px;
+  font-size: 20px;
   color: #eee;
+  font-family: var(--fd);
 }
 
 .dark button {
@@ -693,6 +711,8 @@ dialog::backdrop {
   height: auto;
   background: #fff;
   margin: 14px auto;
+  filter: grayscale(100%);
+  width: 100px;
 }
 
 .miss {
@@ -823,6 +843,11 @@ dialog::backdrop {
   gap: 6px 8px;
   align-items: center;
   justify-content: center;
+}
+
+.fade {
+  opacity: 0.7;
+  background: repeating-linear-gradient(45deg, #8a8a8a 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, #bbb 0 1px, transparent 1px 5px), #fff;
 }
 
 @media (max-width: 600px) {

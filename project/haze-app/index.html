@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Gaze the Haze: Singapore haze, today and since 2014</title>
+    <title>Gaze the Haze: Singapore haze, today and past</title>
+    <link rel="icon" type="image/png" href="../../img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +14,11 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Gaze the <span class="glow" data-text="Haze">Haze</span></h1>
+    <h1>
+      <span class="glow" data-text="Gaze">Gaze</span
+      ><em><span class="glow" data-text="the">the </span></em>
+      <span class="glow" data-text="Haze">Haze</span>
+    </h1>
     <p class="lead">
       See how hazy Singapore's air is today, hour by hour and region by region,
       and compare it with the past.
@@ -99,8 +104,10 @@
         official advice.
       </p>
     </div>
+    <br /><br />
+    <hr />
 
-    <section>
+    <section class="fade">
       <h2>Compare the past</h2>
       <p>
         Before the Pollutant Standards Index (PSI) was established, the country
@@ -196,24 +203,21 @@
     </section>
 
     <div class="dark">
+      <div class="sub">
+        <button class="lk" id="abt">About the project</button>
+      </div>
       <span class="t">Support my work</span
       ><button id="sup">Buy me a kopi (&amp; N95 mask)</button>
-      <div class="sub">
-        <button class="lk" id="abt">About the project</button
-        ><span
-          >Made by Tiffany Ong (<a
-            href="https://ongtiffany.github.io"
-            target="_blank"
-            rel="noopener"
-            >ongtiffany.github.io</a
-          >)</span
-        >
-      </div>
+      <span>
+        <a href="https://ongtiffany.github.io" target="_blank" rel="noopener"
+          >Tiffany Ong
+        </a></span
+      >
     </div>
 
     <dialog id="dlg" aria-labelledby="dh">
       <h2 id="dh">Thank you</h2>
-      <img class="qr" id="q1" src="payment-qr.png" alt="Payment QR code" />
+      <img class="qr" id="q1" src="img/paynow-qr.jpg" alt="Payment QR code" />
       <p>Please put "Haze" in the payment message or reference.</p>
       <button id="dx">Close</button>
     </dialog>

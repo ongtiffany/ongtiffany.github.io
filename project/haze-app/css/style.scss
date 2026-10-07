@@ -8,15 +8,25 @@ $bp-mobile:600px;
 body{margin:0;overflow-x:clip;padding:0 28px 0;text-align:center;background:var(--bg);color:var(--ink);font:14px/1.55 Sono,ui-monospace,monospace}
 h1,#mn{font-family:var(--f);font-weight:400}
 h2,.sq,.sq i,.ci,.ci i,.hc,.mt{font-family:var(--fd);font-weight:400}
-#mc,.dark .t,.lead,#cmp b{font-family:var(--fr);font-weight:300}
+#mc,.lead,#cmp b{font-family:var(--fr);font-weight:300}
 h2,.sq,.sq i,.ci,.ci i,#mc,.dark .t{text-shadow:0 1px 1px rgba(0,0,0,.28)}
 h1,#mn{text-shadow:2px 1px 2px black}
-h1{font-size:clamp(88px,24vw,130px);line-height:.92;margin:18px 0 14px}
+h1{font-size:clamp(88px,24vw,130px);line-height: 0.4;margin:40px 0 14px;
+em{font-size: clamp(16px, 6vw, 18px);
+font-style: normal;
+color: #919191; 
+opacity:0.8;
+text-shadow: none;
+margin: 0;
+padding-left: 6px;
+text-transform: uppercase;}
+}
 .glow{position:relative;
- &::after{opacity:0;text-shadow:5px 5px 20px rgba(0,0,0,1);content:attr(data-text);position:absolute;inset:0;color:transparent;font:inherit;line-height:1.2;letter-spacing:inherit;animation:glow 5s ease-in-out infinite alternate}}
-@keyframes glow{from{opacity:0}to{opacity:1}}
+ &::after{opacity:0;text-shadow:5px 5px 20px #444;content:attr(data-text);position:absolute;inset:0;color:transparent;font:inherit;line-height:1.2;letter-spacing:inherit;animation:glow 5s ease-in-out infinite alternate}}
+
+ @keyframes glow{from{opacity:0}to{opacity:1}}
 h2{font-size:30px;margin:0 0 6px}
-p{margin:0 auto 10px;max-width:70ch}.lead{font-size:18px;max-width:52ch}.mut{color:var(--mut);font-size:12px}
+p{margin:0 auto 10px;max-width:70ch}.lead{font-size:18px;max-width:52ch;margin-top:40px;}.mut{color:var(--mut);font-size:12px}
 section{padding:28px 0}
 button,select,input,.btn{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:0;padding:7px 12px;cursor:pointer}
 button:hover{background:#fff}
@@ -27,7 +37,7 @@ button:hover{background:#fff}
 #mk{position:absolute;top:0;left:50%;transform:translateX(-50%);text-align:center;transition:left 1s ease;line-height:1;white-space:nowrap}
 #nw{position:relative;display:inline-block}
 #mn{display:block;font-size:110px;line-height:.95}
-#cmp{position:absolute;left:100%;bottom:8px;margin-left:12px;width:132px;text-align:left;white-space:normal;font-size:12px;line-height:1.35}
+#cmp{position:absolute;left:100%;bottom:8px;margin-left:12px;margin-bottom: 20px;width:132px;text-align:left;white-space:normal;font-size:12px;line-height:1.35}
 #cmp b{font-size:22px;font-weight:600;margin-right:5px;vertical-align:-2px}
 #mk.flip #cmp{left:auto;right:100%;margin:0 12px 0 0;text-align:right}
 #mc{display:block;font-size:26px;margin:6px 0 2px}#mk .ar{display:block;font-size:14px;position:relative;top:0}
@@ -40,7 +50,10 @@ button:hover{background:#fff}
 .sq{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;aspect-ratio:1/1;font-size:35px;line-height:1;color:#111}
 .sq i{font-size:18px;line-height:1;font-style:normal;margin-bottom:-1px}
 .sq.n{box-shadow:inset 0 0 0 1px #d0d0d0;color:#999}
-.acc{display:flex;position:relative;width:100%;justify-content:center;align-items:center;text-align:center;padding:12px 40px;margin-top:10px;font-weight:600}.acc .ch{position:absolute;right:14px}
+button.acc{display:flex;position:relative;width:100%;justify-content:center;align-items:center;text-align:center;padding:12px 40px;margin-top:10px;font-weight:600; background:#111; color:#fff;
+    &:hover{
+        opacity:0.9;
+    }}.acc .ch{position:absolute;right:14px}
 #lp{background:#fff;padding:14px;margin-bottom:0}
 .hgw{overflow-x:auto;padding-bottom:6px}
 .hg{display:grid;grid-template-columns:76px repeat(24,34px);column-gap:1px;row-gap:0;width:max-content;margin:0 auto}
@@ -76,14 +89,14 @@ button:hover{background:#fff}
 #cx{background:var(--card);padding:14px 16px;font-size:13px;max-width:72ch;line-height:1.6;margin:0 auto;text-align:center}#cx b{font-weight:600}
 .leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;margin:8px 0}
 .leg i{display:inline-block;width:28px;height:13px;vertical-align:-2px;margin-right:5px}
-.dark{background:$ink;color:#bbb;margin:30px -28px 0;padding:26px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
-.dark .t{font-size:26px;color:#eee}
+.dark{background:$ink;color:#bbb;margin:30px -28px 0;padding:26px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;}
+.dark .t{font-size:20px;color:#eee; font-family: var(--fd);}
 .dark button{background:#ddd;color:#111;font-size:13px;padding:7px 16px}.dark button:hover{background:#fff}
 .dark .sub{font-size:12px;color:#bbb;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;align-items:center}.dark a{color:#ddd}
 .dark .lk{background:none;color:#ddd;text-decoration:underline;padding:0;font-size:12px}.dark .lk:hover{background:none;color:#fff}
 dialog{border:0;background:var(--card);color:var(--ink);padding:24px;max-width:520px;width:calc(100% - 32px)}
 dialog::backdrop{background:rgba(0,0,0,.45)}
-.qr{display:block;width:240px;max-width:100%;height:auto;background:#fff;margin:14px auto}.miss{font-size:12px;color:var(--mut);text-align:center;margin:14px 0}
+.qr{display:block;width:240px;max-width:100%;height:auto;background:#fff;margin:14px auto; filter:grayscale(100%);width:100px;}.miss{font-size:12px;color:var(--mut);text-align:center;margin:14px 0}
 .row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .tb{background:$ink;color:#fff}.tb:hover{background:#333}
 .sw{position:relative;--fade:var(--bg)}#lp .sw{--fade:#fff}
@@ -99,7 +112,13 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 .ci.hx{width:44px;height:44px;box-shadow:inset 0 0 0 1px #bbb;cursor:pointer}
 .sg.nw{box-shadow:inset 0 0 0 1px #bbb}
 #gp label{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;justify-content:center}
-@media (max-width:#{$bp-mobile}){body{padding:0 14px}.dark{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}}
+.fade{
+    opacity:0.7;
+    background: repeating-linear-gradient(45deg, #8a8a8a  0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, #bbb 0 1px, transparent 1px 5px), #fff;
+}
+@media (max-width:#{$bp-mobile}){body{padding:0 14px}.dark{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
+}
+
 @media(prefers-reduced-motion:reduce){#mk{transition:none}.glow::after{animation:none;opacity:.5}}
 .chip{padding:7px 16px}.chip[aria-pressed=true]{background:$ink;color:#fff}.chip.off{opacity:.4}.chip.off:hover{opacity:.7}
 .rsw{margin:0 0 12px}#mcap{margin:0 auto 6px}
