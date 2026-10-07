@@ -46,13 +46,14 @@ h2, .sq, .sq i, .ci, .ci i, #mc, .dark .t {
 }
 
 h1, #mn {
-  text-shadow: 2px 1px 2px black;
+  text-shadow: 1px 1px 2px black;
 }
 
 h1 {
   font-size: clamp(88px, 24vw, 130px);
   line-height: 0.4;
   margin: 40px 0 14px;
+  color: #666;
 }
 h1 em {
   font-size: clamp(16px, 6vw, 18px);
@@ -70,7 +71,7 @@ h1 em {
 }
 .glow::after {
   opacity: 0;
-  text-shadow: 5px 5px 20px #444;
+  text-shadow: 5px 5px 20px #555;
   content: attr(data-text);
   position: absolute;
   inset: 0;

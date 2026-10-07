@@ -10,8 +10,8 @@ h1,#mn{font-family:var(--f);font-weight:400}
 h2,.sq,.sq i,.ci,.ci i,.hc,.mt{font-family:var(--fd);font-weight:400}
 #mc,.lead,#cmp b{font-family:var(--fr);font-weight:300}
 h2,.sq,.sq i,.ci,.ci i,#mc,.dark .t{text-shadow:0 1px 1px rgba(0,0,0,.28)}
-h1,#mn{text-shadow:2px 1px 2px black}
-h1{font-size:clamp(88px,24vw,130px);line-height: 0.4;margin:40px 0 14px;
+h1,#mn{text-shadow:1px 1px 2px black}
+h1{font-size:clamp(88px,24vw,130px);line-height: 0.4;margin:40px 0 14px; color:#666;
 em{font-size: clamp(16px, 6vw, 18px);
 font-style: normal;
 color: #919191; 
@@ -22,7 +22,7 @@ padding-left: 6px;
 text-transform: uppercase;}
 }
 .glow{position:relative;
- &::after{opacity:0;text-shadow:5px 5px 20px #444;content:attr(data-text);position:absolute;inset:0;color:transparent;font:inherit;line-height:1.2;letter-spacing:inherit;animation:glow 5s ease-in-out infinite alternate}}
+ &::after{opacity:0;text-shadow:5px 5px 20px #555;content:attr(data-text);position:absolute;inset:0;color:transparent;font:inherit;line-height:1.2;letter-spacing:inherit;animation:glow 5s ease-in-out infinite alternate}}
 
  @keyframes glow{from{opacity:0}to{opacity:1}}
 h2{font-size:30px;margin:0 0 6px}
