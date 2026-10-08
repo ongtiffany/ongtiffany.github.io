@@ -110,23 +110,41 @@ const floor = add(today, -400), from = add(last, -2) < floor ? floor : add(last,
 for (let d = from; d <= today; d = add(d, 1)) todo.add(d);
 for (let k = 0; k < 60; k++) { const d = add(today, -k); if (!Y[d.slice(0, 4)]?.[d]) todo.add(d); }
 if (process.env.SKIP_LIVE) console.log('SKIP_LIVE set: not contacting the live API.');
+// An item's timestamp may carry an offset ("+08:00"), be UTC ("Z"), or have none. Convert to Singapore date and hour.
+function sgtOf(ts) {
+  if (!/(Z|[+-]\d{2}:?\d{2})$/.test(ts)) return { date: ts.slice(0, 10), h: +ts.slice(11, 13) };
+  const t = new Date(ts);
+  if (isNaN(t)) return null;
+  const s = new Date(t.getTime() + 8 * 3600e3).toISOString();
+  return { date: s.slice(0, 10), h: +s.slice(11, 13) };
+}
+const failed = [];
+if (process.env.SKIP_LIVE) console.log('SKIP_LIVE set: not contacting the live API.');
 for (const d of process.env.SKIP_LIVE ? [] : [...todo].sort()) {
   try {
     let tok, n = 0;
     do {
       const j = await get(`${BASE}/v2/real-time/api/psi?date=${d}` + (tok ? '&paginationToken=' + tok : ''));
       for (const it of j.data?.items ?? []) {
-        const h = +it.timestamp.slice(11, 13), r = it.readings?.psi_twenty_four_hourly;
-        if (!r || !(h >= 0 && h < 24)) continue;
+        const t = sgtOf(String(it.timestamp)), r = it.readings?.psi_twenty_four_hourly;
+        if (!t || !r || !(t.h >= 0 && t.h < 24)) continue;
         const v = REG.map(k => typeof r[k] == 'number' ? r[k] : null);
-        if (v.some(x => x != null)) { put(d, h, v); n++; }
+        if (v.some(x => x != null)) { put(t.date, t.h, v); n++; }      // stored under the reading's own Singapore date
       }
       tok = j.data?.paginationToken;
     } while (tok);
     console.log(d, n, 'hours');
-  } catch (e) { console.warn(d, e.message); }
+    if (!n) failed.push(d);
+  } catch (e) { console.warn(d, e.message); failed.push(d); }
   await sleep(2200);
 }
 
 await save();
-console.log('Done. Latest day on file:', dates().pop());
+const have = d => (Y[d.slice(0, 4)]?.[d] ?? []).some(Boolean);
+const recentMissing = [add(today, -1), today].filter(d => !have(d));
+if (!process.env.SKIP_LIVE && failed.length)
+  console.log(`::warning::NEA returned nothing for ${failed.length} day(s): ${failed.slice(-8).join(', ')}${failed.length > 8 ? ' …' : ''}. This is usually a rate limit on shared GitHub IP addresses. Add a free DATA_GOV_SG_API_KEY secret (see README).`);
+if (!process.env.SKIP_LIVE && recentMissing.length)
+  console.log(`::warning::No readings saved for ${recentMissing.join(' and ')}. The page will try to fill recent days from NEA live.`);
+console.log('Latest days on file:', dates().slice(-3).join(', '));
+console.log('Done.');
