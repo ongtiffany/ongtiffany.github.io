@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Gaze the Haze: Singapore haze, today and past</title>
-    <link rel="icon" type="image/png" href="../../img/favicon.png" />
+    <title>Gaze the Haze: Singapore haze, today and since 2014</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,20 +23,14 @@
       and compare it with the past.
     </p>
     <div class="ctl">
-      <button
-        id="today"
-        class="tb"
-        type="button"
-        aria-label="Choose a date: Today"
-      >
+      <button id="today" class="tb" type="button" aria-label="Choose a date">
         Today</button
-      ><input
-        type="date"
-        id="dp"
-        min="2014-04-01"
-        tabindex="-1"
-        aria-hidden="true"
-      />
+      ><button id="dpb" class="tb" type="button" aria-label="Choose a date">
+        ▾
+      </button>
+    </div>
+    <div id="ld" role="status" aria-live="polite">
+      <i></i><span id="ldt">Loading data…</span>
     </div>
 
     <div class="hero">
@@ -49,9 +42,6 @@
       </div>
       <div class="bands" id="bands"></div>
       <div class="lbls" id="lbls"></div>
-    </div>
-    <div id="ld" role="status" aria-live="polite">
-      <i></i><span id="ldt">Loading data…</span>
     </div>
     <div
       class="strip"
@@ -104,10 +94,9 @@
         official advice.
       </p>
     </div>
-    <br /><br />
-    <hr />
 
     <section class="fade">
+      <h3>[Still in development]</h3>
       <h2>Compare the past</h2>
       <p>
         Before the Pollutant Standards Index (PSI) was established, the country
@@ -203,16 +192,17 @@
     </section>
 
     <div class="dark">
-      <div class="sub">
-        <button class="lk" id="abt">About the project</button>
-      </div>
+      <button class="lk" id="abt">About the project</button>
       <span class="t">Support my work</span
       ><button id="sup">Buy me a kopi (&amp; N95 mask)</button>
-      <span>
-        <a href="https://ongtiffany.github.io" target="_blank" rel="noopener"
-          >Tiffany Ong
-        </a></span
-      >
+      <div class="sub">
+        <span
+          >Made by
+          <a href="https://ongtiffany.github.io" target="_blank" rel="noopener"
+            >Tiffany Ong
+          </a></span
+        >
+      </div>
     </div>
 
     <dialog id="dlg" aria-labelledby="dh">
@@ -220,6 +210,14 @@
       <img class="qr" id="q1" src="img/paynow-qr.jpg" alt="Payment QR code" />
       <p>Please put "Haze" in the payment message or reference.</p>
       <button id="dx">Close</button>
+    </dialog>
+
+    <dialog id="dpd" aria-labelledby="dph">
+      <h2 id="dph">Pick a date</h2>
+      <input type="date" id="dp" min="2014-04-01" aria-label="Date" />
+      <div class="row" style="margin-top: 14px">
+        <button id="dpt">Today</button><button id="dpx">Close</button>
+      </div>
     </dialog>
 
     <dialog id="info" aria-labelledby="ih">
@@ -235,10 +233,5 @@
     <script src="js/years.js"></script>
     <script src="js/hours.js"></script>
     <script src="js/ui.js"></script>
-    <script
-      data-goatcounter="https://ongtiffany.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"
-    ></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 /* accordions and dialogs */
 function tog(b,p){const o=$(p).hidden;$(p).hidden=!o;$(b).setAttribute('aria-expanded',o);$(b).querySelector('.ch').textContent=o?'▴':'▾'}
 $('lt').onclick=()=>tog('lt','lp');$('dsb').onclick=()=>tog('dsb','dsp');$('gt').onclick=()=>tog('gt','gp');$('prof').onchange=()=>info();
-['dlg','info'].forEach(i=>$(i).addEventListener('click',e=>{if(e.target==$(i))$(i).close()}));
+['dlg','info','dpd'].forEach(i=>$(i).addEventListener('click',e=>{if(e.target==$(i))$(i).close()}));
 $('q1').onerror=function(){this.hidden=true;const m=document.createElement('div');m.className='miss';m.textContent='QR code coming soon.';this.after(m)};
 $('sup').onclick=()=>$('dlg').showModal();$('abt').onclick=()=>showInfo('About the project','Gaze the Haze turns NEA\'s open PSI readings and Singapore\'s newspaper archives into one picture of the haze, today and since 1961. Today\'s numbers update live; earlier years are a saved copy of NEA\'s dataset that refreshes once a day. It is a personal project, free to use, and not official health advice: check nea.gov.sg for that. Cause tags are placeholders for now.');$('dx').onclick=()=>$('dlg').close();$('ix').onclick=()=>$('info').close();
 let IA=null;$('ia').onclick=()=>{$('info').close();if(IA)IA()};

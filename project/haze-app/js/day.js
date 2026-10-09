@@ -47,37 +47,43 @@ $("strip").onclick = (e) => {
   const b = e.target.closest(".dc");
   if (b) select(+b.dataset.y, +b.dataset.d);
 };
-/* one date button opens the native picker */
-$("dp").max = iso(TY, TD);
-$("dp").value = iso(sel.y, sel.d);
-$("today").onclick = () => $("dp").showPicker();
+/* date picker: the date button and its arrow both open it */
+function openPicker() {
+  const i = $("dp");
+  i.max = iso(TY, TD);
+  i.value = iso(sel.y, sel.d);
+  $("dpd").showModal();
+  try {
+    if (i.showPicker) i.showPicker();
+  } catch (e) {}
+}
+$("today").onclick = openPicker;
+$("dpb").onclick = openPicker;
+$("dp").onchange = (e) => {
+  const [y, m, d] = e.target.value.split("-").map(Number);
+  if (DAILY[y]) {
+    $("dpd").close();
+    select(y, Math.round((Date.UTC(y, m - 1, d) - Date.UTC(y, 0, 1)) / 864e5));
+  }
+};
+$("dpt").onclick = () => {
+  $("dpd").close();
+  select(TY, TD);
+};
+$("dpx").onclick = () => $("dpd").close();
 function dayLabel(y, d) {
-  const date = dt(y, d),
-    w =
-      date.toLocaleDateString("en-GB", { weekday: "short" }) +
-      " " +
-      date.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+  const w = dt(y, d).toLocaleDateString("en-GB", {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+    }),
     yd = nb(TY, TD, -1);
   return y == TY && d == TD
-    ? "Today, " + w
+    ? "Today " + w
     : yd && y == yd[0] && d == yd[1]
-      ? "Yesterday, " + w
+      ? "Yesterday " + w
       : w + " " + y;
 }
-$("dp").onchange = (e) => {
-  const value = e.target.value,
-    [y, m, d] = value.split("-").map(Number),
-    day = Math.round((Date.UTC(y, m - 1, d) - Date.UTC(y, 0, 1)) / 864e5);
-  if (
-    value >= "2014-04-01" &&
-    value <= $("dp").max &&
-    DAILY[y] &&
-    iso(y, day) == value &&
-    day < DAILY[y].length
-  )
-    select(y, day);
-  else e.target.value = iso(sel.y, sel.d);
-};
 const nb = (y, d, n) => {
   const t = new Date(y, 0, 1 + d + n),
     y2 = t.getFullYear();
@@ -111,10 +117,10 @@ function info() {
     ch = ((p - q) / q) * 100;
     const s =
       Math.abs(ch) < 4
-        ? ["≈", "Similar <br>to"]
+        ? ["≈", "Similar to"]
         : ch > 0
-          ? ["↑", "Higher <br>than"]
-          : ["↓", "Lower <br>than"];
+          ? ["↑", "Higher <br> than"]
+          : ["↓", "Lower <br> than"];
     $("cmp").innerHTML = `<b>${s[0]}</b>${s[1]} day before`;
   }
   const OUT = [
@@ -148,12 +154,7 @@ function select(y, d) {
   const p = DAILY[y][d],
     b = p == null ? null : bi(p),
     ps = p == null ? 50 : pos(p);
-  $("dp").value = iso(y, d);
   $("today").textContent = dayLabel(y, d);
-  $("today").setAttribute(
-    "aria-label",
-    "Choose a date: " + $("today").textContent,
-  );
   $("mn").textContent = p == null ? (LD.arch || LD.live ? "…" : "–") : p;
   $("mc").textContent =
     b == null ? (LD.arch || LD.live ? "Loading" : "No reading") : BANDS[b].n;

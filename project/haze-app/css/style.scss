@@ -10,7 +10,7 @@ h1,#mn{font-family:var(--f);font-weight:400}
 h2,.sq,.sq i,.ci,.ci i,.hc,.mt{font-family:var(--fd);font-weight:400}
 #mc,.lead,#cmp b{font-family:var(--fr);font-weight:300}
 h2,.sq,.sq i,.ci,.ci i,#mc,.dark .t{text-shadow:0 1px 1px rgba(0,0,0,.28)}
-h1,#mn{text-shadow:1px 1px 2px black}
+h1,#mn{text-shadow:0px 0px 1px black}
 h1{font-size:clamp(88px,24vw,130px);line-height: 0.4;margin:40px 0 14px; color:#666;
 em{font-size: clamp(16px, 6vw, 18px);
 font-style: normal;
@@ -19,7 +19,7 @@ opacity:0.8;
 text-shadow: none;
 margin: 0;
 padding-left: 6px;
-text-transform: uppercase;}
+font-family: var(--fr);}
 }
 .glow{position:relative;
  &::after{opacity:0;text-shadow:5px 5px 20px #555;content:attr(data-text);position:absolute;inset:0;color:transparent;font:inherit;line-height:1.2;letter-spacing:inherit;animation:glow 5s ease-in-out infinite alternate}}
@@ -118,11 +118,10 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 }
 @media (max-width:#{$bp-mobile}){body{padding:0 14px}.dark{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
 }
-
 @media(prefers-reduced-motion:reduce){#mk{transition:none}.glow::after{animation:none;opacity:.5}}
 .chip{padding:7px 16px}.chip[aria-pressed=true]{background:$ink;color:#fff}.chip.off{opacity:.4}.chip.off:hover{opacity:.7}
 .rsw{margin:0 0 12px}#mcap{margin:0 auto 6px}
-#dp{position:absolute;top:100%;left:50%;width:1px;height:1px;padding:0;opacity:0;pointer-events:none}
+#dpd input{font-size:16px;padding:10px 14px;background:#fff}
 #ld{display:flex;align-items:center;justify-content:center;gap:10px;min-height:24px;margin:4px 0 8px;font-size:13px;color:var(--mut)}
 #ld i{width:14px;height:14px;border:2px solid #c8c8c8;border-top-color:$ink;border-radius:50%;animation:spin .9s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
