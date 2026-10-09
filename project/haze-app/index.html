@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gaze the Haze: Singapore haze, today and since 2014</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Rubik+Dirt&family=Rubik:wght@300&family=Sono:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>
+      <span class="glow" data-text="Gaze">Gaze</span
+      ><em><span class="glow" data-text="the">the </span></em>
+      <span class="glow" data-text="Haze">Haze</span>
+    </h1>
+    <p class="lead">
+      See how hazy Singapore's air is today, hour by hour and region by region,
+      and compare it with the past.
+    </p>
+    <div class="ctl">
+      <button id="today" class="tb" type="button" aria-label="Choose a date">
+        Today</button
+      ><button id="dpb" class="tb" type="button" aria-label="Choose a date">
+        ▾
+      </button>
+    </div>
+    <div id="ld" role="status" aria-live="polite">
+      <i></i><span id="ldt">Loading data…</span>
+    </div>
+
+    <div class="hero">
+      <div id="mk">
+        <div id="nw">
+          <b id="mn"></b><span id="cmp" aria-live="polite"></span>
+        </div>
+        <span id="mc"></span><span class="ar">▼</span>
+      </div>
+      <div class="bands" id="bands"></div>
+      <div class="lbls" id="lbls"></div>
+    </div>
+    <div
+      class="strip"
+      id="strip"
+      aria-label="Last 90 days. Swipe or scroll sideways. Left and right arrow keys step by a day."
+    ></div>
+    <button class="acc" id="lt" aria-expanded="false" aria-controls="lp">
+      <span>View your regions levels each hour</span><span class="ch">▾</span>
+    </button>
+    <div id="lp" hidden>
+      <p class="mut" id="mcap"></p>
+      <div class="mapw">
+        <svg
+          id="map"
+          viewBox="0 0 420 285"
+          role="img"
+          aria-label="Map of Singapore's five regions with their readings"
+        ></svg>
+      </div>
+      <div class="rsw">
+        <button id="rs" class="chip" aria-pressed="true">
+          Daily average for each region
+        </button>
+      </div>
+      <p class="mut">
+        Tap a time to compare every region at that hour. Tap a region name, or a
+        region on the map, to follow it through the day. Tap “Daily average for
+        each region” to start again.
+      </p>
+      <div class="hgw"><div class="hg" id="hrs"></div></div>
+    </div>
+
+    <button class="acc" id="gt" aria-expanded="false" aria-controls="gp">
+      <span>Some guidance for the day</span><span class="ch">▾</span>
+    </button>
+    <div id="gp" hidden>
+      <label
+        >Guidance for
+        <select id="prof" aria-label="Who the guidance is for">
+          <option value="1">a healthy adult</option>
+          <option value="0.85">a child or older adult</option>
+          <option value="0.7">
+            someone with asthma or a heart or lung condition
+          </option>
+        </select></label
+      >
+      <div class="grid" id="gd"></div>
+      <p class="mut" style="margin-top: 10px">
+        Guidance is loosely modelled on NEA's PSI bands. Check nea.gov.sg for
+        official advice.
+      </p>
+    </div>
+
+    <section class="fade">
+      <h3>[Still in development]</h3>
+      <h2>Compare the past</h2>
+      <p>
+        Before the Pollutant Standards Index (PSI) was established, the country
+        relied on news archives to note haze tracking.
+      </p>
+      <p>
+        Each circle is a year. Small and lighter was less polluted, big and dark
+        was more with the lowest and highest reading within. Under each circle
+        is how many hazy days that year had, then its twelve months from January
+        (top) to December (bottom). Data from newspapers are depicted by the
+        cross-hatched pattern. Tap a year or a month for details.
+      </p>
+      <div class="sc" id="sc"></div>
+      <div class="bands" id="bands2"></div>
+      <div class="lbls" id="lbls2"></div>
+      <p class="mut" style="margin-top: 12px">
+        Readings before 2014 did not include PM2.5, so they cannot be compared
+        like-for-like with later years.
+      </p>
+      <h2 style="margin-top: 20px">Why it happened</h2>
+      <p>
+        Pick causes to show only the months where they applied. A marker shows
+        one cause per month; hover a month for all of them. Tags are
+        placeholders inferred from season and level, not verified attributions.
+      </p>
+      <div class="cbs" id="cbs"></div>
+      <div id="cx" aria-live="polite">
+        Hover or tap a cause to see what it means and why it happens.
+      </div>
+    </section>
+
+    <section>
+      <button class="acc" id="dsb" aria-expanded="false" aria-controls="dsp">
+        <span>Data Sources</span><span class="ch">▾</span>
+      </button>
+      <div id="dsp" hidden>
+        <p class="mut">
+          Metric: NEA's 24-hour Pollutant Standards Index (PSI). Each day shows
+          the highest hourly reading across the five regions (north, south,
+          east, west, central), with the day's lowest alongside. Values are
+          shown as published, with no smoothing or gap-filling. Records may be
+          missing, and NEA notes the dataset has not been through its
+          climate-data quality control. Official records:
+          sales_climo@nea.gov.sg.
+        </p>
+        <div class="src">
+          <div>
+            <span class="tg2">Live</span><br />NEA Real-time PSI API (<a
+              href="https://data.gov.sg"
+              target="_blank"
+              rel="noopener"
+              >data.gov.sg</a
+            >, v2), Singapore Open Data Licence. Requested by your browser for
+            the current day, cached for 10 minutes and re-checked every 15
+            minutes while the page is open.
+          </div>
+          <div>
+            <span class="tg2">Saved</span><br />NEA Historical 24-hr PSI dataset
+            (<a
+              href="https://data.gov.sg/datasets/d_b4cf557f8750260d229c49fd768e11ed/view"
+              target="_blank"
+              rel="noopener"
+              >data.gov.sg</a
+            >, April 2014 onward), extended with the Real-time API for days
+            after the dataset's last record. Stored as static JSON in this site
+            and rebuilt once a day at 01:00 SGT.
+          </div>
+          <div>
+            <span class="tg2">Newspaper</span><br />Events before 2014
+            (cross-hatched) are editorial annotations drawn from The Straits
+            Times via
+            <a
+              href="https://eresources.nlb.gov.sg/newspapers"
+              target="_blank"
+              rel="noopener"
+              >NLB NewspaperSG</a
+            >,
+            <a
+              href="https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html"
+              target="_blank"
+              rel="noopener"
+              >NLB Infopedia</a
+            >
+            and The Borneo Post. They are qualitative accounts, not
+            measurements, and are updated by hand.
+          </div>
+        </div>
+        <div class="card">
+          <span id="st"></span><span id="ar" class="mut"></span
+          ><span id="lv" class="mut"></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="dark">
+      <button class="lk" id="abt">About the project</button>
+      <span class="t">Support my work</span
+      ><button id="sup">Buy me a kopi (&amp; N95 mask)</button>
+      <div class="sub">
+        <span
+          >Made by
+          <a href="https://ongtiffany.github.io" target="_blank" rel="noopener"
+            >Tiffany Ong
+          </a></span
+        >
+      </div>
+    </div>
+
+    <dialog id="dlg" aria-labelledby="dh">
+      <h2 id="dh">Thank you</h2>
+      <img class="qr" id="q1" src="img/paynow-qr.jpg" alt="Payment QR code" />
+      <p>Please put "Haze" in the payment message or reference.</p>
+      <button id="dx">Close</button>
+    </dialog>
+
+    <dialog id="dpd" aria-labelledby="dph">
+      <h2 id="dph">Pick a date</h2>
+      <input type="date" id="dp" min="2014-04-01" aria-label="Date" />
+      <div class="row" style="margin-top: 14px">
+        <button id="dpt">Today</button><button id="dpx">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="info" aria-labelledby="ih">
+      <h2 id="ih"></h2>
+      <p id="ib"></p>
+      <div class="row">
+        <button id="ia" hidden></button><button id="ix">Close</button>
+      </div>
+    </dialog>
+    <script src="js/core.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/day.js"></script>
+    <script src="js/years.js"></script>
+    <script src="js/hours.js"></script>
+    <script src="js/ui.js"></script>
+    <script
+      data-goatcounter="https://ongtiffany.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+  </body>
+</html>
