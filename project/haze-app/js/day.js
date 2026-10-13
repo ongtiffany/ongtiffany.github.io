@@ -8,28 +8,54 @@ const pos = (p) => {
     hi = b == 4 ? 400 : BANDS[b].m;
   return Math.min(1, (b + (Math.min(p, 400) - lo) / (hi - lo)) / 5) * 100;
 };
-let stripDone = 0;
-function drawStrip() {
-  const sl = $("strip").scrollLeft;
-  let h = "";
-  for (let i = TD - 89; i <= TD; i++) {
-    const [y, d] = i < 0 ? [TY - 1, ylen(TY - 1) + i] : [TY, i],
-      p = DAILY[y] ? DAILY[y][d] : null,
-      m = DMIN[y] ? DMIN[y][d] : null,
-      b = p == null ? null : bi(p),
-      t =
-        i == TD
-          ? "Today"
-          : dt(y, d).toLocaleDateString("en-GB", {
-              weekday: "short",
-              day: "numeric",
-              month: "short",
-            });
-    h += `<button class="dc" data-y="${y}" data-d="${d}"><span>${t}</span><span class="sq${b == null ? " n" : ""}" style="${b == null ? "" : SW(b) + ";color:" + TC(b)}">${p != null && m != null ? `<i>${m}-</i>` : ""}${p == null ? "–" : p}</span></button>`;
+let stripDone = 0,
+  SEND = [TY, TD],
+  stripKeys = new Set(); // SEND: last day shown in the strip; the strip moves to wherever the selected date is
+const absDay = (y, d) => Math.round(Date.UTC(y, 0, 1 + d) / 864e5),
+  fromAbs = (a) => {
+    const t = new Date(a * 864e5),
+      y = t.getUTCFullYear();
+    return [
+      y,
+      Math.round(
+        (Date.UTC(y, t.getUTCMonth(), t.getUTCDate()) - Date.UTC(y, 0, 1)) /
+          864e5,
+      ),
+    ];
+  };
+function drawStrip(jump) {
+  const sl = $("strip").scrollLeft,
+    items = [];
+  let c = SEND;
+  for (let k = 0; k < 90 && c; k++) {
+    items.push(c);
+    c = nb(c[0], c[1], -1);
   }
-  $("strip").innerHTML = h;
+  items.reverse();
+  stripKeys = new Set(items.map((x) => x[0] + "-" + x[1]));
+  $("strip").innerHTML = items
+    .map(([y, d]) => {
+      const p = DAILY[y] ? DAILY[y][d] : null,
+        m = DMIN[y] ? DMIN[y][d] : null,
+        b = p == null ? null : bi(p),
+        t =
+          y == TY && d == TD
+            ? "Today"
+            : dt(y, d).toLocaleDateString("en-GB", {
+                weekday: "short",
+                day: "numeric",
+                month: "short",
+              });
+      return `<button class="dc" data-y="${y}" data-d="${d}"><span>${t}<em>${y == TY ? "&nbsp;" : y}</em></span><span class="sq${b == null ? " n" : ""}" style="${b == null ? "" : SW(b) + ";color:" + TC(b)}">${p != null && m != null ? `<i>${m}-</i>` : ""}${p == null ? "–" : p}</span></button>`;
+    })
+    .join("");
   hl(1);
-  $("strip").scrollLeft = stripDone ? sl : 1e5;
+  const on = document.querySelector(".dc.on");
+  if (jump || !stripDone)
+    $("strip").scrollLeft = on
+      ? on.offsetLeft - $("strip").clientWidth / 2 + on.offsetWidth / 2
+      : 1e5;
+  else $("strip").scrollLeft = sl;
   stripDone = 1;
 }
 function hl(c) {
@@ -47,30 +73,52 @@ $("strip").onclick = (e) => {
   const b = e.target.closest(".dc");
   if (b) select(+b.dataset.y, +b.dataset.d);
 };
-/* date picker: the date button and its arrow both open it */
-function openPicker() {
-  const i = $("dp");
-  i.max = iso(TY, TD);
-  i.value = iso(sel.y, sel.d);
-  $("dpd").showModal();
-  try {
-    if (i.showPicker) i.showPicker();
-  } catch (e) {}
+/* date picker: custom dialog */
+const dp = $("dp");
+const dialog = $("dpd");
+
+dp.max = iso(TY, TD);
+
+function openDateDialog() {
+  dp.value = iso(sel.y, sel.d);
+
+  if (!dialog.open) {
+    dialog.showModal();
+  }
+
+  requestAnimationFrame(() => {
+    dp.focus();
+
+    try {
+      dp.showPicker();
+    } catch (err) {
+      // The date input remains available for manual interaction.
+    }
+  });
 }
-$("today").onclick = openPicker;
-$("dpb").onclick = openPicker;
-$("dp").onchange = (e) => {
+function closeDateDialog() {
+  if (dialog.open) dialog.close();
+}
+
+$("today").addEventListener("click", openDateDialog);
+$("dpb").addEventListener("click", openDateDialog);
+
+dp.onchange = (e) => {
   const [y, m, d] = e.target.value.split("-").map(Number);
-  if (DAILY[y]) {
-    $("dpd").close();
+
+  if (y && m && d && DAILY[y]) {
     select(y, Math.round((Date.UTC(y, m - 1, d) - Date.UTC(y, 0, 1)) / 864e5));
+    closeDateDialog();
   }
 };
-$("dpt").onclick = () => {
-  $("dpd").close();
+
+$("dpt").addEventListener("click", () => {
   select(TY, TD);
-};
-$("dpx").onclick = () => $("dpd").close();
+  closeDateDialog();
+});
+
+$("dpx").addEventListener("click", closeDateDialog);
+
 function dayLabel(y, d) {
   const w = dt(y, d).toLocaleDateString("en-GB", {
       weekday: "short",
@@ -119,8 +167,8 @@ function info() {
       Math.abs(ch) < 4
         ? ["≈", "Similar to"]
         : ch > 0
-          ? ["↑", "Higher <br> than"]
-          : ["↓", "Lower <br> than"];
+          ? ["↑", "Higher than"]
+          : ["↓", "Lower than"];
     $("cmp").innerHTML = `<b>${s[0]}</b>${s[1]} day before`;
   }
   const OUT = [
@@ -147,10 +195,14 @@ function info() {
         ? "Optional. Helpful if someone at home is sensitive."
         : "Switch it on, with windows closed.";
   $("gd").innerHTML =
-    `<div><b>Going outside</b>${OUT}</div><div><b>Indoors</b>Windows: ${WIN}<br>Air purifier: ${PUR}${lv >= 2 ? "<br>Air-con: helps with comfort when windows are shut, though most home units filter little fine smoke." : ""}</div>`;
+    `<div><b>Outdoors</b>${OUT}</div><div><b>Indoors</b><em>Windows</em>: ${WIN}<br><em>Air purifier</em>: ${PUR}${lv >= 2 ? "<br><em>Air-con</em>: helps with comfort when windows are shut, though most home units filter little fine smoke." : ""}</div>`;
 }
 function select(y, d) {
   sel = { y, d };
+  if (!stripKeys.has(y + "-" + d)) {
+    SEND = fromAbs(Math.min(absDay(TY, TD), absDay(y, d) + 45));
+    drawStrip(true);
+  } // date outside the strip: move the strip to it
   const p = DAILY[y][d],
     b = p == null ? null : bi(p),
     ps = p == null ? 50 : pos(p);
@@ -161,6 +213,11 @@ function select(y, d) {
   $("mk").style.left =
     p == null ? "50%" : `clamp(70px,${ps}%,calc(100% - 70px))`;
   $("mk").classList.toggle("flip", ps > 60);
+  dp.value = iso(y, d);
+  $("today").setAttribute(
+    "aria-label",
+    "Choose a date. Showing " + dayLabel(y, d),
+  );
   hl();
   info();
   loadDay2(y, d);

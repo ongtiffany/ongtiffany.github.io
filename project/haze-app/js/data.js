@@ -4,15 +4,18 @@ let chain=Promise.resolve(),gapRun=0;
 const api=p=>{const r=chain.then(()=>{const ac=new AbortController(),t=setTimeout(()=>ac.abort(),15000);return fetch('https://api-open.data.gov.sg/v2/real-time/api/'+p,{signal:ac.signal}).then(x=>{clearTimeout(t);if(!x.ok)throw 0;return x.json()},e=>{clearTimeout(t);throw e})});chain=r.catch(()=>0).then(()=>sleep(2200));return r};
 const PR={};function psiRaw(k){const c=PR[k];if(c&&Date.now()-c.t<6e5)return c.p;const p=api('psi?date='+k);PR[k]={t:Date.now(),p};p.catch(()=>{PR[k].t=Date.now()-57e4});return p}   // a failed request is remembered for 30 seconds so we do not retry straight away
 const mx=r=>{if(!r)return null;if(typeof r.national=='number')return r.national;const v=Object.values(r).filter(x=>typeof x=='number');return v.length?Math.max(...v):null};
-async function liveDay(y,d){const j=await psiRaw(iso(y,d)),v=((j.data&&j.data.items)||[]).map(i=>mx(i.readings&&i.readings.psi_twenty_four_hourly)).filter(x=>x!=null);return v.length?[Math.min(...v),Math.max(...v)]:null}
+function sgtOf(ts){ts=String(ts);if(!/(Z|[+-]\d{2}:?\d{2})$/.test(ts))return{date:ts.slice(0,10),h:+ts.slice(11,13)};const t=new Date(ts);if(isNaN(t))return null;const s=new Date(t.getTime()+8*36e5).toISOString();return{date:s.slice(0,10),h:+s.slice(11,13)}}   // reading time as Singapore date and hour, whatever format NEA sends
+function dayItems(j,key){const all=((j.data&&j.data.items)||[]).map(i=>({t:sgtOf(i.timestamp),r:i.readings&&i.readings.psi_twenty_four_hourly})).filter(x=>x.t&&x.r);const own=all.filter(x=>x.t.date==key);return own.length?own:all}   // this day's readings (falls back to everything returned)
+async function liveDay(y,d){const k=iso(y,d),v=dayItems(await psiRaw(k),k).map(x=>mx(x.r)).filter(x=>x!=null);return v.length?[Math.min(...v),Math.max(...v)]:null}
 let liveN=0;
 async function live(){if(MODE=='sample'){LD.live=0;ldShow();return}if(!liveN++){LD.live=1;ldShow()}try{const r=await liveDay(TY,TD);if(r)setVal(TY,TD,r[1],r[0]);
  $('lv').textContent='Live feed last checked '+new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Singapore',hour:'2-digit',minute:'2-digit'})+' SGT.';
  drawStrip();drawYears();if(sel.y==TY&&sel.d==TD)select(TY,TD);gap()}catch(e){$('lv').textContent='Live feed unavailable (blocked or rate-limited).'}finally{LD.live=0;ldShow();if(DAILY[sel.y][sel.d]==null)select(sel.y,sel.d)}}
-async function gap(){if(gapRun||HOSTED)return;gapRun=1;HIST.t=HIST.t||{};
- for(let k=1;k<=45&&MODE!='sample';k++){const t=new Date(TY,sg.getMonth(),sg.getDate()-k),y=t.getFullYear(),d=Math.round((t-new Date(y,0,1))/864e5),key=iso(y,d);
+async function gap(){if(gapRun)return;gapRun=1;const N=HOSTED?14:45;   // saved data only needs a short top-up; a local run with no saved data fetches more
+HIST.t=HIST.t||{};
+ for(let k=1;k<=N&&MODE!='sample';k++){const t=new Date(TY,sg.getMonth(),sg.getDate()-k),y=t.getFullYear(),d=Math.round((t-new Date(y,0,1))/864e5),key=iso(y,d);
   if(y<2014||!DAILY[y]||DAILY[y][d]!=null||HIST.t[key])continue;
-  try{LD.gap=1;LD.gn=` (${k} of 45)`;ldShow();const r=await liveDay(y,d);HIST.t[key]=1;if(r)setVal(y,d,r[1],r[0]);else LS.set();drawStrip();hl()}catch(e){break}}
+  try{LD.gap=1;LD.gn=` (${k} of ${N})`;ldShow();const r=await liveDay(y,d);HIST.t[key]=1;if(r)setVal(y,d,r[1],r[0]);else LS.set();drawStrip();hl()}catch(e){break}}
  gapRun=0;LD.gap=0;ldShow();drawYears()}
 
 /* sample preview (add ?sample to the address to see the design without data) */
@@ -25,10 +28,9 @@ function sample(){blank();YRS.forEach(y=>{const r=R(y*97);DAILY[y]=DAILY[y].map(
 
 /* regional readings for one day: sample, saved archive (past days) or live feed (today) */
 const YC={};
-function parseItems(j){const H=Array(24).fill(null);((j.data&&j.data.items)||[]).forEach(i=>{const h=+i.timestamp.slice(11,13),r=i.readings&&i.readings.psi_twenty_four_hourly;
- if(r&&h>=0&&h<24){const v=REG.map(k=>typeof r[k]=='number'?r[k]:null);if(v.some(x=>x!=null))H[h]=v}});return H}
+function parseItems(j,key){const H=Array(24).fill(null);dayItems(j,key).forEach(x=>{const v=REG.map(k=>typeof x.r[k]=='number'?x.r[k]:null);if(x.t.h>=0&&x.t.h<24&&v.some(q=>q!=null))H[x.t.h]=v});return H}
 const arch=y=>YC[y]||(YC[y]=fetch(`data/${y}.json`).then(r=>r.ok?r.json():{}).catch(()=>({})));
 async function loadDay(y,d){const k=iso(y,d),now=y==TY&&d==TD;
  if(MODE=='sample'){const p=DAILY[y][d];if(p==null)return null;const r=R(y*400+d);return Array.from({length:24},(_,h)=>REG.map(()=>Math.round(Math.max(15,p*(.85+.3*Math.sin((h-6)/24*6.283))*(.88+.24*r())))))}
  if(HOSTED&&!now)return(await arch(y))[k]||null;
- try{return parseItems(await psiRaw(k))}catch(e){return HOSTED?(await arch(y))[k]||null:null}}
+ try{return parseItems(await psiRaw(k),k)}catch(e){return HOSTED?(await arch(y))[k]||null:null}}

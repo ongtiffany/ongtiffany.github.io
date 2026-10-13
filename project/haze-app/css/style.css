@@ -46,13 +46,13 @@ h2, .sq, .sq i, .ci, .ci i, #mc, .dark .t {
 }
 
 h1, #mn {
-  text-shadow: 0px 0px 1px black;
+  text-shadow: 1px 1px 2px black;
 }
 
 h1 {
-  font-size: clamp(88px, 24vw, 130px);
-  line-height: 0.4;
-  margin: 40px 0 14px;
+  font-size: clamp(98px, 24vw, 130px);
+  line-height: 0.5;
+  margin: 30px 0 14px;
   color: #666;
 }
 h1 em {
@@ -71,6 +71,7 @@ h1 em {
 }
 .glow::after {
   opacity: 0;
+  filter: blur(8px);
   text-shadow: 5px 5px 20px #555;
   content: attr(data-text);
   position: absolute;
@@ -85,6 +86,7 @@ h1 em {
 @keyframes glow {
   from {
     opacity: 0;
+    filter: blur(3px);
   }
   to {
     opacity: 1;
@@ -101,9 +103,9 @@ p {
 }
 
 .lead {
-  font-size: 18px;
+  font-size: 17px;
   max-width: 52ch;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .mut {
@@ -189,7 +191,7 @@ button:hover {
   bottom: 8px;
   margin-left: 12px;
   margin-bottom: 20px;
-  width: 132px;
+  width: 110px;
   text-align: left;
   white-space: normal;
   font-size: 12px;
@@ -327,8 +329,12 @@ button.acc:hover {
 
 #lp {
   background: #fff;
-  padding: 14px;
+  padding: 14px 4px;
   margin-bottom: 0;
+}
+
+#lp > p {
+  padding: 0 10px;
 }
 
 .hgw {
@@ -373,13 +379,14 @@ button.acc:hover {
 }
 
 .pt {
+  font-family: var(--fd);
   font-size: 12px;
   text-align: center;
   color: #444;
   padding: 2px 0 6px;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 100% 3px;
+  background-size: 100% 7px;
 }
 
 .hh, .hc {
@@ -428,8 +435,8 @@ button.acc:hover {
 }
 
 .mapw {
-  margin: 0 auto 14px;
-  max-width: 560px;
+  margin: 0 auto;
+  max-width: 900px;
   text-align: center;
 }
 
@@ -437,6 +444,27 @@ button.acc:hover {
   width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
+}
+
+.mapw svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mapw .r {
+  fill: #fff;
+  stroke: #111;
+  stroke-width: 0.5px;
+}
+
+.mapw .r.on {
+  fill: #1c1c1c;
+}
+
+.mapw .r:hover {
+  fill: #111;
 }
 
 #map [data-r] {
@@ -461,6 +489,15 @@ button.acc:hover {
   fill: #111;
 }
 
+#mcap {
+  font-family: var(--fr);
+  font-size: 16px;
+}
+
+#mcap strong {
+  font-weight: 700;
+}
+
 #gp select {
   background: #fff;
   max-width: 100%;
@@ -482,12 +519,24 @@ button.acc:hover {
 .grid > div {
   padding: 12px 14px;
   background: #fff;
+  text-align: left;
+  font-family: var(--fr);
+  font-size: 16px;
 }
 
 .grid b {
   display: block;
   margin-bottom: 3px;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.grid em {
+  font-weight: 100;
+  line-height: 2.2;
+  font-style: normal;
+  text-decoration: underline;
 }
 
 .sc {
@@ -495,6 +544,7 @@ button.acc:hover {
   gap: 4px;
   overflow-x: auto;
   padding-bottom: 10px;
+  padding-top: 15px;
 }
 
 .ml {
@@ -514,7 +564,7 @@ button.acc:hover {
 }
 
 .ml .sp {
-  height: 124px;
+  height: 108px;
 }
 
 .yc {
@@ -567,10 +617,18 @@ button.acc:hover {
 
 .yc small {
   display: block;
-  font-size: 10px;
+  font-size: 9px;
   color: var(--mut);
-  height: 30px;
-  line-height: 1.2;
+  height: 14px;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.yc[data-y] .ci:not(.e) {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
 .sg {
@@ -604,20 +662,6 @@ button.acc:hover {
 .cb[aria-pressed=true] {
   background: #1c1c1c;
   color: #fff;
-}
-
-#cx {
-  background: var(--card);
-  padding: 14px 16px;
-  font-size: 13px;
-  max-width: 72ch;
-  line-height: 1.6;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#cx b {
-  font-weight: 600;
 }
 
 .leg {
@@ -846,11 +890,6 @@ dialog::backdrop {
   justify-content: center;
 }
 
-.fade {
-  opacity: 0.7;
-  background: repeating-linear-gradient(45deg, #8a8a8a 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, #bbb 0 1px, transparent 1px 5px), #fff;
-}
-
 @media (max-width: 600px) {
   body {
     padding: 0 14px;
@@ -860,6 +899,13 @@ dialog::backdrop {
     margin-right: -14px;
     padding-left: 14px;
     padding-right: 14px;
+  }
+  #cmp {
+    position: relative;
+    left: 0;
+  }
+  .hero {
+    padding-top: 180px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -896,12 +942,6 @@ dialog::backdrop {
   margin: 0 auto 6px;
 }
 
-#dpd input {
-  font-size: 16px;
-  padding: 10px 14px;
-  background: #fff;
-}
-
 #ld {
   display: flex;
   align-items: center;
@@ -931,4 +971,157 @@ dialog::backdrop {
   #ld i {
     animation: none;
   }
+}
+.dc em {
+  display: block;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 1.1;
+  min-height: 11px;
+}
+
+/* cause icons: transparent SVGs in img/, layered on top of each other when a month has several causes */
+.ic {
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 18px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.sg {
+  position: relative;
+}
+
+.sg .ic {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.cg {
+  display: inline-flex;
+  gap: 1px;
+  align-items: stretch;
+}
+
+.cn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 6px 10px;
+}
+
+.cn:hover {
+  background: #ddd;
+}
+
+.cn .ic {
+  width: 16px;
+  height: 20px;
+}
+
+.ic.big {
+  width: 36px;
+  height: 46px;
+}
+
+.icb {
+  margin-bottom: 8px;
+}
+
+#ib .ic {
+  vertical-align: -4px;
+}
+
+#dp {
+  pointer-events: none;
+}
+
+#dpd {
+  background: white;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  left: 0%;
+  box-sizing: border-box;
+  width: min(360px, 100vw - 32px);
+  max-width: calc(100vw - 32px);
+  max-height: 85vh;
+  overflow: auto;
+  margin: auto;
+}
+
+#dpd::backdrop {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+#dpd input[type=date] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
+  margin: 12px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#dpd .row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sg {
+  font-size: 10px;
+  text-align: center;
+}
+
+.yc[data-y] {
+  display: flex;
+  flex-direction: column;
+}
+
+.yc[data-y] .cc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.haze-label {
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  line-height: 12px;
+  color: #777;
+  white-space: nowrap;
+}
+
+.haze-bar-wrap {
+  height: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.haze-bar {
+  height: 6px;
+  max-width: 100%;
+  background: #777;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.fade {
+  opacity: 0.7;
+  background: repeating-linear-gradient(45deg, #8a8a8a 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, #bbb 0 1px, transparent 1px 5px), #fff;
 }/*# sourceMappingURL=style.css.map */
