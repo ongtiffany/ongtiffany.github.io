@@ -1,0 +1,58 @@
+{
+  "1961": {
+    "m": [9],
+    "days": null,
+    "t": "October 1961: the first haze on record",
+    "articles": [
+      {
+        "date": "1961-10-19",
+        "title": "Another week of heavy haze",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19611019-1",
+        "causes": [],
+        "status": "placeholder"
+      },
+      {
+        "date": "1961-10-19",
+        "title": "Haze gives the air pilots a hard time",
+        "source": "The Borneo Post",
+        "url": "https://www.theborneopost.com/2019/09/21/ive-been-hazed-since-i-was-22-a-very-short-history-of-haze/",
+        "causes": [],
+        "status": "secondary-reference"
+      }
+    ],
+    "b": "Contemporary and retrospective reports describe a haze episode in October 1961. Cause tags have not yet been verified."
+  },
+  "1997": {
+    "m": [7, 8, 9],
+    "days": null,
+    "t": "August to October 1997",
+    "articles": [
+      {
+        "date": null,
+        "title": "Haze pollution",
+        "source": "NLB Infopedia",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html",
+        "causes": [],
+        "status": "historical-reference"
+      }
+    ],
+    "b": "A major smoke haze outbreak. NLB Infopedia records a peak PSI reading of 226 in September. Daily readings and article-based haze-day counts are not yet included."
+  },
+  "2013": {
+    "m": [5],
+    "days": null,
+    "t": "June 2013",
+    "articles": [
+      {
+        "date": null,
+        "title": "Haze pollution",
+        "source": "NLB Infopedia",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html",
+        "causes": [],
+        "status": "historical-reference"
+      }
+    ],
+    "b": "Haze returned in June 2013 in one of the most serious episodes of the preceding 16 years. Daily readings are not yet included."
+  }
+}
