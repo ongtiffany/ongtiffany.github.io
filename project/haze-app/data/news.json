@@ -1,58 +1,624 @@
 {
+  "_schema_version": 4,
+  "_notice": "PSI measurements and historical news records are independent sources. News coverage does not establish the number of haze days or prove the cause of a particular PSI reading.",
   "1961": {
-    "m": [9],
-    "days": null,
-    "t": "October 1961: the first haze on record",
     "articles": [
+      {
+        "date": "1961-10-18",
+        "title": "Haze article, 18 October 1961 (headline not retrieved)",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/Digitised/Article/straitstimes19611018-1.2.87"
+      },
       {
         "date": "1961-10-19",
         "title": "Another week of heavy haze",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19611019-1",
-        "causes": [],
-        "status": "placeholder"
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19611019-1"
+      }
+    ]
+  },
+  "1972": {
+    "articles": [
+      {
+        "date": "1972-10-04",
+        "title": "Haze over Malaysia puzzles the experts",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19721004-1"
       },
       {
-        "date": "1961-10-19",
-        "title": "Haze gives the air pilots a hard time",
-        "source": "The Borneo Post",
-        "url": "https://www.theborneopost.com/2019/09/21/ive-been-hazed-since-i-was-22-a-very-short-history-of-haze/",
-        "causes": [],
-        "status": "secondary-reference"
+        "date": "1972-10-13",
+        "title": "Change in wind direction blows away the haze",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19721013-1"
+      },
+      {
+        "date": "1972-10-20",
+        "title": "Downpour and wind change thin the haze",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19721020-1"
+      },
+      {
+        "date": null,
+        "title": "Haze pollution",
+        "source": "NLB Infopedia",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html"
       }
-    ],
-    "b": "Contemporary and retrospective reports describe a haze episode in October 1961. Cause tags have not yet been verified."
+    ]
+  },
+  "1977": {
+    "articles": [
+      {
+        "date": "1977-10-08",
+        "title": "Quick action taken to tackle the rise in smog",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19771008-1"
+      },
+      {
+        "date": null,
+        "title": "Haze – A Burning Issue For Four Decades",
+        "source": "Remember Singapore (compiled from ST / National Archives)",
+        "url": "https://remembersingapore.org/2013/06/19/a-hazy-problem-for-40-years/"
+      }
+    ]
+  },
+  "1979": {
+    "articles": [
+      {
+        "date": null,
+        "title": "Haze – A Burning Issue For Four Decades",
+        "source": "Remember Singapore (compiled from ST / National Archives)",
+        "url": "https://remembersingapore.org/2013/06/19/a-hazy-problem-for-40-years/"
+      }
+    ]
+  },
+  "1982": {
+    "articles": [
+      {
+        "date": "1982-09-07",
+        "title": "Dry spell and wind make the ways hazy",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19820907-1"
+      }
+    ]
+  },
+  "1983": {
+    "articles": [
+      {
+        "date": null,
+        "title": "Haze – A Burning Issue For Four Decades",
+        "source": "Remember Singapore (compiled from ST / National Archives)",
+        "url": "https://remembersingapore.org/2013/06/19/a-hazy-problem-for-40-years/"
+      }
+    ]
+  },
+  "1987": {
+    "articles": [
+      {
+        "date": "1987-09-21",
+        "title": "Blaze partly responsible for the haze in Singapore",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19870921-1"
+      },
+      {
+        "date": null,
+        "title": "Haze – A Burning Issue For Four Decades",
+        "source": "Remember Singapore (compiled from ST / National Archives)",
+        "url": "https://remembersingapore.org/2013/06/19/a-hazy-problem-for-40-years/"
+      }
+    ]
+  },
+  "1989": {
+    "articles": [
+      {
+        "date": "1989-02-14",
+        "title": "Bushfires cast blanket of haze over Singapore",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19890214-1"
+      },
+      {
+        "date": "1989-02-24",
+        "title": "Dry weather brings on hazy mornings",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19890224-1"
+      }
+    ]
+  },
+  "1994": {
+    "articles": [
+      {
+        "date": "1994-09-14",
+        "title": "The New Paper, 14 September 1994 – haze coverage (PSI hits 114)",
+        "source": "The New Paper",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/newpaper19940914-1"
+      },
+      {
+        "date": "1994-09-28",
+        "title": "Govt to look at needed steps if pollution worsens",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19940928-1"
+      },
+      {
+        "date": null,
+        "title": "Haze pollution",
+        "source": "NLB Infopedia",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html"
+      }
+    ]
   },
   "1997": {
-    "m": [7, 8, 9],
-    "days": null,
-    "t": "August to October 1997",
     "articles": [
+      {
+        "date": "1997-09-20",
+        "title": "Environment Ministry plan to tackle the haze",
+        "source": "The New Paper",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/newpaper19970920-1"
+      },
+      {
+        "date": "1997-09-27",
+        "title": "Haze team in Jakarta to identify areas for assistance",
+        "source": "The Straits Times (Weekly Overseas Edition)",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/stoverseas19970927-1"
+      },
       {
         "date": null,
         "title": "Haze pollution",
         "source": "NLB Infopedia",
-        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html",
-        "causes": [],
-        "status": "historical-reference"
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html"
+      },
+      {
+        "date": null,
+        "title": "Severe Transboundary Smoke Haze in 1997",
+        "source": "Meteorological Service Singapore",
+        "url": "https://www.weather.gov.sg/severe-transboundary-smoke-haze-in-1997/"
       }
-    ],
-    "b": "A major smoke haze outbreak. NLB Infopedia records a peak PSI reading of 226 in September. Daily readings and article-based haze-day counts are not yet included."
+    ]
+  },
+  "2001": {
+    "articles": [
+      {
+        "date": "2001-07-13",
+        "title": "Haze envelops Singapore",
+        "source": "The Hindu (via India Environment Portal)",
+        "url": "https://indiaenvironmentportal.org.in/news-clippings/haze-envelops-singapore"
+      }
+    ]
+  },
+  "2002": {
+    "articles": [
+      {
+        "date": null,
+        "title": "Haze – A Burning Issue For Four Decades",
+        "source": "Remember Singapore (compiled from ST / National Archives)",
+        "url": "https://remembersingapore.org/2013/06/19/a-hazy-problem-for-40-years/"
+      }
+    ]
+  },
+  "2005": {
+    "articles": [
+      {
+        "date": null,
+        "title": "Haze – A Burning Issue For Four Decades",
+        "source": "Remember Singapore (compiled from ST / National Archives)",
+        "url": "https://remembersingapore.org/2013/06/19/a-hazy-problem-for-40-years/"
+      }
+    ]
+  },
+  "2006": {
+    "articles": [
+      {
+        "date": "2006-09-08",
+        "title": "The haze is back, and it could last a few days",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20060908-1"
+      },
+      {
+        "date": "2006-10-25",
+        "title": "Clearing up ASEAN’s Hazy Relations",
+        "source": "RSIS",
+        "url": "https://rsis.edu.sg/rsis-publication/nts/870-clearing-up-aseans-hazy-rel/"
+      },
+      {
+        "date": null,
+        "title": "Environmental Protection Division Annual Report 2006",
+        "source": "National Environment Agency",
+        "url": "https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epdannualreport2006.pdf"
+      },
+      {
+        "date": null,
+        "title": "Haze pollution",
+        "source": "NLB Infopedia",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html"
+      }
+    ]
+  },
+  "2010": {
+    "articles": [
+      {
+        "date": null,
+        "title": "2010 Southeast Asian haze",
+        "source": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/2010_Southeast_Asian_haze"
+      }
+    ]
+  },
+  "2012": {
+    "articles": [
+      {
+        "date": "2012-09-07",
+        "title": "Singapore chokes on smoke from Indonesia",
+        "source": "Tuoi Tre News (AFP)",
+        "url": "https://tuoitrenews.vn/news/international/20120907/singapore-chokes-on-smoke-from-indonesia/12782.html"
+      }
+    ]
   },
   "2013": {
-    "m": [5],
-    "days": null,
-    "t": "June 2013",
     "articles": [
+      {
+        "date": "2013-06-17",
+        "title": "NEA Advisory - Update on Haze Situation (17 June 2013)",
+        "source": "Ministry of Health / NEA",
+        "url": "https://www.moh.gov.sg/newsroom/nea-advisory---update-on-haze-situation-%2817-june-2013%29/"
+      },
+      {
+        "date": "2013-06-23",
+        "title": "Singapore is blanketed by its worst haze in 16 years",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20130623-1"
+      },
+      {
+        "date": null,
+        "title": "2013 archive: haze episode summary",
+        "source": "Meteorological Service Singapore",
+        "url": "https://www.weather.gov.sg/category/all-years/2013/"
+      },
       {
         "date": null,
         "title": "Haze pollution",
         "source": "NLB Infopedia",
-        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html",
-        "causes": [],
-        "status": "historical-reference"
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html"
       }
-    ],
-    "b": "Haze returned in June 2013 in one of the most serious episodes of the preceding 16 years. Daily readings are not yet included."
+    ]
+  },
+  "2014": {
+    "articles": [
+      {
+        "date": null,
+        "title": "Moderate Haze during Prolonged Dry Spells in late Northeast Monsoon 2014",
+        "source": "Meteorological Service Singapore",
+        "url": "https://www.weather.gov.sg/category/all-categories/transboundary-haze/"
+      }
+    ]
+  },
+  "2015": {
+    "articles": [
+      {
+        "date": "2015-08-28",
+        "title": "Haze so thick it obscures views of towers, with visibility dwindling to just 300m",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150828-1"
+      },
+      {
+        "date": "2015-09-03",
+        "title": "Haze Situation Update (3 September 2015)",
+        "source": "Meteorological Service Singapore",
+        "url": "https://www.weather.gov.sg/haze-situation-update-3-september-2015/"
+      },
+      {
+        "date": "2015-09-15",
+        "title": "PSI levels in S’pore hover within unhealthy range and are expected to become worse",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150915-1"
+      },
+      {
+        "date": "2015-09-25",
+        "title": "Unprecedented move due to possibility of PSI hitting hazardous levels: Heng Swee Keat",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150925-1"
+      },
+      {
+        "date": "2015-10-05",
+        "title": "2,100 more troops sent to Sumatra; Malaysia closes schools amid hazardous air quality",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20151005-1"
+      },
+      {
+        "date": null,
+        "title": "Annual Climate Assessment Report 2015 — Prolonged Transboundary Haze",
+        "source": "Meteorological Service Singapore",
+        "url": "https://www.weather.gov.sg/wp-content/uploads/2016/03/Annual-Climate-Assessment-Report-2015.pdf"
+      }
+    ]
+  },
+  "2016": {
+    "articles": [
+      {
+        "date": "2016-08-26",
+        "title": "Hazy skies and burning smell across Singapore",
+        "source": "The Jakarta Post (The Straits Times/ANN)",
+        "url": "https://www.thejakartapost.com/seasia/2016/08/26/hazy-skies-and-burning-smell-across-singapore"
+      },
+      {
+        "date": "2016-08-28",
+        "title": "Fewer hot spots, but haze still a concern in Singapore",
+        "source": "Inquirer / Asia News Network (The Straits Times)",
+        "url": "https://newsinfo.inquirer.net/810444/fewer-hot-spots-but-haze-still-a-concern-in-singapore/amp"
+      },
+      {
+        "date": "2016-08-29",
+        "title": "Fewer hot spots, but haze still a concern in Singapore",
+        "source": "The Jakarta Post (The Straits Times)",
+        "url": "https://www.thejakartapost.com/seasia/2016/08/29/fewer-hot-spots-but-haze-still-a-concern-in-singapore"
+      },
+      {
+        "date": "2016-09-28",
+        "title": "Haze fight: Firms asked to review sources of palm oil",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20160928-1"
+      }
+    ]
+  },
+  "2017": {
+    "articles": [
+      {
+        "date": "2017-04-22",
+        "title": "This time, it is local pollution causing haze",
+        "source": "The Straits Times (via STOMP)",
+        "url": "https://www.stomp.sg/singapore-seen/this-time-it-is-local-pollution-causing-haze"
+      },
+      {
+        "date": "2017-05-18",
+        "title": "Indonesia assures ASEAN neighbours a haze-free 2017",
+        "source": "The Borneo Post",
+        "url": "https://www.theborneopost.com/2017/05/18/indonesia-assures-asean-neighbours-a-haze-free-2017/"
+      },
+      {
+        "date": "2017-11-08",
+        "title": "Commentary: When the haze comes from Singapore's own backyard",
+        "source": "Singapore Institute of International Affairs",
+        "url": "https://siiaonline.org/when-the-haze-comes-from-singapores-own-backyard/"
+      }
+    ]
+  },
+  "2018": {
+    "articles": [
+      {
+        "date": "2018-02-21",
+        "title": "Singapore unlikely to experience transboundary haze from hot spots detected in 4 Indonesian provinces",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/singapore-unlikely-to-experience-transboundary-haze-from-hot-spots-detected-in-4-indonesian-provinces"
+      },
+      {
+        "date": "2018-04-11",
+        "title": "Hazy conditions over parts of Singapore on Wednesday: NEA",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/hazy-conditions-expected-over-parts-of-singapore-on-wednesday-nea"
+      },
+      {
+        "date": "2018-05-20",
+        "title": "Sunday morning's haze in Singapore likely came from domestic sources, says NEA",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/sunday-mornings-haze-in-singapore-likely-came-from-domestic-sources-says-nea"
+      },
+      {
+        "date": "2018-06-03",
+        "title": "Burning smell in some parts of central Singapore on Sunday not caused by haze: NEA",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/burning-smell-in-some-parts-of-central-singapore-on-sunday-not-caused-by-haze"
+      }
+    ]
+  },
+  "2019": {
+    "articles": [
+      {
+        "date": "2019-09-10",
+        "title": "Haze in Singapore may be back to stay: Winds, dry weather and 'persistent' hot spots in Sumatra to blame",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/haze-in-singapore-may-be-back-to-stay-winds-dry-weather-and-persistant"
+      },
+      {
+        "date": "2019-09-13",
+        "title": "Haze Situation Update (13 September 2019)",
+        "source": "National Environment Agency",
+        "url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-13-september-2019"
+      },
+      {
+        "date": "2019-09-15",
+        "title": "Haze in Singapore enters unhealthy range across island",
+        "source": "Inquirer / Asia News Network",
+        "url": "https://newsinfo.inquirer.net/1164920/haze-in-singapore-enters-unhealthy-range-across-island"
+      },
+      {
+        "date": "2019-09-16",
+        "title": "Hazy one moment, clear the next: Haze in Singapore is at mercy of the winds",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/hazy-one-moment-clear-the-next-when-will-singapore-experience-haze"
+      },
+      {
+        "date": "2019-09-24",
+        "title": "Three companies with offices in Singapore linked to forest fires causing haze",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/three-companies-with-offices-in-singapore-fingered-for-involvement-in-haze"
+      },
+      {
+        "date": "2019-09-27",
+        "title": "Haze season for 2019 could ease as early as next week: Asean weather watchdog",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/haze-season-for-2019-could-be-over-as-early-as-next-week-asean-weather"
+      },
+      {
+        "date": "2019-10-15",
+        "title": "Air pollutant reading in Palembang hits record high",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20191015-1"
+      },
+      {
+        "date": "2019-12-28",
+        "title": "Year in Review: Sarawak hit by choking haze, drought",
+        "source": "The Borneo Post",
+        "url": "https://www.theborneopost.com/2019/12/28/sarawak-hit-by-choking-haze-drought/"
+      }
+    ]
+  },
+  "2020": {
+    "articles": [
+      {
+        "date": "2021-09-30",
+        "title": "Air quality in S'pore was in moderate to good range throughout 2020: NEA",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/air-quality-in-spore-was-in-moderate-to-good-range-throughout-2020-nea"
+      }
+    ]
+  },
+  "2021": {
+    "articles": [
+      {
+        "date": "2021-03-01",
+        "title": "Ozone, not haze, caused unhealthy air quality in northern Singapore",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/ozone-not-haze-the-cause-of-air-quality-turning-unhealthy-for-the-first-time"
+      },
+      {
+        "date": "2021-03-02",
+        "title": "Slightly hazy conditions with burning smell in parts of Singapore on Tuesday morning due to hot spot in Johor: NEA",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/slightly-hazy-conditions-with-burning-smell-in-parts-of-singapore-on-tuesday"
+      },
+      {
+        "date": "2021-03-03",
+        "title": "askST: Is the slight burning smell in parts of S’pore earlier this week due to haze?",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/is-slight-burning-smell-in-the-air-over-the-past-few-days-related-to-haze"
+      }
+    ]
+  },
+  "2022": {
+    "articles": [
+      {
+        "date": "2022-05-09",
+        "title": "Haze may affect S’pore if drier weather persists later this year",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20220509-1"
+      },
+      {
+        "date": "2022-06-28",
+        "title": "Moderate risk of severe haze in S'pore due to rising agricultural commodity prices: Report",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/moderate-risk-of-severe-haze-this-year-due-to-rising-agricultural-commodity-prices-report"
+      }
+    ]
+  },
+  "2023": {
+    "articles": [
+      {
+        "date": "2023-09-06",
+        "title": "Sarawak haze due to open burning by ‘neighbour’, says state govt",
+        "source": "Free Malaysia Today (citing The Borneo Post)",
+        "url": "https://fmtv5.freemalaysiatoday.com/category/nation/2023/09/06/sarawak-haze-due-to-open-burning-by-neighbour-says-state-govt"
+      },
+      {
+        "date": "2023-09-13",
+        "title": "More hot spots in Indonesia this week, but severe haze not expected for now",
+        "source": "The Straits Times (via NUS CDE news page)",
+        "url": "https://cde.nus.edu.sg/news/more-hot-spots-in-indonesia-this-week-but-severe-haze-not-expected-for-now"
+      },
+      {
+        "date": "2023-10-07",
+        "title": "Singapore air quality drops as authorities warn of smoke haze",
+        "source": "Gulf News (AP)",
+        "url": "https://gulfnews.com/world/asia/singapore-air-quality-drops-as-authorities-warn-of-smoke-haze-1.1696653977352"
+      },
+      {
+        "date": "2023-10-07",
+        "title": "Why the haze has reached Singapore’s shores again",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/multimedia/graphics/2023/10/haze-returns-singapore-2023/index.html"
+      }
+    ]
+  },
+  "2025": {
+    "articles": [
+      {
+        "date": "2025-03-26",
+        "title": "Haze returns to Singapore as regional hot spot activity intensifies",
+        "source": "Malay Mail (citing The Straits Times)",
+        "url": "https://www.malaymail.com/news/singapore/2025/03/26/haze-returns-to-singapore-as-regional-hot-spot-activity-intensifies/170917"
+      }
+    ]
+  },
+  "2026": {
+    "articles": [
+      {
+        "date": "2026-08-20",
+        "title": "Sarawak may continue to see haze as Serian API reaches 191",
+        "source": "The Borneo Post",
+        "url": "https://www.theborneopost.com/2026/08/20/sarawak-may-see-continued-haze-as-serian-api-reaches-191/"
+      },
+      {
+        "date": "2026-08-30",
+        "title": "Serian’s API soars to hazardous 364, four Sarawak areas very unhealthy by 8am Sunday",
+        "source": "The Borneo Post",
+        "url": "https://www.theborneopost.com/?p=1339171"
+      },
+      {
+        "date": "2026-09-05",
+        "title": "Moderate Haze Observed Singapore, Southern Malaysia And Northern Borneo - ASMC",
+        "source": "Bernama (NNN)",
+        "url": "https://web29.bernama.com/nnn/news.php?id=2603309"
+      },
+      {
+        "date": "2026-10-03",
+        "title": "Haze in Singapore: Air quality deteriorating; PSI in central region back in unhealthy range",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/haze-in-singapore-air-quality-deteriorating-psi-in-central-region-back-in-unhealthy-range"
+      },
+      {
+        "date": "2026-10-08",
+        "title": "Singapore shrouded in haze; PSI readings in the unhealthy range across the island",
+        "source": "The Star",
+        "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/08/singapore-shrouded-in-haze-psi-readings-in-the-unhealthy-range-across-the-island"
+      },
+      {
+        "date": "2026-10-13",
+        "title": "Haze in Singapore persists; PSI remains unhealthy for all regions",
+        "source": "The Straits Times (via Yahoo News Singapore)",
+        "url": "https://sg.news.yahoo.com/haze-singapore-persists-24-hour-222911759.html"
+      },
+      {
+        "date": "2026-10-13",
+        "title": "Haze in Singapore persists; PSI remains unhealthy for all regions",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/haze-in-singapore-persists-24-hour-psi-remains-unhealthy-for-all-regions"
+      },
+      {
+        "date": "2026-10-14",
+        "title": "Hazy conditions persist overnight as PSI remains unhealthy across Singapore",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/hazy-conditions-persist-overnight-as-psi-remains-unhealthy-across-singapore"
+      },
+      {
+        "date": "2026-10-15",
+        "title": "Singapore looking into which companies responsible for haze-causing fires: PM Wong",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/singapore-looking-into-which-companies-responsible-for-haze-causing-fires-pm-wong"
+      },
+      {
+        "date": "2026-10-16",
+        "title": "Singapore is experiencing its 12th consecutive day of unhealthy air, the longest since 2015 haze crisis",
+        "source": "The Straits Times (via Asia News Network)",
+        "url": "https://asianews.network/singapore-is-experiencing-its-12th-consecutive-day-of-unhealthy-air-the-longest-since-2015-haze-crisis/"
+      },
+      {
+        "date": "2026-10-16",
+        "title": "S’pore is experiencing its 12th consecutive day of unhealthy air, the longest since 2015 haze crisis",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/environment/spore-is-experiencing-its-12th-consecutive-day-of-unhealthy-air-the-longest-since-2015-haze-crisis"
+      },
+      {
+        "date": "2026-10-16",
+        "title": "Why is the haze so bad in Southeast Asia this year?",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/business/environment/why-is-haze-so-bad-southeast-asia-this-year-2026-10-15/"
+      }
+    ]
   }
 }

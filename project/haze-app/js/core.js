@@ -3,14 +3,14 @@ const $ = (i) => document.getElementById(i),
   sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const BANDS = [
   { n: "Good", m: 50, c: "#f2f2f2" },
-  { n: "Moderate", m: 100, c: "#dadada" },
-  { n: "Unhealthy", m: 200, c: "#bebebe" },
-  { n: "Severe", m: 300, c: "#a0a0a0" },
-  { n: "Hazardous", m: 1e4, c: "#828282" },
+  { n: "Moderate", m: 100, c: "#d3d3d3" },
+  { n: "Unhealthy", m: 200, c: "#b3b3b3" },
+  { n: "Severe", m: 300, c: "#929292" },
+  { n: "Hazardous", m: 1e4, c: "#707070" },
 ];
 const bi = (p) => BANDS.findIndex((b) => p <= b.m);
 /* texture: two staggered fine dot layers, each 15% darker than the shade they sit on */
-const GL = [242, 218, 190, 160, 130],
+const GL = [242, 211, 179, 146, 112],
   dotc = (g) => {
     const d = Math.round(g - 25.5);
     return `rgb(${d},${d},${d})`;

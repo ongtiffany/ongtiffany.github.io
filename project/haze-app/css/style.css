@@ -548,6 +548,7 @@ button.acc:hover {
 }
 
 .ml {
+  display: none;
   position: sticky;
   left: 0;
   background: var(--bg);
@@ -1038,6 +1039,20 @@ dialog::backdrop {
   vertical-align: -4px;
 }
 
+#ib {
+  text-align: left;
+}
+#ib h4 {
+  font-size: 18px;
+  font-family: var(--fr);
+  margin-bottom: 10px;
+}
+#ib .mut {
+  margin-top: 30px;
+  border-top: 1px solid #999;
+  padding: 16px 0 8px 0;
+}
+
 #dp {
   pointer-events: none;
 }
@@ -1121,7 +1136,504 @@ dialog::backdrop {
   flex-shrink: 0;
 }
 
-.fade {
-  opacity: 0.7;
-  background: repeating-linear-gradient(45deg, #8a8a8a 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, #bbb 0 1px, transparent 1px 5px), #fff;
+#news-filters {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+}
+
+#news-filters h3 {
+  margin: 0 0 0.75rem;
+}
+
+#news-filters h4 {
+  margin: 1rem 0 0.5rem;
+}
+
+.news-filter-causes,
+.news-filter-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.1rem;
+}
+
+.news-filter-causes label,
+.news-filter-evidence label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+#news-filter-summary {
+  margin: 1rem 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+#news-filter-clear {
+  margin-top: 0.25rem;
+  cursor: pointer;
+}
+
+.yc[data-pre-year][hidden] {
+  display: none !important;
+}
+
+.sg.unified-dim {
+  opacity: 0.2;
+}
+
+/* Cause filter and adjacent information button */
+.unified-cause-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+button.unified-cause-info {
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.unified-cause {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cause-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding-top: 14px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cause-icon-button .cause-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.cause-icon-button:hover,
+.cause-icon-button:focus-visible {
+  border-color: currentColor;
+  background: #e8edf2;
+  color: #222;
+}
+
+.unified-cause-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cause-count {
+  font-size: 0.85em;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+/* Month haze ring */
+.timeline-month {
+  position: relative;
+  overflow: visible;
+}
+
+/* Haze-day count centred inside the month circle */
+.month-haze-count {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12px;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 600;
+  color: #222;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Thin line from the top of the ring down to the centre */
+.month-haze-count::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(50% + 6px);
+  transform: translateX(-50%);
+  width: 1px;
+  height: 6px;
+  background: #333;
+  pointer-events: none;
+}
+
+.sc {
+  position: relative;
+  align-items: stretch;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 40px 0 10px;
+  isolation: isolate;
+}
+
+.ml {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  flex: 0 0 66px;
+  width: 66px;
+  min-width: 66px;
+  background: var(--bg);
+  color: var(--mut);
+  font-size: 10px;
+  text-align: left;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.ml {
+  position: sticky;
+}
+
+.ml-month-heading {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  line-height: 18px;
+  background: var(--bg);
+  border-top: 1px solid #c8c8c8;
+  z-index: 2;
+}
+
+.ml > div {
+  padding-left: 4px;
+  white-space: nowrap;
+}
+
+.ml-heading {
+  height: 76px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+.ml-bar-label {
+  height: 15px;
+}
+
+.ml-count-labels {
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  line-height: 12px;
+}
+
+.ml-year-label {
+  height: 18px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.ml-month-heading {
+  height: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  border-top: 1px solid #c8c8c8;
+}
+
+.ml-month {
+  height: 18px;
+  line-height: 18px;
+}
+
+/* Annual columns */
+.yc[data-y] {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 74px;
+  width: 74px;
+  align-items: stretch;
+}
+
+.yc[data-y] .cc {
+  height: 76px;
+  min-height: 76px;
+  flex: 0 0 76px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 0;
+  padding: 0 0 4px;
+  box-sizing: border-box;
+}
+
+/* Annual haze-day bar: starts at the circle's vertical midpoint */
+.annual-records {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Annual circle and ring positioning */
+.cc.annual-records {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.annual-circle-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Circle remains the correct dynamic size */
+.annual-circle-wrap .annual-circle {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* Haze ring matches the circle exactly */
+.annual-circle-wrap .annual-haze-ring {
+  position: absolute;
+  inset: -3px;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: conic-gradient(var(--haze-ring-color, black) 0deg var(--haze-angle), transparent var(--haze-angle) 360deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Haze-day number above the circle */
+.annual-circle-wrap .annual-haze-count {
+  position: absolute;
+  left: calc(50% + 1px);
+  bottom: calc(100% - 1px);
+  transform: translateX(-50%);
+  display: block;
+  z-index: 4;
+  padding-top: 0;
+  border-radius: 50%;
+  color: #333;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+}
+.annual-circle-wrap .annual-haze-count::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: calc(100% - 7px);
+  transform: translateX(-50%);
+  width: 1px;
+  height: 7px;
+  background: #333;
+}
+
+.annual-circle {
+  position: relative;
+  z-index: 3;
+  font-size: 25px;
+}
+
+/* Dotted texture for circles with PSI data */
+.annual-circle:not(.e):not(.no-psi-circle)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.3) 0.8px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.55;
+}
+
+/* News-only year: empty circle with cross-hatched fill */
+.annual-circle.no-psi-circle {
+  display: inline-flex;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px dashed #999;
+  border-radius: 50%;
+  background-image: repeating-linear-gradient(45deg, transparent 0, transparent 4px, #d3d3d3 4px, #d3d3d3 5px), repeating-linear-gradient(-45deg, transparent 0, transparent 4px, #d3d3d3 4px, #d3d3d3 5px);
+}
+
+/* Hover and keyboard focus */
+.annual-circle:not(.e):hover {
+  filter: brightness(1.08);
+}
+
+.annual-circle:not(.e):focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 3px;
+}
+
+.annual-circle.no-psi-circle:hover {
+  border-color: #222;
+}
+
+/* Annual article and haze-day counts */
+.yc[data-y] .haze-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: 24px;
+  min-height: 24px;
+  line-height: 12px;
+  font-size: 10px;
+  white-space: nowrap;
+  color: #666;
+  margin-top: -10px;
+  z-index: -9;
+}
+
+.annual-count {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: #f1f1f1;
+  width: 18px;
+  margin-top: 0;
+  z-index: 9;
+  border: 1px solid gray;
+}
+
+/* The PSI circle determines the size and position */
+.annual-records .annual-circle {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.yc[data-y] .year-label {
+  height: 18px;
+  min-height: 18px;
+  line-height: 18px;
+  margin: 0;
+}
+
+/* Keep month cells aligned */
+.yc[data-y] > .sg,
+.yc[data-y] > .timeline-month {
+  flex: 0 0 22px;
+  height: 22px;
+  min-height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+.yc[data-y] > .sg.has-news,
+.yc[data-y] > .timeline-month.has-news {
+  background-image: repeating-linear-gradient(45deg, transparent 0, transparent 4px, #d3d3d3 4px, #d3d3d3 5px), repeating-linear-gradient(-45deg, transparent 0, transparent 4px, #d3d3d3 4px, #d3d3d3 5px);
+}
+
+/* Ensure month circles can display the haze indicators */
+.timeline-month {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Ring around the month circle */
+.timeline-month > .month-haze-ring {
+  position: absolute;
+  inset: -1px;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  background: conic-gradient(black 0deg var(--haze-angle), transparent var(--haze-angle) 360deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+}
+
+/* Haze-day number in the centre */
+.timeline-month .month-haze-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  color: #222;
+  padding: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  white-space: nowrap;
+  z-index: 7;
+}
+
+.news-article {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-color, #ddd);
+}
+
+.news-article summary {
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.news-article summary:hover {
+  text-decoration: underline;
+}
+
+.news-article-details {
+  padding: 6px 0 0 12px;
+  font-size: 0.9rem;
+}
+
+.news-article-details p {
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .ml {
+    flex-basis: 60px;
+    width: 60px;
+    min-width: 60px;
+  }
+  .yc[data-y] {
+    flex-basis: 68px;
+    width: 68px;
+  }
 }/*# sourceMappingURL=style.css.map */
