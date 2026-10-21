@@ -908,6 +908,9 @@ dialog::backdrop {
   .hero {
     padding-top: 180px;
   }
+  #mk.flip #cmp {
+    left: 0;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   #mk {
