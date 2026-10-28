@@ -80,7 +80,6 @@ text-transform: uppercase;}.grid em{font-weight: 100;
 line-height: 2.2;
 font-style: normal;
 text-decoration: underline;}
-.sc{display:flex;gap:4px;overflow-x:auto;padding-bottom:10px; padding-top:15px;}
 .ml{display:none;position:sticky;left:0;background:var(--bg);z-index:2;flex:none;width:22px;font-size:11px;color:var(--mut)}
 .ml div{height:18px;line-height:18px}.ml .sp{height:108px}
 .yc{flex:none;width:74px;text-align:center;transition:opacity .3s}
@@ -102,12 +101,18 @@ text-decoration: underline;}
 .cb[aria-pressed=true]{background:$ink;color:#fff}
 .leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;margin:8px 0}
 .leg i{display:inline-block;width:28px;height:13px;vertical-align:-2px;margin-right:5px}
-.dark{background:$ink;color:#bbb;margin:30px -28px 0;padding:26px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;}
+.dark{background:$ink;color:#bbb;margin:30px -28px 0;padding:26px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;
+hr{
+  width: 200px;
+border: none;
+border-top: 1px dashed gray;
+}
+}
 .dark .t{font-size:20px;color:#eee; font-family: var(--fd);}
 .dark button{background:#ddd;color:#111;font-size:13px;padding:7px 16px}.dark button:hover{background:#fff}
 .dark .sub{font-size:12px;color:#bbb;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;align-items:center}.dark a{color:#ddd}
 .dark .lk{background:none;color:#ddd;text-decoration:underline;padding:0;font-size:12px}.dark .lk:hover{background:none;color:#fff}
-dialog{border:0;background:var(--card);color:var(--ink);padding:24px;max-width:520px;width:calc(100% - 32px)}
+dialog{border:0;background:var(--card);color:var(--ink);padding:24px;max-width:820px;width:calc(100% - 32px)}
 dialog::backdrop{background:rgba(0,0,0,.45)}
 .qr{display:block;width:240px;max-width:100%;height:auto;background:#fff;margin:14px auto; filter:grayscale(100%);width:100px;}.miss{font-size:12px;color:var(--mut);text-align:center;margin:14px 0}
 .row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
@@ -268,6 +273,7 @@ text-align: center;
   cursor: pointer;
 }
 
+
 .yc[data-pre-year][hidden] {
   display: none !important;
 }
@@ -343,52 +349,19 @@ button.unified-cause-info{
 
 
 
-/* Haze-day count centred inside the month circle */
-.month-haze-count {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 12px;
-  font-size: 9px;
-  line-height: 1;
-  font-weight: 600;
-  color: #222;
-
-  pointer-events: none;
-  z-index: 4;
-}
-
-/* Thin line from the top of the ring down to the centre */
-.month-haze-count::before {
-  content: "";
-  position: absolute;
-
-  left: 50%;
-  bottom: calc(50% + 6px);
-  transform: translateX(-50%);
-
-  width: 1px;
-  height: 6px;
-
-  background: #333;
-  pointer-events: none;
-}
 // Timeline column layout
 $timeline-label-width: 66px;
 
 .sc {
+  display:flex;
+  overflow-x:auto;
   position: relative;
   align-items: stretch;
-  gap: 10px;
+  gap: 20px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 40px 0 10px;
+  padding: 40px 0 30px;
   isolation: isolate;
 }
 
@@ -556,7 +529,7 @@ $timeline-label-width: 66px;
 /* Haze-day number above the circle */
 .annual-circle-wrap .annual-haze-count {
   position: absolute;
-  left: calc(50% + 1px);
+  left: calc(50% + 7px);
   bottom: calc(100% - 1px);
   transform: translateX(-50%);
   display: block;
@@ -571,10 +544,16 @@ $timeline-label-width: 66px;
   pointer-events: none;
   width:20px;
   height:20px;
+  em{
+    font-weight: normal;
+    font-style: normal;
+    font-size:8px;
+    padding-left:2px;
+  }
 &::after {
   content: "";
   position: absolute;
-  left: calc(50% - 0.5px);
+  left: calc(50% - 6.5px);
   top: calc(100% - 7px);
   transform: translateX(-50%);
   width: 1px;
@@ -583,6 +562,7 @@ $timeline-label-width: 66px;
 
 }
 }
+
 
 
 .annual-circle {
@@ -661,19 +641,48 @@ $timeline-label-width: 66px;
   white-space: nowrap;
   color: #666;
   margin-top: -10px;
-z-index: -9;
+z-index: 0;
+cursor: pointer;
 }
 
-.annual-count {
+.annual-count { /*News articles*/
   display: block;
-  height: 20px;
-  line-height: 20px;
+  height: 25px;
+  line-height: 32px;
   text-align: center;
-  background: #f1f1f1;
+  background: #f2f2f2;
   width: 18px;
   margin-top: 0;
   z-index: 9;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  font-family: var(--fr);
+  color: #646464;
+  font-size:11px;
+  padding-left:5px;
+  em{
+    font-size:8px;
+    padding-left:7px;
+  }
+}
+
+/* Allow a small newspaper marker beside the monthly PSI circle */
+.timeline-month.has-news {
+  position: relative;
+}
+
+/* Small rectangle indicates dated newspaper records */
+.timeline-month.has-news::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 12px;
+  right: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #777;
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 2;
 }
 
 
@@ -687,10 +696,25 @@ z-index: -9;
 
 
 .yc[data-y] .year-label {
-  height: 18px;
-  min-height: 18px;
-  line-height: 18px;
-  margin: 0;
+height: 30px;
+min-height: 18px;
+line-height: 25px;
+margin: 0;
+z-index: 1;
+font-family: var(--fr);
+font-size: 10px;
+background: transparent;
+&::before{
+  content: "";
+  position: absolute;
+  width:1px;
+  height: 10px;
+  background: gray;
+  margin-left:0.9%;
+  margin-top:18px;
+  transform: translateX(-50%);
+  
+}
 }
 
 /* Keep month cells aligned */
@@ -759,27 +783,108 @@ z-index: -9;
 }
 
 
-/* Haze-day number in the centre */
+/* Haze-day count next to month circle */
 .timeline-month .month-haze-count {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -9px;
+  left: 110%;
   display: block;
+  padding-bottom: 5px;
   color: #222;
-  padding: 2px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
-  line-height: 12px;
+  line-height: 10px;
   white-space: nowrap;
-
   z-index: 7;
+  em{
+    font-size: 8px;
+    font-weight: normal;
+    font-style: normal;
+    padding-left:2px;
+  }
+  /* Thin line from the top of the ring down to the centre */
+  &::before{
+      content: "";
+  position: absolute;
+  width: 62px;
+  height: 2px;
+  background:rgb(172, 171, 171);
+  margin-top:-2px;
+  margin-left:-3px;
+  }
+}
+
+
+.timeline-month {
+  position: relative;
+  overflow: visible;
+}
+
+
+/* Keep labels outside the month circle */
+
+.month-article-count {
+  position: absolute;
+  left: 110%;
+  margin-top:-1px;
+  white-space: nowrap;
+  font-size: 10px;
+  line-height: 1.2;
+  color:#000;
+  font-family: var(--fr);
+  font-size: 10px;
+  &::before{
+      content: "";
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background:lightgray;
+  margin-top:11px;
+  margin-left:-3px;
+  }
+  em{
+    font-size: 8px;
+    color: var(--text-color, #555);
+  }
+}
+
+
+
+
+
+/* Newspaper marker */
+.timeline-month.has-news::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #dcdada;
+  border:1px solid #777;
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 2;
+  display:none;
 }
 
 
 .news-article {
   padding: 9px 0;
   border-bottom: 1px solid var(--border-color, #ddd);
+}
+.news-article-date-source{
+  
+  color: #606060;
+  font-size:12px;
+}
+
+.news-article-title a{
+  color: #111;
+  font-family: var(--fr);
+  font-size:16px;
+  font-weight: 500;
 }
 
 .news-article summary {
@@ -815,4 +920,26 @@ z-index: -9;
     width: 68px;
   }
 }
+
+.verification-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border-radius: 12px;
+  background: rgb(223, 223, 223);
+  color: rgb(72, 72, 72);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.verification-badge span {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
 
