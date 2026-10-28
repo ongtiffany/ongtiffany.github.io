@@ -23,6 +23,12 @@ $("q1").onerror = function () {
   this.after(m);
 };
 $("sup").onclick = () => $("dlg").showModal();
+$("feedback").onclick = () => $("feedbackDlg").showModal();
+$("feedbackClose").onclick = () => $("feedbackDlg").close();
+
+$("feedbackDlg").addEventListener("click", (e) => {
+  if (e.target === $("feedbackDlg")) $("feedbackDlg").close();
+});
 $("abt").onclick = () =>
   showInfo(
     "About the project",

@@ -327,14 +327,11 @@ function placeholderIcon(id) {
 function renderUnifiedLegend() {
   $("cbs").innerHTML = `
     <div class="possible-causes">
-      <h3>Possible causes</h3>
-
       <p class="possible-causes-intro">
-        Haze in Singapore can be influenced by several factors.
-        The list below explain how these factors could contribute
+        Haze in Singapore can be influenced by several factors. Tap to each one to find out 
+        how these factors could contribute
         to haze, but they do not establish the cause of a particular
-        event. Explore the historical PSI measurements and news
-        records in the timeline to assess the available evidence.
+        event. 
       </p>
 
 <div class="unified-causes">
@@ -357,9 +354,8 @@ function renderUnifiedLegend() {
 </div>
 
       <p class="possible-causes-note">
-        These are possible contributing factors, not confirmed
-        explanations for individual haze events. Historical news
-        records are provided for further investigation.
+        Look at the historical PSI measurements and news
+        records in the timeline to assess the available evidence.
       </p>
     </div>`;
 }
@@ -431,7 +427,10 @@ function newsInfo(year) {
       return `
       <article class="news-article">
         <strong>${esc(a.title || "Untitled source")}</strong>
-        <div>${esc(a.source || "Unknown source")}</div>
+        <div>
+  ${esc(a.source || "Unknown source")}
+  ${verificationHTML(a)}
+</div>
         <small>${esc(a.date || "Publication date unavailable")}</small>
         <div>${esc((a.source_type || "").replaceAll("_", " "))}</div>
         ${
@@ -457,7 +456,7 @@ function newsInfo(year) {
 
       <div class="news-stats">
         <div><strong>${articles.length}</strong>
-          <span>Source records</span></div>
+  <span>${articles.length === 1 ? "Article" : "Articles"}</span></div>
         <div><strong>${dated.length}</strong>
           <span>Records with publication dates</span></div>
         <div><strong>${distinctDates}</strong>
@@ -471,11 +470,11 @@ function newsInfo(year) {
       <p><strong>Cause evidence:</strong>
         ${esc(record.cause_evidence || "unknown")}</p>
 
-      <h4>Source records</h4>
-      ${sourceList || "<p>No source records available.</p>"}
+      <h4>News articles</h4>
+      ${sourceList || "<p>No news articles available.</p>"}
 
       <p class="news-disclaimer">
-        Historical news records are not an exhaustive count of haze
+        Historical news articles are not an exhaustive count of haze
         days. PSI measurements are shown independently.
       </p>
     `,
@@ -496,6 +495,10 @@ function escapeHTML(value) {
   );
 }
 
+function articleLabel(count) {
+  return `${count} ${count === 1 ? "article" : "articles"}`;
+}
+
 function safeURL(value) {
   try {
     const url = new URL(value);
@@ -503,6 +506,26 @@ function safeURL(value) {
   } catch {
     return null;
   }
+}
+
+function verificationHTML(article) {
+  if (
+    String(article?.verification ?? "")
+      .trim()
+      .toLowerCase() !== "verified"
+  ) {
+    return "";
+  }
+
+  return `
+    <span class="verification-badge"
+      title="This newspaper record has been verified"
+      aria-label="Verified"
+      role="img">
+      <span aria-hidden="true">✓</span>
+      Verified
+    </span>
+  `;
 }
 
 function articleHTML(article, index = 0) {
@@ -534,43 +557,77 @@ function articleHTML(article, index = 0) {
   }
 
   return `
-    <details class="news-article">
-      <summary>${title}</summary>
+    <article class="news-article">
+      <div class="news-article-date-source">
+  ${escapeHTML(date)}, ${source}
+  ${verificationHTML(article)}
+</div>
 
-      <div class="news-article-details">
-        <p><strong>Date:</strong> ${escapeHTML(date)}</p>
-        <p><strong>Source:</strong> ${source}</p>
-
+      <div class="news-article-title">
         ${
           url
-            ? `<p>
-                <a href="${escapeHTML(url)}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  Open original article ↗
-                </a>
-              </p>`
-            : `<p>Link unavailable.</p>`
+            ? `<a href="${escapeHTML(url)}"
+                 target="_blank"
+                 rel="noopener noreferrer">${title}</a>`
+            : title
         }
       </div>
-    </details>`;
+
+
+      ${index > 0 ? "" : ""}
+    </article>
+    ${index < 0 ? "" : ""}
+  `;
 }
 
 function monthInfo(year, monthIndex) {
   const stats = MST[year]?.[monthIndex] ?? null;
+  const articles = articlesForMonth(year, monthIndex);
   const title = `${MO[monthIndex]} ${year}`;
 
   const psiSection = stats
     ? `
       <div class="month-stats">
-        <p><strong>Average PSI:</strong> ${stats.mean.toFixed(1)}</p>
-        <p><strong>Peak daily PSI:</strong> ${stats.pk}</p>
-        <p><strong>Haze days:</strong> ${stats.over}</p>
+        <p>Average PSI: <strong>${stats.mean.toFixed(1)}</strong></p>
+        <p>Peak daily PSI: <strong>${stats.pk}</strong></p>
+        <p>Haze days (PSI above 100): <strong>${stats.over}</strong></p>
       </div>`
     : `
       <p>PSI measurements are unavailable for this month.</p>`;
 
-  showInfo(title, psiSection);
+  const newsSection = `
+    <h4>${articleLabel(articles.length)}</h4>
+
+    <div class="annual-articles">
+      ${
+        articles.length
+          ? articles
+              .map(
+                (article, index) => `
+                  ${index > 0 ? "<hr>" : ""}
+                  ${articleHTML(article, index)}
+                `,
+              )
+              .join("")
+          : "<p>No dated newspaper articles available for this month.</p>"
+      }
+    </div>
+  `;
+
+  const hasWorstDay =
+    stats && Number.isInteger(stats.day) && stats.day >= 0 && stats.pk != null;
+
+  showInfo(
+    title,
+    `${psiSection}${newsSection}`,
+    hasWorstDay ? `View worst day (${fmt(year, stats.day)})` : null,
+    hasWorstDay
+      ? () => {
+          select(year, stats.day);
+          scrollTo({ top: 0, behavior: "smooth" });
+        }
+      : null,
+  );
 }
 
 const pre = (y) => {
@@ -599,9 +656,9 @@ const pre = (y) => {
       </div>
     </div>
 
-    <div class="haze-label">
-      ${days == null ? "Days unknown" : days + " haze days"}
-    </div>
+<div class="haze-label">
+  ${days == null ? "Days unknown" : days + " haze days"}
+</div>
 
     <b>${y}</b>
 
@@ -614,6 +671,17 @@ const pre = (y) => {
     ).join("")}
   </div>`;
 };
+
+function newspaperShadow(count) {
+  const shadows = Array.from({ length: Math.max(0, count - 1) }, (_, i) => {
+    const offset = i + 1;
+    const color = offset % 2 === 1 ? "#bbbbbb" : "#d3d3d3";
+
+    return `${offset}px ${offset}px 0 ${color}`;
+  });
+
+  return shadows.length ? shadows.join(", ") : "none";
+}
 
 function yearRow(y, MS) {
   const annualArticles = articlesForYear(y);
@@ -721,12 +789,30 @@ ${
   q?.over > 0
     ? `<span class="month-haze-ring"
         style="--haze-angle:${Math.min(q.over, 30) * 12}deg">
-      </span>
-      <span class="month-haze-count">${q.over}</span>`
+      </span>`
     : ""
 }
 
 <span class="month-icons"></span>
+
+${
+  q?.over > 0
+    ? `<span class="month-haze-count">
+        ${q.over}<em>haze days</em>
+      </span>`
+    : ""
+}
+
+${
+  hasNewsMonth
+    ? `<span class="month-article-count"
+    data-y="${y}"
+    data-m="${m}">
+    ${articlesForMonth(y, m).length}
+    <em>${articlesForMonth(y, m).length === 1 ? "article" : "articles"}</em>
+</span>`
+    : ""
+}
 
 </button>`;
   }).join("");
@@ -752,7 +838,7 @@ ${
           </span>
 
           <span class="annual-haze-count">
-            ${psiHazeDays}
+            ${psiHazeDays}<em>haze days</em>
           </span>`
         : ""
     }
@@ -760,9 +846,29 @@ ${
   </span>
 </div>
 
-<div class="haze-label">
-  <span class="annual-count">${hasNews ? annualArticleCount : "–"}</span>
+
+<div
+  class="haze-label newspaper-count${annualArticleCount > 0 ? " has-newspapers" : ""}"
+  ${
+    annualArticleCount > 0
+      ? `role="button" tabindex="0"
+       aria-label="View ${annualArticleCount} newspaper records for ${y}"`
+      : ""
+  }
+>
+  ${
+    annualArticleCount > 0
+      ? `<span
+   class="annual-count"
+   style="box-shadow: ${newspaperShadow(annualArticleCount)}"
+>
+  ${annualArticleCount}
+  <em>${annualArticleCount === 1 ? "article" : "articles"}</em>
+</span>`
+      : ""
+  }
 </div>
+
 
 <b class="year-label">${y}</b>
 
@@ -850,23 +956,23 @@ function yearInfo(year) {
       stats
         ? `
           <p>
-            <strong>Lowest – Highest daily PSI:</strong>
-            ${escapeHTML(stats.mn ?? "Unavailable")} –
-            ${escapeHTML(stats.pk ?? "Unavailable")}
+            Lowest – Highest daily:
+            <strong>${escapeHTML(stats.mn ?? "Unavailable")} –
+            ${escapeHTML(stats.pk ?? "Unavailable")}</strong>
           </p>
 
           <p>
-            <strong>Average PSI:</strong>
-            ${
+            Average:
+            <strong>${
               Number.isFinite(stats.mean)
                 ? stats.mean.toFixed(1)
                 : "Unavailable"
-            }
+            }</strong>
           </p>
 
           <p>
-            <strong>Haze days (PSI above 100):</strong>
-            ${escapeHTML(stats.over ?? "Unavailable")}
+            Haze days (above 100):
+            <strong>${escapeHTML(stats.over ?? "Unavailable")}</strong>
           </p>
         `
         : `<p>PSI measurements are unavailable for this year.</p>`
@@ -874,7 +980,7 @@ function yearInfo(year) {
   `;
 
   const newsSection = `
-    <h4>News records (${articles.length})</h4>
+    <h4>Monthly ${articleLabel(articles.length)}</h4>
 
     ${
       record?.event_status
@@ -890,33 +996,29 @@ function yearInfo(year) {
         : ""
     }
 
-    <p><strong>Dated articles:</strong> ${datedArticles.length}</p>
-    <p><strong>Undated articles:</strong> ${undatedCount}</p>
-    <p><strong>Total articles:</strong> ${articles.length}</p>
 
-    <div class="annual-articles">
-      ${
-        articles.length
-          ? articles
-              .map((article, index) => articleHTML(article, index))
-              .join("")
-          : "<p>No linked news articles available.</p>"
-      }
-    </div>
-  `;
+<div class="annual-articles">
+  ${
+    articles.length
+      ? articles
+          .map(
+            (article, index) => `
+            ${index > 0 ? "<hr>" : ""}
+            ${articleHTML(article, index)}
+          `,
+          )
+          .join("")
+      : "<p>No linked news articles available for this year.</p>"
+  }
+</div>`;
 
   showInfo(
-    `${year} · Annual PSI and news summary`,
+    `${year}`,
     `
       ${psiSection}
       ${newsSection}
 
-      <p class="news-disclaimer">
-        ${escapeHTML(
-          NEWS_NOTICE ||
-            "PSI measurements and historical news records are independent sources. News coverage does not establish the number of haze days or prove the cause of a particular PSI reading.",
-        )}
-      </p>
+
     `,
   );
 }
@@ -925,11 +1027,25 @@ document.addEventListener("click", (event) => {
   const target = event.target;
   if (!(target instanceof Element)) return;
 
-  // Monthly PSI circle: open the corresponding month popup.
+  // Month circle and its associated labels/indicators.
   const monthButton = target.closest(".timeline-month[data-y][data-m]");
+  const monthArticleCount = target.closest(
+    ".month-article-count[data-y][data-m]",
+  );
 
-  if (monthButton) {
-    monthInfo(Number(monthButton.dataset.y), Number(monthButton.dataset.m));
+  const monthTarget = monthButton || monthArticleCount;
+
+  if (monthTarget) {
+    monthInfo(Number(monthTarget.dataset.y), Number(monthTarget.dataset.m));
+    return;
+  }
+
+  const articleLabel = target.closest(".month-article-count");
+
+  if (articleLabel) {
+    event.stopPropagation();
+
+    monthInfo(Number(articleLabel.dataset.y), Number(articleLabel.dataset.m));
     return;
   }
 
@@ -962,6 +1078,19 @@ document.addEventListener("click", (event) => {
   if (annual && !annual.classList.contains("e")) {
     yearInfo(Number(annual.dataset.y));
     return;
+  }
+
+  // Make the annual circle section and newspaper count clickable.
+  const annualSection = target.closest(
+    ".unified-year-row .annual-records, .unified-year-row .newspaper-count",
+  );
+
+  if (annualSection) {
+    const row = annualSection.closest(".unified-year-row");
+    if (row) {
+      yearInfo(Number(row.dataset.year));
+      return;
+    }
   }
 
   // Legacy historical news markers, if any remain.
@@ -1036,6 +1165,16 @@ document.addEventListener("keydown", (e) => {
   ) {
     e.preventDefault();
     e.target.click();
+  }
+
+  const newspaper = e.target.closest?.(
+    ".unified-year-row .newspaper-count.has-newspapers",
+  );
+
+  if (newspaper && (e.key === "Enter" || e.key === " ")) {
+    e.preventDefault();
+    const row = newspaper.closest(".unified-year-row");
+    if (row) yearInfo(Number(row.dataset.year));
   }
 });
 

@@ -11,7 +11,13 @@ const api = (p) => {
     }).then(
       (x) => {
         clearTimeout(t);
-        if (!x.ok) throw 0;
+        if (!x.ok) {
+          const retryAfter = x.headers.get("Retry-After");
+          throw new Error(
+            `PSI API HTTP ${x.status}` +
+              (retryAfter ? `; Retry-After: ${retryAfter}` : ""),
+          );
+        }
         return x.json();
       },
       (e) => {
@@ -122,7 +128,8 @@ async function gap() {
       drawStrip();
       hl();
     } catch (e) {
-      break;
+      console.warn(`[gap] Skipping ${key}; fetch failed:`, e);
+      continue;
     }
   }
   gapRun = 0;
