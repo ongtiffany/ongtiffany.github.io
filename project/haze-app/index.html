@@ -108,27 +108,28 @@
     <hr />
 
     <section class="fade">
-      <h3>[In development]</h3>
       <h2>Compare the past</h2>
       <p>
-        Before the Pollutant Standards Index (PSI) was established, the country
-        relied on news archives to note haze tracking.
+        Each circle on the top row is a year. Small and lighter was less
+        polluted, big and dark was more with the lowest and highest PSI reading
+        within. Above the circle, shows the number of haze days that year, also
+        indicated but the black ring circling clockwise. Under each circle is
+        the number of haze related news articles that year had, and the years
+        labelled below. Directly below are its twelve months from January (top)
+        to December (bottom), and the number of haze days and articles on the
+        right. Tap a year or a month for details.
       </p>
-      <p>
-        Each circle is a year. Small and lighter was less polluted, big and dark
-        was more with the lowest and highest reading within. Under each circle
-        is how many haze days that year had, then its twelve months from January
-        (top) to December (bottom). Data from newspapers are depicted by the
-        cross-hatched pattern. Tap a year or a month for details.
-      </p>
+
       <div class="sc" id="sc"></div>
       <div class="bands" id="bands2"></div>
       <div class="lbls" id="lbls2"></div>
       <p class="mut" style="margin-top: 12px">
-        Readings before 2014 did not include PM2.5, so they cannot be compared
-        like-for-like with later years.
+        Before the Pollutant Standards Index (PSI) was established, the country
+        relied on news archives to note haze tracking. Readings before 2014 did
+        not include PM2.5, so they cannot be compared like-for-like with later
+        years.
       </p>
-      <h2 style="margin-top: 20px">Why it happened</h2>
+      <h2 style="margin-top: 20px">Possible causes</h2>
       <div class="cbs" id="cbs"></div>
     </section>
 
@@ -177,15 +178,15 @@
               target="_blank"
               rel="noopener"
               >NLB NewspaperSG</a
-            >,
+            >
+            and
             <a
               href="https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-08-30_185150.html"
               target="_blank"
               rel="noopener"
               >NLB Infopedia</a
-            >
-            and The Borneo Post. They are qualitative accounts, not
-            measurements, and are updated by hand.
+            >. They are qualitative accounts, not measurements, and are updated
+            by hand.
           </div>
         </div>
         <div class="card">
@@ -199,8 +200,14 @@
       <div class="sub">
         <button class="lk" id="abt">About the project</button>
       </div>
+        <span class="t">Help make it better</span>
+  <button id="feedback">Give your feedback</button>
+  <hr>
       <span class="t">Support my work</span
       ><button id="sup">Buy me a kopi (&amp; N95 mask)</button>
+      
+
+  <span>
       <span>
         <a href="https://ongtiffany.github.io" target="_blank" rel="noopener"
           >Tiffany Ong
@@ -222,6 +229,25 @@
         <button id="ia" hidden></button><button id="ix">Close</button>
       </div>
     </dialog>
+
+    <dialog id="feedbackDlg" aria-labelledby="feedbackHeading">
+  <h2 id="feedbackHeading">Give your feedback</h2>
+  <p>
+    Have a suggestion, spotted an error, or an idea for improving
+    Gaze the Haze? I'd love to hear from you.
+  </p>
+  <p>
+    Your feedback helps make this project more useful and accurate.
+  </p>
+  <p>
+    Email:
+    <a href="mailto:YOUR-EMAIL@example.com">
+      YOUR-EMAIL@example.com
+    </a>
+  </p>
+  <button id="feedbackClose" type="button">Close</button>
+</dialog>
+    
     <script src="js/core.js"></script>
     <script src="js/data.js"></script>
     <script src="js/day.js"></script>
