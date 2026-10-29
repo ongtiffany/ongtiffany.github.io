@@ -66,11 +66,24 @@ function dayItems(j, key) {
   return own.length ? own : all;
 } // this day's readings (falls back to everything returned)
 async function liveDay(y, d) {
-  const k = iso(y, d),
-    v = dayItems(await psiRaw(k), k)
-      .map((x) => mx(x.r))
-      .filter((x) => x != null);
-  return v.length ? [Math.min(...v), Math.max(...v)] : null;
+  const k = iso(y, d);
+  const j = await psiRaw(k);
+  const items = dayItems(j, k);
+  const v = items
+    .map((x) => mx(x.r))
+    .filter((x) => x != null);
+  if (!v.length) return null;
+  const max = Math.max(...v);
+  const min = Math.min(...v);
+  const hourly = parseItems(j, k);
+  if (hourly.some((row) => row && row.some((x) => x != null))) {
+    try {
+      const a = await arch(y);
+      if (a) a[k] = hourly;
+    } catch (e) {}
+    LS.saveRecent(k, max, min, hourly);
+  }
+  return [min, max];
 }
 let liveN = 0;
 async function live() {
@@ -109,7 +122,7 @@ async function live() {
 async function gap() {
   if (gapRun) return;
   gapRun = 1;
-  const N = HOSTED ? 14 : 45; // saved data only needs a short top-up; a local run with no saved data fetches more
+  const N = 90; // Cover the full 90-day strip so past data is always harvested
   HIST.t = HIST.t || {};
   for (let k = 1; k <= N && MODE != "sample"; k++) {
     const t = new Date(TY, sg.getMonth(), sg.getDate() - k),
@@ -129,6 +142,9 @@ async function gap() {
       hl();
     } catch (e) {
       console.warn(`[gap] Skipping ${key}; fetch failed:`, e);
+      if (String(e?.message).includes("429")) {
+        await sleep(5000);
+      }
       continue;
     }
   }
@@ -193,7 +209,25 @@ const arch = (y) =>
   YC[y] ||
   (YC[y] = fetch(`data/${y}.json`)
     .then((r) => (r.ok ? r.json() : {}))
-    .catch(() => ({})));
+    .then((data) => {
+      const recent = LS.getRecent();
+      for (const [k, item] of Object.entries(recent)) {
+        if (k.startsWith(y + "-") && item?.h && !data[k]) {
+          data[k] = item.h;
+        }
+      }
+      return data;
+    })
+    .catch(() => {
+      const data = {};
+      const recent = LS.getRecent();
+      for (const [k, item] of Object.entries(recent)) {
+        if (k.startsWith(y + "-") && item?.h) {
+          data[k] = item.h;
+        }
+      }
+      return data;
+    }));
 async function loadDay(y, d) {
   const k = iso(y, d);
   const now = y == TY && d == TD;
@@ -236,13 +270,30 @@ async function loadDay(y, d) {
   // If the archive has no readings for this date,
   // try retrieving them directly from NEA.
   try {
-    const hourly = parseItems(await psiRaw(k), k);
+    const j = await psiRaw(k);
+    const hourly = parseItems(j, k);
 
     if (
       hourly.some(
         (row) => Array.isArray(row) && row.some((value) => value != null),
       )
     ) {
+      try {
+        const a = await arch(y);
+        if (a) a[k] = hourly;
+      } catch (e) {}
+
+      // If DAILY has no reading for this day, derive it from the hourly data
+      const items = dayItems(j, k);
+      const v = items.map((x) => mx(x.r)).filter((x) => x != null);
+      if (v.length) {
+        const max = Math.max(...v);
+        const min = Math.min(...v);
+        setVal(y, d, max, min, hourly);
+      } else {
+        LS.saveRecent(k, null, null, hourly);
+      }
+
       return hourly;
     }
   } catch (e) {

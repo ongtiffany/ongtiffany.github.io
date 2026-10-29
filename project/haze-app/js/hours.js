@@ -218,6 +218,18 @@ function loadDay2(y, d) {
       DAYD = D;
       selH = null;
       redraw();
+      const p = DAILY[y]?.[d];
+      if (p != null) {
+        const b = bi(p),
+          ps = pos(p);
+        $("mn").textContent = p;
+        $("mc").textContent = BANDS[b].n;
+        $("mk").style.left = `clamp(70px,${ps}%,calc(100% - 70px))`;
+        $("mk").classList.toggle("flip", ps > 60);
+        info();
+        drawStrip();
+        drawYears();
+      }
     })
     .catch(() => {
       if (sel.y == y && sel.d == d) {
