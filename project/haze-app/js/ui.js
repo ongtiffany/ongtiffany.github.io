@@ -140,6 +140,7 @@ async function boot() {
     }
   } catch (e) {}
   applyHist();
+  LS.applyRecent();
   await loadNews();
   LD.arch = 0;
   ldShow();

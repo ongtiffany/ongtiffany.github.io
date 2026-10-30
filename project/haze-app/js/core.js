@@ -58,11 +58,67 @@ const LS = {
       return {};
     }
   },
-  set() {
-    if (HOSTED) return;
+  getRecent() {
+    try {
+      return JSON.parse(localStorage.getItem("hg2_recent") || "{}");
+    } catch (e) {
+      return {};
+    }
+  },
+  saveRecent(key, v, m, h) {
+    try {
+      const recent = LS.getRecent();
+      if (key) {
+        recent[key] = {
+          v: v ?? null,
+          m: m ?? null,
+          ...(h ? { h } : (recent[key]?.h ? { h: recent[key].h } : {})),
+        };
+      }
+      // Prune entries older than 95 days
+      const cutoff = Date.now() - 95 * 864e5;
+      for (const k of Object.keys(recent)) {
+        if (Date.parse(k) < cutoff) delete recent[k];
+      }
+      localStorage.setItem("hg2_recent", JSON.stringify(recent));
+    } catch (e) {}
+  },
+  set(key, v, m, h) {
+    if (HOSTED) {
+      LS.saveRecent(key, v, m, h);
+      return;
+    }
     try {
       localStorage.setItem("hg2", JSON.stringify(HIST));
     } catch (e) {}
+  },
+  applyRecent() {
+    const recent = LS.getRecent();
+    let applied = 0;
+    for (const [key, item] of Object.entries(recent)) {
+      if (!item || item.v == null) continue;
+      const [y, mm, dd] = key.split("-").map(Number);
+      if (!DAILY[y]) continue;
+      const dayIdx = Math.round(
+        (Date.UTC(y, mm - 1, dd) - Date.UTC(y, 0, 1)) / 864e5,
+      );
+      if (dayIdx >= 0 && dayIdx < ylen(y)) {
+        HIST[y] = HIST[y] || Array(ylen(y)).fill(null);
+        if (DAILY[y][dayIdx] == null) {
+          HIST[y][dayIdx] = item.v;
+          DAILY[y][dayIdx] = item.v;
+          applied = 1;
+        }
+        if (item.m != null && DMIN[y][dayIdx] == null) {
+          HIST.mn = HIST.mn || {};
+          HIST.mn[y] = HIST.mn[y] || Array(ylen(y)).fill(null);
+          HIST.mn[y][dayIdx] = item.m;
+          DMIN[y][dayIdx] = item.m;
+          applied = 1;
+        }
+      }
+    }
+    if (applied && MODE == "none") setMode("nea");
   },
 };
 function blank() {
@@ -87,7 +143,7 @@ function applyHist() {
   });
   setMode(any ? "nea" : "none");
 }
-function setVal(y, d, v, m) {
+function setVal(y, d, v, m, h) {
   HIST[y] = HIST[y] || Array(ylen(y)).fill(null);
   HIST[y][d] = v;
   DAILY[y][d] = v;
@@ -97,7 +153,7 @@ function setVal(y, d, v, m) {
     HIST.mn[y][d] = m;
     DMIN[y][d] = m;
   }
-  LS.set();
+  LS.set(iso(y, d), v, m, h);
   if (MODE == "none") setMode("nea");
 }
 const SMS = {

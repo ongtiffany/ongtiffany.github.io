@@ -1,6 +1,13 @@
 // Keeps data/ up to date from NEA via data.gov.sg. Node 20+, no dependencies.
 // First run builds the full history (2014 onward); later runs only add recent days.
 import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const APP_DIR = path.resolve(__dirname, '..');
+const DATA_DIR = path.join(APP_DIR, 'data');
+
 const ID = 'd_b4cf557f8750260d229c49fd768e11ed', BASE = 'https://api-open.data.gov.sg';
 const REG = ['north', 'south', 'east', 'west', 'central'];          // order used in every data file
 const KEY = process.env.DATA_GOV_SG_API_KEY, HDR = KEY ? { 'x-api-key': KEY } : {};
@@ -17,9 +24,9 @@ async function get(u, json = true) {
 }
 
 const Y = {};                                                          // year -> { 'YYYY-MM-DD': [24 x [n,s,e,w,c] | null] }
-await fs.mkdir('data', { recursive: true });
-for (const f of await fs.readdir('data'))
-  if (/^\d{4}\.json$/.test(f)) Y[f.slice(0, 4)] = JSON.parse(await fs.readFile('data/' + f, 'utf8'));
+await fs.mkdir(DATA_DIR, { recursive: true });
+for (const f of await fs.readdir(DATA_DIR))
+  if (/^\d{4}\.json$/.test(f)) Y[f.slice(0, 4)] = JSON.parse(await fs.readFile(path.join(DATA_DIR, f), 'utf8'));
 const put = (d, h, v) => { ((Y[d.slice(0, 4)] ??= {})[d] ??= Array(24).fill(null))[h] = v; };
 const dates = () => Object.values(Y).flatMap(o => Object.keys(o)).sort();
 
@@ -56,9 +63,9 @@ function csv(text, name) {                                              // finds
 }
 
 async function ingestFiles() {                                          // every .csv in data/source is read and merged (one full file, or one per year)
-  const dir = 'data/source', files = (await fs.readdir(dir).catch(() => [])).filter(f => /\.csv$/i.test(f)).sort();
+  const dir = path.join(DATA_DIR, 'source'), files = (await fs.readdir(dir).catch(() => [])).filter(f => /\.csv$/i.test(f)).sort();
   let n = 0;
-  for (const f of files) n += csv(await fs.readFile(`${dir}/${f}`, 'utf8'), f);
+  for (const f of files) n += csv(await fs.readFile(path.join(dir, f), 'utf8'), f);
   return { files: files.length, n };
 }
 
@@ -77,7 +84,7 @@ async function save() {
   const daily = {}, dmin = {};
   for (const y of Object.keys(Y).sort()) {
     const o = Y[y];
-    await fs.writeFile(`data/${y}.json`, JSON.stringify(Object.fromEntries(Object.entries(o).sort())));
+    await fs.writeFile(path.join(DATA_DIR, `${y}.json`), JSON.stringify(Object.fromEntries(Object.entries(o).sort())));
     const a = Array(y % 4 ? 365 : 366).fill(null), m = [...a];
     for (const [d, hrs] of Object.entries(o)) {
       const v = hrs.filter(Boolean).map(h => Math.max(...h.filter(x => x != null)));   // highest region each hour
@@ -85,9 +92,9 @@ async function save() {
     }
     daily[y] = a; dmin[y] = m;
   }
-  await fs.writeFile('data/daily.json', JSON.stringify(daily));
-  await fs.writeFile('data/daily-min.json', JSON.stringify(dmin));
-  await fs.writeFile('data/meta.json', JSON.stringify({ updated: new Date().toISOString(), last: dates().pop() ?? null }));
+  await fs.writeFile(path.join(DATA_DIR, 'daily.json'), JSON.stringify(daily));
+  await fs.writeFile(path.join(DATA_DIR, 'daily-min.json'), JSON.stringify(dmin));
+  await fs.writeFile(path.join(DATA_DIR, 'meta.json'), JSON.stringify({ updated: new Date().toISOString(), last: dates().pop() ?? null }));
 }
 
 const src = await ingestFiles();
@@ -108,7 +115,8 @@ const add = (s, n) => new Date(Date.parse(s) + n * 864e5).toISOString().slice(0,
 const all = dates(), last = all.length ? all[all.length - 1] : '2014-03-31', todo = new Set();
 const floor = add(today, -400), from = add(last, -2) < floor ? floor : add(last, -2);   // never walk forward from an old date
 for (let d = from; d <= today; d = add(d, 1)) todo.add(d);
-for (let k = 0; k < 60; k++) { const d = add(today, -k); if (!Y[d.slice(0, 4)]?.[d]) todo.add(d); }
+const have = (d) => (Y[d.slice(0, 4)]?.[d] ?? []).some(Boolean);
+for (let k = 0; k < 60; k++) { const d = add(today, -k); if (!have(d)) todo.add(d); }
 if (process.env.SKIP_LIVE) console.log('SKIP_LIVE set: not contacting the live API.');
 for (const d of process.env.SKIP_LIVE ? [] : [...todo].sort()) {
   try {
