@@ -94,7 +94,8 @@
         "date": "1989-02-14",
         "title": "Bushfires cast blanket of haze over Singapore",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19890214-1"
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19890214-1",
+        "verification": "verified"
       }
     ]
   },
@@ -248,65 +249,140 @@
       }
     ]
   },
-  "2006": {
+  "2014": {
     "articles": [
       {
-        "date": "2006-09-08",
-        "title": "The haze is back, and it could last a few days",
+        "date": "2014-02-20",
+        "title": "Govt seeks feedback on law on haze",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20060908-1"
-      }
-    ]
-  },
-    "2014": {
-    "articles": [
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20140220-1"
+      },
       {
-        "date": "2014-10-10",
-        "title": "Fair weather today with occasional slight haze: NEA",
+        "date": "2014-03-07",
+        "title": "‘Some risk’ of haze returning if winds change",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20141010-1",
-        "source_type": "contemporary_newspaper_issue"
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20140307-1"
+      },
+      {
+        "date": "2014-05-26",
+        "title": "NUS adapts household fans to combat haze",
+        "source": "The Business Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/biztimes20140526-1"
+      },
+      {
+        "date": "2014-06-21",
+        "title": "Cooling home brews",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20140621-1"
+      },
+      {
+        "date": "2014-06-26",
+        "title": "Haze check",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20140626-1"
+      },
+      {
+        "date": "2014-09-16",
+        "title": "F1 says plan is in place to deal with serious haze",
+        "source": "The Business Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/biztimes20140916-1"
+      },
+      {
+        "date": "2014-10-21",
+        "title": "Weekend’s haze persists, but eases by noon",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20141021-1"
+      },
+      {
+        "date": "2014-11-07",
+        "title": "Clearing the air",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20141107-1"
       }
     ]
   },
   "2015": {
     "articles": [
       {
-        "date": "2015-08-28",
-        "title": "Haze so thick it obscures views of towers, with visibility dwindling to just 300m",
+        "date": "2015-09-21",
+        "title": "Haze: Firms feel heat as pressure mounts",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150828-1"
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150921-1"
+      },
+       {
+        "date": "2015-09-21",
+        "title": "To tackle haze, win over the Indonesian public",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150921-1"
       },
       {
-        "date": "2015-09-15",
-        "title": "PSI levels in S’pore hover within unhealthy range and are expected to become worse",
+        "date": "2015-09-27",
+        "title": "Jokowi orders study on waterways to prevent peatland fires",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150915-1"
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150927-1"
       },
       {
-        "date": "2015-09-25",
-        "title": "Unprecedented move due to possibility of PSI hitting hazardous levels: Heng Swee Keat",
+        "date": "2015-09-27",
+        "title": "Indonesia’s biggest paper firm back in the spotlight",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150925-1"
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150927-1"
       },
       {
-        "date": "2015-10-05",
-        "title": "2,100 more troops sent to Sumatra; Malaysia closes schools amid hazardous air quality",
+        "date": "2015-09-27",
+        "title": "Agency’s scrutiny puts Indonesian firms into public spotlight",
         "source": "The Straits Times",
-        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20151005-1"
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150927-1"
+      },
+      {
+        "date": "2015-09-27",
+        "title": "S’poreans intensify fight against haze",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150927-1"
+      },
+           {
+        "date": "2015-09-28",
+        "title": "Unhealthy haze likely today",
+        "source": "The New Paper",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/newpaper20150928-1"
+      },
+       {
+        "date": "2015-09-28",
+        "title": "Finding heart in the haze",
+        "source": "The New Paper",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/newpaper20150928-1"
+      },
+      {
+        "date": "2015-09-30",
+        "title": "Singapore ‘respects Indonesia’s sovereignty’",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150930-1"
+      },
+      {
+        "date": "2015-09-30",
+        "title": "Indonesian govt determined to resolve crisis: Eng Hen",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150930-1"
+      },
+      {
+        "date": "2015-09-30",
+        "title": "No respite from bad air despite downpour",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20150930-1"
+      },
+      {
+        "date": "2015-10-31",
+        "title": "Indonesia takes lead in sustainable palm oil production",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20151031-1"
+      },
+      {
+        "date": "2015-12-02",
+        "title": "Singapore haze caused by forest fires, but coal burning is main culprit of China smog",
+        "source": "The Straits Times",
+        "url": "https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes20151202-1"
       }
     ]
-  },
-  "2017": {
-    "articles": [
-      {
-        "date": "2017-04-22",
-        "title": "This time, it is local pollution causing haze",
-        "source": "The Straits Times (via STOMP)",
-        "url": "https://www.stomp.sg/singapore-seen/this-time-it-is-local-pollution-causing-haze"
-      }
-    ]
-  },
+},
   "2018": {
     "articles": [
       {

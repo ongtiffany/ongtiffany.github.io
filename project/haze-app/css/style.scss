@@ -21,6 +21,106 @@ margin: 0;
 padding-left: 6px;
 font-family: var(--fr);}
 }
+
+/* Heading */
+.haze-title {
+  margin-top: 28px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: .18em;
+  max-width: 100%;
+  color: #757575; 
+  font-family: 'Rubik 80s Fade', Impact, sans-serif;
+  font-size: 6.5rem;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  text-align: center;
+  animation: focusBreath var(--cycle-speed) ease-in-out infinite;
+  will-change: filter, opacity;
+   position: relative;
+  isolation: isolate;
+
+  &:after{
+     filter: blur(8px);
+text-shadow: 5px 5px 20px #555;
+  }
+  
+}
+
+.small-word {
+  font-family: var(--fr);
+  font-size: .2em;
+  letter-spacing: -.015em;
+  color: #b1b1b1; 
+  text-shadow: none;
+  margin: 0 -14px 0 -10px;
+}
+
+.letter {
+  display: inline-block;
+  animation: dissolveLetter 7s ease-in-out infinite;
+  animation-delay: calc(var(--i) * .18s);
+  will-change: transform, filter, opacity;
+}
+
+/* Letter dissolve animation preserved */
+@keyframes dissolveLetter {
+  0%, 15%, 100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+
+  40% {
+    opacity: .82;
+    filter: blur(1px);
+    transform: translateY(-1px);
+  }
+
+  57% {
+    opacity: .44;
+    filter: blur(4px);
+    transform: translateY(-9px) scale(1.025);
+  }
+
+  72% {
+    opacity: .9;
+    filter: blur(1.5px);
+    transform: translateY(-3px);
+  }
+}
+
+/* Focus breathing animation preserved */
+@keyframes focusBreath {
+  0%, 100% {
+    filter: blur(0);
+    opacity: 1;
+    text-shadow: 0 0 2px rgba(80, 84, 90, .05);
+  }
+
+  35% {
+    filter: blur(.5px);
+    opacity: .94;
+  }
+
+  58% {
+    filter: blur(3px);
+    opacity: .78;
+    text-shadow:
+      0 0 12px rgba(133, 137, 143, .17),
+      0 0 30px rgba(166, 169, 174, .12);
+  }
+
+  78% {
+    filter: blur(1px);
+    opacity: .92;
+  }
+}
+
 .glow{position:relative;
  &::after{opacity:0;filter: blur(8px); text-shadow:5px 5px 20px #555;content:attr(data-text);position:absolute;inset:0;color:transparent;font:inherit;line-height:1.2;letter-spacing:inherit;animation:glow 5s ease-in-out infinite alternate}}
 
